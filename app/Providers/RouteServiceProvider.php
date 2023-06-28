@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/bosa-admin/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
