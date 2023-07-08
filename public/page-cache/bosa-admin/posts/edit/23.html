@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="../../backend/" data-template="vertical-menu-template-no-customizer">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Tambah Post
+ - Bosa</title>
+
+    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="../../backend/img/favicon/favicon.ico" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/fonts/fontawesome.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/fonts/tabler-icons.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/fonts/flag-icons.css" />
+
+
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/css/rtl/core.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/css/rtl/theme-default.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/css/demo.css" />
+
+
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/node-waves/node-waves.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/typeahead-js/typeahead.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/apex-charts/apex-charts.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/swiper/swiper.css" />
+
+<link rel="stylesheet" href="../../backend/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/css/pages/cards-advance.css" />
+
+<script src="http://localhost:5000/backend/vendor/js/helpers.js"></script>
+
+<script src="http://localhost:5000/backend/js/config.js"></script>
+
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/animate-css/animate.css" />
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+
+<style>
+    #editor{
+        min-height: 350px;
+    }
+</style>
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/flatpickr/flatpickr.css" /> 
+<link rel="stylesheet" href="http://localhost:5000/backend/vendor/libs/select2/select2.css" />
+<script src="http://localhost:5000/backend/ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+        <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <a href="index.html" class="app-brand-link">
+            <span class="app-brand-logo demo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer" x="0px" y="0px" width="32" height="32" viewBox="0 0 60 60" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <path fill="#CCE4FF" d="M32,10c-12.15,0-22,9.85-22,22c0,12.15,9.85,22,22,22s22-9.85,22-22C54,19.85,44.15,10,32,10z M23,37  c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5S25.76,37,23,37z M41,37c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5S43.76,37,41,37z" />
+                    <path fill="#007AFF" d="M32,8C18.766,8,8,18.766,8,32s10.766,24,24,24c13.233,0,24-10.766,24-24S45.233,8,32,8z M32,52  c-11.028,0-20-8.972-20-20c0-11.028,8.972-20,20-20c11.028,0,20,8.972,20,20C52,43.028,43.028,52,32,52z" />
+                    <path fill="#007AFF" d="M41,25c-3.859,0-7,3.14-7,7c0,3.86,3.141,7,7,7c3.859,0,7-3.14,7-7C48,28.14,44.859,25,41,25z M41,35  c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3S42.654,35,41,35z" />
+                    <path fill="#007AFF" d="M23,25c-3.86,0-7,3.14-7,7c0,3.86,3.14,7,7,7c3.86,0,7-3.14,7-7C30,28.14,26.86,25,23,25z M23,35  c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3S24.654,35,23,35z" />
+                </svg>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold">BOSA</span>
+        </a>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <li class="menu-item active">
+            <a href="index.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <div data-i18n="Dashboard">Dashboard</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-pencil"></i>
+                <div data-i18n="Roles & Permissions">Posting</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="http://localhost:5000/bosa-admin/posts" class="menu-link">
+                        <div data-i18n="Roles">Semua Post</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-access-roles.html" class="menu-link">
+                        <div data-i18n="Roles">Tambah Post</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="app-access-permission.html" class="menu-link">
+                        <div data-i18n="Permission">Kategori</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+            <div class="layout-page">
+
+
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+            <i class="ti ti-menu-2 ti-sm"></i>
+        </a>
+    </div>
+
+    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                        <img src="../../backend/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="avatar avatar-online">
+                                        <img src="../../backend/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <span class="fw-semibold d-block">John Doe</span>
+                                    <small class="text-muted">Admin</small>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            <!--/ User -->
+        </ul>
+    </div>
+</nav>
+
+                <div class="content-wrapper">
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+                            <div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-1 mt-0"><span class="text-muted fw-light">Posts /</span> Edit Posting</h4>
+    <div class="row mb-3">
+        <form id="create-post-form" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="Jgt7GBrOZe8IPHwLVn1XalMIfuFeqeW6bGF8MRhd">            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <label class="form-label" for="judul">Judul</label>
+                            <input type="text" class="form-control" value="asdasd222" id="judul" required />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="document-editor">
+                                <div class="toolbar-container"></div>
+                                <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
+                                    <div id="editor"><p><span class="image-inline ck-widget ck-widget_with-resizer" contenteditable="false"><img src="http://localhost:5000/media/f883c37cc9c79e314ad9128ad83d9f268d63342a4a2e18f16147dc282233f4dc_1688121066.png"><div class="ck ck-reset_all ck-widget__resizer ck-hidden"><div class="ck-widget__resizer__handle ck-widget__resizer__handle-top-left"></div><div class="ck-widget__resizer__handle ck-widget__resizer__handle-top-right"></div><div class="ck-widget__resizer__handle ck-widget__resizer__handle-bottom-right"></div><div class="ck-widget__resizer__handle ck-widget__resizer__handle-bottom-left"></div><div class="ck ck-size-view" style="display: none;"></div></div></span>⁠⁠⁠⁠⁠⁠⁠</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="status">Status</label>
+                                <select class="form-select" id="status" required>
+                                    <option value="Publish" selected>Publish</option>
+                                    <option value="Draft" >Draft</option>
+                                </select>
+
+                                <label for="flatpickr-date" class="form-label mt-3">Tanggal Post</label>
+                                <input type="text" class="form-control" placeholder="YYYY-MM-DD" value="2023-06-08 12:00:00" id="flatpickr-datetime" />
+
+                            </div>
+                            <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-md-6 mt-4">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between">
+                                <div class="card-title mb-0">
+                                    <h5 class="mb-0">Kategori</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="select2-success">
+                                    <select name="" id="select2Success" class="select2 form-select" multiple>
+                                                                                    <option value="1" >Kegiatan</option>
+                                                                                    <option value="2" selected>Unorganized</option>
+                                                                            </select>
+                                </div>
+                            </div>
+                            <div class="card-header d-flex justify-content-between">
+                                <div class="card-title mb-0">
+                                    <h5 class="mb-0">Thumbnail</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <input class="form-control" id="thumbnail" type="file" id="formFile" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+                        </div>
+                    </div>
+
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div class="container-xxl">
+                            <div
+                                class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                                <div>
+                                    ©
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    , made with ❤️ by <a href="#" target="_blank"
+                                        class="fw-semibold">Smabosa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <div class="drag-target"></div>
+    </div>
+    <script src="http://localhost:5000/backend/vendor/libs/jquery/jquery.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/popper/popper.js"></script>
+<script src="http://localhost:5000/backend/vendor/js/bootstrap.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/node-waves/node-waves.js"></script>
+
+<script src="http://localhost:5000/backend/vendor/libs/hammer/hammer.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/i18n/i18n.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/typeahead-js/typeahead.js"></script>
+
+<script src="http://localhost:5000/backend/vendor/js/menu.js"></script>
+
+<script src="http://localhost:5000/backend/vendor/libs/apex-charts/apexcharts.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/swiper/swiper.js"></script>
+
+<script src="http://localhost:5000/backend/js/main.js"></script>
+
+<script src="http://localhost:5000/backend/js/dashboards-analytics.js"></script>
+
+<script src="http://localhost:5000/backend/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+
+<script src="http://localhost:5000/backend/vendor/libs/moment/moment.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="http://localhost:5000/backend/js/extended-ui-sweetalert2.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/sweetalert2/sweetalert2.js"></script>
+
+<script src="http://localhost:5000/backend/vendor/libs/select2/select2.js"></script>
+<script src="http://localhost:5000/backend/js/forms-selects.js"></script>
+<script src="http://localhost:5000/backend/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="http://localhost:5000/backend/js/forms-pickers.js"></script>
+<script>
+    DecoupledEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: 'http://localhost:5000/bosa-admin/posts/upload-image?_token=Jgt7GBrOZe8IPHwLVn1XalMIfuFeqeW6bGF8MRhd',
+            }
+        })
+        .then(editor => {
+            const toolbarContainer = document.querySelector('.toolbar-container');
+
+            toolbarContainer.prepend(editor.ui.view.toolbar.element);
+
+            window.editor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#submit-post').click(function() {
+            Swal.fire({
+                title: 'Yakin?',
+                text: "Kamu akan Mengedit post",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak',
+                customClass: {
+                    confirmButton: 'btn btn-primary me-3',
+                    cancelButton: 'btn btn-label-secondary'
+                },
+        buttonsStyling: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    event.preventDefault();
+                    var imageFile = $('#thumbnail')[0].files[0];
+                    var post_title = $('#judul').val();
+                    var post_status = $('#status').val();
+                    var post_categories = $('#select2Success').val();
+                    var post_content = $('#editor').html();
+                    var post_date = $('#flatpickr-datetime').val();
+                    var formData = new FormData();
+                    formData.append('post_thumbnail', imageFile);
+                    formData.append('post_title', post_title);
+                    formData.append('post_status', post_status);
+                    formData.append('post_categories', post_categories);
+                    formData.append('post_content', post_content);
+                    formData.append('post_date', post_date);
+
+                    $.ajax({
+                        url: 'http://localhost:5000/bosa-admin/posts/update/23?_token=Jgt7GBrOZe8IPHwLVn1XalMIfuFeqeW6bGF8MRhd',
+                        type: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            Swal.fire({
+                                title: 'Berhasl!',
+                                text: 'Postingan Berhasil Di Edit!',
+                                icon: 'success',
+                                customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                },
+                                buttonsStyling: false
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = '/bosa-admin/posts';
+                                }
+                            });
+                        },
+                        error: function(xhr) {
+                            console.log(error)
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Perubahan Dibatalkan',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+    });
+    
+</script>
+
+</body>
+
+</html>

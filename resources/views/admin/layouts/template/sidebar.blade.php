@@ -39,16 +39,29 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="app-access-roles.html" class="menu-link">
-                        <div data-i18n="Roles">Tambah Post</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="app-access-permission.html" class="menu-link">
+                    <a href="{{route('admin.categories')}}" class="menu-link">
                         <div data-i18n="Permission">Kategori</div>
                     </a>
                 </li>
             </ul>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('admin.image-slider')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-album"></i>
+                <div data-i18n="Image Slider">Image Slider</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('admin.about-school')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Tentang Sekolah">Tentang Sekolah</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('admin.event')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-calendar-event"></i>
+                <div data-i18n="Event">Event</div>
+            </a>
         </li>
     </ul>
 </aside>

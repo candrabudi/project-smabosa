@@ -5,17 +5,18 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Vuexy - Bootstrap Admin Template</title>
+    <title>@yield('title') - Bosa</title>
 
     <meta name="description" content="" />
     @include('admin.layouts.template.styles')
 </head>
 
 <body>
-
+    @include('sweetalert::alert')
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
             @include('admin.layouts.template.sidebar')

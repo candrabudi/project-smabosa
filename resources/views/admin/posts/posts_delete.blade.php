@@ -3,14 +3,15 @@
     <a href="#" class="btn btn-success btn-sm ms-auto"><i class="fa fa-plus"></i> &NonBreakingSpace;Tambah Post Baru</a>
 </div>
 <div class="card-datatable table-responsive">
-    <table class="dt-responsive table">
+    <table class="dt-responsive table" id="get-post-delete">
         <thead>
             <tr>
+                <th width=50>No</th>
                 <th>Judul</th>
-                <th>Waktu</th>
+                <th>Tanggal Post</th>
                 <th>Penulis</th>
                 <th>Kategori</th>
-                <th>Aksi</th>
+                <th width=180>Aksi</th>
             </tr>
         </thead>
     </table>
