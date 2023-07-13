@@ -14,6 +14,12 @@ use DB;
 use DataTables;
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        if(!Auth::user()){
+            return redirect()->route('login');
+        }
+    }
     public function index()
     {
         $post_publish = Post::where('post_status', 'Publish')->count();
@@ -181,8 +187,8 @@ class PostController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('post_thumbnail')) {
                 $image = $request->file('post_thumbnail');
-                $imageName = 'post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('post_thumbnail'), $imageName);
+                $imageName = 'post_thumbnail/post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/post_thumbnail'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -197,6 +203,7 @@ class PostController extends Controller
             $store_post->post_title = $request->post_title;
             $store_post->post_content = $request->post_content;
             $store_post->post_status = $request->post_status;
+            $store_post->post_short_desc = $request->short_desc;
             $store_post->post_slug = $slug;
             $store_post->post_thumbnail = $imageName;
             $store_post->save();
@@ -221,6 +228,7 @@ class PostController extends Controller
             return response()->json([
                 'status'    => 'failed', 
                 'code'      => 500, 
+                'error' => $e->getMessage(),
                 'message'   => 'Something wrong error!'
             ], 500);
         }
@@ -240,8 +248,8 @@ class PostController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('post_thumbnail')) {
                 $image = $request->file('post_thumbnail');
-                $imageName = 'post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('post_thumbnail'), $imageName);
+                $imageName = 'post_thumbnail/post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/post_thumbnail'), $imageName);
             }else{
                 $imageName = null;
             }
@@ -249,6 +257,7 @@ class PostController extends Controller
             $post->author_id = Auth::user()->id;
             $post->post_date = $request->post_date ?? $post->post_date ;
             $post->post_title = $request->post_title ?? $post->post_title;
+            $post->post_short_desc = $request->short_desc ?? $post->post_short_desc;
             $post->post_content = $request->post_content ?? $post->post_content;
             $post->post_status = $request->post_status ?? $post->post_status;
             $post->post_slug = $slug ?? $post->post_slug;

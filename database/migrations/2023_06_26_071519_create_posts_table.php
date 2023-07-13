@@ -16,6 +16,7 @@ return new class extends Migration
             $table->bigInteger('author_id');
             $table->dateTime('post_date');
             $table->string('post_title');
+            $table->string('post_short_desc');
             $table->text('post_content');
             $table->enum('post_status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->string('post_slug');

@@ -11,6 +11,10 @@ use DB;
 
 class EventController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('admin.event.index');
@@ -46,12 +50,12 @@ class EventController extends Controller
     public function store(Request $request)
     {
         try{
-            $lowercase = strtolower($request->post_title);
+            $lowercase = strtolower($request->title);
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('event_thumbnail')) {
                 $image = $request->file('event_thumbnail');
-                $imageName = 'event_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('event_thumbnail'), $imageName);
+                $imageName = 'event_thumbnail/event_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/event_thumbnail'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -113,8 +117,8 @@ class EventController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('event_thumbnail')) {
                 $image = $request->file('event_thumbnail');
-                $imageName = 'event_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('event_thumbnail'), $imageName);
+                $imageName = 'event_thumbnail/event_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/event_thumbnail'), $imageName);
             }else{
                 $imageName = null;
             }

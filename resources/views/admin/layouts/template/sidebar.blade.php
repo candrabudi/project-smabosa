@@ -63,5 +63,11 @@
                 <div data-i18n="Event">Event</div>
             </a>
         </li>
+        <li class="menu-item">
+            <a href="{{route('admin.school-achievement')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-certificate-2"></i>
+                <div data-i18n="Prestasi Sekolah">Prestasi Sekolah</div>
+            </a>
+        </li>
     </ul>
 </aside>

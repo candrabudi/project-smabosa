@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class AboutSchoolController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $about_school = AboutSchool::first();
@@ -22,8 +26,8 @@ class AboutSchoolController extends Controller
             if(!$check){
                 if($request->hasFile('about_thumbnail')) {
                     $image = $request->file('about_thumbnail');
-                    $imageName = 'about_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                    $image->move(public_path('about_thumbnail'), $imageName);
+                    $imageName = 'about_thumbnail/about_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
+                    $image->move(public_path('images/about_thumbnail'), $imageName);
                 }else{
                     return response()->json([
                         'status'    => 'failed', 
@@ -38,10 +42,10 @@ class AboutSchoolController extends Controller
                 $store_about->thumbnail = $imageName;
                 $store_about->save();
             }else{
-                if($request->hasFile('post_thumbnail')) {
-                    $image = $request->file('post_thumbnail');
-                    $imageName = 'post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                    $image->move(public_path('post_thumbnail'), $imageName);
+                if($request->hasFile('about_thumbnail')) {
+                    $image = $request->file('about_thumbnail');
+                    $imageName = 'about_thumbnail/about_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
+                    $image->move(public_path('images/about_thumbnail'), $imageName);
                 }else{
                     $imageName = null;
                 }

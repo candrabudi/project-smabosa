@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('event');
             $table->dateTime('event_date');
             $table->string('location', 191);
-            $table->tinyInteger('is_active');
+            $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });
     }

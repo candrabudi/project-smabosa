@@ -8,15 +8,18 @@ use App\Http\Controllers\Admin\MasterCategoryController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Frontend\LandingpageController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\SchoolAchievementController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
+Route::get('/blog', [LandingpageController::class, 'blog'])->name('blog');
+Route::get('/blog/detail/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
 
 Auth::routes();
-Route::prefix('bosa-admin')->group(function () {
+Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('bosa.dashboard');
     Route::prefix('posts')->group(function () {
         Route::get('/', [PostController::class, 'index'])->name('admin.posts');
@@ -57,6 +60,15 @@ Route::prefix('bosa-admin')->group(function () {
         Route::post('/update/{id}', [EventController::class, 'update'])->name('admin.event.update');
         Route::post('/store', [EventController::class, 'store'])->name('admin.event.store');
         Route::delete('/delete/{id}', [EventController::class, 'delete'])->name('admin.event.delete');
+    });
+    Route::prefix('school-achievement')->group(function () {
+        Route::get('/', [SchoolAchievementController::class, 'index'])->name('admin.school-achievement');
+        Route::get('/datatable', [SchoolAchievementController::class, 'datatable'])->name('admin.school-achievement.datatable');
+        Route::get('/create', [SchoolAchievementController::class, 'create'])->name('admin.school-achievement.create');
+        Route::get('/edit/{id}', [SchoolAchievementController::class, 'edit'])->name('admin.school-achievement.edit');
+        Route::post('/update/{id}', [SchoolAchievementController::class, 'update'])->name('admin.school-achievement.update');
+        Route::post('/store', [SchoolAchievementController::class, 'store'])->name('admin.school-achievement.store');
+        Route::delete('/delete/{id}', [SchoolAchievementController::class, 'delete'])->name('admin.school-achievement.delete');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

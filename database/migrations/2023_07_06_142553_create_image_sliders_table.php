@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('title', 191);
             $table->text('description');
+            $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });
     }

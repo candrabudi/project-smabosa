@@ -9,6 +9,10 @@ use DataTables;
 
 class ImageSliderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('admin.image_slider.index');
@@ -55,9 +59,9 @@ class ImageSliderController extends Controller
                 $originName = $request->file('image')->getClientOriginalName();
                 $fileName = pathinfo($originName, PATHINFO_FILENAME);
                 $extension = $request->file('image')->getClientOriginalExtension();
-                $fileName = 'image_slider' . '_' . time() . '.' . $extension;
+                $fileName = 'image_slider/image_slider' . '_' . time() . '.' . $extension;
           
-                $request->file('image')->move(public_path('image_slider'), $fileName);
+                $request->file('image')->move(public_path('images/image_slider'), $fileName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -106,9 +110,9 @@ class ImageSliderController extends Controller
                 $originName = $request->file('image')->getClientOriginalName();
                 $fileName = pathinfo($originName, PATHINFO_FILENAME);
                 $extension = $request->file('image')->getClientOriginalExtension();
-                $fileName = 'image_slider' . '_' . time() . '.' . $extension;
+                $fileName = 'images/image_slider' . '_' . time() . '.' . $extension;
         
-                $request->file('image')->move(public_path('image_slider'), $fileName);
+                $request->file('image')->move(public_path('images/image_slider'), $fileName);
             }else{
                 $fileName = null;
             }

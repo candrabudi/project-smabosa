@@ -17,6 +17,12 @@ Tambah Post
                             <input type="text" class="form-control" id="judul" required />
                         </div>
                     </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <label class="form-label" for="short_desc">Deskripsi Singkat</label>
+                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control" ></textarea>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="document-editor">
@@ -137,12 +143,14 @@ Tambah Post
                     var post_title = $('#judul').val();
                     var post_status = $('#status').val();
                     var post_categories = $('#select2Success').val();
+                    var short_desc = $('#short_desc').val();
                     var post_content = $('#editor').html();
                     var post_date = $('#flatpickr-datetime').val();
                     var formData = new FormData();
                     formData.append('post_thumbnail', imageFile);
                     formData.append('post_title', post_title);
                     formData.append('post_status', post_status);
+                    formData.append('short_desc', short_desc);
                     formData.append('post_categories', post_categories);
                     formData.append('post_content', post_content);
                     formData.append('post_date', post_date);

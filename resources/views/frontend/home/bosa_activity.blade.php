@@ -6,7 +6,7 @@
                     <div class=row>
                         <div class=col-12>
                             <div class=section-title>
-                                <h2 class="wow fadeInUp" data-wow-delay=.4s>Kegiatan Bosa</h2>
+                                <h2 class="wow fadeInUp" data-wow-delay=.4s>Artikel Terbaru</h2>
                                 <p class="wow fadeInUp" data-wow-delay=.6s>Informasi Terbaru Berbagai Kegiatan di SMA BOPKRI 1 YOGYAKARTA</p>
                             </div>
                         </div>

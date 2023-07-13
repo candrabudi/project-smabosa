@@ -21,8 +21,8 @@
 </style>
 <section class="hero-area">
     <div class="hero-slider">
-        @foreach($imageSliders as $slider)
-        <div class="hero-inner" style='background-image: url("{{ asset('images/slider/'.$slider->image) }}");'>
+        @foreach($image_sliders as $slider)
+        <div class="hero-inner" style='background-image: url("{{ asset('image_slider/'.$slider->image) }}");'>
             <div class="container">
                 <div class="row ">
                     <div class="col-lg-8 offset-lg-2 col-md-12 co-12">
