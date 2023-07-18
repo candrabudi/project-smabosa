@@ -8,11 +8,15 @@ use App\Http\Controllers\Admin\MasterCategoryController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Frontend\LandingpageController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\SchoolAchievementController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
 Route::get('/blog', [LandingpageController::class, 'blog'])->name('blog');
+Route::get('/kegiatan', [LandingpageController::class, 'activity'])->name('activity');
+Route::get('/tentang-sekolah', [LandingpageController::class, 'about'])->name('about');
+Route::get('/agenda', [LandingpageController::class, 'event'])->name('event');
 Route::get('/blog/detail/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
@@ -69,6 +73,10 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::post('/update/{id}', [SchoolAchievementController::class, 'update'])->name('admin.school-achievement.update');
         Route::post('/store', [SchoolAchievementController::class, 'store'])->name('admin.school-achievement.store');
         Route::delete('/delete/{id}', [SchoolAchievementController::class, 'delete'])->name('admin.school-achievement.delete');
+    });
+    Route::prefix('facilities')->group(function () {
+        Route::get('/', [FacilityController::class, 'index'])->name('admin.facility');
+        Route::get('/datatable', [FacilityController::class, 'datatable'])->name('admin.facility.datatable');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

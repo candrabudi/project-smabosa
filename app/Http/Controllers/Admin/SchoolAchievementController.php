@@ -49,7 +49,7 @@ class SchoolAchievementController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
-                $imageName = 'school_achievement_'.time() . '.' . $image->getClientOriginalExtension();
+                $imageName = 'school_achievement/school_achievement_'.time() . '.' . $image->getClientOriginalExtension();
                 $image->move(public_path('images/school_achievement'), $imageName);
             }else{
                 return response()->json([
@@ -64,6 +64,8 @@ class SchoolAchievementController extends Controller
             $store_event->slug = $slug;
             $store_event->short_desc = $request->short_desc;
             $store_event->content = $request->content;
+            $store_event->achievement_gainer = $request->peraih_prestasi;
+            $store_event->status = $request->status;
             $store_event->thumbnail = $imageName;
             $store_event->save();
 
@@ -120,8 +122,10 @@ class SchoolAchievementController extends Controller
             $school_achievement->title = $request->title ?? $school_achievement->title ;
             $school_achievement->short_desc = $request->short_desc ?? $school_achievement->short_desc;
             $school_achievement->content = $request->content ?? $school_achievement->content;
+            $school_achievement->satus = $request->satus ?? $school_achievement->satus;
             $school_achievement->slug = $slug ?? $school_achievement->slug;
             $school_achievement->thumbnail = $imageName ?? $school_achievement->thumbnail;
+            $school_achievement->achievement_gainer = $request->peraih_prestasi ?? $school_achievement->achievement_gainer;
             $school_achievement->save();
 
             DB::commit();

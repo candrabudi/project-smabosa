@@ -27,7 +27,7 @@ Edit Prestasi
                             <div class="document-editor">
                                 <div class="toolbar-container"></div>
                                 <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
-                                    <div id="editor"><?php echo $school_achievement->title ?></div>
+                                    <div id="editor"><?php echo $school_achievement->content ?></div>
                                 </div>
                             </div>
                         </div>
@@ -36,14 +36,18 @@ Edit Prestasi
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                        <div class="mb-3">
-                            <label class="form-label" for="bs-validation-country">Status</label>
-                            <select class="form-select" id="bs-validation-country" required>
-                                <option value="">Pilih Status</option>
-                                <option value="1" {{($school_achievement->is_active == 1) ? 'selected' : ''}}>Publish</option>
-                                <option value="0" {{($school_achievement->is_active == 0) ? 'selected' : ''}}>Draft</option>
-                            </select>
-                        </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="bs-validation-country">Status</label>
+                                <select class="form-select" id="bs-validation-country" required>
+                                    <option value="">Pilih Status</option>
+                                    <option value="Publish" {{($school_achievement->status == 'Publish') ? 'selected' : ''}}>Publish</option>
+                                    <option value="Draft" {{($school_achievement->status == 'Draft') ? 'selected' : ''}}>Draft</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="peraih_prestasi">Peraih Prestasi</label>
+                                <input type="text" class="form-control" value="{{$school_achievement->achievement_gainer}}" id="peraih_prestasi" required />
+                            </div>
                             <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
                         </div>
                     </div>
@@ -121,6 +125,7 @@ Edit Prestasi
                     var imageFile = $('#thumbnail')[0].files[0];
                     var title = $('#title').val();
                     var short_desc = $('#short_desc').val();
+                    var peraih_prestasi = $('#peraih_prestasi').val();
                     var status = $('#bs-validation-country').val();
                     var content = $('#editor').html();
                     var formData = new FormData();
@@ -129,6 +134,7 @@ Edit Prestasi
                     formData.append('short_desc', short_desc);
                     formData.append('content', content);
                     formData.append('status', status);
+                    formData.append('peraih_prestasi', peraih_prestasi);
 
                     $.ajax({
                         url: '{{ route('admin.school-achievement.update', $school_achievement->id).'?_token='.csrf_token() }}',

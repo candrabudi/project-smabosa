@@ -52,17 +52,17 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item"><a class="active" href="/">Beranda</a></li>
-                                <li class="nav-item"><a href="javascript:void(0)">Profile</a></li>
-                                <li class="nav-item"><a href="javascript:void(0)">Agenda</a></li>
+                                <li class="nav-item"><a href="{{route('about')}}">Profile</a></li>
+                                <li class="nav-item"><a href="{{route('event')}}">Agenda</a></li>
                                 <li class="nav-item">
                                     <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
-                                        <li class="nav-item"><a href="">Blog</a></li>
-                                        <li class="nav-item"><a href="">Kegiatan</a></li>
+                                        <li class="nav-item"><a href="{{route('blog')}}">Blog</a></li>
+                                        <li class="nav-item"><a href="{{route('activity')}}">Kegiatan</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a href="javascript:void(0)">PCPDB</a></li>
-                                <li class="nav-item"><a href="javascript:void(0)">Alumni</a></li>
+                                <li class="nav-item"><a href="https://smabosa-yogya.sch.id/2022/08/31/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2022-2024/">PCPDB</a></li>
+                                <li class="nav-item"><a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a></li>
                                 <li class="nav-item"><a href="javascript:void(0)">Lainnya</a></li>
                             </ul>
                             <form class="d-flex search-form">

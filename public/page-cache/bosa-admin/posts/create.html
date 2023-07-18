@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N">
+    <meta name="csrf-token" content="R4ZdhnygTKtjzLNzgKRSGHZL7QZF4B6TO5onVKtu">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -123,6 +123,12 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/facilities" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Fasilitas">Fasilitas</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="http://localhost:8000/bosa-admin/event" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar-event"></i>
                 <div data-i18n="Event">Event</div>
@@ -183,12 +189,11 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row">
-                            @cache('my-cache-key', 3600)
-<div class="container-xxl flex-grow-1 container-p-y">
+                            <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Posts /</span> Tambah Posting</h4>
     <div class="row mb-3">
         <form id="create-post-form" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N">            <div class="row">
+            <input type="hidden" name="_token" value="R4ZdhnygTKtjzLNzgKRSGHZL7QZF4B6TO5onVKtu">            <div class="row">
                 <div class="col-md-8">
                     <div class="card mb-3">
                         <div class="card-body">
@@ -241,7 +246,10 @@
                             <div class="card-body">
                                 <div class="select2-success">
                                     <select name="" id="select2Success" class="select2 form-select" multiple>
-                                                                                    <option value="1">kegiatan</option>
+                                                                                    <option value="2">Opini Siswa</option>
+                                                                                    <option value="3">Bebas</option>
+                                                                                    <option value="4">Kegiatan</option>
+                                                                                    <option value="5">Pcpdb</option>
                                                                             </select>
                                 </div>
                             </div>
@@ -261,7 +269,6 @@
         
     </div>
 </div>
-@endcache
                         </div>
                     </div>
 
@@ -328,7 +335,7 @@
     DecoupledEditor
         .create(document.querySelector('#editor'), {
             ckfinder: {
-                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N',
+                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=R4ZdhnygTKtjzLNzgKRSGHZL7QZF4B6TO5onVKtu',
             }
         })
         .then(editor => {
@@ -341,7 +348,10 @@
         .catch(err => {
             console.error(err.stack);
         });
-
+        function clearEditor() {
+            var editor = DecoupledEditor.instances[0];
+            editor.setData('');
+        }
 </script>
 
 <script>
@@ -379,7 +389,7 @@
                     formData.append('post_date', post_date);
 
                     $.ajax({
-                        url: 'http://localhost:8000/bosa-admin/posts/store?_token=hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N',
+                        url: 'http://localhost:8000/bosa-admin/posts/store?_token=R4ZdhnygTKtjzLNzgKRSGHZL7QZF4B6TO5onVKtu',
                         type: "POST",
                         data: formData,
                         processData: false,

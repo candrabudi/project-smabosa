@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N">
+    <meta name="csrf-token" content="C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -187,12 +187,12 @@
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Tentang Sekolah /</span> Semua Tentang Sekolah</h4>
     <div class="row mb-3">
         <form id="create-post-form" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N">            <div class="row">
+            <input type="hidden" name="_token" value="C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy">            <div class="row">
                 <div class="col-md-8">
                     <div class="card mb-3">
                         <div class="card-body">
                             <label class="form-label" for="title">Judul</label>
-                            <input type="text" class="form-control" id="title" value="" required />
+                            <input type="text" class="form-control" id="title" value="SEJARAH SMA BOPKRI 1 YOGYAKARTA" required />
                         </div>
                     </div>
                     <div class="card">
@@ -200,7 +200,7 @@
                             <div class="document-editor">
                                 <div class="toolbar-container"></div>
                                 <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
-                                    <div id="editor"></div>
+                                    <div id="editor"><p style="margin-left:0px;">Sejak berdiri pada tanggal 1 Agustus 1946 hingga memasuki usia yang ke 74 tahun SMA BOPKRI 1 Yogyakarta yang di kalangan masyarakat lebih dikenal dengan nama SMA BOSA telah melalui perjalanan yang panjang dalam eksistensinya di bidang pendidikan. Banyak Alumni SMA BOSA yang telah berprestasi di berbagai bidang dan menjadi tokoh di tingkat nasional. Segenap civitas akademika SMA BOSA sampai pada saat inipun senantiasa berupaya meningkatkan kualitas pelayanannya dalam ikut berperan mencerdaskan anak bangsa.</p><p style="margin-left:0px;">Hal tersebut dapat ditunjukkan dengan berbagai prestasi yang berhasil dicapai. Dalam akreditasi sekolah tahun 2004 SMA BOSA telah terakreditasi A dengan nilai 98,60 (nilai tertinggi di Provinsi Daerah Istimewa Yogyakarta). Prestasi tersebut berhasil dipertahankan oleh SMA BOSA dalam akreditasi sekolah yang dilaksanakan pada tahun 2008 terakreditasi A dengan nilai 98,75 (nilai tertinggi di Provinsi Daerah Istimewa Yogyakarta untuk kedua kalinya secara berturut-turut).</p><p style="margin-left:0px;">Pada tahun 2007 SMA BOSA telah ditunjuk menjadi salah satu sekolah R-SMA-BI (Rintisan Sekolah Menengah Atas Bertaraf Internasional) dan pada tanggal 2 Desember 2009 SMA BOSA telah berhasil mendapatkan Sertifikat ISO 9001:2008 dengan No Cert. 73Q11169 (merupakan SMA pertama di Provinsi Daerah Istimewa Yogyakarta yang berhasil meraih Sertifikat ISO 9001 : 2008</p><p style="margin-left:0px;">Namun demikian SMA BOSA tidak akan berpuas diri dengan prestasi yang telah dicapai. Tantangan yang semakin berat dan persaingan yang semakin ketat di masa depan, memicu SMA BOSA untuk selalu berupaya meningkatkan kualitasnya.</p></div>
                                 </div>
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <label class="form-label" for="shor_desc">Deskripsi Singkat</label>
-                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control"></textarea>
+                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control">Sejak berdiri pada tanggal 1 Agustus 1946 hingga memasuki usia yang ke 74 tahun SMA BOPKRI 1 Yogyakarta yang di kalangan masyarakat lebih dikenal dengan nama SMA BOSA telah melalui perjalanan yang panjang dalam</textarea>
                         </div>
                     </div>
                     <div class="card">
@@ -291,7 +291,7 @@
     DecoupledEditor
         .create(document.querySelector('#editor'), {
             ckfinder: {
-                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N',
+                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy',
             }
         })
         .then(editor => {
@@ -336,7 +336,7 @@
                     formData.append('content', content);
 
                     $.ajax({
-                        url: 'http://localhost:8000/bosa-admin/about-school/store?_token=hOpLLMYam6fqkrvnyjMTmAnVsZUeqgzvStE45J1N',
+                        url: 'http://localhost:8000/bosa-admin/about-school/store?_token=C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy',
                         type: "POST",
                         data: formData,
                         processData: false,

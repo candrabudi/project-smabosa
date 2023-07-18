@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title', 191);
             $table->string('slug');
-            $table->string('short_desc');
+            $table->text('short_desc');
             $table->text('content');
+            $table->text('achievement_gainer');
             $table->string('thumbnail');
             $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();

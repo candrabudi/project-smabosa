@@ -1,3 +1,18 @@
+<style>
+    .thumbnail-post{
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        border: 1px solid #EEE;
+    }
+    .thumbnail-content{
+        width: 100%;
+        height: 100%
+    }
+    .thumbnail-content p{
+        opacity: 0;
+    }
+</style>
 <section class="latest-news-area section">
     <div class="container">
         <div class="row">
@@ -17,17 +32,17 @@
 
                             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                                 <div class=image>
-                                    <a href='#'><img class=thumb src="{{asset('images/' .$achievment->thumbnail)}}" alt="#" data-pagespeed-url-hash=4204970080 onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                                    <a href='#'>
+                                        <div class="thumbnail-post" style='background-image: url("{{asset('images/' .$achievment->thumbnail)}}");'>
+                                            <div class="thumbnail-content">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                                 <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">January 25, 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                     <h4 class=title><a href=blog-single-sidebar.html>{{ $achievment->title }}</a></h4>
                                     <p><?php echo substr($achievment->short_desc, 0, 100) ?>....</p>
                                     <div class=button>
@@ -38,7 +53,6 @@
 
                         </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>

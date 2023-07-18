@@ -36,14 +36,18 @@ Tambah Prestasi
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                        <div class="mb-3">
-                            <label class="form-label" for="bs-validation-country">Status</label>
-                            <select class="form-select" id="bs-validation-country" required>
-                                <option value="">Pilih Status</option>
-                                <option value="1">Publish</option>
-                                <option value="0">Draft</option>
-                            </select>
-                        </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="bs-validation-country">Status</label>
+                                <select class="form-select" id="bs-validation-country" required>
+                                    <option value="">Pilih Status</option>
+                                    <option value="1">Publish</option>
+                                    <option value="0">Draft</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="peraih_prestasi">Peraih Prestasi</label>
+                                <input type="text" class="form-control" id="peraih_prestasi" required />
+                            </div>
                             <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
                         </div>
                     </div>
@@ -120,6 +124,7 @@ Tambah Prestasi
                     event.preventDefault();
                     var imageFile = $('#thumbnail')[0].files[0];
                     var title = $('#title').val();
+                    var peraih_prestasi = $('#peraih_prestasi').val();
                     var short_desc = $('#short_desc').val();
                     var status = $('#bs-validation-country').val();
                     var content = $('#editor').html();
@@ -129,6 +134,7 @@ Tambah Prestasi
                     formData.append('short_desc', short_desc);
                     formData.append('content', content);
                     formData.append('status', status);
+                    formData.append('peraih_prestasi', peraih_prestasi);
 
                     $.ajax({
                         url: '{{ route('admin.school-achievement.store').'?_token='.csrf_token() }}',

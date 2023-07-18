@@ -10,5 +10,6 @@ Home - Smabosa
 @include('frontend.home.about')
 @include('frontend.home.articles')
 @include('frontend.home.pcpdb')
+@include('frontend.home.event')
 @include('frontend.home.bosa_achievment')
 @endsection

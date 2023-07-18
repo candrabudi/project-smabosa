@@ -62,6 +62,10 @@
             'autoplayVideos': true,
         });
     </script>
+    <script>
+        paragraph = document.getElementsByClassName("ck");
+        paragraph.remove();
+    </script>
 </body>
 
 </html>

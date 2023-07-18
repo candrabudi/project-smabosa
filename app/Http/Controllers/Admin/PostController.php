@@ -33,6 +33,7 @@ class PostController extends Controller
     public function datatblePostPublish()
     {
         $fetch = Post::where('post_status', 'Publish')
+            ->orderBy('created_at', 'DESC')
             ->get()
             ->toArray();
 

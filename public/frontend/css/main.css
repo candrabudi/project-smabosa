@@ -2107,7 +2107,7 @@ ol {
 .hero-area .tns-nav {
   text-align: center;
   position: absolute;
-  bottom: 60px;
+  bottom: 20px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 100%;
@@ -2132,12 +2132,15 @@ ol {
 }
 
 .hero-area .hero-inner {
+  width: 80%;
+  margin: auto;
   height: auto;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 3;
   padding-bottom: 150px;
+  border-radius: 20px;
 }
 
 .hero-area .hero-inner.overlay::before {
@@ -5688,8 +5691,9 @@ ul.custom-flex {
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-img {
   overflow: hidden;
+  background-size: cover;
   width: 80px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   height: 80px;
   position: absolute;
   left: 0;
@@ -5698,7 +5702,7 @@ ul.custom-flex {
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-img img {
   width: 80px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   height: 80px;
   overflow: hidden;
   display: block;

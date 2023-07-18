@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title', 191);
             $table->string('slug');
             $table->text('content');
-            $table->string('short_desc', 200);
+            $table->text('short_desc');
             $table->string('thumbnail');
             $table->string('event');
             $table->dateTime('event_date');

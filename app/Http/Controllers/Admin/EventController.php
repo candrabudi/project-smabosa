@@ -73,7 +73,6 @@ class EventController extends Controller
             $store_event->event_date = $request->event_date;
             $store_event->location = $request->location;
             $store_event->thumbnail = $imageName;
-            $store_event->is_active = 1;
             $store_event->save();
 
             DB::commit();

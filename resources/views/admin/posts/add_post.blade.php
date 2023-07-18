@@ -3,7 +3,6 @@
 Tambah Post
 @endsection
 @section('content')
-@cache('my-cache-key', 3600)
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Posts /</span> Tambah Posting</h4>
     <div class="row mb-3">
@@ -84,7 +83,6 @@ Tambah Post
         
     </div>
 </div>
-@endcache
 @endsection
 @section('styles')
 <style>
@@ -118,7 +116,10 @@ Tambah Post
         .catch(err => {
             console.error(err.stack);
         });
-
+        function clearEditor() {
+            var editor = DecoupledEditor.instances[0];
+            editor.setData('');
+        }
 </script>
 
 <script>

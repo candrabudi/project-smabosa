@@ -58,6 +58,12 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="{{route('admin.facility')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Fasilitas">Fasilitas</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="{{route('admin.event')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar-event"></i>
                 <div data-i18n="Event">Event</div>
