@@ -1,4 +1,4 @@
-<link rel="icon" type="image/x-icon" href="../../backend/img/favicon/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="{{ asset('backend/img/logo/logo-bosa.png')}}" />
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />

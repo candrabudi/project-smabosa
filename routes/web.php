@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutSchoolController;
+use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ImageSliderController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Frontend\LandingpageController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\SchoolAchievementController;
+use App\Http\Controllers\Admin\ExtracurricularController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
@@ -24,6 +26,7 @@ Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])
 
 Auth::routes();
 Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('bosa.dashboard');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('bosa.dashboard');
     Route::prefix('posts')->group(function () {
         Route::get('/', [PostController::class, 'index'])->name('admin.posts');
@@ -82,6 +85,25 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::get('/edit/{id}', [FacilityController::class, 'edit'])->name('admin.facility.edit');
         Route::post('/update/{id}', [FacilityController::class, 'update'])->name('admin.facility.update');
         Route::delete('/delete/{id}', [FacilityController::class, 'delete'])->name('admin.facility.delete');
+    });
+
+    Route::prefix('extracurricular')->group(function () {
+        Route::get('/', [ExtracurricularController::class, 'index'])->name('admin.extracurricular');
+        Route::get('/datatable', [ExtracurricularController::class, 'datatable'])->name('admin.extracurricular.datatable');
+        Route::get('/create', [ExtracurricularController::class, 'create'])->name('admin.extracurricular.create');
+        Route::post('/store', [ExtracurricularController::class, 'store'])->name('admin.extracurricular.store');
+        Route::get('/edit/{id}', [ExtracurricularController::class, 'edit'])->name('admin.extracurricular.edit');
+        Route::post('/update/{id}', [ExtracurricularController::class, 'update'])->name('admin.extracurricular.update');
+        Route::delete('/delete/{id}', [ExtracurricularController::class, 'delete'])->name('admin.extracurricular.delete');
+    });
+    Route::prefix('announcement')->group(function () {
+        Route::get('/', [AnnouncementController::class, 'index'])->name('admin.announcement');
+        Route::get('/datatable', [AnnouncementController::class, 'datatable'])->name('admin.announcement.datatable');
+        Route::get('/create', [AnnouncementController::class, 'create'])->name('admin.announcement.create');
+        Route::post('/store', [AnnouncementController::class, 'store'])->name('admin.announcement.store');
+        Route::get('/edit/{id}', [AnnouncementController::class, 'edit'])->name('admin.announcement.edit');
+        Route::post('/update/{id}', [AnnouncementController::class, 'update'])->name('admin.announcement.update');
+        Route::delete('/delete/{id}', [AnnouncementController::class, 'delete'])->name('admin.announcement.delete');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

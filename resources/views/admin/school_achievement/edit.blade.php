@@ -109,7 +109,7 @@ Edit Prestasi
         $('#submit-post').click(function() {
             Swal.fire({
                 title: 'Yakin?',
-                text: "Kamu akan menambahkan Event",
+                text: "Kamu akan mengubah Prestasi",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
@@ -145,7 +145,7 @@ Edit Prestasi
                         success: function(response) {
                             Swal.fire({
                                 title: 'Berhasl!',
-                                text: 'Prestasi Berhasil Di tambahkan!',
+                                text: 'Prestasi Berhasil Di diubah!',
                                 icon: 'success',
                                 customClass: {
                                     confirmButton: 'btn btn-primary'
@@ -164,7 +164,7 @@ Edit Prestasi
                 } else {
                     Swal.fire({
                         icon: 'info',
-                        title: 'Penambahan Dibatalkan',
+                        title: 'Perubahan Dibatalkan',
                         showConfirmButton: false,
                         timer: 1500
                     });

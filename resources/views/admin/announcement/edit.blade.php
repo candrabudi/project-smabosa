@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
 @section('title')
-Tambah Event
+Edit Pengumuman
 @endsection
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-1"><span class="text-muted fw-light">Event /</span> Tambah Event</h4>
+    <h4 class="fw-bold py-1"><span class="text-muted fw-light">Pengumuman Sekolah /</span> Edit Pengumuman</h4>
     <div class="row mb-3">
         <form id="create-post-form" enctype="multipart/form-data">
             @csrf
@@ -13,13 +13,13 @@ Tambah Event
                     <div class="card mb-3">
                         <div class="card-body">
                             <label class="form-label" for="title">Judul</label>
-                            <input type="text" class="form-control" id="title" required />
+                            <input type="text" class="form-control" id="title" value="{{$announcement->title}}" required />
                         </div>
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
                             <label class="form-label" for="judul">Deskripsi Singkat</label>
-                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control" ></textarea>
+                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control" >{{$announcement->short_desc}}</textarea>
                         </div>
                     </div>
                     <div class="card">
@@ -27,7 +27,7 @@ Tambah Event
                             <div class="document-editor">
                                 <div class="toolbar-container"></div>
                                 <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
-                                    <div id="editor"></div>
+                                    <div id="editor"><?php echo $announcement->content ?></div>
                                 </div>
                             </div>
                         </div>
@@ -37,16 +37,12 @@ Tambah Event
                     <div class="card">
                         <div class="card-body">
                             <div class="mb-3">
-                                <label class="form-label">Event</label>
-                                <input type="text" class="form-control" id="event_title" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="flatpickr-date" class="form-label">Tanggal Event</label>
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-datetime" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="flatpickr-date" class="form-label">Lokasi</label>
-                                <input type="text" class="form-control" id="location_title" />
+                                <label class="form-label" for="bs-validation-country">Status</label>
+                                <select class="form-select" id="bs-validation-country" required>
+                                    <option value="">Pilih Status</option>
+                                    <option value="Publish" {{($announcement->status == 'Publish') ? 'selected' : ''}}>Publish</option>
+                                    <option value="Draft" {{($announcement->status == 'Draft') ? 'selected' : ''}}>Draft</option>
+                                </select>
                             </div>
                             <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
                         </div>
@@ -109,7 +105,7 @@ Tambah Event
         $('#submit-post').click(function() {
             Swal.fire({
                 title: 'Yakin?',
-                text: "Kamu akan menambahkan Event",
+                text: "Kamu akan mengubah Pengumuman",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
@@ -125,21 +121,19 @@ Tambah Event
                     var imageFile = $('#thumbnail')[0].files[0];
                     var title = $('#title').val();
                     var short_desc = $('#short_desc').val();
-                    var event_title = $('#event_title').val();
-                    var location_title = $('#location_title').val();
+                    var peraih_prestasi = $('#peraih_prestasi').val();
+                    var status = $('#bs-validation-country').val();
                     var content = $('#editor').html();
-                    var event_date = $('#flatpickr-datetime').val();
                     var formData = new FormData();
-                    formData.append('event_thumbnail', imageFile);
+                    formData.append('announcement_thumbnail', imageFile);
                     formData.append('title', title);
                     formData.append('short_desc', short_desc);
                     formData.append('content', content);
-                    formData.append('event', event_title);
-                    formData.append('event_date', event_date);
-                    formData.append('location', location_title);
+                    formData.append('status', status);
+                    formData.append('peraih_prestasi', peraih_prestasi);
 
                     $.ajax({
-                        url: '{{ route('admin.event.store').'?_token='.csrf_token() }}',
+                        url: '{{ route('admin.announcement.update', $announcement->id).'?_token='.csrf_token() }}',
                         type: "POST",
                         data: formData,
                         processData: false,
@@ -147,7 +141,7 @@ Tambah Event
                         success: function(response) {
                             Swal.fire({
                                 title: 'Berhasl!',
-                                text: 'Event Berhasil Di tambahkan!',
+                                text: 'Pengumuman Berhasil Di tambahkan!',
                                 icon: 'success',
                                 customClass: {
                                     confirmButton: 'btn btn-primary'
@@ -155,7 +149,7 @@ Tambah Event
                                 buttonsStyling: false
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = '/bosa-admin/event';
+                                    window.location.href = '/bosa-admin/announcement';
                                 }
                             });
                         },

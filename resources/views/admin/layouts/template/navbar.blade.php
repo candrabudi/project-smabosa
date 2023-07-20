@@ -30,8 +30,23 @@
                             </div>
                         </a>
                     </li>
-                </ul>
-
+                    <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span class="align-middle">
+                                <form method="post" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                </form>
+                            </span>
+                        </a>
+                    </li>
+                </ul>    
+            </li>
+            <li>
+                
             </li>
             <!--/ User -->
         </ul>

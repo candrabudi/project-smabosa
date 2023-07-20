@@ -109,7 +109,7 @@ Tambah Prestasi
         $('#submit-post').click(function() {
             Swal.fire({
                 title: 'Yakin?',
-                text: "Kamu akan menambahkan Event",
+                text: "Kamu akan menambahkan Prestasi",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Ya',

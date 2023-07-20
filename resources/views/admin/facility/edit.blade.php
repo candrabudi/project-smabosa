@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-Edit Prestasi
+Edit Fasilitas
 @endsection
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
@@ -105,7 +105,7 @@ Edit Prestasi
         $('#submit-post').click(function() {
             Swal.fire({
                 title: 'Yakin?',
-                text: "Kamu akan menambahkan Event",
+                text: "Kamu akan mengubah Fasilitas",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
@@ -141,7 +141,7 @@ Edit Prestasi
                         success: function(response) {
                             Swal.fire({
                                 title: 'Berhasl!',
-                                text: 'Prestasi Berhasil Di tambahkan!',
+                                text: 'Fasilitas Berhasil Di tambahkan!',
                                 icon: 'success',
                                 customClass: {
                                     confirmButton: 'btn btn-primary'
@@ -149,7 +149,7 @@ Edit Prestasi
                                 buttonsStyling: false
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = '/bosa-admin/school-achievement';
+                                    window.location.href = '/bosa-admin/announcement';
                                 }
                             });
                         },

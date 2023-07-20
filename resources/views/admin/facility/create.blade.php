@@ -105,7 +105,7 @@ Tambah Fasilitas
         $('#submit-post').click(function() {
             Swal.fire({
                 title: 'Yakin?',
-                text: "Kamu akan menambahkan Event",
+                text: "Kamu akan menambahkan Fasilitas",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Ya',
@@ -141,7 +141,7 @@ Tambah Fasilitas
                         success: function(response) {
                             Swal.fire({
                                 title: 'Berhasl!',
-                                text: 'Prestasi Berhasil Di tambahkan!',
+                                text: 'Fasilitas Berhasil Di tambahkan!',
                                 icon: 'success',
                                 customClass: {
                                     confirmButton: 'btn btn-primary'
@@ -149,7 +149,7 @@ Tambah Fasilitas
                                 buttonsStyling: false
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = '/bosa-admin/facility';
+                                    window.location.href = '/bosa-admin/announcement';
                                 }
                             });
                         },

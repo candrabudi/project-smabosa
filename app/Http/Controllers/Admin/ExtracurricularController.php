@@ -3,20 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Facility;
+use App\Models\Extracurricular;
 use Illuminate\Http\Request;
 use DataTables;
 use DB;
-class FacilityController extends Controller
+
+class ExtracurricularController extends Controller
 {
     public function index()
     {
-        return view('admin.facility.index');
+        return view('admin.extracurricular.index');
     }
 
     public function datatable()
     {
-        $fetch = Facility::whereIn('status', ['Publish', 'Draft'])
+        $fetch = Extracurricular::whereIn('status', ['Publish', 'Draft'])
             ->orderBy('created_at', 'DESC')
             ->get()
             ->toArray();
@@ -37,7 +38,7 @@ class FacilityController extends Controller
 
     public function create()
     {
-        return view('admin.facility.create');
+        return view('admin.extracurricular.create');
     }
 
     public function store(Request $request)
@@ -45,10 +46,10 @@ class FacilityController extends Controller
         try{
             $lowercase = strtolower($request->title);
             $slug = str_replace(' ','-', $lowercase);
-            if ($request->hasFile('facility_thumbnail')) {
-                $image = $request->file('facility_thumbnail');
-                $imageName = 'school_facility/school_facility_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_facility'), $imageName);
+            if ($request->hasFile('extracurricular_thumbnail')) {
+                $image = $request->file('extracurricular_thumbnail');
+                $imageName = 'school_extracurricular/school_extracurricular_'.time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/school_extracurricular'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -58,14 +59,14 @@ class FacilityController extends Controller
                 ], 400);
             }
 
-            $store_facility = new Facility();
-            $store_facility->title = $request->title;
-            $store_facility->slug = $slug;
-            $store_facility->short_desc = $request->short_desc;
-            $store_facility->content = $request->content;
-            $store_facility->status = $request->status;
-            $store_facility->thumbnail = $imageName;
-            $store_facility->save();
+            $store_extracurricular = new Extracurricular();
+            $store_extracurricular->title = $request->title;
+            $store_extracurricular->slug = $slug;
+            $store_extracurricular->short_desc = $request->short_desc;
+            $store_extracurricular->content = $request->content;
+            $store_extracurricular->status = $request->status;
+            $store_extracurricular->thumbnail = $imageName;
+            $store_extracurricular->save();
 
             DB::commit();
             return response()->json([
@@ -85,19 +86,19 @@ class FacilityController extends Controller
 
     public function edit(Request $request, $id)
     {
-        $facility = Facility::where('id', $id)
+        $extracurricular = Extracurricular::where('id', $id)
             ->first();
-        if(!$facility){
+        if(!$extracurricular){
             return redirect()->route('admin.school-achievement');
         }
 
-        return view('admin.facility.edit', compact(['facility']));
+        return view('admin.extracurricular.edit', compact(['facility']));
     }
 
     public function update(Request $request, $id){
-        $school_facility = Facility::where('id', $id)
+        $school_extracurricular = Extracurricular::where('id', $id)
             ->first();
-        if(!$school_facility){
+        if(!$school_extracurricular){
             return response()->json([
                 'status'    => 'failed', 
                 'code'  => 400, 
@@ -108,21 +109,21 @@ class FacilityController extends Controller
         try{
             $lowercase = strtolower($request->title);
             $slug = str_replace(' ','-', $lowercase);
-            if ($request->hasFile('facility_thumbnail')) {
+            if ($request->hasFile('extracurricular_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
-                $imageName = 'school_facility/school_facility_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_facility'), $imageName);
+                $imageName = 'school_extracurricular/school_extracurricular_'.time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/school_extracurricular'), $imageName);
             }else{
                 $imageName = null;
             }
 
-            $school_facility->title = $request->title ?? $school_facility->title ;
-            $school_facility->short_desc = $request->short_desc ?? $school_facility->short_desc;
-            $school_facility->content = $request->content ?? $school_facility->content;
-            $school_facility->status = $request->status ?? $school_facility->status;
-            $school_facility->slug = $slug ?? $school_facility->slug;
-            $school_facility->thumbnail = $imageName ?? $school_facility->thumbnail;
-            $school_facility->save();
+            $school_extracurricular->title = $request->title ?? $school_extracurricular->title ;
+            $school_extracurricular->short_desc = $request->short_desc ?? $school_extracurricular->short_desc;
+            $school_extracurricular->content = $request->content ?? $school_extracurricular->content;
+            $school_extracurricular->status = $request->status ?? $school_extracurricular->status;
+            $school_extracurricular->slug = $slug ?? $school_extracurricular->slug;
+            $school_extracurricular->thumbnail = $imageName ?? $school_extracurricular->thumbnail;
+            $school_extracurricular->save();
 
             DB::commit();
             return response()->json([
@@ -142,7 +143,7 @@ class FacilityController extends Controller
     }
     public function delete($id)
     {
-        Facility::where('id', $id)
+        Extracurricular::where('id', $id)
             ->update([
                 'status' => 'Delete'
             ]);

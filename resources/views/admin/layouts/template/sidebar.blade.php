@@ -59,6 +59,18 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="{{route('admin.extracurricular')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Ekstrakurikular">Ekstrakurikular</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('admin.announcement')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-speakerphone"></i>
+                <div data-i18n="Pengumuman">Pengumuman</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="{{route('admin.event')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar-event"></i>
                 <div data-i18n="Event">Event</div>
