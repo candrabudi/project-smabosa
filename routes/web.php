@@ -77,6 +77,11 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
     Route::prefix('facilities')->group(function () {
         Route::get('/', [FacilityController::class, 'index'])->name('admin.facility');
         Route::get('/datatable', [FacilityController::class, 'datatable'])->name('admin.facility.datatable');
+        Route::get('/create', [FacilityController::class, 'create'])->name('admin.facility.create');
+        Route::post('/store', [FacilityController::class, 'store'])->name('admin.facility.store');
+        Route::get('/edit/{id}', [FacilityController::class, 'edit'])->name('admin.facility.edit');
+        Route::post('/update/{id}', [FacilityController::class, 'update'])->name('admin.facility.update');
+        Route::delete('/delete/{id}', [FacilityController::class, 'delete'])->name('admin.facility.delete');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

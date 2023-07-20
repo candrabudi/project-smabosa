@@ -45,7 +45,7 @@ class SchoolAchievementController extends Controller
     public function store(Request $request)
     {
         try{
-            $lowercase = strtolower($request->totle);
+            $lowercase = strtolower($request->title);
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
@@ -79,7 +79,6 @@ class SchoolAchievementController extends Controller
             return response()->json([
                 'status'    => 'failed', 
                 'code'  => 500, 
-                // 'message'   => 'Something Wrong Error'
                 'message'   => $e->getMessage(),
                 'data'  => $request
             ], 500);

@@ -12,11 +12,11 @@ Fasilitas
                 <div class="nav-align-top mb-4">
                     <div class="card-header p-3 d-flex mb-4">
                         <h5 class="align-self-center m-0">List Fasilitas</h5>
-                        <a href="{{route('admin.school-achievement.create')}}" class="btn btn-success btn-sm ms-auto"><i class="fa fa-plus"></i> &NonBreakingSpace;Tambah Prestasi</a>
+                        <a href="{{route('admin.facility.create')}}" class="btn btn-success btn-sm ms-auto"><i class="fa fa-plus"></i> &NonBreakingSpace;Tambah Fasilitas</a>
                     </div>
                     <div class="card-body">
                         <div class="card-datatable table-responsive">
-                            <table class="dt-responsive table" id="get-fasilities">
+                            <table class="dt-responsive table" id="get-facilities">
                                 <thead>
                                     <tr>
                                         <th width=50>No</th>
@@ -37,7 +37,7 @@ Fasilitas
 @section('scripts')
 <script>
     $(function() {
-        var table = $('#get-fasilities').DataTable({
+        var table = $('#get-facilities').DataTable({
             processing: true,
             serverSide: true,
             ajax: '{!! route('admin.facility.datatable') !!}',
@@ -49,7 +49,7 @@ Fasilitas
                     data: 'id',
                     orderable: false,
                     render: function(id) {
-                        return '<button class="my-1 btn btn-warning btn-xs edit-school-achievement "  style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-category" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
+                        return '<button class="my-1 btn btn-warning btn-xs edit-facility"  style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-facility" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
                     },
                 },
             ],
@@ -57,14 +57,14 @@ Fasilitas
         });
 
     });
-    $('#get-school-achievement').on('click', '.edit-school-achievement ', function() {
+    $('#get-facilities').on('click', '.edit-facility ', function() {
         var id = $(this).data('id');
-        window.location = '/bosa-admin/school-achievement/edit/' + id
+        window.location = '/bosa-admin/facilities/edit/' + id
     });
 </script>
 <script>
     $(function() {
-        $('#get-school-achievement').on('click', '.delete-category', function() {
+        $('#get-facilities').on('click', '.delete-facility', function() {
             var id = $(this).data('id');
 
             Swal.fire({
@@ -82,7 +82,7 @@ Fasilitas
                 allowOutsideClick: () => !Swal.isLoading(),
                 preConfirm: () => {
                     return $.ajax({
-                        url: '/bosa-admin/school-achievement/delete/'+id,
+                        url: '/bosa-admin/facilities/delete/'+id,
                         type: 'DELETE',
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -121,7 +121,7 @@ Fasilitas
                         }
                     }).then((result) => {
                         if (result.dismiss === Swal.DismissReason.timer) {
-                            window.location = '/bosa-admin/school-achievement'
+                            window.location = '/bosa-admin/facilities'
                         }
                     });
                 }

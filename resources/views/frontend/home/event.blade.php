@@ -1,20 +1,4 @@
 @inject('carbon', 'Carbon\Carbon')
-<style>
-    .thumbnail-event{
-        width: 100%;
-        height: 200px;
-        background-size: cover;
-        border: 1px solid #EEE;
-    }
-    .thumbnail-content{
-        width: 100%;
-        height: 100%
-    }
-    .thumbnail-content p{
-        /* display: none; */
-        opacity: 0;
-    }
-</style>
 <section class="events section">
     <div class=container>
         <div class=row>

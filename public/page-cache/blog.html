@@ -23,6 +23,78 @@
     <link rel="stylesheet" href="http://localhost:8000/frontend/css/tiny-slider.css" />
     <link rel="stylesheet" href="http://localhost:8000/frontend/css/glightbox.min.css" />
     <link rel="stylesheet" href="http://localhost:8000/frontend/css/main.css" />
+    <style>
+        .hero-area{
+            background-image: url('/frontend/images/hero/bg-01.jpeg'); 
+            background-size: 100%;
+            background-position: right center;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        .hero-area .overlay::before {
+            opacity: 0.7;
+            background: #081828;
+        } 
+        .hero-container{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .hero-area .hero-text {
+            float: none;
+            text-align: center;
+            margin-top: 150px !important;
+            height: 200px;
+        }
+        .thumbnail-post{
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            border: 1px solid #EEE;
+        }
+        .thumbnail-content{
+            width: 100%;
+            height: 100%
+        }
+        .thumbnail-content p{
+            opacity: 0;
+        }
+
+        .thumbnail-post{
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            border: 1px solid #EEE;
+        }
+
+        .thumbnail-event{
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            border: 1px solid #EEE;
+        }
+        @media only screen and (min-width: 330px) and (max-width: 470px) {
+            .hero-area{
+                overflow: hidden;
+                padding: 10px!important;
+            }
+            .hero-container .hero-inner {
+                border-radius: 3px!important;
+                width: 100%!important;
+                height: 125px!important;
+                overflow: hidden;
+            }
+
+            .hero-inner .hero-text {
+                width: 100%;
+                height: 50px !important;
+            }
+            .hero-area .tns-nav {
+                text-align: center;
+                position: absolute;
+                bottom: 5px!important;
+            }
+        }
+    </style>
     </head>
 
 <body><div class="preloader">
@@ -131,8 +203,8 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/pelantikan-pengurus-osis-sma-bopkri-1-yogyakarta">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689477268.jpeg");'>
+                    <a href="http://localhost:8000/blog/detail/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689335549.png");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -146,58 +218,18 @@
                         <ul>
                             <li>
                                 <i class="lni lni-tag"></i>
-                                                                    <a href="javascript:void(0)">Kegiatan</a>
-                                                            </li>
-                            <li>
-                                <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Senin, 28 Okt 2019</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/pelantikan-pengurus-osis-sma-bopkri-1-yogyakarta">PELANTIKAN PENGURUS OSIS SMA BOPKRI 1 YOGYAKARTA</a></h4>
-                    <p>Hari Sumpah Pemuda 28 Oktober 2019 menjadi momen penting digunakan sebagai hari pelantikan pengurus OSIS SMA BOPKRI 1 Yogyakarta, periode 2019 -2020....</p>
-                    <div class=button>
-                        <a href="http://localhost:8000/blog/detail/pelantikan-pengurus-osis-sma-bopkri-1-yogyakarta" class=btn> Baca Lebih Lanjut</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-                <div class="col-lg-6 col-12">
-
-            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                <div class=image>
-                    
-                    <a href="http://localhost:8000/blog/detail/studi-banding-jurnalistik-bosa">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689474109.jpg");'>
-                            <div class="thumbnail-content">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class=content-body>
-                    <div class=meta-data>
-                        <ul>
-                            <li>
-                                <i class="lni lni-tag"></i>
-                                                                    <a href="javascript:void(0)">Opini Siswa</a>
-                                                                    <a href="javascript:void(0)">Bebas</a>
-                                                                    <a href="javascript:void(0)">Kegiatan</a>
                                                                     <a href="javascript:void(0)">Pcpdb</a>
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Rabu, 2 Mei 2018</a>
+                                <a href="javascript:void(0)">Jumat, 14 Jul 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/studi-banding-jurnalistik-bosa">STUDI BANDING JURNALISTIK BOSA</a></h4>
-                    <p>Kebersamaan para anggota ekstra kurikuler (ekskul) Jurnalistik SMA BOPKRI 1 kembali terwadahi dalam kegiatan Studi Banding ke Jakarta, 24-27 April 201...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024">PEDOMAN DAN PENGISIAN FORMULIR PCPDB SMA BOSA TAHUN PELAJARAN 2023-2024</a></h4>
+                    <p>Untuk Tahun Pelajaran 2023 – 2024 sekolah memberikan apresiasi bagi Calon Peserta Didik dengan ketentuan sebagai berikut...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/studi-banding-jurnalistik-bosa" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -208,8 +240,8 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/beribadah-dengan-setia">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689335013.png");'>
+                    <a href="http://localhost:8000/blog/detail/last-call-to-join-sma-bosa-yogyakarta">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689433601.jpeg");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -223,18 +255,19 @@
                         <ul>
                             <li>
                                 <i class="lni lni-tag"></i>
-                                                                    <a href="javascript:void(0)">Opini Siswa</a>
+                                                                    <a href="javascript:void(0)">Bebas</a>
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Sabtu, 28 Apr 2018</a>
+                                <a href="javascript:void(0)">Sabtu, 24 Jun 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/beribadah-dengan-setia">BERIBADAH DENGAN SETIA</a></h4>
-                    <p>Teman – teman yang terkasih di dalam Yesus Kristus, tahukah kalian  yang dimaksud dengan beribadah dalam kesetiaan? Tuhan memberikan waktu kehidupa...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/last-call-to-join-sma-bosa-yogyakarta">LAST CALL TO JOIN SMA BOSA YOGYAKARTA</a></h4>
+                    <p>Masih belum menentukan mau melanjutkan masa putih abu-abu di mana?
+Tenang, Pendaftaran Calon Peserta Didik Baru Gelombang 3 SMA BOSA masih dibuka! Ma...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/beribadah-dengan-setia" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/last-call-to-join-sma-bosa-yogyakarta" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -245,8 +278,8 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/gengsi-vs-tujuan-hidup">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689334926.png");'>
+                    <a href="http://localhost:8000/blog/detail/sma-bosa:-satuan-pendidikan-aman-bencana">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689433474.jpeg");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -260,18 +293,18 @@
                         <ul>
                             <li>
                                 <i class="lni lni-tag"></i>
-                                                                    <a href="javascript:void(0)">Opini Siswa</a>
+                                                                    <a href="javascript:void(0)">Bebas</a>
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Senin, 9 Apr 2018</a>
+                                <a href="javascript:void(0)">Selasa, 20 Jun 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/gengsi-vs-tujuan-hidup">GENGSI VS TUJUAN HIDUP</a></h4>
-                    <p>Apakah kalian ingin maju? Pastinya ingin kan, siapa sih yang nggak mau maju dan berhasil ? Tapi  sebelum itu kita harus punya tujuan. Tanpa tujuan, k...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/sma-bosa:-satuan-pendidikan-aman-bencana">SMA BOSA: SATUAN PENDIDIKAN AMAN BENCANA</a></h4>
+                    <p>SMA BOSA merupakan sekolah yang termasuk dalam SPAB. Program SPAB bertujuan untuk membangun budaya siaga dan aman di sekolah, serta untuk membangun ke...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/gengsi-vs-tujuan-hidup" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/sma-bosa:-satuan-pendidikan-aman-bencana" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -282,45 +315,8 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/studi-lapangan-sma-bopkri-1-yogyakarta">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689473954.jpg");'>
-                            <div class="thumbnail-content">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class=content-body>
-                    <div class=meta-data>
-                        <ul>
-                            <li>
-                                <i class="lni lni-tag"></i>
-                                                                    <a href="javascript:void(0)">Kegiatan</a>
-                                                            </li>
-                            <li>
-                                <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Rabu, 21 Mar 2018</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/studi-lapangan-sma-bopkri-1-yogyakarta">STUDI LAPANGAN SMA BOPKRI 1 YOGYAKARTA</a></h4>
-                    <p>Studi lapangan kembali dilaksanakan oleh SMA BOPKRI 1 Yogya. Kegiatan rutin yang diadakan setiap tahun dan wajib diikuti siswa Kelas X ini dimaksudkan...</p>
-                    <div class=button>
-                        <a href="http://localhost:8000/blog/detail/studi-lapangan-sma-bopkri-1-yogyakarta" class=btn> Baca Lebih Lanjut</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-                <div class="col-lg-6 col-12">
-
-            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                <div class=image>
-                    
-                    <a href="http://localhost:8000/blog/detail/kunjungan-&amp;-wawancara-mendikbud-di-sma-bopkri-1-yogyakarta">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689436455.jpg");'>
+                    <a href="http://localhost:8000/blog/detail/latihan-gabungan-pramuka-dan-pecinta-alam-sma-bosa">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478816.jpeg");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -338,14 +334,14 @@
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Minggu, 16 Jul 2017</a>
+                                <a href="javascript:void(0)">Selasa, 20 Jun 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/kunjungan-&amp;-wawancara-mendikbud-di-sma-bopkri-1-yogyakarta">KUNJUNGAN &amp; WAWANCARA MENDIKBUD DI SMA BOPKRI 1 YOGYAKARTA</a></h4>
-                    <p>Mentri Pendidikan dan Kebudayaan kita sekarang, Bapak Muhadjir Effendy berkunjung ke SMA BOPKRI 1 Yogyakarta tanggal 15 Juli 2017 yang lalu. Beliau da...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/latihan-gabungan-pramuka-dan-pecinta-alam-sma-bosa">LATIHAN GABUNGAN PRAMUKA DAN PECINTA ALAM SMA BOSA</a></h4>
+                    <p>Gerakan Pramuka SMA BOPKRI 1 Yogyakarta dan Ekstrakurikuler Pecinta Alam SMA BOSA melaksanakan latihan gabungan dengan melakukan pendakian Gunung Prau...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/kunjungan-&amp;-wawancara-mendikbud-di-sma-bopkri-1-yogyakarta" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/latihan-gabungan-pramuka-dan-pecinta-alam-sma-bosa" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -356,8 +352,8 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/study-tour-bosa-ke-bali">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689435692.jpg");'>
+                    <a href="http://localhost:8000/blog/detail/rapat-kerja-guru-dan-karyawan-sma-bosa-tahun-2023">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478779.jpeg");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -375,14 +371,14 @@
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Sabtu, 1 Apr 2017</a>
+                                <a href="javascript:void(0)">Senin, 12 Jun 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/study-tour-bosa-ke-bali">STUDY TOUR BOSA KE BALI</a></h4>
-                    <p>Seluruh siswa kelas XI SMA BOPKRI 1 Yogya mengikuti Studi Tur ke Bali, Sabtu hingga Kamis, tanggal 24-29 Maret 2017. Menjelang keberangkatan, para sis...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/rapat-kerja-guru-dan-karyawan-sma-bosa-tahun-2023">RAPAT KERJA GURU DAN KARYAWAN SMA BOSA TAHUN 2023</a></h4>
+                    <p>SMA BOPKRI 1 Yogyakarta sudah lebih awal menyelenggarakan rapat kerja untuk mengevaluasi dan mempersiapkan lebih dini layanan pendidikan yang maksimal...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/study-tour-bosa-ke-bali" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/rapat-kerja-guru-dan-karyawan-sma-bosa-tahun-2023" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -393,8 +389,119 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/pelantikan-pengurus-dan-anggota-jurnalistik-periode-2017/2018">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689436620.jpg");'>
+                    <a href="http://localhost:8000/blog/detail/penyerahan-kembali-purnaiswa-tahun-pelajaran-2022-2023-sma-bosa">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689337157.jpeg");'>
+                            <div class="thumbnail-content">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=content-body>
+                    <div class=meta-data>
+                        <ul>
+                            <li>
+                                <i class="lni lni-tag"></i>
+                                                                    <a href="javascript:void(0)">Bebas</a>
+                                                            </li>
+                            <li>
+                                <i class="lni lni-calendar"></i>
+                                <a href="javascript:void(0)">Jumat, 2 Jun 2023</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/penyerahan-kembali-purnaiswa-tahun-pelajaran-2022-2023-sma-bosa">PENYERAHAN KEMBALI PURNAISWA TAHUN PELAJARAN 2022-2023 SMA BOSA</a></h4>
+                    <p>Bertepatan dengan Hari Kebangkitan Nasional, SMA BOPKRI 1 Yogyakarta menyelenggarakan penyerahan kembali purnasiswa tahun pelajaran 2022-2023....</p>
+                    <div class=button>
+                        <a href="http://localhost:8000/blog/detail/penyerahan-kembali-purnaiswa-tahun-pelajaran-2022-2023-sma-bosa" class=btn> Baca Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                <div class="col-lg-6 col-12">
+
+            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                <div class=image>
+                    
+                    <a href="http://localhost:8000/blog/detail/ranking-1-paralel-setiap-program-berdasarkan-nilai-sekolah">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689337265.jpeg");'>
+                            <div class="thumbnail-content">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=content-body>
+                    <div class=meta-data>
+                        <ul>
+                            <li>
+                                <i class="lni lni-tag"></i>
+                                                                    <a href="javascript:void(0)">Bebas</a>
+                                                            </li>
+                            <li>
+                                <i class="lni lni-calendar"></i>
+                                <a href="javascript:void(0)">Jumat, 2 Jun 2023</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/ranking-1-paralel-setiap-program-berdasarkan-nilai-sekolah">RANKING 1 PARALEL SETIAP PROGRAM BERDASARKAN NILAI SEKOLAH</a></h4>
+                    <p>Ranking 1 paralel setiap program berdasarkan nilai sekolah, diraih oleh purnasiswa SMA BOPKRI 1 Yogykarta tahun pelajaran 2022-2023 dengan rincian seb...</p>
+                    <div class=button>
+                        <a href="http://localhost:8000/blog/detail/ranking-1-paralel-setiap-program-berdasarkan-nilai-sekolah" class=btn> Baca Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                <div class="col-lg-6 col-12">
+
+            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                <div class=image>
+                    
+                    <a href="http://localhost:8000/blog/detail/pembelajaran-bosa-ais-educational-program-di-australia">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689433349.jpeg");'>
+                            <div class="thumbnail-content">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class=content-body>
+                    <div class=meta-data>
+                        <ul>
+                            <li>
+                                <i class="lni lni-tag"></i>
+                                                                    <a href="javascript:void(0)">Bebas</a>
+                                                            </li>
+                            <li>
+                                <i class="lni lni-calendar"></i>
+                                <a href="javascript:void(0)">Jumat, 2 Jun 2023</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/pembelajaran-bosa-ais-educational-program-di-australia">PEMBELAJARAN BOSA-AIS EDUCATIONAL PROGRAM DI AUSTRALIA</a></h4>
+                    <p>Selain program reguler, SMA BOPKRI 1 Yogyakarta mempunyai layanan pendidikan unggulan BOSA-AIS Educational Program. BOSA-AIS Educational Program merup...</p>
+                    <div class=button>
+                        <a href="http://localhost:8000/blog/detail/pembelajaran-bosa-ais-educational-program-di-australia" class=btn> Baca Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                <div class="col-lg-6 col-12">
+
+            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                <div class=image>
+                    
+                    <a href="http://localhost:8000/blog/detail/pawai-budaya-guru-dan-karyawan-sma-bosa">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478564.jpeg");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -412,14 +519,14 @@
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Jumat, 16 Sep 2016</a>
+                                <a href="javascript:void(0)">Jumat, 2 Jun 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/pelantikan-pengurus-dan-anggota-jurnalistik-periode-2017/2018">PELANTIKAN PENGURUS DAN ANGGOTA JURNALISTIK PERIODE 2017/2018</a></h4>
-                    <p>Ekstrakurikuler Jurnalistik SMA BOPKRI 1 kembali mengadakan Pelantikan Pengurus dan Anggota Jurnalistik periode 2017/2018 yang kali ini berlokasi di A...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/pawai-budaya-guru-dan-karyawan-sma-bosa">PAWAI BUDAYA GURU DAN KARYAWAN SMA BOSA</a></h4>
+                    <p>Para guru dan karyawan SMA BOSA mengikuti pawai budaya dalam rangka Festival Undhuh-Undhuh Kelurahan Klitren dan Perayaan Pentakosta GKJ Gondokusuman ...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/pelantikan-pengurus-dan-anggota-jurnalistik-periode-2017/2018" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/pawai-budaya-guru-dan-karyawan-sma-bosa" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -430,8 +537,8 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="http://localhost:8000/blog/detail/yjb-nerd-v-band-bosa-yogyakarta">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689434633.jpg");'>
+                    <a href="http://localhost:8000/blog/detail/student-exchange-sma-bosa-x-sondervick-college-2023">
+                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478693.jpeg");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -449,51 +556,14 @@
                                                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Minggu, 12 Jun 2016</a>
+                                <a href="javascript:void(0)">Jumat, 2 Jun 2023</a>
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/yjb-nerd-v-band-bosa-yogyakarta">YJB NERD V BAND BOSA YOGYAKARTA</a></h4>
-                    <p>Di SMA BOSA kini ada band akustik yang tidak kalah tenarnya dengan band akustik lainnya. Sudah tahu mereka? NerdV, begitu nama band akustik BOSA terse...</p>
+                    <h4 class=title><a href="http://localhost:8000/blog/detail/student-exchange-sma-bosa-x-sondervick-college-2023">STUDENT EXCHANGE SMA BOSA X SONDERVICK COLLEGE 2023</a></h4>
+                    <p>Yuk tengok program pertukaran pelajar SMA BOPKRI 1 Yogyakarta dengan Soundervick College di Belanda yang dilakukan setiap tahun dan dapat diikuti oleh...</p>
                     <div class=button>
-                        <a href="http://localhost:8000/blog/detail/yjb-nerd-v-band-bosa-yogyakarta" class=btn> Baca Lebih Lanjut</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-                <div class="col-lg-6 col-12">
-
-            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                <div class=image>
-                    
-                    <a href="http://localhost:8000/blog/detail/wisuda-100%-sma-bopkri-1-yogyakarta">
-                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689434348.jpg");'>
-                            <div class="thumbnail-content">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class=content-body>
-                    <div class=meta-data>
-                        <ul>
-                            <li>
-                                <i class="lni lni-tag"></i>
-                                                                    <a href="javascript:void(0)">Kegiatan</a>
-                                                            </li>
-                            <li>
-                                <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">Kamis, 12 Mei 2016</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class=title><a href="http://localhost:8000/blog/detail/wisuda-100%-sma-bopkri-1-yogyakarta">WISUDA 100% SMA BOPKRI 1 YOGYAKARTA</a></h4>
-                    <p>SMA BOPKRI 1 Yogyakarta mewisuda 230 siswa Klas XII-nya yang lulus 100 % sekaligus Penyerahan Kembali kepada orang tua di gedung Graha Sarina Vidi, Ka...</p>
-                    <div class=button>
-                        <a href="http://localhost:8000/blog/detail/wisuda-100%-sma-bopkri-1-yogyakarta" class=btn> Baca Lebih Lanjut</a>
+                        <a href="http://localhost:8000/blog/detail/student-exchange-sma-bosa-x-sondervick-college-2023" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
@@ -502,9 +572,9 @@
                 <div class="pagination center">
     <ul class="pagination-list">
                             
-                                                                        <li><a href="http://localhost:8000/blog?page=1">1</a></li>
+                                                                        <li class="active"><a href=" http://localhost:8000/blog?page=1 ">1</a></li>
                                                                                 <li><a href="http://localhost:8000/blog?page=2">2</a></li>
-                                                                                <li class="active"><a href=" http://localhost:8000/blog?page=3 ">3</a></li>
+                                                                                <li><a href="http://localhost:8000/blog?page=3">3</a></li>
                                                             </ul>
 </div>
  
