@@ -20,7 +20,8 @@ class ImageSliderController extends Controller
 
     public function datatbleImageSlider()
     {
-        $fetch = ImageSlider::get()
+        $fetch = ImageSlider::whereIn('status', ['Publish', 'Draft'])
+            ->get()
             ->toArray();
 
         $i = 0;
@@ -119,7 +120,7 @@ class ImageSliderController extends Controller
 
             $image_slider->title = $request->title_slider ?? $image_slider->title;
             $image_slider->description = $request->description_slider ?? $image_slider->description;
-            $image_slider->title = $fileName ?? $image_slider->image;
+            $image_slider->image = $fileName ?? $image_slider->image;
             $image_slider->save();
 
             return response()->json([
@@ -131,5 +132,19 @@ class ImageSliderController extends Controller
         }catch(\Exception $e){
             return redirect()->back();
         }
+    }
+
+    public function delete($id)
+    {
+        ImageSlider::where('id', $id)
+            ->update([
+                'status' => 'Delete'
+            ]);
+        
+        return response()->json([
+            'status'    => 'success',
+            'code'  => 200,
+            'message'   => 'Success delete slide!'
+        ]);
     }
 }

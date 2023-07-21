@@ -80,7 +80,7 @@ Master Kategori
                     formData.append('image', imageFile);
 
                     $.ajax({
-                        url: '{{ route('admin.image-slider.store').'?_token='.csrf_token() }}',
+                        url: '{{ route('admin.image-slider.update', $image_slider->id).'?_token='.csrf_token() }}',
                         type: "POST",
                         data: formData,
                         processData: false,

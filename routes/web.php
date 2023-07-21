@@ -53,6 +53,8 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::get('/datatable', [ImageSliderController::class, 'datatbleImageSlider'])->name('admin.image-slider.datatable');
         Route::get('/create', [ImageSliderController::class, 'create'])->name('admin.image-slider.add');
         Route::get('/edit/{id}', [ImageSliderController::class, 'edit'])->name('admin.image-slider.edit');
+        Route::post('/update/{id}', [ImageSliderController::class, 'update'])->name('admin.image-slider.update');
+        Route::delete('/delete/{id}', [ImageSliderController::class, 'delete'])->name('admin.image-slider.delete');
         Route::post('/store', [ImageSliderController::class, 'store'])->name('admin.image-slider.store');
     });
     Route::prefix('about-school')->group(function () {

@@ -64,7 +64,7 @@ Master Kategori
 </script>
 <script>
     $(function() {
-        $('#get-categories').on('click', '.delete-category', function() {
+        $('#get-image-slider').on('click', '.delete-category', function() {
             var id = $(this).data('id');
 
             Swal.fire({
@@ -82,7 +82,7 @@ Master Kategori
                 allowOutsideClick: () => !Swal.isLoading(),
                 preConfirm: () => {
                     return $.ajax({
-                        url: '/bosa-admin/master-categories/delete/'+id,
+                        url: '/bosa-admin/image-slider/delete/'+id,
                         type: 'DELETE',
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
