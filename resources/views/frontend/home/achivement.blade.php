@@ -21,6 +21,17 @@
         font-size: 20px;
         margin-top: 10px;
     }
+    .content-title{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #375bcd;
+        background-color: #FFF000;
+        font-size: 20px;
+    }
+    .content-title a:hover{
+        color: #000;
+    } 
     @media only screen and (min-width: 330px) and (max-width: 470px) {
         .bosa-title h2{
             width: 100%;
@@ -50,7 +61,7 @@
                 <div class=row>
                     <div class=col-12>
                         <div class=bosa-title>
-                            <h2 class="wow fadeInUp" data-wow-delay=.4s>KEGIATAN BOSA</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=.4s>KEGIATAN B<span style="color: #d7292a">O</span>SA</h2>
                             <h3 class="wow fadeInUp" data-wow-delay=.6s>Informasi Terbaru tentang berbagai macam kegiatan di SMA BOPKRI 1 Yogyakarta</h3>
                         </div>
                     </div>
@@ -71,9 +82,9 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class=content-body>
-                                <h4 class=title><a href="#">{{ $activity->post_title }}</a></h4>
-                            </div>
+                            <!-- <div class=content-body> -->
+                                <h4 class=content-title><a href="#">{{ $activity->post_title }}</a></h4>
+                            <!-- </div> -->
                         </div>
 
                     </div>
@@ -86,7 +97,7 @@
                 <div class=row>
                     <div class=col-12>
                         <div class=bosa-title>
-                            <h2 class="wow fadeInUp" data-wow-delay=.4s>BERPRESTASI BERSAMA BOSA</h2>
+                            <h2 class="wow fadeInUp" data-wow-delay=.4s>BERPRESTASI BERSAMA B<span style="color: #d7292a">O</span>SA</h2>
                             <h3 class="wow fadeInUp" data-wow-delay=.6s>Informasi tentang peserta didik, guru, dan karyawan SMA BOPKRI 1 Yogyakarta yang mendapatkan kejuaraan dan penghargaan dibidang akademik dan non-akademik</h3>
                         </div>
                     </div>
@@ -107,9 +118,9 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class=content-body>
-                                <h4 class=title><a href="#">{{ $achievment->title }}</a></h4>
-                            </div>
+                            <!-- <div class=content-body> -->
+                                <h4 class="content-title"><a href="#">{{ $achievment->title }}</a></h4>
+                            <!-- </div> -->
                         </div>
 
                     </div>

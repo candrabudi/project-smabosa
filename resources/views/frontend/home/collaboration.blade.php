@@ -4,6 +4,7 @@
         width: 100%;
         height: 300px;
         background-color: #375bcd;
+        border-bottom: 15px solid #fff000;
     }
 
     .collaboration .container-collaboration {
