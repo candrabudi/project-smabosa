@@ -24,10 +24,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}" />
     <style>
         .hero-area{
-            background-image: url('/frontend/images/hero/bg-01.jpeg'); 
             background-size: 100%;
             background-position: right center;
-            padding: 50px;
+            /* padding: 50px; */
             box-sizing: border-box;
         }
         .hero-area .overlay::before {
@@ -36,13 +35,12 @@
         } 
         .hero-container{
             width: 100%;
-            border-radius: 10px;
         }
         .hero-area .hero-text {
             float: none;
             text-align: center;
             margin-top: 150px !important;
-            height: 200px;
+            height: 400px;
         }
         .thumbnail-post{
             width: 100%;

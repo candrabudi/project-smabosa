@@ -5,11 +5,8 @@ Home - Smabosa
 @endsection
 
 @section('content')
-@include('frontend.home.hero_slider')
-@include('frontend.home.program_study')
-@include('frontend.home.about')
-@include('frontend.home.articles')
-@include('frontend.home.pcpdb')
-@include('frontend.home.event')
-@include('frontend.home.bosa_achievment')
+@include('frontend.home.hero')
+@include('frontend.home.collaboration')
+@include('frontend.home.information')
+@include('frontend.home.achivement')
 @endsection

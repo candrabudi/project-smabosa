@@ -24,10 +24,18 @@ class LandingpageController extends Controller
         $articles = Post::where('post_status', 'Publish')
             ->orderBy('post_date', 'DESC')
             ->get()
-            ->take(6);
+            ->take(3);
         $events = Event::where('status', 'Publish')
             ->get()
             ->take(2);
+        $activities = Post::select('posts.*')
+            ->join('post_categories as pc', 'pc.post_id','=', 'posts.id' )
+            ->join('master_categories as mc', 'mc.id', '=', 'pc.master_category_id')
+            ->where('name', 'LIKE', '%kegiatan%')
+            ->where('post_status', 'Publish')
+            ->with('category')
+            ->orderby('post_date','DESC')
+            ->paginate(3);
         $about = AboutSchool::first();
         if(count($events) > 1){
             $eventLasts = Event::where('status', 'Publish')
@@ -40,7 +48,7 @@ class LandingpageController extends Controller
             $eventLasts = [];
         }
         return view('frontend.index', compact(
-            'image_sliders', 'school_achievements', 'articles', 'events', 'eventLasts', 'about'
+            'image_sliders', 'school_achievements', 'articles', 'events', 'eventLasts', 'about', 'activities'
         ));
     }
 

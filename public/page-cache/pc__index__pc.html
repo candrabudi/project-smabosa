@@ -25,10 +25,9 @@
     <link rel="stylesheet" href="http://localhost:8000/frontend/css/main.css" />
     <style>
         .hero-area{
-            background-image: url('/frontend/images/hero/bg-01.jpeg'); 
             background-size: 100%;
             background-position: right center;
-            padding: 50px;
+            /* padding: 50px; */
             box-sizing: border-box;
         }
         .hero-area .overlay::before {
@@ -37,13 +36,12 @@
         } 
         .hero-container{
             width: 100%;
-            border-radius: 10px;
         }
         .hero-area .hero-text {
             float: none;
             text-align: center;
             margin-top: 150px !important;
-            height: 200px;
+            height: 400px;
         }
         .thumbnail-post{
             width: 100%;
@@ -95,7 +93,150 @@
             }
         }
     </style>
-    </head>
+    <style>
+    .collaboration {
+        width: 100%;
+        height: 300px;
+        background-color: #375bcd;
+    }
+
+    .collaboration .container-collaboration {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .collaboration .container-collaboration .collaboration-title {
+        text-align: center;
+        width: 35%;
+        margin: auto;
+
+    }
+
+    .collaboration .container-collaboration .collaboration-title h2 {
+        color: #375bcd;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #fff000;
+        border-radius: 4px;
+    }
+
+    .collaboration .container-collaboration .content-collaboration {
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 15px;
+    }
+
+    .collaboration .container-collaboration .content-collaboration .box-program-reguler {
+        line-height: 300px !important;
+        text-align: center;
+        width: 100%;
+        min-height: 40px;
+        background-color: #fff000;
+        margin-top: 50px;
+        border-radius: 4px;
+    }
+
+    .box-program-reguler h3 {
+        color: #375bcd;
+    }
+
+    .collaboration .container-collaboration .content-collaboration .box-program-ais {
+        line-height: 300px !important;
+        text-align: center;
+        width: 100%;
+        min-height: 40px;
+        background-color: #fff000;
+        margin-top: 30px;
+        border-radius: 4px;
+    }
+
+    .box-program-ais h3 {
+        color: #375bcd;
+    }
+
+    .collaboration .container-collaboration .content-collaboration img {
+        width: 100px;
+    }
+
+    @media only screen and (min-width: 330px) and (max-width: 470px) {
+        .collaboration {
+            width: 100%;
+            min-height: 300px!important;
+            background-color: #375bcd;
+        }
+
+        .collaboration .container-collaboration {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .collaboration .container-collaboration .collaboration-title {
+            text-align: center;
+            width: 100%!important;
+            margin: auto;
+
+        }
+
+        .collaboration .container-collaboration .collaboration-title h2 {
+            color: #375bcd;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff000;
+            border-radius: 4px;
+            font-size: 24px!important;
+        }
+
+        .collaboration .container-collaboration .content-collaboration {
+            padding: 0px!important;
+            box-sizing: border-box;
+            margin-top: 15px
+        }
+
+        .collaboration .container-collaboration .content-collaboration .box-program-reguler {
+            line-height: 300px !important;
+            text-align: center;
+            width: 100%;
+            min-height: 40px;
+            background-color: #fff000;
+            margin-top: 50px;
+            border-radius: 4px;
+            padding: 10px!important;
+        }
+
+        .box-program-reguler h3 {
+            color: #375bcd;
+            font-size: 20px!important;
+        }
+
+        .collaboration .container-collaboration .content-collaboration .box-program-ais {
+            line-height: 300px !important;
+            text-align: center;
+            width: 100%;
+            min-height: 40px;
+            background-color: #fff000;
+            margin-top: 30px;
+            border-radius: 4px;
+            padding: 10px!important;
+        }
+
+        .box-program-ais h3 {
+            color: #375bcd;
+            font-size: 20px!important;
+        }
+
+        .collaboration .container-collaboration .content-collaboration img {
+            width: 100px;
+            display: none;
+        }
+    }
+</style>
+</head>
 
 <body><div class="preloader">
     <div class="preloader-inner">
@@ -179,22 +320,7 @@
 <section class="hero-area overlay">
     <div class="hero-slider">
                 <div class="hero-container">
-            <div class="hero-inner" style='background-image: url("http://localhost:8000/images/image_slider/image_slider_1689479030.jpeg");'>
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-lg-8 offset-lg-2 col-md-12 co-12">
-                            <div class="home-slider">
-                                <div class="hero-text">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="hero-container">
-            <div class="hero-inner" style='background-image: url("http://localhost:8000/images/image_slider/image_slider_1689493877.jpeg");'>
+            <div class="hero-inner" style='background-image: url("http://localhost:8000/images/image_slider/image_slider_1689922224.png");'>
                 <div class="container">
                     <div class="row ">
                         <div class="col-lg-8 offset-lg-2 col-md-12 co-12">
@@ -209,214 +335,216 @@
             </div>
         </div>
             </div>
-</section><!-- <section class="program-study">
-
-    <div class="container-2">
-        <h2>PROGRAM AKADEMIK</h2>
-
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <div class="row" style="height: 200px; border-right: 1px solid #fff">
-                    <div class="col-md-9">
-                        <h3 style="margin-top: 80px;">PROGRAM REGULER</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="box-img-program">
-                            <img src="https://cdn4.vectorstock.com/i/1000x1000/58/83/opened-cardboard-package-box-flat-design-style-vector-20895883.jpg" alt="">
+</section><section class="collaboration">
+    <div class="container-collaboration">
+        <div class="collaboration-title">
+            <h2>PROGRAM AKADEMIK</h2>
+        </div>
+        <div class="content-collaboration">
+            <div class="row">
+                <div class="col-md">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="box-program-reguler">
+                                <h3>PROGRAM REGULER</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row" style="height: 200px; border-left: 1px solid #fff">
-                    <div class="col-md-9">
-                        <h3 style="margin-top: 50px">BOSA-AIS</h3>
-                        <h3>Educational Program</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="box-img-program">
-                            <img src="https://cdn4.vectorstock.com/i/1000x1000/58/83/opened-cardboard-package-box-flat-design-style-vector-20895883.jpg" alt="">
+                <div class="col-md">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="box-program-ais">
+                                <h3>BOSA-AIS<br> EDUCATIONAL PROGRAM</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section><style>
+    .information-first {
+        width: 100%;
+        min-height: 800px;
+    }
 
-</section> -->
+    .information-second {
+        width: 100%;
+        min-height: 500px;
+    }
 
-<section class="services section">
-    <div class=container>
-        <div class=row>
-            <div class=col-12>
-                <div class=section-title>
-                    <h2 class="wow fadeInUp" data-wow-delay=.4s>PROGRAM AKADEMIK SMABOSA</h2>
-                </div>
-            </div>
-        </div>
-        <div class=single-head>
-            <div class=row>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="single-service wow fadeInUp" data-wow-delay=.2s>
-                        <span class=><img src="https://cdn4.vectorstock.com/i/1000x1000/58/83/opened-cardboard-package-box-flat-design-style-vector-20895883.jpg" alt="" style="width: 80px;"></span>
-                        <h3><a href="javascript:void(0)">PROGRAM REGULER</a></h3>
-                        <p></p>
-                        <!-- <div class=button>
-                            <a href="javascript:void(0)" class=btn>Read More</a>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="single-service wow fadeInUp" data-wow-delay=.6s>
-                        <span class=><img src="https://cdn4.vectorstock.com/i/1000x1000/58/83/opened-cardboard-package-box-flat-design-style-vector-20895883.jpg" alt="" style="width: 80px;"></span>
-                        <h3><a href="javascript:void(0)">BOSA-AIS EDUCATIONAL PROGRAM</a></h3>
-                        <p></p>
-                        <!-- <div class=button>
-                            <a href="javascript:void(0)" class=btn>Read More</a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><section class="about-us section" style="background-color: #fff;">
+    .information-first h3 {
+        text-align: center;
+        background-color: #375bcd;
+        color: #fff000;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .information-first a:hover {
+        color: #fff;
+    }
+
+    .information-second a:hover {
+        color: #fff;
+    }
+
+    .information-first img {
+        width: 100%;
+    }
+
+    .content-information {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .content-information .thumbnail-information {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .content-information h3 {
+        text-align: center;
+        background-color: #375bcd;
+        color: #fff000;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    @media only screen and (min-width: 330px) and (max-width: 470px) {
+        .information-first {
+            width: 100%;
+            min-height: 200px!important;
+            margin-bottom: 20px!important;
+        }
+        .content-information h3 {
+            font-size: 18px!important;
+        }
+    }
+</style>
+<section class="information section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-12">
-                <div class="about-left">
-                    <div class="about-title align-left">
-                        <span class="wow fadeInDown" data-wow-delay=".2s">Apa itu Smabosa Bopkri 1 Yogyakarta</span>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">SEJARAH SMA BOPKRI 1 YOGYAKARTA</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">Sejak berdiri pada tanggal 1 Agustus 1946 hingga memasuki usia yang ke 74 tahun SMA BOPKRI 1 Yogyakarta yang di kalangan masyarakat lebih dikenal dengan nama SMA BOSA telah melalui perjalanan yang panjang dalam</p>
-                        <div class="button wow fadeInUp" data-wow-delay="1s">
-                            <a href="about-us.html" class="btn">Peserta Didik</a>
-                            <a href="about-us.html" class="btn">Guru</a>
-                            <a href="about-us.html" class="btn">Bosa-ais</a>
-                            <a href="about-us.html" class="btn">Fasilitas</a>
-                            <!-- <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM" class="glightbox video btn"> Play Video<i class="lni lni-play"></i></a> -->
-                        </div>
-                    </div>
+            <div class="col-lg-7">
+                <div class="information-first">
+                    <img src="http://localhost:8000/frontend/images/image-01.jpeg" alt="">
+                    <h3>
+                        <a href="#">EKSTRAKURIKULER</a>
+                    </h3>
                 </div>
             </div>
-            <div class="col-lg-6 col-12">
-                <div class="about-right wow fadeInRight" data-wow-delay=".4s">
-                    <img src="http://localhost:8000/images/about_thumbnail/about_thumbnail_1689478983.jpeg" alt="#">
+            <div class="col-lg-5">
+                <div class="information-second">
+                    <div class="row">
+                        <div class="col-lg-12 mb-3">
+                            <div class="content-information">
+                                <div class="thumbnail-information" style="background-image: url('http://localhost:8000/frontend/images/image-02.jpeg');">
+
+                                </div>
+                                <h3>
+                                    <a href="#">GURU & KARYAWAN</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <div class="content-information">
+                                <div class="thumbnail-information" style="background-image: url('http://localhost:8000/frontend/images/image-02.jpeg');">
+
+                                </div>
+                                <h3>
+                                    <a href="#">KERJASAMA INTERNASIONAL</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <div class="content-information">
+                                <div class="thumbnail-information" style="background-image: url('http://localhost:8000/frontend/images/image-02.jpeg');">
+
+                                </div>
+                                <h3>
+                                    <a href="#">FASILITAS</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section><section class="bosa-activity latest-news-area section">
+</section><style>
+    .bosa-title{
+        margin-bottom: 20px;
+    }
+    .bosa-title h2{
+        width: 50%;
+        box-sizing: border-box;
+        background-color: #375bcd;
+        font-size: 35px;
+        padding: 10px;
+        border-radius: 8px;
+        line-height: 40px;
+        text-transform: capitalize;
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+    }
+    .bosa-title h3{
+        text-align: left;
+        font-weight: 400;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    @media only screen and (min-width: 330px) and (max-width: 470px) {
+        .bosa-title h2{
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #375bcd;
+            font-size: 22px;
+            padding: 10px;
+            border-radius: 8px;
+            line-height: 40px;
+            text-transform: capitalize;
+            position: relative;
+            font-weight: 700;
+            color: #fff;
+        }
+        .bosa-title h3{
+            text-align: left;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+</style>
+<section class="latest-news-area section">
     <div class="container">
         <div class="row">
-            <div class="latest-news-area section">
-                <div class=container>
-                    <div class=row>
-                        <div class=col-12>
-                            <div class=section-title>
-                                <h2 class="wow fadeInUp" data-wow-delay=.4s>Artikel Terbaru</h2>
-                                <p class="wow fadeInUp" data-wow-delay=.6s>Informasi Terbaru Berbagai Kegiatan di SMA BOPKRI 1 YOGYAKARTA</p>
-                            </div>
+            <div class=container>
+                <div class=row>
+                    <div class=col-12>
+                        <div class=bosa-title>
+                            <h2 class="wow fadeInUp" data-wow-delay=.4s>KEGIATAN BOSA</h2>
+                            <h3 class="wow fadeInUp" data-wow-delay=.6s>Informasi Terbaru tentang berbagai macam kegiatan di SMA BOPKRI 1 Yogyakarta</h3>
                         </div>
                     </div>
-                    <div class=row>
-                                                <div class="col-lg-4 col-md-6 col-12 mt-3">
+                </div>
+                <div class=row>
+                                        <div class="col-lg-4 col-md-6 col-12">
 
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689335549.png");'>
-                                        <div class="thumbnail-content">
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">Jumat, 14 Jul 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h4 class=title><a href="http://localhost:8000/blog/detail/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024">
-                                        PEDOMAN DAN PENGISIAN FORMULIR PCPDB SMA BOSA TAHUN PELAJARAN 2023-2024
-                                        ...                                    </a></h4>
-                                    <p>Untuk Tahun Pelajaran 2023 – 2024 sekolah memberikan apresiasi bagi Calon Peserta Didik dengan ket....</p>
-                                    <div class=button>
-                                        <a href="http://localhost:8000/blog/detail/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024" class=btn>Baca</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mt-3">
-
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689433601.jpeg");'>
-                                        <div class="thumbnail-content">
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">Sabtu, 24 Jun 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h4 class=title><a href="http://localhost:8000/blog/detail/last-call-to-join-sma-bosa-yogyakarta">
-                                        LAST CALL TO JOIN SMA BOSA YOGYAKARTA
-                                        ...                                    </a></h4>
-                                    <p>Masih belum menentukan mau melanjutkan masa putih abu-abu di mana?
-Tenang, Pendaftaran Calon Pesert....</p>
-                                    <div class=button>
-                                        <a href="http://localhost:8000/blog/detail/last-call-to-join-sma-bosa-yogyakarta" class=btn>Baca</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mt-3">
-
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689433474.jpeg");'>
-                                        <div class="thumbnail-content">
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">Selasa, 20 Jun 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h4 class=title><a href="http://localhost:8000/blog/detail/sma-bosa:-satuan-pendidikan-aman-bencana">
-                                        SMA BOSA: SATUAN PENDIDIKAN AMAN BENCANA
-                                        ...                                    </a></h4>
-                                    <p>SMA BOSA merupakan sekolah yang termasuk dalam SPAB. Program SPAB bertujuan untuk membangun budaya s....</p>
-                                    <div class=button>
-                                        <a href="http://localhost:8000/blog/detail/sma-bosa:-satuan-pendidikan-aman-bencana" class=btn>Baca</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mt-3">
-
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
                                     <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478816.jpeg");'>
                                         <div class="thumbnail-content">
                                             <p>
@@ -424,30 +552,19 @@ Tenang, Pendaftaran Calon Pesert....</p>
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">Selasa, 20 Jun 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h4 class=title><a href="http://localhost:8000/blog/detail/latihan-gabungan-pramuka-dan-pecinta-alam-sma-bosa">
-                                        LATIHAN GABUNGAN PRAMUKA DAN PECINTA ALAM SMA BOSA
-                                        ...                                    </a></h4>
-                                    <p>Gerakan Pramuka SMA BOPKRI 1 Yogyakarta dan Ekstrakurikuler Pecinta Alam SMA BOSA melaksanakan latih....</p>
-                                    <div class=button>
-                                        <a href="http://localhost:8000/blog/detail/latihan-gabungan-pramuka-dan-pecinta-alam-sma-bosa" class=btn>Baca</a>
-                                    </div>
-                                </div>
+                                </a>
+                            </div>
+                            <div class=content-body>
+                                <h4 class=title><a href="#">LATIHAN GABUNGAN PRAMUKA DAN PECINTA ALAM SMA BOSA</a></h4>
                             </div>
                         </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mt-3">
 
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
+                    </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
                                     <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478779.jpeg");'>
                                         <div class="thumbnail-content">
                                             <p>
@@ -455,293 +572,122 @@ Tenang, Pendaftaran Calon Pesert....</p>
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">Senin, 12 Jun 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h4 class=title><a href="http://localhost:8000/blog/detail/rapat-kerja-guru-dan-karyawan-sma-bosa-tahun-2023">
-                                        RAPAT KERJA GURU DAN KARYAWAN SMA BOSA TAHUN 2023
-                                        ...                                    </a></h4>
-                                    <p>SMA BOPKRI 1 Yogyakarta sudah lebih awal menyelenggarakan rapat kerja untuk mengevaluasi dan mempers....</p>
-                                    <div class=button>
-                                        <a href="http://localhost:8000/blog/detail/rapat-kerja-guru-dan-karyawan-sma-bosa-tahun-2023" class=btn>Baca</a>
-                                    </div>
-                                </div>
+                                </a>
+                            </div>
+                            <div class=content-body>
+                                <h4 class=title><a href="#">RAPAT KERJA GURU DAN KARYAWAN SMA BOSA TAHUN 2023</a></h4>
                             </div>
                         </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mt-3">
 
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689337157.jpeg");'>
+                    </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478564.jpeg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class=content-body>
-                                    <div class=meta-data>
-                                        <ul>
-                                            <li>
-                                                <i class="lni lni-calendar"></i>
-                                                <a href="javascript:void(0)">Jumat, 2 Jun 2023</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h4 class=title><a href="http://localhost:8000/blog/detail/penyerahan-kembali-purnaiswa-tahun-pelajaran-2022-2023-sma-bosa">
-                                        PENYERAHAN KEMBALI PURNAISWA TAHUN PELAJARAN 2022-2023 SMA BOSA
-                                        ...                                    </a></h4>
-                                    <p>Bertepatan dengan Hari Kebangkitan Nasional, SMA BOPKRI 1 Yogyakarta menyelenggarakan penyerahan kem....</p>
-                                    <div class=button>
-                                        <a href="http://localhost:8000/blog/detail/penyerahan-kembali-purnaiswa-tahun-pelajaran-2022-2023-sma-bosa" class=btn>Baca</a>
-                                    </div>
-                                </div>
+                                </a>
+                            </div>
+                            <div class=content-body>
+                                <h4 class=title><a href="#">PAWAI BUDAYA GURU DAN KARYAWAN SMA BOSA</a></h4>
                             </div>
                         </div>
-                                            </div>
-                </div>
+
+                    </div>
+                                    </div>
             </div>
         </div>
-    </div>
-</section><section class="call-action section overlay">
-    <div class=container>
-        <div class="row ">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                <div class=call-content>
-                    <span>Ayo mulai daftarkan diri anda menjadi siswa SMABOSA</span>
-                    <h2>PCPDB SMABOSA</h2>
-                    <p>Learn about how them you went down prying the wedding ring off his cold, dead finger. I don't
-                        know what you did, Fry, but once again, you screwed up!</p>
-                    <div class=button>
-                        <a href="javascript:void(0)" class=btn>Daftar sekarang</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><section class="events section">
-    <div class=container>
-        <div class=row>
-            <div class=col-12>
-                <div class=section-title>
-                    <div class="section-icon wow zoomIn" data-wow-delay=.4s>
-                        <i class="lni lni-bookmark"></i>
-                    </div>
-                    <h2 class="wow fadeInUp" data-wow-delay=.4s>Agenda</h2>
-                    <p class="wow fadeInUp" data-wow-delay=.6s>There are many variations of passages of Lorem
-                        Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-            </div>
-        </div>
-        <div class=row>
-                        <div class="col-lg-4 col-md-6 col-12">
-
-                <div class="single-event wow fadeInUp" data-wow-delay=.2s>
-                    <div class=event-image>
-                        <a href=event-details.html>
-                            <div class="thumbnail-event" style='background-image: url("http://localhost:8000/images/event_thumbnail/event_thumbnail_1689479623.jpg");'>
-                                <div class="thumbnail-content">
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <p class=date>15
-                            <span>Oct</span>
-                        </p>
-                    </div>
-                    <div class=content>
-                        <h3><a href=event-details.html>VIRTUAL EDUFAIR</a></h3>
-                        <p>Virtual Edufair SMA BOPKRI 1 Yogyakarta tahun 2020 mengusung tema “Set Your Goals, Make
-Your Plan...</p>
-                    </div>
-                    <div class=bottom-content>
-                        <span class=time>
-                            <i class="lni lni-timer"></i>
-                            <a href="javascript:void(0)">09:00</a>
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-
-                <div class="single-event wow fadeInUp" data-wow-delay=.2s>
-                    <div class=event-image>
-                        <a href=event-details.html>
-                            <div class="thumbnail-event" style='background-image: url("http://localhost:8000/images/event_thumbnail/event_thumbnail_1689480012.png");'>
-                                <div class="thumbnail-content">
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <p class=date>16
-                            <span>Aug</span>
-                        </p>
-                    </div>
-                    <div class=content>
-                        <h3><a href=event-details.html>PEMENTASAN TEATER GENDING WARINGIN SMA BOPKRI 1 YOGYAKARTA</a></h3>
-                        <p>Ada banyak cara dalam memperingati suatu hari bersejarah dalam perjalanan hidup, hal itu perlu diray...</p>
-                    </div>
-                    <div class=bottom-content>
-                        <span class=time>
-                            <i class="lni lni-timer"></i>
-                            <a href="javascript:void(0)">09:00</a>
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-                        <div class="col-lg-4 col-md-12 col-12">
-                                <div class="single-event short wow fadeInUp" data-wow-delay=.6s>
-                    <div class=content>
-                        <p class=date>15<span>Oct</span></p>
-                        <h3><a href=event-details.html>VIRTUAL EDUFAIR...</a></h3>
-                        <p>Virtual Edufair SMA BOPKRI 1 Yogyakarta tahun 2020 mengusung tema “Set Your Goals, Make</p>
-                    </div>
-                    <div class=bottom-content>
-                        <span class=time>
-                            <i class="lni lni-timer"></i>
-                            <a href="javascript:void(0)">09:00</a>
-                        </span>
-                    </div>
-                </div>
-                                <div class="single-event short wow fadeInUp" data-wow-delay=.6s>
-                    <div class=content>
-                        <p class=date>10<span>Sep</span></p>
-                        <h3><a href=event-details.html>PERTEMUAN ORANG TUA PESERTA DI...</a></h3>
-                        <p>Pertemuan orang tua peserta didik di awal tahun pelajaran 2020-2021 ini bertujuan untuk me</p>
-                    </div>
-                    <div class=bottom-content>
-                        <span class=time>
-                            <i class="lni lni-timer"></i>
-                            <a href="javascript:void(0)">12:00</a>
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section><section class="latest-news-area section">
-    <div class="container">
-        <div class="row">
-            <div class="latest-news-area section">
-                <div class=container>
-                    <div class=row>
-                        <div class=col-12>
-                            <div class=section-title>
-                                <h2 class="wow fadeInUp" data-wow-delay=.4s>BERPRESTASI BERSAMA BOSA</h2>
-                                <p class="wow fadeInUp" data-wow-delay=.6s>Informasi Tentang Peserta didik, guru, dan Karyawan SMA BOPKRI 1 YOGYAKARTA</p>
-                            </div>
+        <div class="row mt-5">
+            <div class=container>
+                <div class=row>
+                    <div class=col-12>
+                        <div class=bosa-title>
+                            <h2 class="wow fadeInUp" data-wow-delay=.4s>BERPRESTASI BERSAMA BOSA</h2>
+                            <h3 class="wow fadeInUp" data-wow-delay=.6s>Informasi tentang peserta didik, guru, dan karyawan SMA BOPKRI 1 Yogyakarta yang mendapatkan kejuaraan dan penghargaan dibidang akademik dan non-akademik</h3>
                         </div>
                     </div>
-                    <div class=row>
-                                                <div class="col-lg-4 col-md-6 col-12">
+                </div>
+                <div class=row>
+                                        <div class="col-lg-4 col-md-6 col-12">
 
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <a href='#'>
-                                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689503888.jpg");'>
-                                            <div class="thumbnail-content">
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                                </p>
-                                            </div>
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689503888.jpg");'>
+                                        <div class="thumbnail-content">
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                            </p>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class=content-body>
-                                    <h4 class=title><a href=blog-single-sidebar.html>LOMBA POSTER LINGKUNGAN HIDUP ANTAR PELAJAR SMA/SMK SE-DIY TAHUN 2017</a></h4>
-                                    <p>Lomba ini bisa diikuti secara individu atau kelompok dan Ian memilih ikut lomba ini dalam bentuk kel....</p>
-                                    <div class=button>
-                                        <a href="#" class=btn>Read More</a>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-
+                            <div class=content-body>
+                                <h4 class=title><a href=blog-single-sidebar.html>LOMBA POSTER LINGKUNGAN HIDUP ANTAR PELAJAR SMA/SMK SE-DIY TAHUN 2017</a></h4>
+                            </div>
                         </div>
-                                                <div class="col-lg-4 col-md-6 col-12">
 
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <a href='#'>
-                                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689503594.jpg");'>
-                                            <div class="thumbnail-content">
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                                </p>
-                                            </div>
+                    </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689503594.jpg");'>
+                                        <div class="thumbnail-content">
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                            </p>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class=content-body>
-                                    <h4 class=title><a href=blog-single-sidebar.html>JUARA 3 OLIMPIADE FISIKA 2016 TINGKAT PROVINSI DI. YOGYAKARTA</a></h4>
-                                    <p>Di akhir tahun 2016 lalu, Calvin Halim (XII MIPA 4) yang mengikuti Olimpiade Fisika tingkat Provinsi....</p>
-                                    <div class=button>
-                                        <a href="#" class=btn>Read More</a>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-
+                            <div class=content-body>
+                                <h4 class=title><a href=blog-single-sidebar.html>JUARA 3 OLIMPIADE FISIKA 2016 TINGKAT PROVINSI DI. YOGYAKARTA</a></h4>
+                            </div>
                         </div>
-                                                <div class="col-lg-4 col-md-6 col-12">
 
-                            <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
-                                <div class=image>
-                                    <a href='#'>
-                                        <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689495954.jpg");'>
-                                            <div class="thumbnail-content">
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
-                                                </p>
-                                            </div>
+                    </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689495954.jpg");'>
+                                        <div class="thumbnail-content">
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                            </p>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class=content-body>
-                                    <h4 class=title><a href=blog-single-sidebar.html>PENELITIAN EMPAT SISWA SMA BOPKRI 1 RAIH MEDALI EMAS &amp; PERAK PADA OPSI TINGKAT DIY 2016</a></h4>
-                                    <p>Dua karya Penelitian berjudul “Kotak Perkalian Ajaib Solusi Perkalian Langsung N Bilangan Berdigit....</p>
-                                    <div class=button>
-                                        <a href="#" class=btn>Read More</a>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-
+                            <div class=content-body>
+                                <h4 class=title><a href=blog-single-sidebar.html>PENELITIAN EMPAT SISWA SMA BOPKRI 1 RAIH MEDALI EMAS &amp; PERAK PADA OPSI TINGKAT DIY 2016</a></h4>
+                            </div>
                         </div>
-                                            </div>
-                </div>
+
+                    </div>
+                                    </div>
             </div>
         </div>
     </div>
 </section>
-<!-- End Clients Area -->
-
-<!-- Start Footer Area -->
 <footer class="footer">
-    <!-- Start Middle Top -->
     <div class="footer-middle">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
                     <div class="f-about single-footer">
                         <div class="logo">
                             <a href="index.html"><img src="frontend/images/logo/logo.png" alt="Logo"></a>
                         </div>
-                        <p>Nemo enim enim voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequ magni dolores eos qui ratione.</p>
                         <div class="footer-social">
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
@@ -751,7 +697,6 @@ Your Plan...</p>
                             </ul>
                         </div>
                     </div>
-                    <!-- End Single Widget -->
                 </div>
               
             </div>
@@ -771,7 +716,6 @@ Your Plan...</p>
             </div>
         </div>
     </div>
-    <!-- End Footer Middle -->
 </footer><!--/ End Footer Area -->
 
     <!-- ========================= scroll-top ========================= -->

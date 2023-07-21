@@ -1,19 +1,12 @@
-<!-- End Clients Area -->
-
-<!-- Start Footer Area -->
 <footer class="footer">
-    <!-- Start Middle Top -->
     <div class="footer-middle">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Single Widget -->
                     <div class="f-about single-footer">
                         <div class="logo">
                             <a href="index.html"><img src="frontend/images/logo/logo.png" alt="Logo"></a>
                         </div>
-                        <p>Nemo enim enim voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequ magni dolores eos qui ratione.</p>
                         <div class="footer-social">
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
@@ -23,7 +16,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- End Single Widget -->
                 </div>
               
             </div>
@@ -43,5 +35,4 @@
             </div>
         </div>
     </div>
-    <!-- End Footer Middle -->
 </footer>
