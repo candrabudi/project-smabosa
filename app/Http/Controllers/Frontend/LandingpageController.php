@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\AboutSchool;
 use App\Models\Event;
+use App\Models\Extracurricular;
 use App\Models\ImageSlider;
 use App\Models\Post;
 use App\Models\SchoolAchievement;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 use DB;
 
@@ -110,5 +112,38 @@ class LandingpageController extends Controller
         return view('frontend.activity.index', compact([
             'activities','recent_activities'
         ]));
+    }
+
+    public function teacher()
+    {
+        $teachers = Teacher::where('status', 'Publish')
+            ->paginate(4);
+        return view('frontend.teacher.index', compact('teachers'));
+    }
+    public function Extracurricular()
+    {
+        $extracurriculars = Extracurricular::where('status', 'Publish')
+            ->paginate(10);
+        return view('frontend.extracurricular.index', compact('extracurriculars'));
+    }
+    public function ExtracurricularDetail($slug)
+    {
+        $extracurricular = Extracurricular::where('slug', $slug)
+            ->where('status', 'Publish')
+            ->first();
+        return view('frontend.extracurricular.detail', compact('extracurricular'));
+    }
+    public function Achivement()
+    {
+        $achivements = SchoolAchievement::where('status', 'Publish')
+            ->paginate(10);
+        return view('frontend.achivement.index', compact('achivements'));
+    }
+    public function AchivementDetail($slug)
+    {
+        $achivement = SchoolAchievement::where('slug', $slug)
+            ->where('status', 'Publish')
+            ->first();
+        return view('frontend.achivement.detail', compact('achivement'));
     }
 }

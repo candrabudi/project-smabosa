@@ -13,6 +13,12 @@
 
     <meta name="description" content="" />
     @include('admin.layouts.template.styles')
+    <style>
+        .toast-body{
+            background-color: #FFF;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,6 +26,16 @@
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
             @include('admin.layouts.template.sidebar')
+
+            <div class="bs-toast toast toast-placement-ex m-2" style="border: none;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+                <div class="toast-header p-2" style="border: none; border-radius: 2px;background: #EEE;">
+                    <i class="ti ti-arrows-cross ti-xs me-2"></i>
+                    <div class="me-auto fw-semibold">Something Wrong Error</div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Sepertinya ada masalah internal.</div>
+            </div>
 
             <div class="layout-page">
 

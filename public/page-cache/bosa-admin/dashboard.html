@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">
+    <meta name="csrf-token" content="f7xSkSzHvrJLxYkNN9r76ESsbZV1i1vKIt262fap">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -49,7 +49,14 @@
 
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/animate-css/animate.css" />
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/toastr/toastr.css" />
 
+    <style>
+        .toast-body{
+            background-color: #FFF;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -126,6 +133,12 @@
                 <i class="menu-icon tf-icons ti ti-speakerphone"></i>
                 <div data-i18n="Pengumuman">Pengumuman</div>
             </a>
+        </li> 
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/teacher" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-school"></i>
+                <div data-i18n="Guru">Guru</div>
+            </a>
         </li>
         <li class="menu-item">
             <a href="http://localhost:8000/bosa-admin/event" class="menu-link">
@@ -141,6 +154,16 @@
         </li>
     </ul>
 </aside>
+            <div class="bs-toast toast toast-placement-ex m-2" style="border: none;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+                <div class="toast-header p-2" style="border: none; border-radius: 2px;background: #EEE;">
+                    <i class="ti ti-arrows-cross ti-xs me-2"></i>
+                    <div class="me-auto fw-semibold">Something Wrong Error</div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Sepertinya ada masalah internal.</div>
+            </div>
+
             <div class="layout-page">
 
 
@@ -183,7 +206,7 @@
                         <a class="dropdown-item" href="#">
                             <span class="align-middle">
                                 <form method="post" action="http://localhost:8000/logout">
-                                    <input type="hidden" name="_token" value="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                    <input type="hidden" name="_token" value="f7xSkSzHvrJLxYkNN9r76ESsbZV1i1vKIt262fap">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
                                 </form>
                             </span>
                         </a>

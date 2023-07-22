@@ -82,9 +82,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- <div class=content-body> -->
-                                <h4 class=content-title><a href="#">{{ $activity->post_title }}</a></h4>
-                            <!-- </div> -->
+                            <h4 class=content-title><a href="{{ route('blog.detail', $activity->post_slug) }}">{{ $activity->post_title }}</a></h4>
                         </div>
 
                     </div>
@@ -118,9 +116,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- <div class=content-body> -->
-                                <h4 class="content-title"><a href="#">{{ $achievment->title }}</a></h4>
-                            <!-- </div> -->
+                            <h4 class="content-title"><a href="{{route('achivement.detail', $achievment->slug)}}">{{ $achievment->title }}</a></h4>
                         </div>
 
                     </div>

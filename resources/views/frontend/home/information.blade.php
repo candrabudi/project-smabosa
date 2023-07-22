@@ -69,7 +69,7 @@
                 <div class="information-first">
                     <img src="{{asset('frontend/images/image-01.jpeg')}}" alt="">
                     <h3>
-                        <a href="#">EKSTRAKURIKULER</a>
+                        <a href="{{route('extracurricular')}}">EKSTRAKURIKULER</a>
                     </h3>
                 </div>
             </div>
@@ -82,7 +82,7 @@
 
                                 </div>
                                 <h3>
-                                    <a href="#">GURU & KARYAWAN</a>
+                                    <a href="{{route('teacher')}}">GURU & KARYAWAN</a>
                                 </h3>
                             </div>
                         </div>

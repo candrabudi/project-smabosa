@@ -8,7 +8,7 @@
 </title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="http://127.0.0.1:8000/backend/img/logo/logo-bosa.png" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/backend/img/logo/logo-bosa.png" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Web Font -->
@@ -17,12 +17,12 @@
         rel="stylesheet">
 
     <!-- ========================= CSS here ========================= -->
-    <link rel="stylesheet" href="http://127.0.0.1:8000/frontend/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/frontend/css/LineIcons.2.0.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/frontend/css/animate.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/frontend/css/tiny-slider.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/frontend/css/glightbox.min.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/frontend/css/main.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/animate.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/tiny-slider.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/glightbox.min.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/main.css" />
     <style>
         .hero-area{
             background-size: 100%;
@@ -283,7 +283,7 @@
                 <div class="nav-inner">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="/">
-                            <img src="http://127.0.0.1:8000/frontend/images/logo/logo.png" alt="Logo">
+                            <img src="http://localhost:8000/frontend/images/logo/logo.png" alt="Logo">
                         </a>
                         <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
@@ -293,13 +293,20 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item"><a class="active" href="/">Beranda</a></li>
-                                <li class="nav-item"><a href="http://127.0.0.1:8000/tentang-sekolah">Profile</a></li>
-                                <li class="nav-item"><a href="http://127.0.0.1:8000/agenda">Agenda</a></li>
+                                <li class="nav-item">
+                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profile</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-4">
+                                        <li class="nav-item"><a href="http://localhost:8000/tentang-sekolah">Tentang Sekolah</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/guru">Guru</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/ekstrakurikuler">Ekstrakurikuler</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="http://localhost:8000/agenda">Agenda</a></li>
                                 <li class="nav-item">
                                     <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
-                                        <li class="nav-item"><a href="http://127.0.0.1:8000/blog">Blog</a></li>
-                                        <li class="nav-item"><a href="http://127.0.0.1:8000/kegiatan">Kegiatan</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/blog">Blog</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/kegiatan">Kegiatan</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a href="https://smabosa-yogya.sch.id/2022/08/31/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2022-2024/">PCPDB</a></li>
@@ -321,7 +328,7 @@
 <section class="hero-area overlay">
     <div class="hero-slider">
                 <div class="hero-container">
-            <div class="hero-inner" style='background-image: url("http://127.0.0.1:8000/images/image_slider/image_slider_1689922224.png");'>
+            <div class="hero-inner" style='background-image: url("http://localhost:8000/images/image_slider/image_slider_1689922224.png");'>
                 <div class="container">
                     <div class="row ">
                         <div class="col-lg-8 offset-lg-2 col-md-12 co-12">
@@ -351,7 +358,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="http://127.0.0.1:8000/backend/img/logo/logo-bosa.png" alt="">
+                            <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -363,7 +370,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="http://127.0.0.1:8000/backend/img/logo/logo-bosa.png" alt="">
+                            <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -439,9 +446,9 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="information-first">
-                    <img src="http://127.0.0.1:8000/frontend/images/image-01.jpeg" alt="">
+                    <img src="http://localhost:8000/frontend/images/image-01.jpeg" alt="">
                     <h3>
-                        <a href="#">EKSTRAKURIKULER</a>
+                        <a href="http://localhost:8000/ekstrakurikuler">EKSTRAKURIKULER</a>
                     </h3>
                 </div>
             </div>
@@ -450,17 +457,17 @@
                     <div class="row">
                         <div class="col-lg-12 mb-3">
                             <div class="content-information">
-                                <div class="thumbnail-information" style="background-image: url('http://127.0.0.1:8000/frontend/images/image-02.jpeg');">
+                                <div class="thumbnail-information" style="background-image: url('http://localhost:8000/frontend/images/image-02.jpeg');">
 
                                 </div>
                                 <h3>
-                                    <a href="#">GURU & KARYAWAN</a>
+                                    <a href="http://localhost:8000/guru">GURU & KARYAWAN</a>
                                 </h3>
                             </div>
                         </div>
                         <div class="col-lg-12 mb-3">
                             <div class="content-information">
-                                <div class="thumbnail-information" style="background-image: url('http://127.0.0.1:8000/frontend/images/image-02.jpeg');">
+                                <div class="thumbnail-information" style="background-image: url('http://localhost:8000/frontend/images/image-02.jpeg');">
 
                                 </div>
                                 <h3>
@@ -470,7 +477,7 @@
                         </div>
                         <div class="col-lg-12 mb-3">
                             <div class="content-information">
-                                <div class="thumbnail-information" style="background-image: url('http://127.0.0.1:8000/frontend/images/image-02.jpeg');">
+                                <div class="thumbnail-information" style="background-image: url('http://localhost:8000/frontend/images/image-02.jpeg');">
 
                                 </div>
                                 <h3>
@@ -557,7 +564,7 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" style='background-image: url("http://127.0.0.1:8000/images/post_thumbnail/post_thumbnail_1689478816.jpeg");'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478816.jpeg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -567,7 +574,7 @@
                                 </a>
                             </div>
                             <!-- <div class=content-body> -->
-                                <h4 class=content-title><a href="#">LATIHAN GABUNGAN PRAMUKA DAN PECINTA ALAM SMA BOSA</a></h4>
+                                <h4 class=content-title><a href="http://localhost:8000/blog/detail/latihan-gabungan-pramuka-dan-pecinta-alam-sma-bosa">LATIHAN GABUNGAN PRAMUKA DAN PECINTA ALAM SMA BOSA</a></h4>
                             <!-- </div> -->
                         </div>
 
@@ -577,7 +584,7 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" style='background-image: url("http://127.0.0.1:8000/images/post_thumbnail/post_thumbnail_1689478779.jpeg");'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478779.jpeg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -587,7 +594,7 @@
                                 </a>
                             </div>
                             <!-- <div class=content-body> -->
-                                <h4 class=content-title><a href="#">RAPAT KERJA GURU DAN KARYAWAN SMA BOSA TAHUN 2023</a></h4>
+                                <h4 class=content-title><a href="http://localhost:8000/blog/detail/rapat-kerja-guru-dan-karyawan-sma-bosa-tahun-2023">RAPAT KERJA GURU DAN KARYAWAN SMA BOSA TAHUN 2023</a></h4>
                             <!-- </div> -->
                         </div>
 
@@ -597,7 +604,7 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" style='background-image: url("http://127.0.0.1:8000/images/post_thumbnail/post_thumbnail_1689478564.jpeg");'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1689478564.jpeg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -607,7 +614,7 @@
                                 </a>
                             </div>
                             <!-- <div class=content-body> -->
-                                <h4 class=content-title><a href="#">PAWAI BUDAYA GURU DAN KARYAWAN SMA BOSA</a></h4>
+                                <h4 class=content-title><a href="http://localhost:8000/blog/detail/pawai-budaya-guru-dan-karyawan-sma-bosa">PAWAI BUDAYA GURU DAN KARYAWAN SMA BOSA</a></h4>
                             <!-- </div> -->
                         </div>
 
@@ -631,7 +638,7 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" style='background-image: url("http://127.0.0.1:8000/images/school_achievement/school_achievement_1689503888.jpg");'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689503888.jpg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -641,7 +648,7 @@
                                 </a>
                             </div>
                             <!-- <div class=content-body> -->
-                                <h4 class="content-title"><a href="#">LOMBA POSTER LINGKUNGAN HIDUP ANTAR PELAJAR SMA/SMK SE-DIY TAHUN 2017</a></h4>
+                                <h4 class="content-title"><a href="http://localhost:8000/prestasi/lorem-1">LOMBA POSTER LINGKUNGAN HIDUP ANTAR PELAJAR SMA/SMK SE-DIY TAHUN 2017</a></h4>
                             <!-- </div> -->
                         </div>
 
@@ -651,7 +658,7 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" style='background-image: url("http://127.0.0.1:8000/images/school_achievement/school_achievement_1689503594.jpg");'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689503594.jpg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -661,7 +668,7 @@
                                 </a>
                             </div>
                             <!-- <div class=content-body> -->
-                                <h4 class="content-title"><a href="#">JUARA 3 OLIMPIADE FISIKA 2016 TINGKAT PROVINSI DI. YOGYAKARTA</a></h4>
+                                <h4 class="content-title"><a href="http://localhost:8000/prestasi/lorem-2">JUARA 3 OLIMPIADE FISIKA 2016 TINGKAT PROVINSI DI. YOGYAKARTA</a></h4>
                             <!-- </div> -->
                         </div>
 
@@ -671,7 +678,7 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" style='background-image: url("http://127.0.0.1:8000/images/school_achievement/school_achievement_1689495954.jpg");'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/school_achievement/school_achievement_1689495954.jpg");'>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -681,7 +688,7 @@
                                 </a>
                             </div>
                             <!-- <div class=content-body> -->
-                                <h4 class="content-title"><a href="#">PENELITIAN EMPAT SISWA SMA BOPKRI 1 RAIH MEDALI EMAS &amp; PERAK PADA OPSI TINGKAT DIY 2016</a></h4>
+                                <h4 class="content-title"><a href="http://localhost:8000/prestasi/lorem-3">PENELITIAN EMPAT SISWA SMA BOPKRI 1 RAIH MEDALI EMAS &amp; PERAK PADA OPSI TINGKAT DIY 2016</a></h4>
                             <!-- </div> -->
                         </div>
 
@@ -700,6 +707,7 @@
                         <div class="logo">
                             <a href="index.html"><img src="frontend/images/logo/logo.png" alt="Logo"></a>
                         </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, saepe ea? Cupiditate assumenda hic magnam illo suscipit alias voluptas, neque odio. Odit consectetur culpa itaque quos impedit nisi nobis vel voluptas cupiditate debitis molestiae dolore expedita reprehenderit error labore rem provident, ipsam autem odio quam facere et iure voluptate commodi?</p>
                         <div class="footer-social">
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
@@ -736,12 +744,12 @@
     </a>
 
     <!-- ========================= JS here ========================= -->
-    <script src="http://127.0.0.1:8000/frontend/js/bootstrap.min.js"></script>
-    <script src="http://127.0.0.1:8000/frontend/js/count-up.min.js"></script>
-    <script src="http://127.0.0.1:8000/frontend/js/wow.min.js"></script>
-    <script src="http://127.0.0.1:8000/frontend/js/tiny-slider.js"></script>
-    <script src="http://127.0.0.1:8000/frontend/js/glightbox.min.js"></script>
-    <script src="http://127.0.0.1:8000/frontend/js/main.js"></script>
+    <script src="http://localhost:8000/frontend/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/count-up.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/wow.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/tiny-slider.js"></script>
+    <script src="http://localhost:8000/frontend/js/glightbox.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/main.js"></script>
     <script type="text/javascript">
         //========= Hero Slider 
         tns({

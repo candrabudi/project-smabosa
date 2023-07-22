@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\SchoolAchievementController;
 use App\Http\Controllers\Admin\ExtracurricularController;
+use App\Http\Controllers\Admin\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
@@ -19,6 +20,11 @@ Route::get('/blog', [LandingpageController::class, 'blog'])->name('blog');
 Route::get('/kegiatan', [LandingpageController::class, 'activity'])->name('activity');
 Route::get('/tentang-sekolah', [LandingpageController::class, 'about'])->name('about');
 Route::get('/agenda', [LandingpageController::class, 'event'])->name('event');
+Route::get('/guru', [LandingpageController::class, 'teacher'])->name('teacher');
+Route::get('/ekstrakurikuler', [LandingpageController::class, 'Extracurricular'])->name('extracurricular');
+Route::get('/ekstrakurikuler/{slug}', [LandingpageController::class, 'ExtracurricularDetail'])->name('extracurricular.detail');
+Route::get('/prestasi', [LandingpageController::class, 'Achivement'])->name('achivement');
+Route::get('/prestasi/{slug}', [LandingpageController::class, 'AchivementDetail'])->name('achivement.detail');
 Route::get('/blog/detail/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
@@ -106,6 +112,15 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::get('/edit/{id}', [AnnouncementController::class, 'edit'])->name('admin.announcement.edit');
         Route::post('/update/{id}', [AnnouncementController::class, 'update'])->name('admin.announcement.update');
         Route::delete('/delete/{id}', [AnnouncementController::class, 'delete'])->name('admin.announcement.delete');
+    });
+    Route::prefix('teacher')->group(function () {
+        Route::get('/', [TeacherController::class, 'index'])->name('admin.teacher');
+        Route::get('/datatable', [TeacherController::class, 'datatable'])->name('admin.teacher.datatable');
+        Route::get('/create', [TeacherController::class, 'create'])->name('admin.teacher.create');
+        Route::post('/store', [TeacherController::class, 'store'])->name('admin.teacher.store');
+        Route::get('/edit/{id}', [TeacherController::class, 'edit'])->name('admin.teacher.edit');
+        Route::post('/update/{id}', [TeacherController::class, 'update'])->name('admin.teacher.update');
+        Route::delete('/delete/{id}', [TeacherController::class, 'delete'])->name('admin.teacher.delete');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

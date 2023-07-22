@@ -34,5 +34,6 @@
 
 <link rel="stylesheet" href="{{ asset('backend/vendor/libs/animate-css/animate.css') }}" />
 <link rel="stylesheet" href="{{ asset('backend/vendor/libs/sweetalert2/sweetalert2.css') }}" />
+<link rel="stylesheet" href="{{ asset('backend/vendor/libs/toastr/toastr.css') }}" />
 
 @yield('styles')

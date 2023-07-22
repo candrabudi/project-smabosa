@@ -7,6 +7,7 @@
                         <div class="logo">
                             <a href="index.html"><img src="frontend/images/logo/logo.png" alt="Logo"></a>
                         </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, saepe ea? Cupiditate assumenda hic magnam illo suscipit alias voluptas, neque odio. Odit consectetur culpa itaque quos impedit nisi nobis vel voluptas cupiditate debitis molestiae dolore expedita reprehenderit error labore rem provident, ipsam autem odio quam facere et iure voluptate commodi?</p>
                         <div class="footer-social">
                             <ul>
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>

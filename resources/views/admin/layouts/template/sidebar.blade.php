@@ -69,6 +69,12 @@
                 <i class="menu-icon tf-icons ti ti-speakerphone"></i>
                 <div data-i18n="Pengumuman">Pengumuman</div>
             </a>
+        </li> 
+        <li class="menu-item">
+            <a href="{{route('admin.teacher')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-school"></i>
+                <div data-i18n="Guru">Guru</div>
+            </a>
         </li>
         <li class="menu-item">
             <a href="{{route('admin.event')}}" class="menu-link">
