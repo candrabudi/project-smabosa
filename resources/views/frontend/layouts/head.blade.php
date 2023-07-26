@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/tiny-slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/glightbox.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/faw/css/all.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/css/faw/css/v5-font-face.css') }}" />
     <style>
@@ -110,15 +111,17 @@
         i+span {
             margin-left: 10px;
         }
-        .box-contact{
+
+        .box-contact {
             width: 100%;
             background-color: #DDD;
         }
 
-        .box-contact span{
+        .box-contact span {
             color: #000;
         }
-        .box-icon{
+
+        .box-icon {
             width: 35px;
             padding: 10px;
             text-align: center;
@@ -128,7 +131,8 @@
             border-radius: 4px;
             color: #fff;
         }
-        .image-facility img{
+
+        .image-facility img {
             width: 50%;
         }
     </style>
