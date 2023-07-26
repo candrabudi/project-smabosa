@@ -23,7 +23,7 @@
 </style>
 @endsection
 @section('content')
-<section class="section blog-single">
+<section class="section blog-single content-blog">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
