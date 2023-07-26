@@ -20,10 +20,13 @@
         max-width: 100%;
         margin-right: 20px;
     }
+    .content-blog .ck-reset_all{
+        display: none;
+    }
 </style>
 @endsection
 @section('content')
-<section class="section blog-single content-blog">
+<section class="section blog-single">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
