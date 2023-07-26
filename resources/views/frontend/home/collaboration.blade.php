@@ -73,7 +73,7 @@
 <section class="collaboration">
     <div class="container-collaboration">
         <div class="collaboration-title">
-            <h2>PROGRAM AKADEMIK</h2>
+            <h2>LAYANAN PENDIDIKAN</h2>
         </div>
         <div class="content-collaboration">
             <div class="row">
