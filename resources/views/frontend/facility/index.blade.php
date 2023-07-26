@@ -10,7 +10,7 @@ Fasilitas - Smabosa
         <div class="row">
             <div class="col-12">
                 <div class="section-title align-center gray-bg">
-                    <span>Guru</span>
+                    <span>Fasilitas</span>
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">Data Fasilitas SMA 1 BOPKRI Yogyakarta</h2>
                     <p class="wow fadeInUp" data-wow-delay=".6s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorum!</p>
                 </div>
