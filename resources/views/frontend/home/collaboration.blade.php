@@ -142,6 +142,80 @@
             display: none;
         }
     }
+    @media only screen and (min-width: 765px) and (max-width: 820px) {
+        .collaboration {
+            width: 100%;
+            min-height: 300px!important;
+            background-color: #375bcd;
+        }
+
+        .collaboration .container-collaboration {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .collaboration .container-collaboration .collaboration-title {
+            text-align: center;
+            width: 100%!important;
+            margin: auto;
+
+        }
+
+        .collaboration .container-collaboration .collaboration-title h2 {
+            color: #375bcd;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff000;
+            border-radius: 4px;
+            font-size: 24px!important;
+        }
+
+        .collaboration .container-collaboration .content-collaboration {
+            padding: 0px!important;
+            box-sizing: border-box;
+            margin-top: 15px
+        }
+
+        .collaboration .container-collaboration .content-collaboration .box-program-reguler {
+            line-height: 300px !important;
+            text-align: center;
+            width: 100%;
+            min-height: 40px;
+            background-color: #fff000;
+            margin-top: 50px;
+            border-radius: 4px;
+            padding: 10px!important;
+        }
+
+        .box-program-reguler h3 {
+            color: #375bcd;
+            font-size: 20px!important;
+        }
+
+        .collaboration .container-collaboration .content-collaboration .box-program-ais {
+            line-height: 300px !important;
+            text-align: center;
+            width: 100%;
+            min-height: 40px;
+            background-color: #fff000;
+            margin-top: 30px;
+            border-radius: 4px;
+            padding: 10px!important;
+        }
+
+        .box-program-ais h3 {
+            color: #375bcd;
+            font-size: 20px!important;
+        }
+
+        .collaboration .container-collaboration .content-collaboration img {
+            width: 100px;
+            display: none;
+        }
+    }
 </style>
 @endsection
 <section class="collaboration">

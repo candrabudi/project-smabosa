@@ -21,6 +21,8 @@ Route::get('/kegiatan', [LandingpageController::class, 'activity'])->name('activ
 Route::get('/tentang-sekolah', [LandingpageController::class, 'about'])->name('about');
 Route::get('/agenda', [LandingpageController::class, 'event'])->name('event');
 Route::get('/guru', [LandingpageController::class, 'teacher'])->name('teacher');
+Route::get('/fasilitas', [LandingpageController::class, 'faciliy'])->name('facility');
+Route::get('/fasilitas/{slug}', [LandingpageController::class, 'detailFaciliy'])->name('facility.detail');
 Route::get('/ekstrakurikuler', [LandingpageController::class, 'Extracurricular'])->name('extracurricular');
 Route::get('/ekstrakurikuler/{slug}', [LandingpageController::class, 'ExtracurricularDetail'])->name('extracurricular.detail');
 Route::get('/prestasi', [LandingpageController::class, 'Achivement'])->name('achivement');

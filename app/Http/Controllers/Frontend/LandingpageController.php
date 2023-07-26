@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AboutSchool;
 use App\Models\Event;
 use App\Models\Extracurricular;
+use App\Models\Facility;
 use App\Models\ImageSlider;
 use App\Models\Post;
 use App\Models\SchoolAchievement;
@@ -119,6 +120,18 @@ class LandingpageController extends Controller
         $teachers = Teacher::where('status', 'Publish')
             ->paginate(4);
         return view('frontend.teacher.index', compact('teachers'));
+    }
+    public function faciliy()
+    {
+        $facilities = Facility::where('status', 'Publish')
+            ->paginate(4);
+        return view('frontend.facility.index', compact('facilities'));
+    }
+    public function detailFaciliy($slug)
+    {
+        $facility = Facility::where('status', 'Publish')
+            ->first();
+        return view('frontend.facility.detail', compact('facility'));
     }
     public function Extracurricular()
     {

@@ -12,6 +12,7 @@
     <script src="{{ asset('frontend/js/tiny-slider.js') }}"></script>
     <script src="{{ asset('frontend/js/glightbox.min.js') }}"></script>
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+    <script src="https://use.fontawesome.com/b21714c392.js"></script>
     <script type="text/javascript">
         //========= Hero Slider 
         tns({

@@ -102,7 +102,7 @@
 
                                 </div>
                                 <h3>
-                                    <a href="#">FASILITAS</a>
+                                    <a href="{{route('facility')}}">FASILITAS</a>
                                 </h3>
                             </div>
                         </div>
