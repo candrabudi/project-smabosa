@@ -104,11 +104,11 @@
         }
 
         .box-contact i {
-            font-size: 40px;
+            font-size: 15px;
             vertical-align: middle;
         }
 
-        .box-contact i + .box-contact span {
+        .box-contact i + span {
             margin-left: 10px;
         }
 
