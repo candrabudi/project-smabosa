@@ -103,12 +103,12 @@
             }
         }
 
-        i {
+        .box-contact i {
             font-size: 40px;
             vertical-align: middle;
         }
 
-        i+span {
+        .box-contact i + .box-contact span {
             margin-left: 10px;
         }
 
