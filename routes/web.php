@@ -37,7 +37,7 @@ Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])
 
 Auth::routes();
 Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('bosa.dashboard');
+    Route::get('/', [DashboardController::class, 'index']);
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('bosa.dashboard');
     Route::prefix('posts')->group(function () {
         Route::get('/', [PostController::class, 'index'])->name('admin.posts');
