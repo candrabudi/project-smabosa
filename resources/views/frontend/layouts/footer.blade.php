@@ -43,28 +43,15 @@
                         </div>
                         <div class="footer-social">
                             <ul>
-                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
+                                <!-- <li><a href="javascript:void(0)"><img src="{{asset('frontend/images/icons/tiktok.svg')}}" width="20" alt=""></a></li> -->
+                                <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/SMABOSA_YK?t=WrQON_m8V57uWFSj65bD8w&s=09"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6 col-12">
-
-                    <div class="single-footer sm-custom-border f-link">
-                        <h3>Halaman</h3>
-                        <ul>
-                            <li><a href="javascript:void(0)">Baca Berita Terbaru</a></li>
-                            <li><a href="javascript:void(0)">Kegiatan Bosa</a></li>
-                            <li><a href="javascript:void(0)">Apa saja si Ekstrakurikuler Bosa ?</a></li>
-                            <li><a href="javascript:void(0)">Data Guru di Smabosa</a></li>
-                            <li><a href="javascript:void(0)">ingin tau mengenai PCPDB ?</a></li>
-                        </ul>
-                    </div>
-
-                </div> -->
 
                 <div class="col-lg-9 col-md-6 col-12">
 

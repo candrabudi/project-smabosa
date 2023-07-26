@@ -15,12 +15,10 @@
                 <div class="col-lg-8 col-md-6 col-12">
                     <div class="toolbar-social">
                         <ul>
-
-                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
+                            <li><a href="https://twitter.com/SMABOSA_YK?t=WrQON_m8V57uWFSj65bD8w&s=09"><i class="lni lni-twitter-original"></i></a></li>
+                            <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="lni lni-instagram"></i></a></li>
+                            <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="lni lni-youtube"></i></a></li>
+                            <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
                         </ul>
                     </div>
                 </div>
