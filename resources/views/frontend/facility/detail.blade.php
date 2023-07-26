@@ -32,7 +32,7 @@
                         <img src="{{ asset('images/'.$facility->thumbnail) }}" alt="#" data-pagespeed-url-hash="1974793277" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                     </div>
                     <div class="post-details">
-                        <div class="detail-inner">
+                        <div class="content-blog detail-inner">
                             <?php echo $facility->content ?>
                         </div>
                     </div>
