@@ -20,6 +20,7 @@ Route::get('/blog', [LandingpageController::class, 'blog'])->name('blog');
 Route::get('/kegiatan', [LandingpageController::class, 'activity'])->name('activity');
 Route::get('/tentang-sekolah', [LandingpageController::class, 'about'])->name('about');
 Route::get('/agenda', [LandingpageController::class, 'event'])->name('event');
+Route::get('/agenda/{slug}', [LandingpageController::class, 'eventDetail'])->name('event.detail');
 Route::get('/guru', [LandingpageController::class, 'teacher'])->name('teacher');
 Route::get('/fasilitas', [LandingpageController::class, 'faciliy'])->name('facility');
 Route::get('/fasilitas/{slug}', [LandingpageController::class, 'detailFaciliy'])->name('facility.detail');
@@ -27,7 +28,9 @@ Route::get('/ekstrakurikuler', [LandingpageController::class, 'Extracurricular']
 Route::get('/ekstrakurikuler/{slug}', [LandingpageController::class, 'ExtracurricularDetail'])->name('extracurricular.detail');
 Route::get('/prestasi', [LandingpageController::class, 'Achivement'])->name('achivement');
 Route::get('/prestasi/{slug}', [LandingpageController::class, 'AchivementDetail'])->name('achivement.detail');
-Route::get('/blog/detail/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
+Route::get('/blog/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
+Route::get('/pengumuman', [LandingpageController::class, 'announcement'])->name('announcement');
+Route::get('/pengumuman/{slug}', [LandingpageController::class, 'announcementDetail'])->name('announcement.detail');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 

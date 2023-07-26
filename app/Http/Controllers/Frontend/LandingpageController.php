@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutSchool;
+use App\Models\Announcement;
 use App\Models\Event;
 use App\Models\Extracurricular;
 use App\Models\Facility;
@@ -74,7 +75,7 @@ class LandingpageController extends Controller
     {
 
         $article = Post::where('post_slug', $slug)->first();
-        $recent_posts = Post::where('post_status', 'Publish')->get()->take(3);
+        $recent_posts = Post::where('post_status', 'Publish')->get()->take(10);
         return view('frontend.blog_detail', compact('article', 'recent_posts'));
     }
 
@@ -90,6 +91,14 @@ class LandingpageController extends Controller
             ->orderBy('event_date', 'DESC')
             ->get();
         return view('frontend.event.index', compact('events'));
+    }
+
+    public function eventDetail($slug)
+    {
+        $event = Event::where('status', 'Publish')
+            ->where('slug', $slug)
+            ->first();
+        return view('frontend.event.detail', compact('event'));
     }
 
     public function Activity()
@@ -158,5 +167,30 @@ class LandingpageController extends Controller
             ->where('status', 'Publish')
             ->first();
         return view('frontend.achivement.detail', compact('achivement'));
+    }
+
+    public function announcement()
+    {
+        $announcements = Announcement::where('status', 'Publish')
+            ->orderby('created_at','DESC')
+            ->paginate(10);
+
+        $recent_posts = Post::where('post_status', 'Publish')
+            ->orderBy('post_date', 'DESC')
+            ->get()
+            ->take(10);
+        return view('frontend.announcement.index', compact([
+            'announcements','recent_posts'
+        ]));
+    }
+    public function announcementDetail($slug)
+    {
+
+        $announcement = Announcement::where('slug', $slug)->first();
+        $recent_posts = Post::where('post_status', 'Publish')
+            ->orderBy('post_date', 'DESC')
+            ->get()
+            ->take(10);
+        return view('frontend.announcement.detail', compact('announcement', 'recent_posts'));
     }
 }

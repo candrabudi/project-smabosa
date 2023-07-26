@@ -55,15 +55,19 @@
                                     <ul class="sub-menu collapse" id="submenu-1-4">
                                         <li class="nav-item"><a href="{{route('about')}}">Tentang Sekolah</a></li>
                                         <li class="nav-item"><a href="{{route('teacher')}}">Guru</a></li>
-                                        <li class="nav-item"><a href="{{route('extracurricular')}}">Ekstrakurikuler</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a href="{{route('event')}}">Agenda</a></li>
                                 <li class="nav-item">
                                     <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
+                                        <li class="nav-item"><a href="{{route('announcement')}}">Pengumuman</a></li>
                                         <li class="nav-item"><a href="{{route('blog')}}">Blog</a></li>
+                                        <li class="nav-item"><a href="https://www.youtube.com/channel/UC1JUQzztEDDSOVOC0rTMY2A">Video</a></li>
                                         <li class="nav-item"><a href="{{route('activity')}}">Kegiatan</a></li>
+                                        <li class="nav-item"><a href="{{route('extracurricular')}}">Ekstrakurikuler</a></li>
+                                        <li class="nav-item"><a href="{{route('facility')}}">Fasilitas</a></li>
+                                        <li class="nav-item"><a href="{{route('facility')}}">Opini</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a href="https://smabosa-yogya.sch.id/2022/08/31/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2022-2024/">PCPDB</a></li>

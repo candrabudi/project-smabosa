@@ -14,13 +14,13 @@ Tentang - Smabosa
 
                 <div class="single-event wow fadeInUp" data-wow-delay=".2s">
                     <div class="event-image">
-                        <a href="event-details.html"><img src="{{ asset('images/'.$event->thumbnail) }}" alt="#" data-pagespeed-url-hash=358499839 onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                        <a href="{{route('event.detail', $event->slug)}}"><img src="{{ asset('images/'.$event->thumbnail) }}" alt="#" data-pagespeed-url-hash=358499839 onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
                         <p class=date>{{ $carbon::parse($event->event_date)->format('d') }}
                             <span>{{ $carbon::parse($event->event_date)->format('M')}}</span>
                         </p>
                     </div>
                     <div class="content">
-                        <h3><a href=event-details.html>{{$event->title}}</a></h3>
+                        <h3><a href={{route('event.detail', $event->slug)}}>{{$event->title}}</a></h3>
                         <p><?php echo substr($event->short_desc, 0, 100) ?>...</p>
                     </div>
                     <div class="bottom-content">

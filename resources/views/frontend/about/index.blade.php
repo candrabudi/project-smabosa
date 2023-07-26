@@ -26,5 +26,53 @@ Tentang - Smabosa
         </div>
     </div>
 </section>
+<div class="faq section">
+    <div class=container>
+        <div class="align-center mb-5">
+            <span class="wow fadeInDown" data-wow-delay=".2s">Visi & Misi</span>
+            <h4 class="wow fadeInUp" data-wow-delay=".4s">Visi & Misi SMA BOPKRI 1 YOGYAKARTA</h4>
+        </div>
+        <div class=row>
+            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                <div class=tab-content id=nav-tabContent>
+                    <div class="tab-pane fade show active" id=nav-general role=tabpanel>
+                        <div class=accordion id=accordionExample>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
+                                <h2 class=accordion-header id=headingOne1>
+                                    <button class=accordion-button type=button data-bs-toggle=collapse data-bs-target="#collapseOne1" aria-expanded=true aria-controls=collapseOne1>
+                                        <span>VISI SMA BOPKRI 1 YOGYAKARTA</span><i class="lni lni-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id=collapseOne1 class="accordion-collapse collapse show" aria-labelledby=headingOne1 data-bs-parent="#accordionExample">
+                                    <div class=accordion-body>
+                                        <p>Terwujudnya manusia cerdas, berbudaya dan berdaya saing global berdasarkan kasih</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item wow fadeInUp" data-wow-delay=".8s">
+                                <h2 class=accordion-header id=headingTwo2>
+                                    <button class="accordion-button" type=button data-bs-toggle=collapse data-bs-target="#collapseTwo2" aria-expanded=false aria-controls=collapseTwo2>
+                                        <span>MISI SMA BOPKRI 1 YOGYAKARTA</span><i class="lni lni-chevron-down"></i>
+                                    </button>
+                                </h2>
+                                <div id=collapseTwo2 class="accordion-collapse collapse show" aria-labelledby=headingTwo2 data-bs-parent="#accordionExample">
+                                    <div class=accordion-body>
+                                        <ul>
+                                            <li>Menyelenggarakan pendidikan yang berkualitas sesuai dengan tuntutan dan perkembangan jaman.</li>
+                                            <li>Mengembangkan seluruh potensi siswa, baik kemampuan akademik dan non akademik untuk mampu bersaing di tingkat nasional maupun internasional.</li>
+                                            <li>Menciptakan suasana pembelajaran yang aman, nyaman, sejuk dan menyenangkan.</li>
+                                            <li>Mengembangkan sikap kedisiplinan, ketertiban, ketaqwaan dan tanggungjawab, serta berkompetensi yang sportif melalui berbagai kegiatan sekolah.</li>
+                                            <li>Menyemaikan dan menumbuhkan sikap kasih melalui pelayanan, keteladanan dan budi pekerti luhur sesuai dengan norma keagamaan, sosial kemasyarakatan, dan norma kebangsaan berdasarkan Pancasila.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection
