@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-Ekstrakurikuler - Smabosa
+{{$extracurricular->title}} - Smabosa
 @endsection
 @section('style')
 <style>

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-Event - Smabosa
+{{$event->title}} - Smabosa
 @endsection
 @section('style')
 <style>

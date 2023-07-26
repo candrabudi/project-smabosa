@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-Blog Detail - Smabosa
+{{$article->post_title}} - Smabosa
 @endsection
 
 @section('content')
