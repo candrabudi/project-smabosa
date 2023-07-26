@@ -12,7 +12,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="f-about single-footer">
                         <div class="logo">
-                            <a href="index.html"><img src="frontend/images/logo/logo.png" alt="Logo"></a>
+                            <a href="/"><img src="{{ asset('frontend/images/logo/logo.png') }}" alt="Logo"></a>
                         </div>
                         <p>Jl. Wardhani No.2, Kotabaru, Kec. Gondokusman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224</p>
                         <div class="mt-3">
