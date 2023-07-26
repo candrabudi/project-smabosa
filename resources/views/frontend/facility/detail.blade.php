@@ -42,3 +42,11 @@
     </div>
 </section>
 @endsection
+<script>
+    var elements = document.getElementsByClassName("ck-reset_all");
+
+    for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+        element.style.display = "none";
+    }
+</script>
