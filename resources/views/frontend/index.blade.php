@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-Home - Smabosa
+Sistem Informasi Sekolah - Smabosa
 @endsection
 
 @section('content')
