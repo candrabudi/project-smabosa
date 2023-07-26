@@ -14,7 +14,7 @@
                         <div class="logo">
                             <a href="index.html"><img src="frontend/images/logo/logo.png" alt="Logo"></a>
                         </div>
-                        <p>Jl. Wardhani No.2, Kotabaru, Kec. Gondokusman, Kota Yogyakarta, Daerah Istimiewa Yogyakarta 55224</p>
+                        <p>Jl. Wardhani No.2, Kotabaru, Kec. Gondokusman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224</p>
                         <div class="mt-3">
                             <div class="box-contact mt-2">
                                 <i class="fa fa-id-badge box-icon"></i><span><b>NPSN. </b>20403227</span>
