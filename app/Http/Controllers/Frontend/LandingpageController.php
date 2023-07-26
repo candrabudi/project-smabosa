@@ -139,6 +139,7 @@ class LandingpageController extends Controller
     public function detailFaciliy($slug)
     {
         $facility = Facility::where('status', 'Publish')
+            ->where('slug', $slug)
             ->first();
         return view('frontend.facility.detail', compact('facility'));
     }
