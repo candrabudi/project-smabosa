@@ -11,6 +11,7 @@ use App\Models\Facility;
 use App\Models\ImageSlider;
 use App\Models\Post;
 use App\Models\SchoolAchievement;
+use App\Models\SchoolProgram;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use DB;
@@ -193,5 +194,11 @@ class LandingpageController extends Controller
             ->get()
             ->take(10);
         return view('frontend.announcement.detail', compact('announcement', 'recent_posts'));
+    }
+
+    public function schoolProgram()
+    {
+        $school_program = SchoolProgram::first();
+        return view('frontend.program.index', compact('school_program'));
     }
 }

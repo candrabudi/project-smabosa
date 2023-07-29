@@ -75,7 +75,7 @@
                                 <li class="nav-item">
                                     <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
-                                        <li class="nav-item"><a href="https://perpustakaan.smabosa-yogya.sch.id/">Perpustakaan Digital</a></li>
+                                        <li class="nav-item"><a href="http://117.102.64.163:3333/perpustakaan">Perpustakaan Digital</a></li>
                                     </ul>
                                 </li>
                             </ul>

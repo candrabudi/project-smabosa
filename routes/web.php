@@ -12,7 +12,9 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\SchoolAchievementController;
 use App\Http\Controllers\Admin\ExtracurricularController;
+use App\Http\Controllers\Admin\SchoolProgramController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Models\SchoolProgram;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
@@ -31,6 +33,7 @@ Route::get('/prestasi/{slug}', [LandingpageController::class, 'AchivementDetail'
 Route::get('/blog/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
 Route::get('/pengumuman', [LandingpageController::class, 'announcement'])->name('announcement');
 Route::get('/pengumuman/{slug}', [LandingpageController::class, 'announcementDetail'])->name('announcement.detail');
+Route::get('/program', [LandingpageController::class, 'schoolProgram'])->name('schoolprogram');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
@@ -126,6 +129,10 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::get('/edit/{id}', [TeacherController::class, 'edit'])->name('admin.teacher.edit');
         Route::post('/update/{id}', [TeacherController::class, 'update'])->name('admin.teacher.update');
         Route::delete('/delete/{id}', [TeacherController::class, 'delete'])->name('admin.teacher.delete');
+    });
+    Route::prefix('program')->group(function () {
+        Route::get('/', [SchoolProgramController::class, 'index'])->name('admin.program');
+        Route::post('/store', [SchoolProgramController::class, 'store'])->name('admin.program.store');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

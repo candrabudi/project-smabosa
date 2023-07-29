@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy">
+    <meta name="csrf-token" content="s8czW22kJYWw6QHqIwSeVJJ97pO8ydVmJKijUhdk">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -13,7 +13,7 @@
  - Bosa</title>
 
     <meta name="description" content="" />
-    <link rel="icon" type="image/x-icon" href="../../backend/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/backend/img/logo/logo-bosa.png" />
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,6 +49,7 @@
 
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/animate-css/animate.css" />
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/toastr/toastr.css" />
 
 <style>
     #editor{
@@ -58,6 +59,12 @@
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/flatpickr/flatpickr.css" /> 
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/select2/select2.css" />
 <script src="http://localhost:8000/backend/ckeditor/ckeditor.js"></script>
+    <style>
+        .toast-body{
+            background-color: #FFF;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,12 +74,7 @@
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer" x="0px" y="0px" width="32" height="32" viewBox="0 0 60 60" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <path fill="#CCE4FF" d="M32,10c-12.15,0-22,9.85-22,22c0,12.15,9.85,22,22,22s22-9.85,22-22C54,19.85,44.15,10,32,10z M23,37  c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5S25.76,37,23,37z M41,37c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5S43.76,37,41,37z" />
-                    <path fill="#007AFF" d="M32,8C18.766,8,8,18.766,8,32s10.766,24,24,24c13.233,0,24-10.766,24-24S45.233,8,32,8z M32,52  c-11.028,0-20-8.972-20-20c0-11.028,8.972-20,20-20c11.028,0,20,8.972,20,20C52,43.028,43.028,52,32,52z" />
-                    <path fill="#007AFF" d="M41,25c-3.859,0-7,3.14-7,7c0,3.86,3.141,7,7,7c3.859,0,7-3.14,7-7C48,28.14,44.859,25,41,25z M41,35  c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3S42.654,35,41,35z" />
-                    <path fill="#007AFF" d="M23,25c-3.86,0-7,3.14-7,7c0,3.86,3.14,7,7,7c3.86,0,7-3.14,7-7C30,28.14,26.86,25,23,25z M23,35  c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3S24.654,35,23,35z" />
-                </svg>
+                <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" width="20" alt="">
             </span>
             <span class="app-brand-text demo menu-text fw-bold">BOSA</span>
         </a>
@@ -123,6 +125,36 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/program" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Tentang Sekolah">Tentang Sekolah</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/facilities" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Fasilitas">Fasilitas</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/extracurricular" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Ekstrakurikular">Ekstrakurikular</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/announcement" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-speakerphone"></i>
+                <div data-i18n="Pengumuman">Pengumuman</div>
+            </a>
+        </li> 
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/teacher" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-school"></i>
+                <div data-i18n="Guru">Guru</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="http://localhost:8000/bosa-admin/event" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar-event"></i>
                 <div data-i18n="Event">Event</div>
@@ -136,6 +168,16 @@
         </li>
     </ul>
 </aside>
+            <div class="bs-toast toast toast-placement-ex m-2" style="border: none;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+                <div class="toast-header p-2" style="border: none; border-radius: 2px;background: #EEE;">
+                    <i class="ti ti-arrows-cross ti-xs me-2"></i>
+                    <div class="me-auto fw-semibold">Something Wrong Error</div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Sepertinya ada masalah internal.</div>
+            </div>
+
             <div class="layout-page">
 
 
@@ -171,8 +213,22 @@
                             </div>
                         </a>
                     </li>
-                </ul>
-
+                    <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span class="align-middle">
+                                <form method="post" action="http://localhost:8000/logout">
+                                    <input type="hidden" name="_token" value="s8czW22kJYWw6QHqIwSeVJJ97pO8ydVmJKijUhdk">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                </form>
+                            </span>
+                        </a>
+                    </li>
+                </ul>    
+            </li>
+            <li>
+                
             </li>
             <!--/ User -->
         </ul>
@@ -187,7 +243,7 @@
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Tentang Sekolah /</span> Semua Tentang Sekolah</h4>
     <div class="row mb-3">
         <form id="create-post-form" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy">            <div class="row">
+            <input type="hidden" name="_token" value="s8czW22kJYWw6QHqIwSeVJJ97pO8ydVmJKijUhdk">            <div class="row">
                 <div class="col-md-8">
                     <div class="card mb-3">
                         <div class="card-body">
@@ -291,7 +347,7 @@
     DecoupledEditor
         .create(document.querySelector('#editor'), {
             ckfinder: {
-                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy',
+                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=s8czW22kJYWw6QHqIwSeVJJ97pO8ydVmJKijUhdk',
             }
         })
         .then(editor => {
@@ -336,7 +392,7 @@
                     formData.append('content', content);
 
                     $.ajax({
-                        url: 'http://localhost:8000/bosa-admin/about-school/store?_token=C1VR8e5V2Z3ImGWx3y67qd0dPxjjpL3qX3Zk8dBy',
+                        url: 'http://localhost:8000/bosa-admin/about-school/store?_token=s8czW22kJYWw6QHqIwSeVJJ97pO8ydVmJKijUhdk',
                         type: "POST",
                         data: formData,
                         processData: false,

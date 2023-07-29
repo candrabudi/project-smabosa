@@ -92,7 +92,7 @@
 
                                 </div>
                                 <h3>
-                                    <a href="#">KERJASAMA INTERNASIONAL</a>
+                                    <a href="{{route('schoolprogram')}}">KERJASAMA INTERNASIONAL</a>
                                 </h3>
                             </div>
                         </div>

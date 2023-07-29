@@ -17,7 +17,8 @@
 
     .collaboration .container-collaboration .collaboration-title {
         text-align: center;
-        width: 35%;
+        width: 80%;
+        font-size: 26px;
         margin: auto;
 
     }

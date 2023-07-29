@@ -53,6 +53,12 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="{{route('admin.program')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Tentang Sekolah">Tentang Sekolah</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="{{route('admin.facility')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-building-arch"></i>
                 <div data-i18n="Fasilitas">Fasilitas</div>
