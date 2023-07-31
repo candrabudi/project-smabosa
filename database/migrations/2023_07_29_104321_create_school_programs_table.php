@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('short_desc');
             $table->text('content');
+            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
             $table->timestamps();
         });
     }

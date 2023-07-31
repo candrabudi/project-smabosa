@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('teacher_name');
             $table->string('teacher_subjects');
+            $table->text('description');
             $table->enum('type_teacher', ['tetap','tatausaha', 'karyawan'])->default('tetap');
-            $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Publish');
             $table->string('teacher_photo');
+            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
+            $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Publish');
             $table->timestamps();
         });
     }

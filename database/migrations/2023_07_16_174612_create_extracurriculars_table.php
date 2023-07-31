@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('short_desc');
             $table->text('content');
             $table->string('thumbnail');
+            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
             $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });

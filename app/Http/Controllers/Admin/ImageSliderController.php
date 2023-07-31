@@ -21,21 +21,19 @@ class ImageSliderController extends Controller
     public function datatbleImageSlider()
     {
         $fetch = ImageSlider::whereIn('status', ['Publish', 'Draft'])
-            ->get()
-            ->toArray();
+                    ->get(['id', 'title', 'description', 'image'])
+                    ->toArray();
 
-        $i = 0;
-        $reform = array_map(function($new) use (&$i) { 
-            $i++;
+        $reform = array_map(function($new, $index) {
             return [
-                'no' => $i.'.',
+                'no' => ($index + 1) . '.',
                 'id' => $new['id'],
-                'title' => $new['title'], 
-                'description'   => $new['description'], 
+                'title' => $new['title'],
+                'description' => $new['description'],
                 'image' => $new['image']
-            ]; 
-        }, $fetch);
-        
+            ];
+        }, $fetch, array_keys($fetch));
+
         return DataTables::of($reform)->make(true);
     }
 
@@ -48,32 +46,31 @@ class ImageSliderController extends Controller
     {
         try{
 
-            if(empty($request->image) || empty($request->title_slider) || empty($request->description_slider)){
+            if (empty($request->image) || empty($request->title_slider) || empty($request->description_slider)) {
                 return response()->json([
-                    'status'    => 'failed', 
-                    'code'  => 400, 
-                    'message'   => 'failed request'
+                    'status' => 'failed',
+                    'code' => 400,
+                    'message' => 'failed request'
                 ], 400);
             }
-
-            if($request->hasFile('image')) {
-                $originName = $request->file('image')->getClientOriginalName();
-                $fileName = pathinfo($originName, PATHINFO_FILENAME);
-                $extension = $request->file('image')->getClientOriginalExtension();
-                $fileName = 'image_slider/image_slider' . '_' . time() . '.' . $extension;
-          
-                $request->file('image')->move(public_path('images/image_slider'), $fileName);
-            }else{
+            
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/image_slider'), $fileName);
+            } else {
                 return response()->json([
-                    'status'    => 'failed', 
-                    'code'  => 400, 
-                    'message'   => 'Failed upload image'
+                    'status' => 'failed',
+                    'code' => 400,
+                    'message' => 'Failed upload image'
                 ], 400);
             }
-
+            
             $image_slider = new ImageSlider();
             $image_slider->title = $request->title_slider;
             $image_slider->description = $request->description_slider;
+            $image_slider->status = $request->status_slider;
+            $image_slider->language = $request->language_slider;
             $image_slider->image = $fileName;
             $image_slider->save();
 
@@ -90,38 +87,35 @@ class ImageSliderController extends Controller
 
     public function edit($id)
     {
-        $image_slider = ImageSlider::where('id', $id)
-            ->first();
-        if(!$image_slider){
-            return redirect()->route('admin.image-slider');
-        }
-        return view('admin.image_slider.edit', compact(['image_slider']));
+        $product = ImageSlider::find($id);
+        return response()->json($product);
     }
 
     public function update(Request $request, $id)
     {
         try{
-
-            $image_slider = ImageSlider::where('id', $id)
-            ->first();
-            if(!$image_slider){
+            $image_slider = ImageSlider::find($id);
+            if (!$image_slider) {
                 return redirect()->route('admin.image-slider');
             }
-            if($request->hasFile('image')) {
+           
+
+            if ($request->hasFile('image')) {
                 $originName = $request->file('image')->getClientOriginalName();
-                $fileName = pathinfo($originName, PATHINFO_FILENAME);
                 $extension = $request->file('image')->getClientOriginalExtension();
                 $fileName = 'images/image_slider' . '_' . time() . '.' . $extension;
-        
+
                 $request->file('image')->move(public_path('images/image_slider'), $fileName);
-            }else{
-                $fileName = null;
+            } else {
+                $fileName = $image_slider->image;
             }
 
-            $image_slider->title = $request->title_slider ?? $image_slider->title;
-            $image_slider->description = $request->description_slider ?? $image_slider->description;
-            $image_slider->image = $fileName ?? $image_slider->image;
-            $image_slider->save();
+            $image_slider->update([
+                'title' => $request->input('title_slider', $image_slider->title),
+                'description' => $request->input('description_slider', $image_slider->description),
+                'status' => $request->input('status_slider', $image_slider->status),
+                'image' => $fileName,
+            ]);
 
             return response()->json([
                 'status'    => 'success', 
@@ -130,21 +124,22 @@ class ImageSliderController extends Controller
             ], 200);
 
         }catch(\Exception $e){
-            return redirect()->back();
+            return response()->json([
+                'status'    => 'failed', 
+                'code'  => 500, 
+                'message'   => $e->getMessage()
+            ], 500); 
         }
     }
 
     public function delete($id)
     {
-        ImageSlider::where('id', $id)
-            ->update([
-                'status' => 'Delete'
-            ]);
-        
+        ImageSlider::where('id', $id)->update(['status' => 'Delete']);
+
         return response()->json([
-            'status'    => 'success',
-            'code'  => 200,
-            'message'   => 'Success delete slide!'
+            'status' => 'success',
+            'code' => 200,
+            'message' => 'Success delete slide!'
         ]);
     }
 }

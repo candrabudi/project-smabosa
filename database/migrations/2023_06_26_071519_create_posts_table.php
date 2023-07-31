@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string('post_title');
             $table->text('post_short_desc');
             $table->text('post_content');
-            $table->enum('post_status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->string('post_slug');
             $table->string('post_thumbnail');
+            $table->enum('post_language', ['Indonesia', 'English', 'Jawa']);
+            $table->enum('post_status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });
     }

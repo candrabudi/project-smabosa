@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('master_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
+            $table->enum('status', ['Publish', 'Delete']);
             $table->timestamps();
         });
     }

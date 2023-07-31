@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('event');
             $table->dateTime('event_date');
             $table->string('location', 191);
+            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
             $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });

@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">
+    <meta name="csrf-token" content="1iOqHi2LqXa5lyuknn3UJLaNs9FccDJoPIiaVxSh">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -49,7 +49,14 @@
 
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/animate-css/animate.css" />
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/toastr/toastr.css" />
 
+    <style>
+        .toast-body{
+            background-color: #FFF;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -110,6 +117,12 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/program" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Program">Program</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="http://localhost:8000/bosa-admin/facilities" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-building-arch"></i>
                 <div data-i18n="Fasilitas">Fasilitas</div>
@@ -126,6 +139,12 @@
                 <i class="menu-icon tf-icons ti ti-speakerphone"></i>
                 <div data-i18n="Pengumuman">Pengumuman</div>
             </a>
+        </li> 
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/teacher" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-school"></i>
+                <div data-i18n="Guru">Guru</div>
+            </a>
         </li>
         <li class="menu-item">
             <a href="http://localhost:8000/bosa-admin/event" class="menu-link">
@@ -141,6 +160,16 @@
         </li>
     </ul>
 </aside>
+            <div class="bs-toast toast toast-placement-ex m-2" style="border: none;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+                <div class="toast-header p-2" style="border: none; border-radius: 2px;background: #EEE;">
+                    <i class="ti ti-arrows-cross ti-xs me-2"></i>
+                    <div class="me-auto fw-semibold">Something Wrong Error</div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Sepertinya ada masalah internal.</div>
+            </div>
+
             <div class="layout-page">
 
 
@@ -183,7 +212,7 @@
                         <a class="dropdown-item" href="#">
                             <span class="align-middle">
                                 <form method="post" action="http://localhost:8000/logout">
-                                    <input type="hidden" name="_token" value="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                    <input type="hidden" name="_token" value="1iOqHi2LqXa5lyuknn3UJLaNs9FccDJoPIiaVxSh">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
                                 </form>
                             </span>
                         </a>
@@ -211,7 +240,10 @@
                 <div class="nav-align-top mb-4">
                     <div class="card-header p-3 d-flex mb-4">
                         <h5 class="align-self-center m-0">List Slider</h5>
-                        <a href="http://localhost:8000/bosa-admin/image-slider/create" class="btn btn-success btn-sm ms-auto"><i class="fa fa-plus"></i> &NonBreakingSpace;Tambah Slider</a>
+                        <button class="btn btn-success btn-sm ms-auto btn-toggle-sidebar" data-bs-toggle="offcanvas" data-bs-target="#addImageSlider" aria-controls="addImageSlider">
+                            <i class="ti ti-plus me-1"></i>
+                            <span class="align-middle">&NonBreakingSpace;Tambah Slider</span>
+                        </button>
                     </div>
                     <div class="card-body">
                         <div class="card-datatable table-responsive">
@@ -221,7 +253,7 @@
                                         <th width=50>No</th>
                                         <th width=20%>Judul</th>
                                         <th width=55%>Description</th>
-                                        <th>Aksi</th>
+                                        <th width=120>Aksi</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -232,7 +264,60 @@
         </div>
     </div>
 </div>
-                        </div>
+<div class="offcanvas offcanvas-end event-sidebar col-lg-12" tabindex="-1" id="addImageSlider" aria-labelledby="addImageSliderLabel">
+    <div class="offcanvas-header my-1">
+        <h5 class="offcanvas-title" id="addImageSliderLabel">Tambah Slider</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+        <form class="event-form pt-0" id="eventForm" onsubmit="return false">
+            <div class="mb-3">
+                <label class="form-label" for="titleSlider">Judul Slider</label>
+                <input type="text" class="form-control" id="titleSlider" name="titleSlider" placeholder="Event Title" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="languageSlider">Bahasa</label>
+                <select class="select2 select-event-label form-select" id="languageSlider" name="languageSlider">
+                    <option data-label="primary" value="Indonesia" selected>Indonesia</option>
+                    <option data-label="primary" value="English">English</option>
+                    <option data-label="primary" value="Jawa">Jawa</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="descriptionSlider">Deskripsi</label>
+                <textarea class="form-control" name="descriptionSlider" id="descriptionSlider"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="imageSlider">Image</label>
+                <input type="file" class="form-control" id="imageSlider" name="imageSlider" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="statusSlider">Status</label>
+                <div class="form-group">
+                    <label class="switch switch-square switch-lg">
+                        <input type="checkbox" class="switch-input" />
+                        <span class="switch-toggle-slider">
+                            <span class="switch-on">
+                                <i class="ti ti-check"></i>
+                            </span>
+                            <span class="switch-off">
+                                <i class="ti ti-x"></i>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3 d-flex justify-content-sm-between justify-content-start my-4">
+                <div>
+                    <button type="submit" id="submit-slider" class="btn btn-primary btn-add-event me-sm-3 me-1">Tambah</button>
+                    <button type="reset" class="btn btn-label-secondary btn-cancel me-sm-0 me-1" data-bs-dismiss="offcanvas">
+                        Batal
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>                        </div>
                     </div>
 
                     <footer class="content-footer footer bg-footer-theme">
@@ -291,6 +376,195 @@
 <script src="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.js"></script>
 
 <script>
+    $(document).ready(function() {
+        $('#submit-slider').click(function() {
+            Swal.fire({
+                title: 'Yakin?',
+                text: "Kamu akan menambahkan kategori",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak',
+                customClass: {
+                    confirmButton: 'btn btn-primary me-3',
+                    cancelButton: 'btn btn-label-secondary'
+                },
+                buttonsStyling: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    event.preventDefault();
+
+                    const valueStatusSlider = $('.switch-input');
+                    const status_slider = valueStatusSlider.prop('checked') ? 'Publish' : 'Draft';
+
+                    const formData = new FormData();
+                    formData.append('title_slider', $('#titleSlider').val());
+                    formData.append('description_slider', $('#descriptionSlider').val());
+                    formData.append('status_slider', status_slider);
+                    formData.append('language_slider', $('#languageSlider').val());
+                    formData.append('image', $('#imageSlider')[0].files[0]);
+                    $.ajax({
+                        url: 'http://localhost:8000/bosa-admin/image-slider/store?_token=1iOqHi2LqXa5lyuknn3UJLaNs9FccDJoPIiaVxSh',
+                        type: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            Swal.fire({
+                                title: 'Berhasl!',
+                                text: 'Kategori Berhasil Di tambahkan!',
+                                icon: 'success',
+                                customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                },
+                                buttonsStyling: false
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = '/bosa-admin/image-slider';
+                                }
+                            });
+                        },
+                        error: function(xhr, response) {
+                            if(xhr.responseJSON.code == 400){
+                                $('#spiner-button').addClass('d-none');
+                                $('#submit-post').removeClass('d-none');
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: xhr.responseJSON.message,
+                                    icon: 'error',
+                                    customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                });
+                            }else if(xhr.responseJSON.code == 500){
+                                $('#spiner-button').addClass('d-none');
+                                $('#submit-post').removeClass('d-none');
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'Something Wrong Error!',
+                                    icon: 'error',
+                                    customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Penambahan Dibatalkan',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+    });
+</script><script>
+    $('#get-image-slider').on('click', '.edit-image-slider ', function() {
+        var id = $(this).data('id');
+        $.get("/bosa-admin/image-slider/edit/" + id, function(data) {
+            let id = data.id;
+            var status_slider_val = (data.status == 'Publish') ? $(".switch-input").prop("checked", true) : $(".switch-input").prop("checked", false);
+
+            $('#titleSlider').val(data.title);
+            $('.btn-add-event').removeAttr("id");
+            $(".btn-add-event").attr("id", "edit-slider");
+            $("#edit-slider").html("Edit Slider");
+            $("#edit-slider").removeClass("btn-primary");
+            $("#edit-slider").addClass("btn-warning");
+            $('#languageSlider').val(data.language);
+            $('#descriptionSlider').val(data.description);
+            $('#statusSlider').val(status_slider_val);
+            $('#edit-slider').click(function() {
+                Swal.fire({
+                    title: 'Yakin?',
+                    text: "Kamu akan Melakukan Perubahan Data",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Ya',
+                    cancelButtonText: 'Tidak',
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3',
+                        cancelButton: 'btn btn-label-secondary'
+                    },
+                    buttonsStyling: false
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        event.preventDefault();
+                        const formData = new FormData();
+                        let valueStatusSlider = $('.switch-input');
+                        let status_slider_update = valueStatusSlider.prop('checked') ? 'Publish' : 'Draft';
+                        formData.append('title_slider', $('#titleSlider').val());
+                        formData.append('description_slider', $('#descriptionSlider').val());
+                        formData.append('status_slider', status_slider_update);
+                        formData.append('language_slider', $('#languageSlider').val());
+                        formData.append('image', $('#imageSlider')[0].files[0]);
+                        $.ajax({
+                            url: '/bosa-admin/image-slider/update/' + id + '?_token=' + $('meta[name="csrf-token"]').attr('content'),
+                            type: "POST",
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                Swal.fire({
+                                    title: 'Berhasl!',
+                                    text: 'Data Berhasil Di Ubah!',
+                                    icon: 'success',
+                                    customClass: {
+                                        confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = '/bosa-admin/image-slider';
+                                    }
+                                });
+                            },
+                            error: function(xhr, response) {
+                                if (xhr.responseJSON.code == 400) {
+                                    $('#spiner-button').addClass('d-none');
+                                    $('#submit-post').removeClass('d-none');
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: xhr.responseJSON.message,
+                                        icon: 'error',
+                                        customClass: {
+                                            confirmButton: 'btn btn-primary'
+                                        },
+                                        buttonsStyling: false
+                                    });
+                                } else if (xhr.responseJSON.code == 500) {
+                                    $('#spiner-button').addClass('d-none');
+                                    $('#submit-post').removeClass('d-none');
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: 'Something Wrong Error!',
+                                        icon: 'error',
+                                        customClass: {
+                                            confirmButton: 'btn btn-primary'
+                                        },
+                                        buttonsStyling: false
+                                    });
+                                }
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'info',
+                            title: 'Perubahan Dibatalkan',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                });
+            });
+        })
+    });
+</script><script>
     $(function() {
         var table = $('#get-image-slider').DataTable({
             processing: true,
@@ -304,7 +578,7 @@
                     data: 'id',
                     orderable: false,
                     render: function(id) {
-                        return '<button class="my-1 btn btn-warning btn-xs edit-image-slider "  style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-category" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
+                        return '<button class="my-1 btn btn-warning btn-xs edit-image-slider btn-toggle-sidebar" data-bs-toggle="offcanvas" data-bs-target="#addImageSlider" aria-controls="addImageSlider" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-category" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
                     },
                 },
             ],
@@ -312,12 +586,7 @@
         });
 
     });
-    $('#get-image-slider').on('click', '.edit-image-slider ', function() {
-        var id = $(this).data('id');
-        window.location = '/bosa-admin/image-slider/edit/' + id
-    });
-</script>
-<script>
+</script><script>
     $(function() {
         $('#get-image-slider').on('click', '.delete-category', function() {
             var id = $(this).data('id');
@@ -354,36 +623,11 @@
                 },
             }).then(function(result) {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Dihapus!',
-                        text: 'Data kamu berhasil di hapus. kamu akan segera dialihkan',
-                        timer: 2300,
-                        timerProgressBar: true,
-                        showConfirmButton: false,
-                        didOpen: () => {
-                            Swal.showLoading()
-                            const b = Swal.getHtmlContainer().querySelector('b')
-                            timerInterval = setInterval(() => {
-                                b.textContent = Swal.getTimerLeft()
-                            }, 100)
-                        },
-                        willClose: () => {
-                            clearInterval(timerInterval)
-                        },
-                        customClass: {
-                            confirmButton: 'btn btn-success d-none'
-                        }
-                    }).then((result) => {
-                        if (result.dismiss === Swal.DismissReason.timer) {
-                            window.location = '/bosa-admin/master-categories'
-                        }
-                    });
+                    window.location.href = '/bosa-admin/image-slider';
                 }
             });
         });
     });
-</script>
-</body>
+</script></body>
 
 </html>

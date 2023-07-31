@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('about_schools', function (Blueprint $table) {
+        Schema::create('master_menus', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 191);
-            $table->text('content');
-            $table->text('short_desc');
-            $table->string('thumbnail');
+            $table->string('name');
+            $table->string('route');
             $table->enum('language', ['Indonesia', 'English', 'Jawa']);
             $table->timestamps();
         });
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('about_schools');
+        Schema::dropIfExists('master_menus');
     }
 };

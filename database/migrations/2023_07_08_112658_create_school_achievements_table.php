@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('content');
             $table->text('achievement_gainer');
             $table->string('thumbnail');
+            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
             $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });

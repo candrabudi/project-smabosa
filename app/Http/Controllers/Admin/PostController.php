@@ -204,6 +204,7 @@ class PostController extends Controller
             $store_post->post_title = $request->post_title;
             $store_post->post_content = $request->post_content;
             $store_post->post_status = $request->post_status;
+            $store_post->post_language = $request->post_language;
             $store_post->post_short_desc = $request->short_desc;
             $store_post->post_slug = $slug;
             $store_post->post_thumbnail = $imageName;

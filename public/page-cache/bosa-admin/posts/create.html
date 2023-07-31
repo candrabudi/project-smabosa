@@ -1,3 +1,69 @@
+<style>
+    .document-editor {
+        padding: 10px;
+        border: 1px solid #DFE4E6;
+        border-bottom-color: #cdd0d2;
+        border-right-color: #cdd0d2;
+        border-radius: 2px;
+        max-height: 700px;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: #FFF;
+    }
+
+    .toolbar-container {
+        z-index: 1;
+        position: relative;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, .05);
+    }
+
+    .toolbar-container .ck.ck-toolbar {
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        border-radius: 0;
+    }
+
+    .content-container {
+        padding: var(--ck-sample-base-spacing);
+        background: #eee;
+        overflow-y: scroll;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .content-container #editor {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        width: 20.8cm;
+        min-height: 550px;
+        padding: 1cm 1cm 2cm;
+        margin: 0 auto;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, .05);
+    }
+
+    .ck-content {
+        background-color: #FFF;
+    }
+    .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    }
+</style>
 <!DOCTYPE html>
 
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
@@ -5,7 +71,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">
+    <meta name="csrf-token" content="6TODVJsgzJyyYJM3mvJ5VVf7q5vfQD6RiNtam0yg">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -13,7 +79,7 @@
  - Bosa</title>
 
     <meta name="description" content="" />
-    <link rel="icon" type="image/x-icon" href="http://localhost:8000/backend/img/logo/logo-bosa.png" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8001/backend/img/logo/logo-bosa.png" />
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,43 +87,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
 
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/fonts/fontawesome.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/fonts/tabler-icons.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/fonts/flag-icons.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/fonts/fontawesome.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/fonts/tabler-icons.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/fonts/flag-icons.css" />
 
 
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/css/rtl/core.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/css/rtl/theme-default.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/css/demo.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/css/rtl/core.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/css/rtl/theme-default.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/css/demo.css" />
 
 
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/node-waves/node-waves.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/typeahead-js/typeahead.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/apex-charts/apex-charts.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/swiper/swiper.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/node-waves/node-waves.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/typeahead-js/typeahead.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/apex-charts/apex-charts.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/swiper/swiper.css" />
 
 <link rel="stylesheet" href="../../backend/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
 <link rel="stylesheet" href="../../backend/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
 <link rel="stylesheet" href="../../backend/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
     
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/css/pages/cards-advance.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/css/pages/cards-advance.css" />
 
-<script src="http://localhost:8000/backend/vendor/js/helpers.js"></script>
+<script src="http://localhost:8001/backend/vendor/js/helpers.js"></script>
 
-<script src="http://localhost:8000/backend/js/config.js"></script>
+<script src="http://localhost:8001/backend/js/config.js"></script>
 
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/animate-css/animate.css" />
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/animate-css/animate.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/toastr/toastr.css" />
 
 <style>
-    #editor{
+    #editor {
         min-height: 300px;
     }
 </style>
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/flatpickr/flatpickr.css" /> 
-<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/select2/select2.css" />
-<script src="http://localhost:8000/backend/ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/flatpickr/flatpickr.css" /> 
+<link rel="stylesheet" href="http://localhost:8001/backend/vendor/libs/select2/select2.css" />
+<script src="http://localhost:8001/backend/ckeditor/ckeditor.js"></script>
+    <style>
+        .toast-body{
+            background-color: #FFF;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +140,7 @@
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" width="20" alt="">
+                <img src="http://localhost:8001/backend/img/logo/logo-bosa.png" width="20" alt="">
             </span>
             <span class="app-brand-text demo menu-text fw-bold">BOSA</span>
         </a>
@@ -94,61 +167,83 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="http://localhost:8000/bosa-admin/posts" class="menu-link">
+                    <a href="http://localhost:8001/bosa-admin/posts" class="menu-link">
                         <div data-i18n="Roles">Semua Post</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="http://localhost:8000/bosa-admin/master-categories" class="menu-link">
+                    <a href="http://localhost:8001/bosa-admin/master-categories" class="menu-link">
                         <div data-i18n="Permission">Kategori</div>
                     </a>
                 </li>
             </ul>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/image-slider" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/image-slider" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-album"></i>
                 <div data-i18n="Image Slider">Image Slider</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/about-school" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/about-school" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-building-arch"></i>
                 <div data-i18n="Tentang Sekolah">Tentang Sekolah</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/facilities" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/program" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Program">Program</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8001/bosa-admin/facilities" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-building-arch"></i>
                 <div data-i18n="Fasilitas">Fasilitas</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/extracurricular" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/extracurricular" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-notebook"></i>
                 <div data-i18n="Ekstrakurikular">Ekstrakurikular</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/announcement" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/announcement" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-speakerphone"></i>
                 <div data-i18n="Pengumuman">Pengumuman</div>
             </a>
+        </li> 
+        <li class="menu-item">
+            <a href="http://localhost:8001/bosa-admin/teacher" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-school"></i>
+                <div data-i18n="Guru">Guru</div>
+            </a>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/event" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/event" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar-event"></i>
                 <div data-i18n="Event">Event</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="http://localhost:8000/bosa-admin/school-achievement" class="menu-link">
+            <a href="http://localhost:8001/bosa-admin/school-achievement" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-certificate-2"></i>
                 <div data-i18n="Prestasi Sekolah">Prestasi Sekolah</div>
             </a>
         </li>
     </ul>
 </aside>
+            <div class="bs-toast toast toast-placement-ex m-2" style="border: none;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+                <div class="toast-header p-2" style="border: none; border-radius: 2px;background: #EEE;">
+                    <i class="ti ti-arrows-cross ti-xs me-2"></i>
+                    <div class="me-auto fw-semibold">Something Wrong Error</div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Sepertinya ada masalah internal.</div>
+            </div>
+
             <div class="layout-page">
 
 
@@ -190,8 +285,8 @@
                     <li>
                         <a class="dropdown-item" href="#">
                             <span class="align-middle">
-                                <form method="post" action="http://localhost:8000/logout">
-                                    <input type="hidden" name="_token" value="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                <form method="post" action="http://localhost:8001/logout">
+                                    <input type="hidden" name="_token" value="6TODVJsgzJyyYJM3mvJ5VVf7q5vfQD6RiNtam0yg">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
                                 </form>
                             </span>
                         </a>
@@ -214,7 +309,7 @@
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Posts /</span> Tambah Posting</h4>
     <div class="row mb-3">
         <form id="create-post-form" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg">            <div class="row">
+            <input type="hidden" name="_token" value="6TODVJsgzJyyYJM3mvJ5VVf7q5vfQD6RiNtam0yg">            <div class="row">
                 <div class="col-md-8">
                     <div class="card mb-3">
                         <div class="card-body">
@@ -222,43 +317,58 @@
                             <input type="text" class="form-control" id="judul" required />
                         </div>
                     </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <label class="form-label" for="short_desc">Deskripsi Singkat</label>
-                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control" ></textarea>
-                        </div>
-                    </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="document-editor">
                                 <div class="toolbar-container"></div>
-                                <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
-                                    <div id="editor"></div>
+                                <div class="content-container">
+                                    <div id="editor">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="card-body">
                             <div class="mb-3">
-                                
-                                <label class="form-label" for="status">Status</label>
-                                <select class="form-select" id="status" required>
-                                    <option value="Publish">Publish</option>
-                                    <option value="Draft">Draft</option>
-                                </select>
-
-                                <label for="flatpickr-date" class="form-label">Tanggal Post</label>
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-datetime" />
-
+                                <div class="form-group mb-3">
+                                    <label class="form-label" for="status">Status</label>
+                                    <select class="form-select" id="status" required>
+                                        <option value="Publish">Publish</option>
+                                        <option value="Draft">Draft</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="form-label" for="post_language">Bahasa</label>
+                                    <select class="form-select" id="post_language" required>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="English">English</option>
+                                        <option value="Jawa">Jawa</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="flatpickr-date" class="form-label">Tanggal Post</label>
+                                    <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-datetime" />
+                                </div>
                             </div>
                             <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
+                            <button class="btn btn-primary d-none" type="button" id="spiner-button" disabled>
+                                <span class="spinner-border me-1" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
                         </div>
                     </div>
-                    <div class="col-xl-12 col-md-6 mt-4">
-                        <div class="card h-100">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <label class="form-label" for="short_desc">Deskripsi Singkat</label>
+                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-md-12 mt-4">
+                        <div class="card">
                             <div class="card-header d-flex justify-content-between">
                                 <div class="card-title mb-0">
                                     <h5 class="mb-0">Kategori</h5>
@@ -267,10 +377,7 @@
                             <div class="card-body">
                                 <div class="select2-success">
                                     <select name="" id="select2Success" class="select2 form-select" multiple>
-                                                                                    <option value="2">Opini Siswa</option>
-                                                                                    <option value="3">Bebas</option>
-                                                                                    <option value="4">Kegiatan</option>
-                                                                                    <option value="5">Pcpdb</option>
+                                                                                <option value="1">Kegiatan</option>
                                                                             </select>
                                 </div>
                             </div>
@@ -287,7 +394,6 @@
                 </div>
             </div>
         </form>
-        
     </div>
 </div>
                         </div>
@@ -322,41 +428,40 @@
 
         <div class="drag-target"></div>
     </div>
-    <script src="http://localhost:8000/backend/vendor/libs/jquery/jquery.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/popper/popper.js"></script>
-<script src="http://localhost:8000/backend/vendor/js/bootstrap.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="http://localhost:8001/backend/vendor/libs/jquery/jquery.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/popper/popper.js"></script>
+<script src="http://localhost:8001/backend/vendor/js/bootstrap.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/node-waves/node-waves.js"></script>
 
-<script src="http://localhost:8000/backend/vendor/libs/hammer/hammer.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/i18n/i18n.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/typeahead-js/typeahead.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/hammer/hammer.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/i18n/i18n.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/typeahead-js/typeahead.js"></script>
 
-<script src="http://localhost:8000/backend/vendor/js/menu.js"></script>
+<script src="http://localhost:8001/backend/vendor/js/menu.js"></script>
 
-<script src="http://localhost:8000/backend/vendor/libs/apex-charts/apexcharts.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/swiper/swiper.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/apex-charts/apexcharts.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/swiper/swiper.js"></script>
 
-<script src="http://localhost:8000/backend/js/main.js"></script>
+<script src="http://localhost:8001/backend/js/main.js"></script>
 
-<script src="http://localhost:8000/backend/js/dashboards-analytics.js"></script>
+<script src="http://localhost:8001/backend/js/dashboards-analytics.js"></script>
 
-<script src="http://localhost:8000/backend/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
-<script src="http://localhost:8000/backend/vendor/libs/moment/moment.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="http://localhost:8000/backend/js/extended-ui-sweetalert2.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/moment/moment.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="http://localhost:8001/backend/js/extended-ui-sweetalert2.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/sweetalert2/sweetalert2.js"></script>
 
-<script src="http://localhost:8000/backend/vendor/libs/select2/select2.js"></script>
-<script src="http://localhost:8000/backend/js/forms-selects.js"></script>
-<script src="http://localhost:8000/backend/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="http://localhost:8000/backend/js/forms-pickers.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/select2/select2.js"></script>
+<script src="http://localhost:8001/backend/js/forms-selects.js"></script>
+<script src="http://localhost:8001/backend/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="http://localhost:8001/backend/js/forms-pickers.js"></script>
 <script>
     DecoupledEditor
         .create(document.querySelector('#editor'), {
-            ckfinder: {
-                uploadUrl: 'http://localhost:8000/bosa-admin/posts/upload-image?_token=yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg',
+            ckfinder: {uploadUrl: 'http://localhost:8001/bosa-admin/posts/upload-image?_token=6TODVJsgzJyyYJM3mvJ5VVf7q5vfQD6RiNtam0yg',
             }
         })
         .then(editor => {
@@ -369,15 +474,19 @@
         .catch(err => {
             console.error(err.stack);
         });
-        function clearEditor() {
-            var editor = DecoupledEditor.instances[0];
-            editor.setData('');
-        }
+
+    function clearEditor() {
+        var editor = DecoupledEditor.instances[0];
+        editor.setData('');
+    }
 </script>
 
 <script>
     $(document).ready(function() {
         $('#submit-post').click(function() {
+            console.log("kodok");
+            $('#spiner-button').removeClass('d-none');
+            $('#submit-post').addClass('d-none');
             Swal.fire({
                 title: 'Yakin?',
                 text: "Kamu akan menambahkan post",
@@ -389,7 +498,7 @@
                     confirmButton: 'btn btn-primary me-3',
                     cancelButton: 'btn btn-label-secondary'
                 },
-        buttonsStyling: false
+                buttonsStyling: false
             }).then((result) => {
                 if (result.isConfirmed) {
                     event.preventDefault();
@@ -399,7 +508,8 @@
                     var post_categories = $('#select2Success').val();
                     var short_desc = $('#short_desc').val();
                     var post_content = $('#editor').html();
-                    var post_date = $('#flatpickr-datetime').val();
+                    var post_date = $('#flatpickr-datetime').val(); 
+                    var post_language = $('#post_language').val();
                     var formData = new FormData();
                     formData.append('post_thumbnail', imageFile);
                     formData.append('post_title', post_title);
@@ -408,10 +518,11 @@
                     formData.append('post_categories', post_categories);
                     formData.append('post_content', post_content);
                     formData.append('post_date', post_date);
+                    formData.append('post_language', post_language);
 
                     $.ajax({
-                        url: 'http://localhost:8000/bosa-admin/posts/store?_token=yB2N5ETQD7t5rmGU4ESNi7Xz7frX8pvnE9JW4jkg',
-                        type: "POST",
+                        url: 'http://localhost:8001/bosa-admin/posts/store?_token=6TODVJsgzJyyYJM3mvJ5VVf7q5vfQD6RiNtam0yg',
+                        type : "POST",
                         data: formData,
                         processData: false,
                         contentType: false,
@@ -430,11 +541,39 @@
                                 }
                             });
                         },
-                        error: function(xhr) {
-                            console.log(error)
+                        error: function(xhr, response) {
+                            if(xhr.responseJSON.code == 400){
+                                if(xhr.responseJSON.message == "Error upload thumbnail!"){
+                                    $('#spiner-button').addClass('d-none');
+                                    $('#submit-post').removeClass('d-none');
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: xhr.responseJSON.message,
+                                        icon: 'error',
+                                        customClass: {
+                                        confirmButton: 'btn btn-primary'
+                                        },
+                                        buttonsStyling: false
+                                    });
+                                }
+                            }else if(xhr.responseJSON.code == 500){
+                                $('#spiner-button').addClass('d-none');
+                                $('#submit-post').removeClass('d-none');
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'Something Wrong Error!',
+                                    icon: 'error',
+                                    customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                });
+                            }
                         }
                     });
                 } else {
+                    $('#spiner-button').addClass('d-none');
+                    $('#submit-post').removeClass('d-none');
                     Swal.fire({
                         icon: 'info',
                         title: 'Penambahan Dibatalkan',
