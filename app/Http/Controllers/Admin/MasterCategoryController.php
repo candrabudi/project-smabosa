@@ -37,7 +37,8 @@ class MasterCategoryController extends Controller
     public function store(Request $request)
     {
         $master_category = new MasterCategory();
-        $master_category->name = $request->nama;
+        $master_category->name = $request->name;
+        $master_category->language = $request->language;
         $master_category->save();
 
         return response()->json([
@@ -49,29 +50,30 @@ class MasterCategoryController extends Controller
 
     public function edit($id)
     {
-        $master_category = MasterCategory::where('id', $id)
-            ->first();
-        if(!$master_category){
-            return redirect()->route('admin.master_categories');
-        }
-
-        return view('admin.categories.edit', compact('master_category'));
+        $category = MasterCategory::find($id);
+        return response()->json($category);
     }
 
     public function update(Request $request, $id)
     {
-        $master_category = MasterCategory::where('id', $id)
-            ->first();
-        if(!$master_category){
-            return redirect()->route('admin.master_categories');
+        $master_category = MasterCategory::find($id);
+
+        if (!$master_category) {
+            return response()->json([
+                'status' => 'failed',
+                'code' => 404,
+                'message' => 'Not Found!'
+            ], 404);
         }
-        $master_category->name = $request->nama ?? $master_category->name;
+
+        $master_category->name = $request->input('name', $master_category->name);
+        $master_category->language = $request->input('language', $master_category->language);
         $master_category->save();
 
         return response()->json([
-            'status'    => 'success',
-            'code'  => 200,
-            'message'   => 'Success edit category!'
+            'status' => 'success',
+            'code' => 200,
+            'message' => 'Success edit category!'
         ]);
     }
     

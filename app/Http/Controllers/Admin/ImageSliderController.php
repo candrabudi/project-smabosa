@@ -87,8 +87,8 @@ class ImageSliderController extends Controller
 
     public function edit($id)
     {
-        $product = ImageSlider::find($id);
-        return response()->json($product);
+        $image_slider = ImageSlider::find($id);
+        return response()->json($image_slider);
     }
 
     public function update(Request $request, $id)
