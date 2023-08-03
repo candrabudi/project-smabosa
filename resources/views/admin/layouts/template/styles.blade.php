@@ -36,4 +36,6 @@
 <link rel="stylesheet" href="{{ asset('backend/vendor/libs/sweetalert2/sweetalert2.css') }}" />
 <link rel="stylesheet" href="{{ asset('backend/vendor/libs/toastr/toastr.css') }}" />
 
+<link rel="stylesheet" href="{{ asset('backend/vendor/libs/spinkit/spinkit.css') }}" />
+
 @yield('styles')

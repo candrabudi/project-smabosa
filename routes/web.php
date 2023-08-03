@@ -73,6 +73,8 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
     });
     Route::prefix('about-school')->group(function () {
         Route::get('/', [AboutSchoolController::class, 'index'])->name('admin.about-school');
+        Route::get('/datatable', [AboutSchoolController::class, 'datatable'])->name('admin.about-school.datatable');
+        Route::get('/edit/{id}', [AboutSchoolController::class, 'edit'])->name('admin.about-school.edit');
         Route::post('/store', [AboutSchoolController::class, 'store'])->name('admin.about-school.store');
     });
     Route::prefix('event')->group(function () {

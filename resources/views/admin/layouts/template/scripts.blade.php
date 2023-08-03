@@ -24,4 +24,12 @@
 <script src="{{ asset('backend/js/extended-ui-sweetalert2.js') }}"></script>
 <script src="{{ asset('backend/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>
 
+<script src="{{ asset('backend/vendor/libs/block-ui/block-ui.js') }}"></script>
+
+<!-- Main JS -->
+<script src="{{ asset('backend/js/main.js') }}"></script>
+
+<!-- Page JS -->
+<script src="{{ asset('backend/js/extended-ui-blockui.js') }}"></script>
+
 @yield('scripts')
