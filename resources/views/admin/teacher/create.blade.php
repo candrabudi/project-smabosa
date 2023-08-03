@@ -30,9 +30,11 @@ Tambah Guru
                                 <label class="form-label" for="teacher_type">Jenis Guru</label>
                                 <select class="form-select" id="teacher_type" required>
                                     <option value="">Pilih Jenis Guru</option>
-                                    <option value="tetap">Tetap</option>
-                                    <option value="tatausaha">Tatausaha</option>
-                                    <option value="karyawan">Karyawan</option>
+                                    <option value="headmaster">Kepala Sekolah</option>
+                                    <option value="viceprincipal">Wakil Kepala Sekolah</option>
+                                    <option value="teacher">Guru</option>
+                                    <option value="administration">Tatausaha</option>
+                                    <option value="employee">Karyawan</option>
                                 </select>
                             </div>
                             <div class="mb-3">

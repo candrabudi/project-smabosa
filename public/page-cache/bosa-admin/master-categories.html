@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="1iOqHi2LqXa5lyuknn3UJLaNs9FccDJoPIiaVxSh">
+    <meta name="csrf-token" content="yaXDQ8HEI3eKKR4Vaan0bzdJABXqdiZfy55kcEce">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -50,6 +50,8 @@
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/animate-css/animate.css" />
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
 <link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/toastr/toastr.css" />
+
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/spinkit/spinkit.css" />
 
     <style>
         .toast-body{
@@ -212,7 +214,7 @@
                         <a class="dropdown-item" href="#">
                             <span class="align-middle">
                                 <form method="post" action="http://localhost:8000/logout">
-                                    <input type="hidden" name="_token" value="1iOqHi2LqXa5lyuknn3UJLaNs9FccDJoPIiaVxSh">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                    <input type="hidden" name="_token" value="yaXDQ8HEI3eKKR4Vaan0bzdJABXqdiZfy55kcEce">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
                                 </form>
                             </span>
                         </a>
@@ -350,6 +352,14 @@
 <script src="http://localhost:8000/backend/js/extended-ui-sweetalert2.js"></script>
 <script src="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.js"></script>
 
+<script src="http://localhost:8000/backend/vendor/libs/block-ui/block-ui.js"></script>
+
+<!-- Main JS -->
+<script src="http://localhost:8000/backend/js/main.js"></script>
+
+<!-- Page JS -->
+<script src="http://localhost:8000/backend/js/extended-ui-blockui.js"></script>
+
 <script>
     $(function() {
         var table = $('#get-categories').DataTable({
@@ -396,7 +406,7 @@
                     formData.append('language', language_category);
 
                     $.ajax({
-                        url: 'http://localhost:8000/bosa-admin/master-categories/store?_token=1iOqHi2LqXa5lyuknn3UJLaNs9FccDJoPIiaVxSh',
+                        url: 'http://localhost:8000/bosa-admin/master-categories/store?_token=yaXDQ8HEI3eKKR4Vaan0bzdJABXqdiZfy55kcEce',
                         type: "POST",
                         data: formData,
                         processData: false,

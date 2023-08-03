@@ -45,8 +45,6 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         try{
-            $lowercase = strtolower($request->teacher_name);
-            $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('teacher_photo')) {
                 $image = $request->file('teacher_photo');
                 $imageName = 'school_teacher/teacher_'.time() . '.' . $image->getClientOriginalExtension();
@@ -62,7 +60,6 @@ class TeacherController extends Controller
 
             $store_teacher = new Teacher();
             $store_teacher->teacher_name = $request->teacher_name;
-            $store_teacher->teacher_slug = $slug;
             $store_teacher->teacher_subjects = $request->teacher_subjects;
             $store_teacher->teacher_type = $request->teacher_type;
             $store_teacher->status = $request->status;

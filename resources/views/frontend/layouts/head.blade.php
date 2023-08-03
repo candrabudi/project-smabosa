@@ -121,6 +121,30 @@
                 bottom: 5px !important;
             }
         }
+        @media only screen and (min-width: 830px) and (max-width: 1270px) {
+            .hero-area {
+                overflow: hidden;
+                padding: 10px !important;
+            }
+
+            .hero-container .hero-inner {
+                border-radius: 3px !important;
+                width: 100% !important;
+                height: 290px !important;
+                overflow: hidden;
+            }
+
+            .hero-inner .hero-text {
+                width: 100%;
+                height: 50px !important;
+            }
+
+            .hero-area .tns-nav {
+                text-align: center;
+                position: absolute;
+                bottom: 5px !important;
+            }
+        }
 
         .box-contact i {
             font-size: 15px;

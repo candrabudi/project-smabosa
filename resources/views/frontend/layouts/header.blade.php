@@ -86,10 +86,10 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <form class="d-flex search-form">
+                            <!-- <form class="d-flex search-form">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit"><i class="lni lni-search-alt"></i></button>
-                            </form>
+                            </form> -->
                         </div>
                     </nav>
                 </div>
