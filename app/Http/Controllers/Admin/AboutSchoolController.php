@@ -78,8 +78,10 @@ class AboutSchoolController extends Controller
 
     public function edit($id)
     {
-        $category = AboutSchool::find($id);
-        return response()->json($category);
+        $about_school = AboutSchool::find($id);
+        return view('admin.about.edit', compact([
+            'about_school'
+        ]));
     }
 
     public function update(Request $request)

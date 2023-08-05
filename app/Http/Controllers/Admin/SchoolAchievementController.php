@@ -21,6 +21,7 @@ class SchoolAchievementController extends Controller
     public function datatable()
     {
         $fetch = SchoolAchievement::get()
+            ->whereIn('status', ['Publish', 'Draft'])
             ->toArray();
 
         $i = 0;
@@ -148,8 +149,7 @@ class SchoolAchievementController extends Controller
     {
         SchoolAchievement::where('id', $id)
             ->update([
-                'is_active' => 0, 
-                'is_delete' => 1
+                'status' => 'Delete'
             ]);
         return response()->json([
             'status'    => 'success',

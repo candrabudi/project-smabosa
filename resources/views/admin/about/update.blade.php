@@ -7,8 +7,8 @@
 
             $('#titleSlider').val(data.title);
             $('.btn-card-block-overlay-2').removeAttr("id");
-            $('.content-about-school').removeAttr("id");
-            $('.content-about-school').attr("id", "editor-update");
+            $('#editor').removeAttr("id");
+            $('#editor').attr("id", "editor-update");
             $(".btn-card-block-overlay-2").attr("id", "edit-about-school");
             $(".offcanvas-title").html("Edit Tentang Sekolah");
             $("#edit-about-school").html("Edit Kategori");

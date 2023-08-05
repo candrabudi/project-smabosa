@@ -18,18 +18,56 @@ Tentang Sekolah
                         </button>
                     </div>
                     <div class="card-body">
-                        <div class="card-datatable table-responsive">
-                            <table class="dt-responsive table" id="get-about-school">
-                                <thead>
-                                    <tr>
-                                        <th width=50>No</th>
-                                        <th>Judul</th>
-                                        <th>Bahasa</th>
-                                        <th>Deskripsi Singkat</th>
-                                        <th width=180>Aksi</th>
-                                    </tr>
-                                </thead>
-                            </table>
+                        <div class="offcanvas-body pt-0" id="card-block">
+                            <form class="event-form pt-0" id="categoryForm" onsubmit="return false">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="titleAbout">Tentang Sekolah</label>
+                                            <input type="text" class="form-control" id="titleAbout" name="titleAbout" placeholder="Tentang Sekolah" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="titleAbout">Tentang Sekolah</label>
+                                            <div class="document-editor">
+                                                <div class="toolbar-container"></div>
+                                                <div class="content-container">
+                                                    <div id="editor" class="content-about-school">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="languageAbout">Bahasa</label>
+                                            <select class="select2 select-event-label form-select" id="languageAbout" name="languageAbout">
+                                                <option data-label="primary" value="Indonesia" selected>Indonesia</option>
+                                                <option data-label="primary" value="English">English</option>
+                                                <option data-label="primary" value="Jawa">Jawa</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="shortDescAbout">Deskripsi Singkat</label>
+                                            <textarea name="shortDescAbout" id="shortDescAbout" class="form-control" cols="30" rows="10"></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="image-input border">
+                                                <input type="file" name="file" id="imageAbout" accept="image/png,image/jpeg" max-size="10000000">
+                                                <input type="hidden" name="">
+                                                <img src="" alt="">
+                                            </label>
+                                        </div>
+                                        <div class="mb-3 d-flex justify-content-sm-between justify-content-start my-4">
+                                            <div>
+                                                <button type="submit" id="submit-about" class="btn btn-primary btn-card-block-overlay-2">
+                                                    Tambah
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -37,7 +75,6 @@ Tentang Sekolah
         </div>
     </div>
 </div>
-@include('admin.about.createOrUpdate')
 @endsection
 @section('styles')
 <link rel="stylesheet" href="{{ asset('backend/vendor/libs/flatpickr/flatpickr.css')}}" /> 
@@ -48,7 +85,6 @@ Tentang Sekolah
 @section('scripts')
 <script>
     function ImageInput(element) {
-        // Variables
         var $wrapper = element;
         var $file = $wrapper.querySelector('input[type=file]');
         var $input = $wrapper.querySelector('input[type=hidden]');
@@ -61,7 +97,6 @@ Tentang Sekolah
             onChanged: onChanged,
         };
 
-        // Methods
         function fileHandler(e) {
             var file = $file.files.length && $file.files[0];
 
@@ -166,8 +201,4 @@ Tentang Sekolah
     });
 </script>
 @include('admin.about.editorJs')
-@include('admin.about.store')
-@include('admin.about.update')
-@include('admin.about.delete')
-@include('admin.about.datatable')
 @endsection

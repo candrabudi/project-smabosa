@@ -51,7 +51,7 @@
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item"><a class="active" href="/">Beranda</a></li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profile</a>
+                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
                                         <li class="nav-item"><a href="{{route('about')}}">Tentang Sekolah</a></li>
                                         <li class="nav-item"><a href="{{route('teacher')}}">Guru</a></li>
