@@ -88,14 +88,14 @@ class HomeInformationController extends Controller
             ->first();
         if ($request->hasFile('info_image')) {
             $image = $request->file('info_image');
-            $fileName = 'image_slider/home_information_' . time() . '.' . $image->getClientOriginalExtension();
+            $fileName = 'home_information/home_information_' . time() . '.' . $image->getClientOriginalExtension();
             $compressedImage = Image::make($image)
                 ->resize(800, null, function ($constraint) {
                     $constraint->aspectRatio();
                 });
             $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
             $compressedImage->encode('webp')->save(public_path('images_upload/home_information/' . $webpFilename));
-            $image_name_db = 'image_slider/' . $webpFilename;
+            $image_name_db = 'home_information/' . $webpFilename;
         } else {
             $image_name_db = null;
         }
