@@ -51,7 +51,6 @@ class SchoolAchievementController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
-                $image = $request->file('image');
                 $fileName = 'school_achievement/school_achievement_' . time() . '.' . $image->getClientOriginalExtension();
                 $compressedImage = Image::make($image)
                     ->resize(800, null, function ($constraint) {
@@ -121,7 +120,6 @@ class SchoolAchievementController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
-                $image = $request->file('image');
                 $fileName = 'school_achievement/school_achievement_' . time() . '.' . $image->getClientOriginalExtension();
                 $compressedImage = Image::make($image)
                     ->resize(800, null, function ($constraint) {
