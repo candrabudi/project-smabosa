@@ -27,7 +27,10 @@
                     formData.append('language_slider', $('#languageSlider').val());
                     formData.append('image', $('#imageSlider')[0].files[0]);
                     $.ajax({
-                        url: '{{ route('admin.image-slider.store').'?_token='.csrf_token() }}',
+                        url: '{{ route('admin.image-slider.store')',
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
                         type: "POST",
                         data: formData,
                         processData: false,
