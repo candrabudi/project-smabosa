@@ -104,7 +104,7 @@
                                         <li class="single-block">
                                             <ul>
                                                 <li class="mega-menu-title">SPAB</li>
-                                                <li class="nav-item"><a href="{{route('pageSpab')}}">KEGAIATAN</a></li>
+                                                <li class="nav-item"><a href="{{route('pageSpab')}}">KEGIATAN</a></li>
                                             </ul>
                                         </li>
                                     </ul>
