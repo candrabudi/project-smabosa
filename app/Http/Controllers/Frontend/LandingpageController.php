@@ -155,7 +155,8 @@ class LandingpageController extends Controller
             $teachersArray[] = [
                 'teacher_subjects' => $teacher->teacher_subjects,
                 'teacher_name' => $teacher->teacher_name,
-                'teacher_photo' => lazyImage(public_path("images_upload/" . $teacher->teacher_photo), $teacher->teacher_name, 400, 400),
+                'teacher_photo_base_64' => lazyImage(public_path("images_upload/" . $teacher->teacher_photo), $teacher->teacher_name, 400, 400),
+                'teacher_photo' => "images_upload/" . $teacher->teacher_photo,
             ];
         }
 

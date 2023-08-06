@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\HomeInformation;
 use Illuminate\Http\Request;
 use DataTables;
+use Intervention\Image\Facades\Image;
 class HomeInformationController extends Controller
 {
     public function index()
@@ -19,17 +20,17 @@ class HomeInformationController extends Controller
             ->toArray();
 
         $i = 0;
-        $reform = array_map(function($new) use (&$i) { 
+        $reform = array_map(function ($new) use (&$i) {
             $i++;
             return [
-                'no' => $i.'.',
+                'no' => $i . '.',
                 'id' => $new['id'],
                 'info_name' => $new['info_name'],
                 'info_lang' => $new['info_lang'],
                 'info_position' => $new['info_position'],
-            ]; 
+            ];
         }, $fetch);
-        
+
         return DataTables::of($reform)->make(true);
     }
 
@@ -41,20 +42,26 @@ class HomeInformationController extends Controller
                 'info_lang' => 'required',
                 'info_image' => 'required|file'
             ]);
-        
+
             $image = $request->file('info_image');
-            $imageName = 'home_information/home_information_' . time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images_upload/home_information'), $imageName);
-        
+            $fileName = 'home_information/home_information_' . time() . '.' . $image->getClientOriginalExtension();
+            $compressedImage = Image::make($image)
+                ->resize(800, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+            $compressedImage->encode('webp')->save(public_path('images_upload/home_information/' . $webpFilename));
+            $image_name_db = 'home_information/' . $webpFilename;
+
             $store = new HomeInformation();
             $store->info_name = $request->info_name;
             $store->info_lang = $request->info_lang;
             $store->info_position = $request->info_position;
             $store->route = '-';
-            $store->info_image = $imageName;
+            $store->info_image = $image_name_db;
             $store->info_status = 'Publish';
             $store->save();
-        
+
             return response()->json([
                 'status' => 'success',
                 'code' => 200,
@@ -79,16 +86,22 @@ class HomeInformationController extends Controller
     {
         $check = HomeInformation::where('id', $id)
             ->first();
-        if($request->hasFile('info_image')) {
+        if ($request->hasFile('info_image')) {
             $image = $request->file('info_image');
-            $imageName = 'home_information/home_information_'.time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images_upload/home_information'), $imageName);
-        }else{
-            $imageName = null;
+            $fileName = 'image_slider/home_information_' . time() . '.' . $image->getClientOriginalExtension();
+            $compressedImage = Image::make($image)
+                ->resize(800, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+            $compressedImage->encode('webp')->save(public_path('images_upload/home_information/' . $webpFilename));
+            $image_name_db = 'image_slider/' . $webpFilename;
+        } else {
+            $image_name_db = null;
         }
         $check->info_name = $request->info_name ?? $check->info_name;
         $check->info_lang = $request->info_lang ?? $check->info_lang;
-        $check->info_image = $imageName ?? $check->info_image;
+        $check->info_image = $image_name_db ?? $check->info_image;
         $check->save();
 
         return $check->info_image;

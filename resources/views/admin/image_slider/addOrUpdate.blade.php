@@ -7,6 +7,7 @@
         <form class="event-form pt-0" id="eventForm" onsubmit="return false">
             <div class="mb-3">
                 <label class="form-label" for="titleSlider">Judul Slider</label>
+                @csrf
                 <input type="text" class="form-control" id="titleSlider" name="titleSlider" placeholder="Event Title" />
             </div>
             <div class="mb-3">

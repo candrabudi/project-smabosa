@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use DataTables;
+use Intervention\Image\Facades\Image;
 class PostController extends Controller
 {
     public function __construct()
@@ -188,8 +189,14 @@ class PostController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('post_thumbnail')) {
                 $image = $request->file('post_thumbnail');
-                $imageName = 'post_thumbnail/post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/post_thumbnail'), $imageName);
+                $fileName = 'post_thumbnail/post_thumbnail_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/post_thumbnail/' . $webpFilename));
+                $image_name_db = 'post_thumbnail/' . $webpFilename;
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -207,7 +214,7 @@ class PostController extends Controller
             $store_post->post_language = $request->post_language;
             $store_post->post_short_desc = $request->short_desc;
             $store_post->post_slug = $slug;
-            $store_post->post_thumbnail = $imageName;
+            $store_post->post_thumbnail = $image_name_db;
             $store_post->save();
             $store_post->fresh();
 
@@ -250,10 +257,16 @@ class PostController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('post_thumbnail')) {
                 $image = $request->file('post_thumbnail');
-                $imageName = 'post_thumbnail/post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/post_thumbnail'), $imageName);
+                $fileName = 'post_thumbnail/post_thumbnail_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/post_thumbnail/' . $webpFilename));
+                $image_name_db = 'post_thumbnail/' . $webpFilename;
             }else{
-                $imageName = null;
+                $image_name_db = null;
             }
 
             $post->author_id = Auth::user()->id;
@@ -263,7 +276,7 @@ class PostController extends Controller
             $post->post_content = $request->post_content ?? $post->post_content;
             $post->post_status = $request->post_status ?? $post->post_status;
             $post->post_slug = $slug ?? $post->post_slug;
-            $post->post_thumbnail = $imageName ?? $post->post_thumbnail;
+            $post->post_thumbnail = $image_name_db ?? $post->post_thumbnail;
             $post->save();
 
             if($request->post_categories){

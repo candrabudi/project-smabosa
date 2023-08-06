@@ -19,7 +19,6 @@
 
                     const valueStatusSlider = $('.switch-input');
                     const status_slider = valueStatusSlider.prop('checked') ? 'Publish' : 'Draft';
-
                     const formData = new FormData();
                     formData.append('title_slider', $('#titleSlider').val());
                     formData.append('description_slider', $('#descriptionSlider').val());
@@ -27,18 +26,18 @@
                     formData.append('language_slider', $('#languageSlider').val());
                     formData.append('image', $('#imageSlider')[0].files[0]);
                     $.ajax({
-                        url: '{{ route('admin.image-slider.store')',
+                        url: '/bosa-admin/image-slider/store',
+                        type: "POST",
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
-                        type: "POST",
                         data: formData,
                         processData: false,
                         contentType: false,
                         success: function(response) {
                             Swal.fire({
-                                title: 'Berhasl!',
-                                text: 'Kategori Berhasil Di tambahkan!',
+                                title: 'Berhasil!',
+                                text: 'Data Berhasil Ditambahkan!',
                                 icon: 'success',
                                 customClass: {
                                     confirmButton: 'btn btn-primary'
@@ -51,27 +50,25 @@
                             });
                         },
                         error: function(xhr, response) {
-                            if(xhr.responseJSON.code == 400){
-                                $('#spiner-button').addClass('d-none');
-                                $('#submit-post').removeClass('d-none');
+                            $('#spiner-button').addClass('d-none');
+                            $('#submit-post').removeClass('d-none');
+                            if (xhr.responseJSON && xhr.responseJSON.code == 400) {
                                 Swal.fire({
                                     title: 'Error!',
                                     text: xhr.responseJSON.message,
                                     icon: 'error',
                                     customClass: {
-                                    confirmButton: 'btn btn-primary'
+                                        confirmButton: 'btn btn-primary'
                                     },
                                     buttonsStyling: false
                                 });
-                            }else if(xhr.responseJSON.code == 500){
-                                $('#spiner-button').addClass('d-none');
-                                $('#submit-post').removeClass('d-none');
+                            } else {
                                 Swal.fire({
                                     title: 'Error!',
-                                    text: 'Something Wrong Error!',
+                                    text: 'Something Went Wrong!',
                                     icon: 'error',
                                     customClass: {
-                                    confirmButton: 'btn btn-primary'
+                                        confirmButton: 'btn btn-primary'
                                     },
                                     buttonsStyling: false
                                 });
