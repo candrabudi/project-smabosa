@@ -1,22 +1,25 @@
+
 @media only screen and (min-width: 330px) and (max-width: 390px) {
     .collaboration {
         width: 100%;
-        min-height: 350px;
+        min-height: 250px!important;
         background-color: #375bcd;
+        padding: 0px;
     }
 
     .collaboration .container-collaboration {
-        width: 80%;
+        width: 100%;
         height: 100%;
         margin: auto;
-        padding: 20px;
+        padding: 5px!important;
         box-sizing: border-box;
     }
 
     .collaboration .container-collaboration .collaboration-title {
         text-align: center;
         width: 100% !important;
-        margin: auto;
+        margin: 30px auto!important;
+        margin-bottom: 0px!important;
 
     }
 
@@ -26,13 +29,13 @@
         box-sizing: border-box;
         background-color: #fff000;
         border-radius: 4px;
-        font-size: 24px !important;
+        font-size: 18px !important;
     }
 
     .collaboration .container-collaboration .content-collaboration {
         padding: 0px !important;
         box-sizing: border-box;
-        margin-top: 15px
+        margin-top: 0px!important;
     }
 
     .collaboration .container-collaboration .content-collaboration .box-program-reguler {
@@ -48,7 +51,7 @@
 
     .box-program-reguler h3 {
         color: #375bcd;
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
 
     .collaboration .container-collaboration .content-collaboration .box-program-ais {
@@ -64,7 +67,7 @@
 
     .box-program-ais h3 {
         color: #375bcd;
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
 
     .collaboration .container-collaboration .content-collaboration img {

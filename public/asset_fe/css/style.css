@@ -56,16 +56,18 @@
     border: 1px solid #EEE;
 }
 
-@media only screen and (min-width: 330px) and (max-width: 470px) {
+/* RESPONSIVE HERO SLIDER */
+@media only screen and (max-width: 330px) {
     .hero-area {
         overflow: hidden;
-        padding: 10px !important;
+        padding: 0px !important;
+        margin-top: 200px!important;
     }
 
     .hero-container .hero-inner {
         border-radius: 3px !important;
         width: 100% !important;
-        height: 125px !important;
+        height: 120px !important;
         overflow: hidden;
     }
 
@@ -81,16 +83,94 @@
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 576px) {
+@media only screen and (min-width: 360px) and (max-width: 390px) {
     .hero-area {
         overflow: hidden;
-        padding: 10px !important;
+        padding: 0px !important;
+        margin-top: 200px!important;
     }
 
     .hero-container .hero-inner {
         border-radius: 3px !important;
         width: 100% !important;
-        height: 225px !important;
+        height: 140px !important;
+        overflow: hidden;
+    }
+
+    .hero-inner .hero-text {
+        width: 100%;
+        height: 50px !important;
+    }
+
+    .hero-area .tns-nav {
+        text-align: center;
+        position: absolute;
+        bottom: 5px !important;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 470px) {
+    .hero-area {
+        overflow: hidden;
+        padding: 0px !important;
+        margin-top: 200px!important;
+    }
+
+    .hero-container .hero-inner {
+        border-radius: 3px !important;
+        width: 100% !important;
+        height: 150px !important;
+        overflow: hidden;
+    }
+
+    .hero-inner .hero-text {
+        width: 100%;
+        height: 50px !important;
+    }
+
+    .hero-area .tns-nav {
+        text-align: center;
+        position: absolute;
+        bottom: 5px !important;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 505px) {
+    .hero-area {
+        overflow: hidden;
+        padding: 0px !important;
+        margin-top: 200px!important;
+    }
+
+    .hero-container .hero-inner {
+        border-radius: 3px !important;
+        width: 100% !important;
+        height: 175px !important;
+        overflow: hidden;
+    }
+
+    .hero-inner .hero-text {
+        width: 100%;
+        height: 50px !important;
+    }
+
+    .hero-area .tns-nav {
+        text-align: center;
+        position: absolute;
+        bottom: 5px !important;
+    }
+}
+@media only screen and (min-width: 505px) and (max-width: 540px) {
+    .hero-area {
+        overflow: hidden;
+        padding: 0px !important;
+        margin-top: 200px!important;
+    }
+
+    .hero-container .hero-inner {
+        border-radius: 3px !important;
+        width: 100% !important;
+        height: 195px !important;
         overflow: hidden;
     }
 
