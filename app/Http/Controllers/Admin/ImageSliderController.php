@@ -111,20 +111,24 @@ class ImageSliderController extends Controller
 
 
             if ($request->hasFile('image')) {
-                $originName = $request->file('image')->getClientOriginalName();
-                $extension = $request->file('image')->getClientOriginalExtension();
-                $fileName = 'images_upload/image_slider' . '_' . time() . '.' . $extension;
-
-                $request->file('image')->move(public_path('images_upload/image_slider'), $fileName);
+                $image = $request->file('image');
+                $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/image_slider/' . $webpFilename));
+                $image_name_db = 'image_slider/' . $webpFilename;
             } else {
-                $fileName = $image_slider->image;
+                $image_name_db = $image_slider->image;
             }
 
             $image_slider->update([
                 'title' => $request->input('title_slider', $image_slider->title),
                 'description' => $request->input('description_slider', $image_slider->description),
                 'status' => $request->input('status_slider', $image_slider->status),
-                'image' => $fileName,
+                'image' => $image_name_db,
             ]);
 
             return response()->json([
