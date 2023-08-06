@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\SchoolAchievementController;
 use App\Http\Controllers\Admin\ExtracurricularController;
+use App\Http\Controllers\Admin\HomeInformationController;
 use App\Http\Controllers\Admin\SchoolProgramController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Models\SchoolProgram;
@@ -145,6 +146,14 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::post('/store', [BosaPageController::class, 'store'])->name('admin.bosa-pages.store');
         Route::get('/edit/{id}', [BosaPageController::class, 'edit'])->name('admin.bosa-pages.edit');
         Route::post('/update/{id}', [BosaPageController::class, 'update'])->name('admin.bosa-pages.update');
+    });
+    Route::prefix('home-information')->group(function () {
+        Route::get('/', [HomeInformationController::class, 'index'])->name('admin.home-information');
+        Route::get('/datatable', [HomeInformationController::class, 'datatable'])->name('admin.home-information.datatable');
+        Route::get('/create', [HomeInformationController::class, 'create'])->name('admin.home-information.create');
+        Route::post('/store', [HomeInformationController::class, 'store'])->name('admin.home-information.store');
+        Route::get('/edit/{id}', [HomeInformationController::class, 'edit'])->name('admin.home-information.edit');
+        Route::post('/update/{id}', [HomeInformationController::class, 'update'])->name('admin.home-information.update');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

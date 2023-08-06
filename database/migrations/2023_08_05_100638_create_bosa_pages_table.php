@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('bosa_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->text('description');
-            $table->text('content');
-            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
-            $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
+            $table->string('page_name');
+            $table->string('page_slug');
+            $table->text('page_desc');
+            $table->text('page_content');
+            $table->enum('page_lang', ['Indonesia', 'English', 'Jawa']);
+            $table->enum('page_status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });
     }

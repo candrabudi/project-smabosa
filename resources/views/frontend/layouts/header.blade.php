@@ -91,8 +91,8 @@
                                     <a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
-                                    <ul class="sub-menu mega-menu collapse" id="submenu-1-4">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
+                                    <ul class="sub-menu mega-menu collapse" id="submenu-1-5">
                                         <li class="single-block">
                                             <ul>
                                                 <li class="mega-menu-title">BKKBN</li>

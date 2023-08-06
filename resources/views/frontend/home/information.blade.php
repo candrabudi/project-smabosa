@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="information-first">
-                    <img src="{{asset('frontend/images/image-01.jpeg')}}" alt="">
+                    <img src="{{asset('images/'.$info_first->info_image)}}" alt="">
                     <h3>
                         <a href="{{route('extracurricular')}}">EKSTRAKURIKULER</a>
                     </h3>
@@ -76,36 +76,18 @@
             <div class="col-lg-5">
                 <div class="information-second">
                     <div class="row">
+                        @foreach($info_images as $ii)
                         <div class="col-lg-12 mb-3">
                             <div class="content-information">
-                                <div class="thumbnail-information" style="background-image: url('{{asset('frontend/images/image-02.jpeg')}}');">
+                                <div class="thumbnail-information" style='background-image: url("{{ asset('images/'.$ii->info_image) }}");'>
 
                                 </div>
                                 <h3>
-                                    <a href="{{route('teacher')}}">GURU & KARYAWAN</a>
+                                    <a href="{{$ii->route}}">{{$ii->info_name}}</a>
                                 </h3>
                             </div>
                         </div>
-                        <div class="col-lg-12 mb-3">
-                            <div class="content-information">
-                                <div class="thumbnail-information" style="background-image: url('{{asset('frontend/images/image-02.jpeg')}}');">
-
-                                </div>
-                                <h3>
-                                    <a href="{{route('schoolprogram')}}">KERJASAMA INTERNASIONAL</a>
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 mb-3">
-                            <div class="content-information">
-                                <div class="thumbnail-information" style="background-image: url('{{asset('frontend/images/image-02.jpeg')}}');">
-
-                                </div>
-                                <h3>
-                                    <a href="{{route('facility')}}">FASILITAS</a>
-                                </h3>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ use App\Models\BosaPage;
 use App\Models\Event;
 use App\Models\Extracurricular;
 use App\Models\Facility;
+use App\Models\HomeInformation;
 use App\Models\ImageSlider;
 use App\Models\Post;
 use App\Models\SchoolAchievement;
@@ -42,6 +43,11 @@ class LandingpageController extends Controller
             ->with('category')
             ->orderby('post_date','DESC')
             ->paginate(3);
+        $info_first = HomeInformation::where('info_position', 1)
+            ->first();
+        $info_images = HomeInformation::where('info_position', '!=', 1)
+            ->orderby('info_position', 'ASC')
+            ->get();
         $about = AboutSchool::first();
         if(count($events) > 1){
             $eventLasts = Event::where('status', 'Publish')
@@ -54,7 +60,7 @@ class LandingpageController extends Controller
             $eventLasts = [];
         }
         return view('frontend.index', compact(
-            'image_sliders', 'school_achievements', 'articles', 'events', 'eventLasts', 'about', 'activities'
+            'image_sliders', 'school_achievements', 'articles', 'events', 'eventLasts', 'about', 'activities', 'info_first', 'info_images'
         ));
     }
 

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('home_information', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('image');
-            $table->enum('language', ['Indonesia', 'English', 'Jawa']);
-            $table->enum('status', ['Publish', 'Draft', 'Delete'])->default('Draft');
+            $table->string('info_name');
+            $table->string('info_image');
+            $table->enum('info_lang', ['Indonesia', 'English', 'Jawa']);
+            $table->enum('info_status', ['Publish', 'Draft', 'Delete'])->default('Draft');
             $table->timestamps();
         });
     }

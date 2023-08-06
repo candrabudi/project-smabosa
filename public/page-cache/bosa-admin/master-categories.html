@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="csrf-token" content="yaXDQ8HEI3eKKR4Vaan0bzdJABXqdiZfy55kcEce">
+    <meta name="csrf-token" content="WpU20sF4Xex2l1FLF9jTrS7CFQ9cKIx4IF0wH39Z">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -105,6 +105,18 @@
                     </a>
                 </li>
             </ul>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/bosa-pages" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Halaman">Halaman</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/home-information" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Informasi">Informasi</div>
+            </a>
         </li>
         <li class="menu-item">
             <a href="http://localhost:8000/bosa-admin/image-slider" class="menu-link">
@@ -214,7 +226,7 @@
                         <a class="dropdown-item" href="#">
                             <span class="align-middle">
                                 <form method="post" action="http://localhost:8000/logout">
-                                    <input type="hidden" name="_token" value="yaXDQ8HEI3eKKR4Vaan0bzdJABXqdiZfy55kcEce">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                    <input type="hidden" name="_token" value="WpU20sF4Xex2l1FLF9jTrS7CFQ9cKIx4IF0wH39Z">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
                                 </form>
                             </span>
                         </a>
@@ -406,7 +418,7 @@
                     formData.append('language', language_category);
 
                     $.ajax({
-                        url: 'http://localhost:8000/bosa-admin/master-categories/store?_token=yaXDQ8HEI3eKKR4Vaan0bzdJABXqdiZfy55kcEce',
+                        url: 'http://localhost:8000/bosa-admin/master-categories/store?_token=WpU20sF4Xex2l1FLF9jTrS7CFQ9cKIx4IF0wH39Z',
                         type: "POST",
                         data: formData,
                         processData: false,
@@ -446,8 +458,6 @@
         var id = $(this).data('id');
         $.get("/bosa-admin/master-categories/edit/" + id, function(data) {
             let id = data.id;
-            var status_slider_val = (data.status == 'Publish') ? $(".switch-input").prop("checked", true) : $(".switch-input").prop("checked", false);
-
             $('#titleSlider').val(data.title);
             $('.btn-add-event').removeAttr("id");
             $(".btn-add-event").attr("id", "edit-category");

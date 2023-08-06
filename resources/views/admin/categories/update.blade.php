@@ -3,8 +3,6 @@
         var id = $(this).data('id');
         $.get("/bosa-admin/master-categories/edit/" + id, function(data) {
             let id = data.id;
-            var status_slider_val = (data.status == 'Publish') ? $(".switch-input").prop("checked", true) : $(".switch-input").prop("checked", false);
-
             $('#titleSlider').val(data.title);
             $('.btn-add-event').removeAttr("id");
             $(".btn-add-event").attr("id", "edit-category");
