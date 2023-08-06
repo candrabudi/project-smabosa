@@ -74,5 +74,4 @@ Tentang - Smabosa
         </div>
     </div>
 </div>
-
 @endsection

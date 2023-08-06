@@ -66,6 +66,14 @@
                         <p>Maka dari itu, SMA BOSA mempunyai layanan pendidikan berupa program reguler dan BOSA-AIS Educational Program. Program Reguler merupakan layanan pendidikan dengan menerapkan kurikulum nasional yang bertujuan untuk mengasah minat dan bakat anak sejak dini dengan berfokus pada materi esensial, pengembangan karakter, dan kompetensi peserta didik SMA BOSA.</p>
                         <br>
                         <p>Dengan slogan “BOSA BISA, BISA BOSA”, SMA BOSA berkomitmen menyelenggarakan pendidikan berpedoman pada kasih, integritas, dan pelayanan yang tulus agar para peserta didik mampu “Berprestasi bersama BOSA”.</p>
+                        <div class="row mt-3">
+                            <div class="col-lg-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15812.115976277692!2d110.3772811!3d-7.7867506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a582d15c6b895%3A0x483d905b35aaf1ea!2sSMA%20BOPKRI%201%20Yogyakarta!5e0!3m2!1sid!2sid!4v1691323791053!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col-lg-6">
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/mfxUMfRG5xA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
