@@ -7,6 +7,7 @@ use App\Models\SchoolAchievement;
 use Illuminate\Http\Request;
 use DataTables;
 use DB;
+use Intervention\Image\Facades\Image;
 class SchoolAchievementController extends Controller
 {
     public function __construct()
@@ -50,8 +51,15 @@ class SchoolAchievementController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
-                $imageName = 'school_achievement/school_achievement_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/school_achievement'), $imageName);
+                $image = $request->file('image');
+                $fileName = 'school_achievement/school_achievement_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/school_achievement/' . $webpFilename));
+                $image_name_db = 'school_achievement/' . $webpFilename;
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -67,7 +75,7 @@ class SchoolAchievementController extends Controller
             $store_event->content = $request->content;
             $store_event->achievement_gainer = $request->peraih_prestasi;
             $store_event->status = $request->status;
-            $store_event->thumbnail = $imageName;
+            $store_event->thumbnail = $image_name_db;
             $store_event->save();
 
             DB::commit();
@@ -113,10 +121,17 @@ class SchoolAchievementController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
-                $imageName = 'school_achievement/school_achievement_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/school_achievement'), $imageName);
+                $image = $request->file('image');
+                $fileName = 'school_achievement/school_achievement_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/school_achievement/' . $webpFilename));
+                $image_name_db = 'school_achievement/' . $webpFilename;
             }else{
-                $imageName = null;
+                $image_name_db = null;
             }
 
             $school_achievement->title = $request->title ?? $school_achievement->title ;
@@ -124,7 +139,7 @@ class SchoolAchievementController extends Controller
             $school_achievement->content = $request->content ?? $school_achievement->content;
             $school_achievement->satus = $request->satus ?? $school_achievement->satus;
             $school_achievement->slug = $slug ?? $school_achievement->slug;
-            $school_achievement->thumbnail = $imageName ?? $school_achievement->thumbnail;
+            $school_achievement->thumbnail = $image_name_db ?? $school_achievement->thumbnail;
             $school_achievement->achievement_gainer = $request->peraih_prestasi ?? $school_achievement->achievement_gainer;
             $school_achievement->save();
 
