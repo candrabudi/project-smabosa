@@ -42,7 +42,7 @@
             <div class="col-lg-12">
                 <div class="nav-inner">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="">
+                        <a class="navbar-brand" href="{{route('landingpage')}}">
                             <img src="{{ asset('asset_fe/images/logo/logo.png') }}" loading="lazy" alt="Logo">
                         </a>
                         <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
