@@ -116,7 +116,7 @@ class SchoolAchievementController extends Controller
         }
         DB::beginTransaction();
         try{
-            $lowercase = strtolower($request->post_title);
+            $lowercase = strtolower($request->title);
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
