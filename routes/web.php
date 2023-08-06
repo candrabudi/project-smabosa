@@ -35,7 +35,8 @@ Route::get('/prestasi/{slug}', [LandingpageController::class, 'AchivementDetail'
 Route::get('/blog/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
 Route::get('/pengumuman', [LandingpageController::class, 'announcement'])->name('announcement');
 Route::get('/pengumuman/{slug}', [LandingpageController::class, 'announcementDetail'])->name('announcement.detail');
-Route::get('/program', [LandingpageController::class, 'schoolProgram'])->name('schoolprogram');
+Route::get('/program/reguler', [LandingpageController::class, 'schoolProgramRegular'])->name('schoolprogramRegular');
+Route::get('/program/bosa-ais', [LandingpageController::class, 'schoolProgramBosaAis'])->name('schoolprogramBosaAis');
 Route::get('/spab', [LandingpageController::class, 'pageSpab'])->name('pageSpab');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
@@ -136,8 +137,10 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
         Route::delete('/delete/{id}', [TeacherController::class, 'delete'])->name('admin.teacher.delete');
     });
     Route::prefix('program')->group(function () {
-        Route::get('/', [SchoolProgramController::class, 'index'])->name('admin.program');
-        Route::post('/store', [SchoolProgramController::class, 'store'])->name('admin.program.store');
+        Route::get('/regular', [SchoolProgramController::class, 'indexRegular'])->name('admin.program.regular');
+        Route::get('/bosa-ais', [SchoolProgramController::class, 'indexBosaAis'])->name('admin.program.bosaAis');
+        Route::post('/storeRegular', [SchoolProgramController::class, 'storeRegular'])->name('admin.program.storeRegular');
+        Route::post('/storeBosaAis', [SchoolProgramController::class, 'storeBosaAis'])->name('admin.program.storeBosaAis');
     });
     Route::prefix('bosa-pages')->group(function () {
         Route::get('/', [BosaPageController::class, 'index'])->name('admin.bosa-pages');

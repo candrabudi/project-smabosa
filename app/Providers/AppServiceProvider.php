@@ -24,17 +24,5 @@ class AppServiceProvider extends ServiceProvider
     {
         config(['app.locale' => 'id']);
 	    Carbon::setLocale('id');
-        // Blade::directive('lazyImage', function ($expression) {
-        //     Log::info($expression);
-        //     // list($path, $alt, $width, $height) = explode(',', str_replace(['(', ')', ' ', '\''], '', $expression));
-        //     // $img = Image::cache(function ($image) use ($path, $width, $height) {
-        //     //     return $image->make($path)->fit($width, $height);
-        //     // }, 10, true);
-    
-        //     // $dataUri = 'data:image/' . pathinfo($path, PATHINFO_EXTENSION) . ';base64,' . base64_encode($img->encode());
-    
-        //     // return '<img src="' . $dataUri . '" alt="' . $alt . '" loading="lazy">';
-        // });
-        Blade::component('lazyimage', LazyImage::class);
     }
 }

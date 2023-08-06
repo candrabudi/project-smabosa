@@ -104,7 +104,7 @@ Program Sekolah - Bosa
                     formData.append('content', content);
 
                     $.ajax({
-                        url: '{{ route('admin.program.storeRegular').'?_token='.csrf_token() }}',
+                        url: '{{ route('admin.program.storeBosaAis').'?_token='.csrf_token() }}',
                         type: "POST",
                         data: formData,
                         processData: false,
@@ -120,7 +120,7 @@ Program Sekolah - Bosa
                                 buttonsStyling: false
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = '/bosa-admin/program/regular';
+                                    window.location.href = '/bosa-admin/program/bosa-ais';
                                 }
                             });
                         },

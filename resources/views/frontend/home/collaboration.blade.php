@@ -82,7 +82,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="box-program-reguler">
-                                <h3>PROGRAM REGULER</h3>
+                                <h3><a href="{{route('schoolprogramRegular')}}">PROGRAM REGULER</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -94,7 +94,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="box-program-ais">
-                                <h3>BOSA-AIS<br> EDUCATIONAL PROGRAM</h3>
+                                <h3><a href="{{route('schoolprogramRegular')}}">BOSA-AIS<br> EDUCATIONAL PROGRAM</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4">

@@ -65,9 +65,15 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="{{route('admin.program')}}" class="menu-link">
+            <a href="{{route('admin.program.regular')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-building-arch"></i>
-                <div data-i18n="Program">Program</div>
+                <div data-i18n="Program Reguler">Program Reguler</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('admin.program.bosaAis')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Program Bosa Ais">Program Bosa Ais</div>
             </a>
         </li>
         <li class="menu-item">

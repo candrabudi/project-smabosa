@@ -232,10 +232,18 @@ class LandingpageController extends Controller
         return view('frontend.announcement.detail', compact('announcement', 'recent_posts'));
     }
 
-    public function schoolProgram()
+    public function schoolProgramRegular()
     {
-        $school_program = SchoolProgram::first();
+        $school_program = SchoolProgram::where('title', 'PROGRAM REGULER')
+            ->first();
         return view('frontend.program.index', compact('school_program'));
+    }
+    
+    public function schoolProgramBosaAis()
+    {
+        $school_program = SchoolProgram::where('title', 'BOSA-AIS EDUCATIONAL PROGRAM')
+            ->first();
+        return view('frontend.program.bosa_ais', compact('school_program'));
     }
 
     public function pageSpab()
