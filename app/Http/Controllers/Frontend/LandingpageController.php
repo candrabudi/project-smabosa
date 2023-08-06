@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\AboutSchool;
 use App\Models\Announcement;
+use App\Models\BosaPage;
 use App\Models\Event;
 use App\Models\Extracurricular;
 use App\Models\Facility;
@@ -200,5 +201,14 @@ class LandingpageController extends Controller
     {
         $school_program = SchoolProgram::first();
         return view('frontend.program.index', compact('school_program'));
+    }
+
+    public function pageSpab()
+    {
+        $spab = BosaPage::where('page_name', 'SPAB')
+            ->first();
+        return view('frontend.bosa_pages.spab', compact([
+            'spab'
+        ]));
     }
 }

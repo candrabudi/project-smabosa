@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutSchoolController;
 use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\BosaPageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ImageSliderController;
 use App\Http\Controllers\Admin\MasterCategoryController;
@@ -34,6 +35,7 @@ Route::get('/blog/{slug}', [LandingpageController::class, 'blogDetail'])->name('
 Route::get('/pengumuman', [LandingpageController::class, 'announcement'])->name('announcement');
 Route::get('/pengumuman/{slug}', [LandingpageController::class, 'announcementDetail'])->name('announcement.detail');
 Route::get('/program', [LandingpageController::class, 'schoolProgram'])->name('schoolprogram');
+Route::get('/spab', [LandingpageController::class, 'pageSpab'])->name('pageSpab');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
@@ -135,6 +137,14 @@ Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
     Route::prefix('program')->group(function () {
         Route::get('/', [SchoolProgramController::class, 'index'])->name('admin.program');
         Route::post('/store', [SchoolProgramController::class, 'store'])->name('admin.program.store');
+    });
+    Route::prefix('bosa-pages')->group(function () {
+        Route::get('/', [BosaPageController::class, 'index'])->name('admin.bosa-pages');
+        Route::get('/datatable', [BosaPageController::class, 'datatable'])->name('admin.bosa-pages.datatable');
+        Route::get('/create', [BosaPageController::class, 'create'])->name('admin.bosa-pages.create');
+        Route::post('/store', [BosaPageController::class, 'store'])->name('admin.bosa-pages.store');
+        Route::get('/edit/{id}', [BosaPageController::class, 'edit'])->name('admin.bosa-pages.edit');
+        Route::post('/update/{id}', [BosaPageController::class, 'update'])->name('admin.bosa-pages.update');
     });
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,3 +1,6 @@
+<style>
+    
+</style>
 <div class="preloader">
     <div class="preloader-inner">
         <div class="preloader-icon">
@@ -39,7 +42,7 @@
             <div class="col-lg-12">
                 <div class="nav-inner">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="/">
+                        <a class="navbar-brand" href="index.html">
                             <img src="{{ asset('frontend/images/logo/logo.png') }}" alt="Logo">
                         </a>
                         <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,18 +52,22 @@
                         </button>
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
-                                <li class="nav-item"><a class="active" href="/">Beranda</a></li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-4">
-                                        <li class="nav-item"><a href="{{route('about')}}">Tentang Sekolah</a></li>
+                                    <a href="/" aria-label="Toggle navigation">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-2">
+                                    <li class="nav-item"><a href="{{route('about')}}">Tentang Sekolah</a></li>
                                         <li class="nav-item"><a href="{{route('teacher')}}">Guru</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a href="{{route('event')}}">Agenda</a></li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-4">
+                                    <a href="{{route('event')}}">Agenda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a href="{{route('announcement')}}">Pengumuman</a></li>
                                         <li class="nav-item"><a href="{{route('blog')}}">Blog</a></li>
                                         <li class="nav-item"><a href="https://www.youtube.com/channel/UC1JUQzztEDDSOVOC0rTMY2A">Video</a></li>
@@ -71,25 +78,38 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Perpustakaan</a>
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Perpustakaan</a>
                                     <ul class="sub-menu collapse" id="submenu-1-4">
                                         <li class="nav-item"><a href="http://117.102.64.163:3333/perpustakaan">Bosa Jogja Library</a></li>
+
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a href="https://smabosa-yogya.sch.id/2022/08/31/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2022-2024/">PCPDB</a></li>
-                                <li class="nav-item"><a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a></li>
                                 <li class="nav-item">
-                                    <a class="page-scroll dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-4">
-                                        <li class="nav-item"><a href="javascript:void(0)">BKKBN</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">SPAB</a></li>
+                                    <a href="https://smabosa-yogya.sch.id/2022/08/31/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2022-2024/" aria-label="Toggle navigation">PCPDB</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
+                                    <ul class="sub-menu mega-menu collapse" id="submenu-1-4">
+                                        <li class="single-block">
+                                            <ul>
+                                                <li class="mega-menu-title">BKKBN</li>
+                                                <li class="nav-item"><a href="#">PERSADA</a></li>
+                                                <li class="nav-item"><a href="#">KEPENDUDUKAN</a></li>
+                                                <li class="nav-item"><a href="#">MATERI KEPENDUDUKAN</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="single-block">
+                                            <ul>
+                                                <li class="mega-menu-title">SPAB</li>
+                                                <li class="nav-item"><a href="{{route('pageSpab')}}">KEGAIATAN</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
-                            <!-- <form class="d-flex search-form">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit"><i class="lni lni-search-alt"></i></button>
-                            </form> -->
                         </div>
                     </nav>
                 </div>

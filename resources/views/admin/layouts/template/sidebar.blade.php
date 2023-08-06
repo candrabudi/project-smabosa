@@ -41,6 +41,12 @@
             </ul>
         </li>
         <li class="menu-item">
+            <a href="{{route('admin.bosa-pages')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Halaman">Halaman</div>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="{{route('admin.image-slider')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-album"></i>
                 <div data-i18n="Image Slider">Image Slider</div>
