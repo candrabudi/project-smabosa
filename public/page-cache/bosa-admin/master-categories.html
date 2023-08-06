@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="../../backend/" data-template="vertical-menu-template-no-customizer">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="csrf-token" content="WpU20sF4Xex2l1FLF9jTrS7CFQ9cKIx4IF0wH39Z">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Master Kategori
+ - Bosa</title>
+
+    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/backend/img/logo/logo-bosa.png" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/fonts/fontawesome.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/fonts/tabler-icons.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/fonts/flag-icons.css" />
+
+
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/css/rtl/core.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/css/rtl/theme-default.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/css/demo.css" />
+
+
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/node-waves/node-waves.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/typeahead-js/typeahead.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/apex-charts/apex-charts.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/swiper/swiper.css" />
+
+<link rel="stylesheet" href="../../backend/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+<link rel="stylesheet" href="../../backend/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+<link rel="stylesheet" href="../../backend/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+    
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/css/pages/cards-advance.css" />
+
+<script src="http://localhost:8000/backend/vendor/js/helpers.js"></script>
+
+<script src="http://localhost:8000/backend/js/config.js"></script>
+
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/animate-css/animate.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.css" />
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/toastr/toastr.css" />
+
+<link rel="stylesheet" href="http://localhost:8000/backend/vendor/libs/spinkit/spinkit.css" />
+
+    <style>
+        .toast-body{
+            background-color: #FFF;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <a href="index.html" class="app-brand-link">
+            <span class="app-brand-logo demo">
+                <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" width="20" alt="">
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold">BOSA</span>
+        </a>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <li class="menu-item active">
+            <a href="index.html" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-smart-home"></i>
+                <div data-i18n="Dashboard">Dashboard</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-pencil"></i>
+                <div data-i18n="Roles & Permissions">Posting</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="http://localhost:8000/bosa-admin/posts" class="menu-link">
+                        <div data-i18n="Roles">Semua Post</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="http://localhost:8000/bosa-admin/master-categories" class="menu-link">
+                        <div data-i18n="Permission">Kategori</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/bosa-pages" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Halaman">Halaman</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/home-information" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Informasi">Informasi</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/image-slider" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-album"></i>
+                <div data-i18n="Image Slider">Image Slider</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/about-school" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Tentang Sekolah">Tentang Sekolah</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/program" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Program">Program</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/facilities" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-building-arch"></i>
+                <div data-i18n="Fasilitas">Fasilitas</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/extracurricular" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-notebook"></i>
+                <div data-i18n="Ekstrakurikular">Ekstrakurikular</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/announcement" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-speakerphone"></i>
+                <div data-i18n="Pengumuman">Pengumuman</div>
+            </a>
+        </li> 
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/teacher" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-school"></i>
+                <div data-i18n="Guru">Guru</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/event" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-calendar-event"></i>
+                <div data-i18n="Event">Event</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="http://localhost:8000/bosa-admin/school-achievement" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-certificate-2"></i>
+                <div data-i18n="Prestasi Sekolah">Prestasi Sekolah</div>
+            </a>
+        </li>
+    </ul>
+</aside>
+            <div class="bs-toast toast toast-placement-ex m-2" style="border: none;" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+                <div class="toast-header p-2" style="border: none; border-radius: 2px;background: #EEE;">
+                    <i class="ti ti-arrows-cross ti-xs me-2"></i>
+                    <div class="me-auto fw-semibold">Something Wrong Error</div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Sepertinya ada masalah internal.</div>
+            </div>
+
+            <div class="layout-page">
+
+
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+            <i class="ti ti-menu-2 ti-sm"></i>
+        </a>
+    </div>
+
+    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                        <img src="../../backend/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="avatar avatar-online">
+                                        <img src="../../backend/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <span class="fw-semibold d-block">John Doe</span>
+                                    <small class="text-muted">Admin</small>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span class="align-middle">
+                                <form method="post" action="http://localhost:8000/logout">
+                                    <input type="hidden" name="_token" value="WpU20sF4Xex2l1FLF9jTrS7CFQ9cKIx4IF0wH39Z">                                    <button type="submit" style="outline: none; border: none; background: none;color: #444;"><i class="ti ti-login me-2"></i>Logout</button>
+                                </form>
+                            </span>
+                        </a>
+                    </li>
+                </ul>    
+            </li>
+            <li>
+                
+            </li>
+            <!--/ User -->
+        </ul>
+    </div>
+</nav>
+
+                <div class="content-wrapper">
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+                            <div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-1"><span class="text-muted fw-light">Kategori /</span> Semua Data</h4>
+    <p class="mb-4">Buat, edit, dan kelola Kategori di situs Anda.</p>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="nav-align-top mb-4">
+                    <div class="card-header p-3 d-flex mb-4">
+                        <h5 class="align-self-center m-0">List Kategori</h5>
+                        <button class="btn btn-success btn-sm ms-auto btn-toggle-sidebar" data-bs-toggle="offcanvas" data-bs-target="#modalCategory" aria-controls="modalCategory">
+                            <i class="ti ti-plus me-1"></i>
+                            <span class="align-middle">&NonBreakingSpace;Tambah Kategori</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-datatable table-responsive">
+                            <table class="dt-responsive table" id="get-categories">
+                                <thead>
+                                    <tr>
+                                        <th width=50>No</th>
+                                        <th>Kategori</th>
+                                        <th width=180>Aksi</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end event-sidebar col-lg-12" tabindex="-1" id="modalCategory" aria-labelledby="modalCategoryLabel">
+    <div class="offcanvas-header my-1">
+        <h5 class="offcanvas-title" id="modalCategoryLabel">Tambah Kategori</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+        <form class="event-form pt-0" id="categoryForm" onsubmit="return false">
+            <div class="mb-3">
+                <label class="form-label" for="nameCategory">Nama Kategori</label>
+                <input type="text" class="form-control" id="nameCategory" name="nameCategory" placeholder="Event Title" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="languageCategory">Bahasa</label>
+                <select class="select2 select-event-label form-select" id="languageCategory" name="languageCategory">
+                    <option data-label="primary" value="Indonesia" selected>Indonesia</option>
+                    <option data-label="primary" value="English">English</option>
+                    <option data-label="primary" value="Jawa">Jawa</option>
+                </select>
+            </div>
+            <div class="mb-3 d-flex justify-content-sm-between justify-content-start my-4">
+                <div>
+                    <button type="submit" id="submit-category" class="btn btn-primary btn-add-event me-sm-3 me-1">Tambah</button>
+                    <button type="reset" class="btn btn-label-secondary btn-cancel me-sm-0 me-1" data-bs-dismiss="offcanvas">
+                        Batal
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>                        </div>
+                    </div>
+
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div class="container-xxl">
+                            <div
+                                class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                                <div>
+                                    ©
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    , made with ❤️ by <a href="#" target="_blank"
+                                        class="fw-semibold">Smabosa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <div class="drag-target"></div>
+    </div>
+    <script src="http://localhost:8000/backend/vendor/libs/jquery/jquery.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/popper/popper.js"></script>
+<script src="http://localhost:8000/backend/vendor/js/bootstrap.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/node-waves/node-waves.js"></script>
+
+<script src="http://localhost:8000/backend/vendor/libs/hammer/hammer.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/i18n/i18n.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/typeahead-js/typeahead.js"></script>
+
+<script src="http://localhost:8000/backend/vendor/js/menu.js"></script>
+
+<script src="http://localhost:8000/backend/vendor/libs/apex-charts/apexcharts.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/swiper/swiper.js"></script>
+
+<script src="http://localhost:8000/backend/js/main.js"></script>
+
+<script src="http://localhost:8000/backend/js/dashboards-analytics.js"></script>
+
+<script src="http://localhost:8000/backend/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+
+<script src="http://localhost:8000/backend/vendor/libs/moment/moment.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="http://localhost:8000/backend/js/extended-ui-sweetalert2.js"></script>
+<script src="http://localhost:8000/backend/vendor/libs/sweetalert2/sweetalert2.js"></script>
+
+<script src="http://localhost:8000/backend/vendor/libs/block-ui/block-ui.js"></script>
+
+<!-- Main JS -->
+<script src="http://localhost:8000/backend/js/main.js"></script>
+
+<!-- Page JS -->
+<script src="http://localhost:8000/backend/js/extended-ui-blockui.js"></script>
+
+<script>
+    $(function() {
+        var table = $('#get-categories').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: 'http://localhost:8000/bosa-admin/master-categories/datatable',
+            columns: [
+                { data: 'no'},
+                { data: 'name'},
+                { 
+                    data: 'id',
+                    orderable: false,
+                    render: function(id) {
+                        return '<button class="my-1 btn btn-warning btn-xs edit-category" data-bs-toggle="offcanvas" data-bs-target="#modalCategory" aria-controls="modalCategory" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-category" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
+                    },
+                },
+            ],
+            responsive: true
+        });
+
+    });
+</script><script>
+    $(document).ready(function() {
+        $('#submit-category').click(function() {
+            Swal.fire({
+                title: 'Yakin?',
+                text: "Kamu akan menambahkan kategori",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak',
+                customClass: {
+                    confirmButton: 'btn btn-primary me-3',
+                    cancelButton: 'btn btn-label-secondary'
+                },
+                buttonsStyling: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    event.preventDefault();
+                    var name_category = $('#nameCategory').val();
+                    var language_category = $('#languageCategory').val();
+                    var formData = new FormData();
+                    formData.append('name', name_category);
+                    formData.append('language', language_category);
+
+                    $.ajax({
+                        url: 'http://localhost:8000/bosa-admin/master-categories/store?_token=WpU20sF4Xex2l1FLF9jTrS7CFQ9cKIx4IF0wH39Z',
+                        type: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            Swal.fire({
+                                title: 'Berhasl!',
+                                text: 'Kategori Berhasil Di tambahkan!',
+                                icon: 'success',
+                                customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                },
+                                buttonsStyling: false
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = '/bosa-admin/master-categories';
+                                }
+                            });
+                        },
+                        error: function(xhr) {
+                            console.log(error)
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Penambahan Dibatalkan',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+    });
+</script><script>
+    $('#get-categories').on('click', '.edit-category ', function() {
+        var id = $(this).data('id');
+        $.get("/bosa-admin/master-categories/edit/" + id, function(data) {
+            let id = data.id;
+            $('#titleSlider').val(data.title);
+            $('.btn-add-event').removeAttr("id");
+            $(".btn-add-event").attr("id", "edit-category");
+            $("#edit-category").html("Edit Kategori");
+            $("#edit-category").removeClass("btn-primary");
+            $("#edit-category").addClass("btn-warning");
+            $('#nameCategory').val(data.name);
+            $('#languageCategory').val(data.language);
+            $('#edit-category').click(function() {
+                Swal.fire({
+                    title: 'Yakin?',
+                    text: "Kamu akan Melakukan Perubahan Data",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Ya',
+                    cancelButtonText: 'Tidak',
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3',
+                        cancelButton: 'btn btn-label-secondary'
+                    },
+                    buttonsStyling: false
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        event.preventDefault();
+                        const formData = new FormData();
+                        formData.append('name', $('#nameCategory').val());
+                        formData.append('language', $('#languageCategory').val());
+                        $.ajax({
+                            url: '/bosa-admin/master-categories/update/' + id + '?_token=' + $('meta[name="csrf-token"]').attr('content'),
+                            type: "POST",
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                Swal.fire({
+                                    title: 'Berhasl!',
+                                    text: 'Data Berhasil Di Ubah!',
+                                    icon: 'success',
+                                    customClass: {
+                                        confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = '/bosa-admin/master-categories';
+                                    }
+                                });
+                            },
+                            error: function(xhr, response) {
+                                if (xhr.responseJSON.code == 400) {
+                                    $('#spiner-button').addClass('d-none');
+                                    $('#submit-post').removeClass('d-none');
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: xhr.responseJSON.message,
+                                        icon: 'error',
+                                        customClass: {
+                                            confirmButton: 'btn btn-primary'
+                                        },
+                                        buttonsStyling: false
+                                    });
+                                } else if (xhr.responseJSON.code == 500) {
+                                    $('#spiner-button').addClass('d-none');
+                                    $('#submit-post').removeClass('d-none');
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: 'Something Wrong Error!',
+                                        icon: 'error',
+                                        customClass: {
+                                            confirmButton: 'btn btn-primary'
+                                        },
+                                        buttonsStyling: false
+                                    });
+                                }
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'info',
+                            title: 'Perubahan Dibatalkan',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                });
+            });
+        })
+    });
+</script><script>
+    $(function() {
+        $('#get-categories').on('click', '.delete-category', function() {
+            var id = $(this).data('id');
+
+            Swal.fire({
+                text: 'Apakah kamu yakin mau menghapus data?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya!',
+                cancelButtonText: 'Batal',
+                customClass: {
+                    confirmButton: 'btn btn-primary me-2',
+                    cancelButton: 'btn btn-label-secondary'
+                },
+                buttonsStyling: false,
+                showLoaderOnConfirm: true,
+                allowOutsideClick: () => !Swal.isLoading(),
+                preConfirm: () => {
+                    return $.ajax({
+                        url: '/bosa-admin/master-categories/delete/'+id,
+                        type: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function(response) {
+                           return response;
+                        },
+                        error: function() {
+                            Swal.showValidationMessage(
+                                'Request failed'
+                            )
+                        }
+                    });
+                },
+            }).then(function(result) {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Dihapus!',
+                        text: 'Data kamu berhasil di hapus. kamu akan segera dialihkan',
+                        timer: 2300,
+                        timerProgressBar: true,
+                        showConfirmButton: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval)
+                        },
+                        customClass: {
+                            confirmButton: 'btn btn-success d-none'
+                        }
+                    }).then((result) => {
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            window.location = '/bosa-admin/master-categories'
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script></body>
+
+</html>

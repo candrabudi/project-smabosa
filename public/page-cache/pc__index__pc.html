@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Sistem Informasi Sekolah - Smabosa
+</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="http://localhost:8000/backend/img/logo/logo-bosa.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/animate.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/tiny-slider.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/glightbox.min.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/main.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/responsive.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/faw/css/all.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/custom_menu.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/style.css" />
+    <link rel="stylesheet" href="http://localhost:8000/frontend/css/faw/css/v5-font-face.css" />
+    <style>
+    .collaboration {
+        width: 100%;
+        height: 300px;
+        background-color: #375bcd;
+        border-bottom: 15px solid #fff000;
+    }
+
+    .collaboration .container-collaboration {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .collaboration .container-collaboration .collaboration-title {
+        text-align: center;
+        width: 80%;
+        font-size: 26px;
+        margin: auto;
+
+    }
+
+    .collaboration .container-collaboration .collaboration-title h2 {
+        color: #375bcd;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #fff000;
+        border-radius: 4px;
+    }
+
+    .collaboration .container-collaboration .content-collaboration {
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 15px;
+    }
+
+    .collaboration .container-collaboration .content-collaboration .box-program-reguler {
+        line-height: 300px !important;
+        text-align: center;
+        width: 100%;
+        min-height: 40px;
+        background-color: #fff000;
+        margin-top: 50px;
+        border-radius: 4px;
+    }
+
+    .box-program-reguler h3 {
+        color: #375bcd;
+    }
+
+    .collaboration .container-collaboration .content-collaboration .box-program-ais {
+        line-height: 300px !important;
+        text-align: center;
+        width: 100%;
+        min-height: 40px;
+        background-color: #fff000;
+        margin-top: 30px;
+        border-radius: 4px;
+    }
+
+    .box-program-ais h3 {
+        color: #375bcd;
+    }
+
+    .collaboration .container-collaboration .content-collaboration img {
+        width: 100px;
+    }
+
+</style>
+</head>
+
+<body><style>
+    
+</style>
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-icon">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<header class="header navbar-area">
+
+    <div class="toolbar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-12">
+                    <div class="toolbar-social">
+                        <ul>
+                            <li><a href="https://twitter.com/SMABOSA_YK?t=WrQON_m8V57uWFSj65bD8w&s=09"><i class="lni lni-twitter-original"></i></a></li>
+                            <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="lni lni-instagram"></i></a></li>
+                            <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="lni lni-youtube"></i></a></li>
+                            <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="toolbar-login">
+                        <div class="button">
+                            <a href="#">Register</a>
+                            <a href="#" class="btn">Log In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="nav-inner">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="http://localhost:8000/frontend/images/logo/logo.png" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a href="/" aria-label="Toggle navigation">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-2">
+                                    <li class="nav-item"><a href="http://localhost:8000/tentang-sekolah">Tentang Sekolah</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/guru">Guru</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="http://localhost:8000/agenda">Agenda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-3">
+                                        <li class="nav-item"><a href="http://localhost:8000/pengumuman">Pengumuman</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/blog">Blog</a></li>
+                                        <li class="nav-item"><a href="https://www.youtube.com/channel/UC1JUQzztEDDSOVOC0rTMY2A">Video</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/kegiatan">Kegiatan</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/ekstrakurikuler">Ekstrakurikuler</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/fasilitas">Fasilitas</a></li>
+                                        <li class="nav-item"><a href="http://localhost:8000/fasilitas">Opini</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Perpustakaan</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-4">
+                                        <li class="nav-item"><a href="http://117.102.64.163:3333/perpustakaan">Bosa Jogja Library</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://smabosa-yogya.sch.id/2022/08/31/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2022-2024/" aria-label="Toggle navigation">PCPDB</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
+                                    <ul class="sub-menu mega-menu collapse" id="submenu-1-5">
+                                        <li class="single-block">
+                                            <ul>
+                                                <li class="mega-menu-title">BKKBN</li>
+                                                <li class="nav-item"><a href="#">PERSADA</a></li>
+                                                <li class="nav-item"><a href="#">KEPENDUDUKAN</a></li>
+                                                <li class="nav-item"><a href="#">MATERI KEPENDUDUKAN</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="single-block">
+                                            <ul>
+                                                <li class="mega-menu-title">SPAB</li>
+                                                <li class="nav-item"><a href="http://localhost:8000/spab">KEGAIATAN</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="hero-area overlay">
+    <div class="hero-slider">
+                <div class="hero-container">
+            <div class="hero-inner" style='background-image: url("http://localhost:8000/images/image_slider/image_slider_1691076378.jpeg");'>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-lg-8 offset-lg-2 col-md-12 co-12">
+                            <div class="home-slider">
+                                <div class="hero-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+</section><section class="collaboration">
+    <div class="container-collaboration">
+        <div class="collaboration-title">
+            <h2>LAYANAN PENDIDIKAN</h2>
+        </div>
+        <div class="content-collaboration">
+            <div class="row">
+                <div class="col-md">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="box-program-reguler">
+                                <h3>PROGRAM REGULER</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:8000/backend/img/logo/logo-bosa.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="box-program-ais">
+                                <h3>BOSA-AIS<br> EDUCATIONAL PROGRAM</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:8000/backend/img/logo/logo-bosa-ais.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><style>
+    .information-first {
+        width: 100%;
+        min-height: 800px;
+    }
+
+    .information-second {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .information-first h3 {
+        text-align: center;
+        background-color: #375bcd;
+        color: #fff000;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .information-first a:hover {
+        color: #fff;
+    }
+
+    .information-second a:hover {
+        color: #fff;
+    }
+
+    .information-first img {
+        width: 100%;
+    }
+
+    .content-information {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .content-information .thumbnail-information {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .content-information h3 {
+        text-align: center;
+        background-color: #375bcd;
+        color: #fff000;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    @media only screen and (min-width: 330px) and (max-width: 470px) {
+        .information-first {
+            width: 100%;
+            min-height: 200px!important;
+            margin-bottom: 20px!important;
+        }
+        .content-information h3 {
+            font-size: 18px!important;
+        }
+    }
+</style>
+<section class="information section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="information-first">
+                    <img src="http://localhost:8000/images/home_information/home_information_1691295055.png" alt="">
+                    <h3>
+                        <a href="http://localhost:8000/ekstrakurikuler">EKSTRAKURIKULER</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="information-second">
+                    <div class="row">
+                                                <div class="col-lg-12 mb-3">
+                            <div class="content-information">
+                                <div class="thumbnail-information" style='background-image: url("http://localhost:8000/images/home_information/home_information_1691295745.jpeg");'>
+
+                                </div>
+                                <h3>
+                                    <a href="">Guru &amp; Karyawan</a>
+                                </h3>
+                            </div>
+                        </div>
+                                                <div class="col-lg-12 mb-3">
+                            <div class="content-information">
+                                <div class="thumbnail-information" style='background-image: url("http://localhost:8000/images/home_information/home_information_1691297077.jpeg");'>
+
+                                </div>
+                                <h3>
+                                    <a href="-">KERJASAMA INTERNASIONAL</a>
+                                </h3>
+                            </div>
+                        </div>
+                                                <div class="col-lg-12 mb-3">
+                            <div class="content-information">
+                                <div class="thumbnail-information" style='background-image: url("http://localhost:8000/images/home_information/home_information_1691300060.jpeg");'>
+
+                                </div>
+                                <h3>
+                                    <a href="-">FASILITAS</a>
+                                </h3>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><style>
+    .bosa-title{
+        margin-bottom: 20px;
+    }
+    .bosa-title h2{
+        width: 50%;
+        box-sizing: border-box;
+        background-color: #375bcd;
+        font-size: 35px;
+        padding: 10px;
+        border-radius: 8px;
+        line-height: 40px;
+        text-transform: capitalize;
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+    }
+    .bosa-title h3{
+        text-align: left;
+        font-weight: 400;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .content-title{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #375bcd;
+        background-color: #FFF000;
+        font-size: 20px;
+    }
+    .content-title a:hover{
+        color: #000;
+    } 
+    @media only screen and (min-width: 330px) and (max-width: 470px) {
+        .bosa-title h2{
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #375bcd;
+            font-size: 22px;
+            padding: 10px;
+            border-radius: 8px;
+            line-height: 40px;
+            text-transform: capitalize;
+            position: relative;
+            font-weight: 700;
+            color: #fff;
+        }
+        .bosa-title h3{
+            text-align: left;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+</style>
+<section class="latest-news-area section">
+    <div class="container">
+        <div class="row">
+            <div class=container>
+                <div class=row>
+                    <div class=col-12>
+                        <div class=bosa-title>
+                            <h2 class="wow fadeInUp" data-wow-delay=.4s>KEGIATAN B<span style="color: #d7292a">O</span>SA</h2>
+                            <h3 class="wow fadeInUp" data-wow-delay=.6s>Informasi Terbaru tentang berbagai macam kegiatan di SMA BOPKRI 1 Yogyakarta</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class=row>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1691078568.png");'>
+                                        <div class="thumbnail-content">
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <h4 class=content-title><a href="http://localhost:8000/blog/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024">PEDOMAN DAN PENGISIAN FORMULIR PCPDB SMA BOSA TAHUN PELAJARAN 2023-2024</a></h4>
+                        </div>
+
+                    </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1691078495.jpeg");'>
+                                        <div class="thumbnail-content">
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <h4 class=content-title><a href="http://localhost:8000/blog/last-call-to-join-sma-bosa-yogyakarta">LAST CALL TO JOIN SMA BOSA YOGYAKARTA</a></h4>
+                        </div>
+
+                    </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+
+                        <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
+                            <div class=image>
+                                <a href='#'>
+                                    <div class="thumbnail-post" style='background-image: url("http://localhost:8000/images/post_thumbnail/post_thumbnail_1691078446.jpeg");'>
+                                        <div class="thumbnail-content">
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <h4 class=content-title><a href="http://localhost:8000/blog/sma-bosa:-satuan-pendidikan-aman-bencana">SMA BOSA: SATUAN PENDIDIKAN AMAN BENCANA</a></h4>
+                        </div>
+
+                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class=container>
+                <div class=row>
+                    <div class=col-12>
+                        <div class=bosa-title>
+                            <h2 class="wow fadeInUp" data-wow-delay=.4s>BERPRESTASI BERSAMA B<span style="color: #d7292a">O</span>SA</h2>
+                            <h3 class="wow fadeInUp" data-wow-delay=.6s>Informasi tentang peserta didik, guru, dan karyawan SMA BOPKRI 1 Yogyakarta yang mendapatkan kejuaraan dan penghargaan dibidang akademik dan non-akademik</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class=row>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="f-about single-footer">
+                        <div class="logo">
+                            <a href="/"><img src="http://localhost:8000/frontend/images/logo/logo.png" alt="Logo"></a>
+                        </div>
+                        <p>Jl. Wardhani No.2, Kotabaru, Kec. Gondokusman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224</p>
+                        <div class="mt-3">
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-id-badge box-icon"></i><span><b>NPSN. </b>20403227</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-map-pin box-icon"></i><span><b>KEC. </b>Gondokusman</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-map-pin box-icon"></i><span><b>KAB. </b>Yogyakarta</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-map-pin box-icon"></i><span><b>PROV. </b>Daerah Istimewa Yogyakarta</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-address-book box-icon"></i><span><b>KODE POS. </b>55224</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-phone box-icon"></i><span><b>TELEPON. </b>(0274)515359</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-phone box-icon"></i><span><b>FAX. </b>(0274)5178000</span>
+                            </div>
+                            <div class="box-contact mt-2">
+                                <i class="fa fa-envelope box-icon"></i><span><b>EMAIL. </b>smabosa@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <ul>
+                                <!-- <li><a href="javascript:void(0)"><img src="http://localhost:8000/frontend/images/icons/tiktok.svg" width="20" alt=""></a></li> -->
+                                <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/SMABOSA_YK?t=WrQON_m8V57uWFSj65bD8w&s=09"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-6 col-12">
+
+                    <div class="single-footer sm-custom-border f-link">
+                        <h3>TENTANG SMA BOSA YOGYAKARTA</h3>
+                        <p>SMA BOPKRI 1 Yogyakarta atau di masyarakat umum lebih dikenal dengan nama SMA BOSA, merupakan salah satu sekolah swasta di bawah naungan Yayasan BOPKRI. SMA BOPKRI 1 Yogyakarta adalah sekolah swasta bercirikan Kristen yang berada di wilayah Kota Yogyakarta, Daerah Istimewa Yogyakarta. </p>
+                        <br>
+                        <p>SMA BOSA didirikan pada 1 Agustus 1946 (sebelumnya bernama Christelijke MULO /Meer Uitgebreid Lager Onderwijs) sekolah setingkat SMA untuk peserta didik Kristen pada zaman Belanda. Sekolah ini beralamat di Jalan Wardhani No.2, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta dan juga merupakan eks-bangunan Akademi Militer hingga tahun 1949.</p>
+                        <br>
+                        <p>SMA BOSA mempunyai visi terwujudnya manusia cerdas, berbudaya dan berdaya saing global berdasarkan kasih, integritas, dan pelayanan yang tulus. </p>
+                        <br>
+                        <p>Maka dari itu, SMA BOSA mempunyai layanan pendidikan berupa program reguler dan BOSA-AIS Educational Program. Program Reguler merupakan layanan pendidikan dengan menerapkan kurikulum nasional yang bertujuan untuk mengasah minat dan bakat anak sejak dini dengan berfokus pada materi esensial, pengembangan karakter, dan kompetensi peserta didik SMA BOSA.</p>
+                        <br>
+                        <p>Dengan slogan “BOSA BISA, BISA BOSA”, SMA BOSA berkomitmen menyelenggarakan pendidikan berpedoman pada kasih, integritas, dan pelayanan yang tulus agar para peserta didik mampu “Berprestasi bersama BOSA”.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="left">
+                            <p>SMA BOPKRI 1 YOGYAKARTA</p>
+                            <br>
+                            <p>#bosabisabisabosa #berprestasibersamabosa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="http://localhost:8000/frontend/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/count-up.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/wow.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/tiny-slider.js"></script>
+    <script src="http://localhost:8000/frontend/js/glightbox.min.js"></script>
+    <script src="http://localhost:8000/frontend/js/main.js"></script>
+    <script src="https://use.fontawesome.com/b21714c392.js"></script>
+    <script type="text/javascript">
+        //========= Hero Slider 
+        tns({
+            container: '.hero-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            controlsText: ['<i class="lni lni-arrow-left"></i>', '<i class="lni lni-arrow-right"></i>'],
+        });
+        //====== Clients Logo Slider
+        tns({
+            container: '.client-logo-carousel',
+            slideBy: 'page',
+            autoplay: true,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            gutter: 15,
+            nav: false,
+            controls: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 3,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 4,
+                },
+                1170: {
+                    items: 6,
+                }
+            }
+        });
+        //========= glightbox
+        GLightbox({
+            'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        });
+    </script>
+    <script>
+        paragraph = document.getElementsByClassName("ck");
+        paragraph.remove();
+    </script>
+</body>
+
+</html>
