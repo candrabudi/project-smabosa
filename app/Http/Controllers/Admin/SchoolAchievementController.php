@@ -135,7 +135,7 @@ class SchoolAchievementController extends Controller
             $school_achievement->title = $request->title ?? $school_achievement->title ;
             $school_achievement->short_desc = $request->short_desc ?? $school_achievement->short_desc;
             $school_achievement->content = $request->content ?? $school_achievement->content;
-            $school_achievement->satus = $request->satus ?? $school_achievement->satus;
+            $school_achievement->status = $request->status ?? $school_achievement->status;
             $school_achievement->slug = $slug ?? $school_achievement->slug;
             $school_achievement->thumbnail = $image_name_db ?? $school_achievement->thumbnail;
             $school_achievement->achievement_gainer = $request->peraih_prestasi ?? $school_achievement->achievement_gainer;
