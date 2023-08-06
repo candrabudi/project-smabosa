@@ -73,7 +73,9 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style='background-image: url("{{ asset('images_upload/' .$activity->post_thumbnail)}}");'>
+                                    <div class="thumbnail-post" loading="lazy" style='
+                                        background-image: url("{{ lazyImageBackground(public_path('images_upload/'.$activity->post_thumbnail))}}");
+                                    '>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
@@ -107,7 +109,9 @@
                         <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                             <div class=image>
                                 <a href='#'>
-                                    <div class="thumbnail-post" loading="lazy" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style='background-image: url("{{ asset('images_upload/' .$achievment->thumbnail)}}");'>
+                                    <div class="thumbnail-post" loading="lazy" style='
+                                        background-image: url("{{lazyImageBackground(public_path('images_upload/'.$achievment->thumbnail))}}");
+                                    '>
                                         <div class="thumbnail-content">
                                             <p>
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.

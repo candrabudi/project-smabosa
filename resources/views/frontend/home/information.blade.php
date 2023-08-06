@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="information-first">
-                    <img src="{{ asset('images_upload/'.$info_first->info_image)}}" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" loading="lazy" alt="">
+                    {!! lazyImage(public_path('images_upload/'.$info_first->info_image), $info_first->info_name, 800, 600) !!}
                     <h3>
                         <a href="{{route('extracurricular')}}">EKSTRAKURIKULER</a>
                     </h3>

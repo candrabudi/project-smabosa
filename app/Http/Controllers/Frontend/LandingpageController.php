@@ -36,12 +36,12 @@ class LandingpageController extends Controller
             ->get()
             ->take(2);
         $activities = Post::select('posts.*')
-            ->join('post_categories as pc', 'pc.post_id','=', 'posts.id' )
+            ->join('post_categories as pc', 'pc.post_id', '=', 'posts.id')
             ->join('master_categories as mc', 'mc.id', '=', 'pc.master_category_id')
             ->where('name', 'LIKE', '%kegiatan%')
             ->where('post_status', 'Publish')
             ->with('category')
-            ->orderby('post_date','DESC')
+            ->orderby('post_date', 'DESC')
             ->paginate(3);
         $info_first = HomeInformation::where('info_position', 1)
             ->first();
@@ -49,18 +49,26 @@ class LandingpageController extends Controller
             ->orderby('info_position', 'ASC')
             ->get();
         $about = AboutSchool::first();
-        if(count($events) > 1){
+        if (count($events) > 1) {
             $eventLasts = Event::where('status', 'Publish')
                 ->whereDate('event_date', '<', $events['1']['event_date'])
                 ->where('id', '!=', $events['1']['id'])
                 ->orderBy('event_date', 'DESC')
                 ->get()
                 ->take(2);
-        }else{
+        } else {
             $eventLasts = [];
         }
         return view('frontend.index', compact(
-            'image_sliders', 'school_achievements', 'articles', 'events', 'eventLasts', 'about', 'activities', 'info_first', 'info_images'
+            'image_sliders',
+            'school_achievements',
+            'articles',
+            'events',
+            'eventLasts',
+            'about',
+            'activities',
+            'info_first',
+            'info_images'
         ));
     }
 
@@ -68,7 +76,7 @@ class LandingpageController extends Controller
     {
         $articles = Post::where('post_status', 'Publish')
             ->with('category')
-            ->orderby('post_date','DESC')
+            ->orderby('post_date', 'DESC')
             ->paginate(10);
 
         $recent_posts = Post::where('post_status', 'Publish')
@@ -76,7 +84,7 @@ class LandingpageController extends Controller
             ->get()
             ->take(10);
         return view('frontend.blog', compact([
-            'articles','recent_posts'
+            'articles', 'recent_posts'
         ]));
     }
     public function blogDetail($slug)
@@ -112,15 +120,15 @@ class LandingpageController extends Controller
     public function Activity()
     {
         $activities = Post::select('posts.*')
-            ->join('post_categories as pc', 'pc.post_id','=', 'posts.id' )
+            ->join('post_categories as pc', 'pc.post_id', '=', 'posts.id')
             ->join('master_categories as mc', 'mc.id', '=', 'pc.master_category_id')
             ->where('name', 'LIKE', '%kegiatan%')
             ->where('post_status', 'Publish')
             ->with('category')
-            ->orderby('post_date','DESC')
+            ->orderby('post_date', 'DESC')
             ->paginate(10);
 
-        $recent_activities = Post::join('post_categories as pc', 'pc.post_id','=', 'posts.id' )
+        $recent_activities = Post::join('post_categories as pc', 'pc.post_id', '=', 'posts.id')
             ->join('master_categories as mc', 'mc.id', '=', 'pc.master_category_id')
             ->where('name', 'LIKE', '%kegiatan%')
             ->where('post_status', 'Publish')
@@ -128,15 +136,36 @@ class LandingpageController extends Controller
             ->get()
             ->take(10);
         return view('frontend.activity.index', compact([
-            'activities','recent_activities'
+            'activities', 'recent_activities'
         ]));
     }
 
     public function teacher()
     {
-        $teachers = Teacher::where('status', 'Publish')
-            ->paginate(4);
-        return view('frontend.teacher.index', compact('teachers'));
+        $perPage = 4;
+        $teachers = Teacher::where('status', 'Publish')->get();
+
+        $paginatedTeachers = collect($teachers)->chunk($perPage);
+
+        $page = request()->get('page', 1);
+        $currentPageTeachers = $paginatedTeachers[$page - 1] ?? collect();
+
+        $teachersArray = [];
+        foreach ($currentPageTeachers as $teacher) {
+            $teachersArray[] = [
+                'teacher_subjects' => $teacher->teacher_subjects,
+                'teacher_name' => $teacher->teacher_name,
+                'teacher_photo' => lazyImage(public_path("images_upload/" . $teacher->teacher_photo), $teacher->teacher_name, 400, 400),
+            ];
+        }
+
+        $paginator = new \Illuminate\Pagination\LengthAwarePaginator(
+            $teachersArray,
+            count($teachers),
+            $perPage,
+            $page
+        );
+        return view('frontend.teacher.index', ['teachersArray' => $teachersArray, 'paginator' => $paginator]);
     }
     public function faciliy()
     {
@@ -181,7 +210,7 @@ class LandingpageController extends Controller
     public function announcement()
     {
         $announcements = Announcement::where('status', 'Publish')
-            ->orderby('created_at','DESC')
+            ->orderby('created_at', 'DESC')
             ->paginate(10);
 
         $recent_posts = Post::where('post_status', 'Publish')
@@ -189,7 +218,7 @@ class LandingpageController extends Controller
             ->get()
             ->take(10);
         return view('frontend.announcement.index', compact([
-            'announcements','recent_posts'
+            'announcements', 'recent_posts'
         ]));
     }
     public function announcementDetail($slug)

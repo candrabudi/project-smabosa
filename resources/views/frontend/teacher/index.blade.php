@@ -17,14 +17,14 @@ Guru - Smabosa
         </div>
         <div class="row">
 
-            @foreach($teachers as $teacher)
+            @foreach($teachersArray as $teacher)
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="single-team wow fadeInUp" data-wow-delay=".2s">
                     <div class="row">
                         <div class="col-lg-5 col-12">
 
                             <div class="image">
-                                <img src="{{ asset('images_upload/'.$teacher->teacher_photo) }}" loading="lazy" alt="#" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                <?php echo $teacher['teacher_photo'] ?>
                             </div>
 
                         </div>
@@ -32,8 +32,8 @@ Guru - Smabosa
                             <div class="info-head">
 
                                 <div class="info-box">
-                                    <span class="designation">{{ $teacher->teacher_subjects }}</span>
-                                    <h4 class="name"><a href="#">{{ $teacher->teacher_name }}</a></h4>
+                                    <span class="designation">{{ $teacher['teacher_subjects'] }}</span>
+                                    <h4 class="name"><a href="#">{{ $teacher['teacher_name'] }}</a></h4>
                                 </div>
 
                             </div>
@@ -42,7 +42,42 @@ Guru - Smabosa
                 </div>
             </div>
             @endforeach
-            {{ $teachers->links('frontend.layouts.paginate') }}
+      
+            @if ($paginator->hasPages())
+                <div class="pagination center">
+                    <ul class="pagination-list">
+                        @if ($paginator->onFirstPage())
+                            <li class="disabled"><span>&laquo;</span></li>
+                        @else
+                            <li><a href="/guru{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+                        @endif
+
+                        {{-- Pagination Elements --}}
+                        @foreach ($paginator->links() as $element)
+                            @if (is_string($element))
+                                <li class="disabled"><span>{{ $element }}</span></li>
+                            @endif
+
+                            @if (is_array($element))
+                                @foreach ($element as $page => $url)
+                                    @if ($page == $paginator->currentPage())
+                                        <li class="active"><span>{{ $page }}</span></li>
+                                    @else
+                                        <li><a href="guru/{{ $url }}">{{ $page }}</a></li>
+                                    @endif
+                                @endforeach
+                            @endif
+                        @endforeach
+
+                        {{-- Next Page Link --}}
+                        @if ($paginator->hasMorePages())
+                            <li><a href="/guru{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                        @else
+                            <li class="disabled"><span>&raquo;</span></li>
+                        @endif
+                    </ul>
+                </div>
+            @endif
         </div>
     </div>
 </section>
