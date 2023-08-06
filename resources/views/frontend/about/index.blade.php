@@ -20,7 +20,7 @@ Tentang - Smabosa
             </div>
             <div class="col-lg-6 col-12">
                 <div class="about-right wow fadeInRight" data-wow-delay=".4s">
-                    <img src="{{ !empty($about) ? asset('images/'.$about->thumbnail) : 'https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg' }}" alt="#">
+                    <img src="{{ !empty($about) ? asset('images_upload/'.$about->thumbnail) : 'https://user-images.githubusercontent.com/43302778/106805462-7a908400-6645-11eb-958f-cd72b74a17b3.jpg' }}" alt="#">
                 </div>
             </div>
         </div>
