@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ImageSlider;
 use Illuminate\Http\Request;
 use DataTables;
+use Intervention\Image\Facades\Image;
 
 class ImageSliderController extends Controller
 {
@@ -21,10 +22,10 @@ class ImageSliderController extends Controller
     public function datatbleImageSlider()
     {
         $fetch = ImageSlider::whereIn('status', ['Publish', 'Draft'])
-                    ->get(['id', 'title', 'description', 'image'])
-                    ->toArray();
+            ->get(['id', 'title', 'description', 'image'])
+            ->toArray();
 
-        $reform = array_map(function($new, $index) {
+        $reform = array_map(function ($new, $index) {
             return [
                 'no' => ($index + 1) . '.',
                 'id' => $new['id'],
@@ -44,7 +45,7 @@ class ImageSliderController extends Controller
 
     public function store(Request $request)
     {
-        try{
+        try {
 
             if (empty($request->image) || empty($request->title_slider) || empty($request->description_slider)) {
                 return response()->json([
@@ -53,11 +54,18 @@ class ImageSliderController extends Controller
                     'message' => 'failed request'
                 ], 400);
             }
-            
+
             if ($request->hasFile('image')) {
-                $image = $request->file('image');
+                // $image = $request->file('image');
                 $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/image_slider'), $fileName);
+                // $image->move(public_path('images_upload/image_slider'), $fileName);
+                $image = $request->file('image');
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/image_slider/' . $webpFilename));
             } else {
                 return response()->json([
                     'status' => 'failed',
@@ -65,7 +73,7 @@ class ImageSliderController extends Controller
                     'message' => 'Failed upload image'
                 ], 400);
             }
-            
+
             $image_slider = new ImageSlider();
             $image_slider->title = $request->title_slider;
             $image_slider->description = $request->description_slider;
@@ -75,12 +83,11 @@ class ImageSliderController extends Controller
             $image_slider->save();
 
             return response()->json([
-                'status'    => 'success', 
-                'code'  => 200, 
+                'status'    => 'success',
+                'code'  => 200,
                 'message'   => 'Success Image Slider'
             ], 200);
-
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return redirect()->back();
         }
     }
@@ -93,12 +100,12 @@ class ImageSliderController extends Controller
 
     public function update(Request $request, $id)
     {
-        try{
+        try {
             $image_slider = ImageSlider::find($id);
             if (!$image_slider) {
                 return redirect()->route('admin.image-slider');
             }
-           
+
 
             if ($request->hasFile('image')) {
                 $originName = $request->file('image')->getClientOriginalName();
@@ -118,17 +125,16 @@ class ImageSliderController extends Controller
             ]);
 
             return response()->json([
-                'status'    => 'success', 
-                'code'  => 200, 
+                'status'    => 'success',
+                'code'  => 200,
                 'message'   => 'Success Image Slider'
             ], 200);
-
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return response()->json([
-                'status'    => 'failed', 
-                'code'  => 500, 
+                'status'    => 'failed',
+                'code'  => 500,
                 'message'   => $e->getMessage()
-            ], 500); 
+            ], 500);
         }
     }
 

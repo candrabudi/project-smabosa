@@ -94,7 +94,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="box-program-ais">
-                                <h3><a href="{{route('schoolprogramRegular')}}">BOSA-AIS<br> EDUCATIONAL PROGRAM</a></h3>
+                                <h3><a href="{{route('schoolprogramBosaAis')}}">BOSA-AIS<br> EDUCATIONAL PROGRAM</a></h3>
                             </div>
                         </div>
                         <div class="col-lg-4">
