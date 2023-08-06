@@ -48,7 +48,7 @@ class TeacherController extends Controller
             if ($request->hasFile('teacher_photo')) {
                 $image = $request->file('teacher_photo');
                 $imageName = 'school_teacher/teacher_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_teacher'), $imageName);
+                $image->move(public_path('images_upload/school_teacher'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -110,7 +110,7 @@ class TeacherController extends Controller
             if ($request->hasFile('teacher_photo')) {
                 $image = $request->file('teacher_photo');
                 $imageName = 'school_teacher/teacher_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_teacher'), $imageName);
+                $image->move(public_path('images_upload/school_teacher'), $imageName);
             }else{
                 $imageName = null;
             }

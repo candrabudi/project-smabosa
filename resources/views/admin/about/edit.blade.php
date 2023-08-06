@@ -77,10 +77,10 @@ Tentang Sekolah
 </div>
 @endsection
 @section('styles')
-<link rel="stylesheet" href="{{ asset('backend/vendor/libs/flatpickr/flatpickr.css')}}" /> 
-<link rel="stylesheet" href="{{ asset('backend/vendor/libs/select2/select2.css') }}" />
-<link rel="stylesheet" href="{{ asset('backend/css/style.css') }}" />
-<script src="{{asset('backend/ckeditor/ckeditor.js')}}"></script>
+<link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/flatpickr/flatpickr.css')}}" /> 
+<link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/select2/select2.css') }}" />
+<link rel="stylesheet" href="{{ asset('asset_be/css/style.css') }}" />
+<script src="{{ asset('asset_be/ckeditor/ckeditor.js')}}"></script>
 @endsection
 @section('scripts')
 <script>

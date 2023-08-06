@@ -77,15 +77,15 @@ Edit Event
         min-height: 300px;
     }
 </style>
-<link rel="stylesheet" href="{{ asset('backend/vendor/libs/flatpickr/flatpickr.css')}}" /> 
-<link rel="stylesheet" href="{{ asset('backend/vendor/libs/select2/select2.css') }}" />
-<script src="{{asset('backend/ckeditor/ckeditor.js')}}"></script>
+<link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/flatpickr/flatpickr.css')}}" /> 
+<link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/select2/select2.css') }}" />
+<script src="{{ asset('asset_be/ckeditor/ckeditor.js')}}"></script>
 @endsection
 @section('scripts')
-<script src="{{ asset('backend/vendor/libs/select2/select2.js') }}"></script>
-<script src="{{ asset('backend/js/forms-selects.js') }}"></script>
-<script src="{{ asset('backend/vendor/libs/flatpickr/flatpickr.js')}}"></script>
-<script src="{{ asset('backend/js/forms-pickers.js')}}"></script>
+<script src="{{ asset('asset_be/vendor/libs/select2/select2.js') }}"></script>
+<script src="{{ asset('asset_be/js/forms-selects.js') }}"></script>
+<script src="{{ asset('asset_be/vendor/libs/flatpickr/flatpickr.js')}}"></script>
+<script src="{{ asset('asset_be/js/forms-pickers.js')}}"></script>
 <script>
     DecoupledEditor
         .create(document.querySelector('#editor'), {

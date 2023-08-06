@@ -35,7 +35,7 @@ $achivement->title - Smabosa
             <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
                 <div class="single-inner">
                     <div class="post-thumbnils">
-                        <img src="{{ asset('images/'.$achivement->thumbnail) }}" alt="#" data-pagespeed-url-hash="1974793277" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <img src="{{ asset('images_upload/'.$achivement->thumbnail) }}" alt="#" data-pagespeed-url-hash="1974793277" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                     </div>
                     <div class="post-details">
                         <div class="detail-inner">

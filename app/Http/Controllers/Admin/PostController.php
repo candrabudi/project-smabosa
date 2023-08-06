@@ -172,9 +172,9 @@ class PostController extends Controller
             $extension = $request->file('upload')->getClientOriginalExtension();
             $fileName = $fileName . '_' . time() . '.' . $extension;
       
-            $request->file('upload')->move(public_path('media'), $fileName);
+            $request->file('upload')->move(public_path('media_upload'), $fileName);
       
-            $url = asset('media/' . $fileName);
+            $url = asset('media_upload/' . $fileName);
   
             return response()->json(['fileName' => $fileName, 'uploaded'=> 1, 'url' => $url]);
         }
@@ -189,7 +189,7 @@ class PostController extends Controller
             if ($request->hasFile('post_thumbnail')) {
                 $image = $request->file('post_thumbnail');
                 $imageName = 'post_thumbnail/post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/post_thumbnail'), $imageName);
+                $image->move(public_path('images_upload/post_thumbnail'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -251,7 +251,7 @@ class PostController extends Controller
             if ($request->hasFile('post_thumbnail')) {
                 $image = $request->file('post_thumbnail');
                 $imageName = 'post_thumbnail/post_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/post_thumbnail'), $imageName);
+                $image->move(public_path('images_upload/post_thumbnail'), $imageName);
             }else{
                 $imageName = null;
             }

@@ -6,12 +6,12 @@
     </a>
 
     <!-- ========================= JS here ========================= -->
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/count-up.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/tiny-slider.js') }}"></script>
-    <script src="{{ asset('frontend/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/main.js') }}"></script>
+    <script src="{{ asset('asset_fe/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('asset_fe/js/count-up.min.js') }}"></script>
+    <script src="{{ asset('asset_fe/js/wow.min.js') }}"></script>
+    <script src="{{ asset('asset_fe/js/tiny-slider.js') }}"></script>
+    <script src="{{ asset('asset_fe/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('asset_fe/js/main.js') }}"></script>
     <script src="https://use.fontawesome.com/b21714c392.js"></script>
     <script type="text/javascript">
         //========= Hero Slider 

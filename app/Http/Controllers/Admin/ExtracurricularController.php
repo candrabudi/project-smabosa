@@ -49,7 +49,7 @@ class ExtracurricularController extends Controller
             if ($request->hasFile('extracurricular_thumbnail')) {
                 $image = $request->file('extracurricular_thumbnail');
                 $imageName = 'school_extracurricular/school_extracurricular_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_extracurricular'), $imageName);
+                $image->move(public_path('images_upload/school_extracurricular'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -112,7 +112,7 @@ class ExtracurricularController extends Controller
             if ($request->hasFile('extracurricular_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
                 $imageName = 'school_extracurricular/school_extracurricular_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_extracurricular'), $imageName);
+                $image->move(public_path('images_upload/school_extracurricular'), $imageName);
             }else{
                 $imageName = null;
             }

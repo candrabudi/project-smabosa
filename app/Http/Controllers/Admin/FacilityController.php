@@ -48,7 +48,7 @@ class FacilityController extends Controller
             if ($request->hasFile('facility_thumbnail')) {
                 $image = $request->file('facility_thumbnail');
                 $imageName = 'school_facility/school_facility_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_facility'), $imageName);
+                $image->move(public_path('images_upload/school_facility'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -111,7 +111,7 @@ class FacilityController extends Controller
             if ($request->hasFile('facility_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
                 $imageName = 'school_facility/school_facility_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_facility'), $imageName);
+                $image->move(public_path('images_upload/school_facility'), $imageName);
             }else{
                 $imageName = null;
             }

@@ -25,7 +25,7 @@ Guru - Smabosa
                         <div class="col-lg-5 col-12">
 
                             <div class="image">
-                                <img src="{{ asset('images/'.$teacher->teacher_photo) }}" alt="#" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                <img src="{{ asset('images_upload/'.$teacher->teacher_photo) }}" alt="#" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                             </div>
 
                         </div>

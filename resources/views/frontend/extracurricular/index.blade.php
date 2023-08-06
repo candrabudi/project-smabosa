@@ -25,7 +25,7 @@ Ekstrakurikuler - Smabosa
                         <div class="col-lg-5 col-12">
 
                             <div class="image">
-                                <img src="{{ asset('images/'.$extracurricular->thumbnail) }}" alt="#" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                <img src="{{ asset('images_upload/'.$extracurricular->thumbnail) }}" alt="#" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                             </div>
 
                         </div>

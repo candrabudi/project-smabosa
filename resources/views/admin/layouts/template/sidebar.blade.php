@@ -2,7 +2,7 @@
     <div class="app-brand demo">
         <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{ asset('backend/img/logo/logo-bosa.png')}}" width="20" alt="">
+                <img src="{{ asset('asset_be/img/logo/logo-bosa.png')}}" width="20" alt="">
             </span>
             <span class="app-brand-text demo menu-text fw-bold">BOSA</span>
         </a>
