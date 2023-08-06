@@ -236,7 +236,30 @@
         bottom: 5px !important;
     }
 }
+@media only screen and (min-width: 720px) and (max-width: 768px) {
+    .hero-area {
+        overflow: hidden;
+        padding: 0px !important;
+    }
 
+    .hero-container .hero-inner {
+        border-radius: 3px !important;
+        width: 100% !important;
+        height: 250px !important;
+        overflow: hidden;
+    }
+
+    .hero-inner .hero-text {
+        width: 100%;
+        height: 50px !important;
+    }
+
+    .hero-area .tns-nav {
+        text-align: center;
+        position: absolute;
+        bottom: 5px !important;
+    }
+}
 @media only screen and (min-width: 830px) and (max-width: 1270px) {
     .hero-area {
         overflow: hidden;
