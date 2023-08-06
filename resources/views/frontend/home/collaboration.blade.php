@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="{{ asset('asset_be/img/logo/logo-bosa.png')}}" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" alt="">
+                            <img src="{{ asset('asset_be/img/logo/logo-bosa.webp')}}" lazyloading="lazy">
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="{{ asset('asset_be/img/logo/logo-bosa-ais.png')}}" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" alt="">
+                            <img src="{{ asset('asset_be/img/logo/logo-bosa-ais.webp')}}" lazyloading="lazy">
                         </div>
                     </div>
                 </div>
