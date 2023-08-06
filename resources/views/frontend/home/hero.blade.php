@@ -3,7 +3,7 @@
         @foreach($image_sliders as $slider)
         <div class="hero-container">
             <div class="hero-inner" style='
-                background-image: url("{{ lazyImageBackground(public_path('images_upload/'.$slider->image)) }}");'
+                background-image: url("{{ asset('images_upload/'.$slider->image) }}");'
             >
                 <div class="container">
                     <div class="row ">

@@ -56,21 +56,20 @@ class ImageSliderController extends Controller
             }
 
             if ($request->hasFile('image')) {
-                // $image = $request->file('image');
-                $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
-                // $image->move(public_path('images_upload/image_slider'), $fileName);
                 $image = $request->file('image');
+                $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
                 $compressedImage = Image::make($image)
                     ->resize(800, null, function ($constraint) {
                         $constraint->aspectRatio();
                     });
                 $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
                 $compressedImage->encode('webp')->save(public_path('images_upload/image_slider/' . $webpFilename));
+                $image_name_db = 'image_slider/' . $webpFilename;
             } else {
                 return response()->json([
                     'status' => 'failed',
                     'code' => 400,
-                    'message' => 'Failed upload image'
+                    'message' => 'Failed upload image',
                 ], 400);
             }
 
@@ -79,7 +78,7 @@ class ImageSliderController extends Controller
             $image_slider->description = $request->description_slider;
             $image_slider->status = $request->status_slider;
             $image_slider->language = $request->language_slider;
-            $image_slider->image = $fileName;
+            $image_slider->image = $image_name_db;
             $image_slider->save();
 
             return response()->json([
@@ -88,7 +87,11 @@ class ImageSliderController extends Controller
                 'message'   => 'Success Image Slider'
             ], 200);
         } catch (\Exception $e) {
-            return redirect()->back();
+            return response()->json([
+                'status' => 'failed', 
+                'code' => 500, 
+                'message' => $e->getMessage()
+            ], 500);
         }
     }
 

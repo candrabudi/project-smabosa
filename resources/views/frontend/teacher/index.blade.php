@@ -24,7 +24,8 @@ Guru - Smabosa
                         <div class="col-lg-5 col-12">
 
                             <div class="image">
-                                <?php echo $teacher['teacher_photo'] ?>
+                                <!-- <?php echo $teacher['teacher_photo'] ?> -->
+                                 <img src="{{asset($teacher['teacher_photo'])}}" lazyloading="lazy" />
                             </div>
 
                         </div>

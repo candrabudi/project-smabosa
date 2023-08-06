@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="information-first">
-                    {!! lazyImage(public_path('images_upload/'.$info_first->info_image), $info_first->info_name, 800, 600) !!}
+                    <img src="{{asset('images_upload/'.$info_first->info_image)}}" lazyloading="lazy" alt="">
                     <h3>
                         <a href="{{route('extracurricular')}}">EKSTRAKURIKULER</a>
                     </h3>

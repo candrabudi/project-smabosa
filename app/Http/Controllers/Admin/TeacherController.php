@@ -7,6 +7,7 @@ use App\Models\Teacher;
 use Illuminate\Http\Request;
 use DB;
 use DataTables;
+use Intervention\Image\Facades\Image;
 
 class TeacherController extends Controller
 {
@@ -47,8 +48,14 @@ class TeacherController extends Controller
         try{
             if ($request->hasFile('teacher_photo')) {
                 $image = $request->file('teacher_photo');
-                $imageName = 'school_teacher/teacher_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/school_teacher'), $imageName);
+                $fileName = 'school_teacher/teacher_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/school_teacher/' . $webpFilename));
+                $image_name_db = 'school_teacher/' . $webpFilename;
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -63,7 +70,7 @@ class TeacherController extends Controller
             $store_teacher->teacher_subjects = $request->teacher_subjects;
             $store_teacher->teacher_type = $request->teacher_type;
             $store_teacher->status = $request->status;
-            $store_teacher->teacher_photo = $imageName;
+            $store_teacher->teacher_photo = $image_name_db;
             $store_teacher->save();
 
             DB::commit();
@@ -109,18 +116,24 @@ class TeacherController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('teacher_photo')) {
                 $image = $request->file('teacher_photo');
-                $imageName = 'school_teacher/teacher_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/school_teacher'), $imageName);
+                $fileName = 'school_teacher/teacher_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/school_teacher/' . $webpFilename));
+                $image_name_db = 'school_teacher/' . $webpFilename;
             }else{
-                $imageName = null;
+                $image_name_db = null;
             }
 
             $school_teacher->teacher_name = $request->teacher_name ?? $school_teacher->teacher_name ;
             $school_teacher->teacher_subjects = $request->teacher_subjects ?? $school_teacher->teacher_subjects;
             $school_teacher->teacher_type = $request->teacher_type ?? $school_teacher->teacher_type;
             $school_teacher->status = $request->status ?? $school_teacher->status;
-            $school_teacher->teacher_slug = $slug ?? $school_teacher->teacherslug;
-            $school_teacher->teacher_photo = $imageName ?? $school_teacher->teacher_photo;
+            // $school_teacher->teacher_slug = $slug ?? $school_teacher->teacherslug;
+            $school_teacher->teacher_photo = $image_name_db ?? $school_teacher->teacher_photo;
             $school_teacher->save();
 
             DB::commit();
