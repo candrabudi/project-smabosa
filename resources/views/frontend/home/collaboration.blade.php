@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="{{ asset('backend/img/logo/logo-bosa.png')}}" alt="">
+                            <img src="{{ asset('asset_be/img/logo/logo-bosa.png')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="{{ asset('backend/img/logo/logo-bosa-ais.png')}}" alt="">
+                            <img src="{{ asset('asset_be/img/logo/logo-bosa-ais.png')}}" alt="">
                         </div>
                     </div>
                 </div>

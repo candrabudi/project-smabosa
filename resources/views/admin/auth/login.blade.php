@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="../../backend/" data-template="vertical-menu-template">
+<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="../../asset_be/" data-template="vertical-menu-template">
 
 <head>
     <meta charset="utf-8" />
@@ -13,21 +13,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/fonts/fontawesome.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/fonts/tabler-icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/fonts/flag-icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/css/rtl/core.css') }}" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/css/rtl/theme-default.css') }}" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ asset('backend/css/demo.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/libs/node-waves/node-waves.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/libs/typeahead-js/typeahead.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/libs/formvalidation/dist/css/formValidation.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('backend/vendor/css/pages/page-auth.css') }}" />
-    <script src="{{ asset('backend/vendor/js/helpers.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/fonts/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/fonts/tabler-icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/fonts/flag-icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/css/rtl/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/css/rtl/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ asset('asset_be/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/node-waves/node-waves.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/typeahead-js/typeahead.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/libs/formvalidation/dist/css/formValidation.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('asset_be/vendor/css/pages/page-auth.css') }}" />
+    <script src="{{ asset('asset_be/vendor/js/helpers.js') }}"></script>
 
-    <script src="{{ asset('backend/vendor/js/template-customizer.js') }}"></script>
-    <script src="{{ asset('backend/js/config.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/js/template-customizer.js') }}"></script>
+    <script src="{{ asset('asset_be/js/config.js') }}"></script>
 </head>
 
 <body>
@@ -68,25 +68,25 @@
         </div>
     </div>
 
-    <script src="{{ asset('backend/vendor/libs/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/popper/popper.js') }}"></script>
-    <script src="{{ asset('backend/vendor/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/node-waves/node-waves.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/node-waves/node-waves.js') }}"></script>
 
-    <script src="{{ asset('backend/vendor/libs/hammer/hammer.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/i18n/i18n.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/typeahead-js/typeahead.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/hammer/hammer.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/i18n/i18n.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/typeahead-js/typeahead.js') }}"></script>
 
-    <script src="{{ asset('backend/vendor/js/menu.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/js/menu.js') }}"></script>
 
-    <script src="{{ asset('backend/vendor/libs/formvalidation/dist/js/FormValidation.min.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js') }}"></script>
-    <script src="{{ asset('backend/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/formvalidation/dist/js/FormValidation.min.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('asset_be/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js') }}"></script>
 
-    <script src="{{ asset('backend/js/main.js') }}"></script>
+    <script src="{{ asset('asset_be/js/main.js') }}"></script>
 
-    <script src="{{ asset('backend/js/pages-auth.js') }}"></script>
+    <script src="{{ asset('asset_be/js/pages-auth.js') }}"></script>
 </body>
 
 </html>

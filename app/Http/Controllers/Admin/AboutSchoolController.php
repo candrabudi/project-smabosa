@@ -52,7 +52,7 @@ class AboutSchoolController extends Controller
         
             $image = $request->file('about_thumbnail');
             $imageName = 'about_thumbnail/about_thumbnail_' . time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images/about_thumbnail'), $imageName);
+            $image->move(public_path('images_upload/about_thumbnail'), $imageName);
         
             $store_about = new AboutSchool();
             $store_about->title = $request->title;
@@ -90,7 +90,7 @@ class AboutSchoolController extends Controller
         if($request->hasFile('about_thumbnail')) {
             $image = $request->file('about_thumbnail');
             $imageName = 'about_thumbnail/about_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images/about_thumbnail'), $imageName);
+            $image->move(public_path('images_upload/about_thumbnail'), $imageName);
         }else{
             $imageName = null;
         }

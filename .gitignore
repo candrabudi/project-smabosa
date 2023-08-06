@@ -3,8 +3,8 @@
 /public/build
 /public/hot
 /public/storage
-/public/images
-/public/media
+/public/images_upload
+/public/media_upload
 /public/page-cache
 /storage/*.key
 /vendor

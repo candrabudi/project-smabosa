@@ -40,7 +40,7 @@ Master Kategori
 @include('admin.home_information.createOrEdit')
 @endsection
 @section('styles')
-<link rel="stylesheet" href="{{ asset('backend/css/style.css') }}" />
+<link rel="stylesheet" href="{{ asset('asset_be/css/style.css') }}" />
 @endsection
 @section('scripts')
 <script>

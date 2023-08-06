@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="information-first">
-                    <img src="{{asset('images/'.$info_first->info_image)}}" alt="">
+                    <img src="{{ asset('images_upload/'.$info_first->info_image)}}" alt="">
                     <h3>
                         <a href="{{route('extracurricular')}}">EKSTRAKURIKULER</a>
                     </h3>
@@ -79,7 +79,7 @@
                         @foreach($info_images as $ii)
                         <div class="col-lg-12 mb-3">
                             <div class="content-information">
-                                <div class="thumbnail-information" style='background-image: url("{{ asset('images/'.$ii->info_image) }}");'>
+                                <div class="thumbnail-information" style='background-image: url("{{ asset('images_upload/'.$ii->info_image) }}");'>
 
                                 </div>
                                 <h3>

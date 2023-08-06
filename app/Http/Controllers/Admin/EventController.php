@@ -55,7 +55,7 @@ class EventController extends Controller
             if ($request->hasFile('event_thumbnail')) {
                 $image = $request->file('event_thumbnail');
                 $imageName = 'event_thumbnail/event_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/event_thumbnail'), $imageName);
+                $image->move(public_path('images_upload/event_thumbnail'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -117,7 +117,7 @@ class EventController extends Controller
             if ($request->hasFile('event_thumbnail')) {
                 $image = $request->file('event_thumbnail');
                 $imageName = 'event_thumbnail/event_thumbnail_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/event_thumbnail'), $imageName);
+                $image->move(public_path('images_upload/event_thumbnail'), $imageName);
             }else{
                 $imageName = null;
             }

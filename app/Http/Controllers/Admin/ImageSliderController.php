@@ -57,7 +57,7 @@ class ImageSliderController extends Controller
             if ($request->hasFile('image')) {
                 $image = $request->file('image');
                 $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/image_slider'), $fileName);
+                $image->move(public_path('images_upload/image_slider'), $fileName);
             } else {
                 return response()->json([
                     'status' => 'failed',
@@ -103,9 +103,9 @@ class ImageSliderController extends Controller
             if ($request->hasFile('image')) {
                 $originName = $request->file('image')->getClientOriginalName();
                 $extension = $request->file('image')->getClientOriginalExtension();
-                $fileName = 'images/image_slider' . '_' . time() . '.' . $extension;
+                $fileName = 'images_upload/image_slider' . '_' . time() . '.' . $extension;
 
-                $request->file('image')->move(public_path('images/image_slider'), $fileName);
+                $request->file('image')->move(public_path('images_upload/image_slider'), $fileName);
             } else {
                 $fileName = $image_slider->image;
             }

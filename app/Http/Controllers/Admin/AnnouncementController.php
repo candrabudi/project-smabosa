@@ -49,7 +49,7 @@ class AnnouncementController extends Controller
             if ($request->hasFile('announcement_thumbnail')) {
                 $image = $request->file('announcement_thumbnail');
                 $imageName = 'school_announcement/school_announcement_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_announcement'), $imageName);
+                $image->move(public_path('images_upload/school_announcement'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -112,7 +112,7 @@ class AnnouncementController extends Controller
             if ($request->hasFile('announcement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
                 $imageName = 'school_announcement/school_announcement_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_announcement'), $imageName);
+                $image->move(public_path('images_upload/school_announcement'), $imageName);
             }else{
                 $imageName = null;
             }

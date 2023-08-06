@@ -44,7 +44,7 @@ class HomeInformationController extends Controller
         
             $image = $request->file('info_image');
             $imageName = 'home_information/home_information_' . time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images/home_information'), $imageName);
+            $image->move(public_path('images_upload/home_information'), $imageName);
         
             $store = new HomeInformation();
             $store->info_name = $request->info_name;
@@ -82,7 +82,7 @@ class HomeInformationController extends Controller
         if($request->hasFile('info_image')) {
             $image = $request->file('info_image');
             $imageName = 'home_information/home_information_'.time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images/home_information'), $imageName);
+            $image->move(public_path('images_upload/home_information'), $imageName);
         }else{
             $imageName = null;
         }

@@ -51,7 +51,7 @@ class SchoolAchievementController extends Controller
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
                 $imageName = 'school_achievement/school_achievement_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_achievement'), $imageName);
+                $image->move(public_path('images_upload/school_achievement'), $imageName);
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -114,7 +114,7 @@ class SchoolAchievementController extends Controller
             if ($request->hasFile('achievement_thumbnail')) {
                 $image = $request->file('achievement_thumbnail');
                 $imageName = 'school_achievement/school_achievement_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/school_achievement'), $imageName);
+                $image->move(public_path('images_upload/school_achievement'), $imageName);
             }else{
                 $imageName = null;
             }

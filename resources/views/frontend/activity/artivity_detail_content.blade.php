@@ -24,7 +24,7 @@
             <div class="col-lg-8 col-12">
                 <div class=single-inner>
                     <div class=post-thumbnils>
-                        <img src="{{ asset('images/'.$article->post_thumbnail) }}" alt="#" data-pagespeed-url-hash=1974793277 onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <img src="{{ asset('images_upload/'.$article->post_thumbnail) }}" alt="#" data-pagespeed-url-hash=1974793277 onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                     </div>
                     <div class=post-details>
                         <div class=detail-inner>
