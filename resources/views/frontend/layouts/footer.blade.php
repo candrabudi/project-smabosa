@@ -44,10 +44,11 @@
                         <div class="footer-social">
                             <ul>
                                 <!-- <li><a href="javascript:void(0)"><img src="{{asset('frontend/images/icons/tiktok.svg')}}" width="20" alt=""></a></li> -->
-                                <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://twitter.com/SMABOSA_YK?t=WrQON_m8V57uWFSj65bD8w&s=09"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
+                                <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/SMABOSA_YK?t=WrQON_m8V57uWFSj65bD8w&s=09"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="mailto:smabosa@gmail.com"><i class="fa-brands fa-google"></i></a></li>
+                                <li><a href="https://www.tiktok.com/@smabosa?_t=8eIfk94bTAf&_r=1"><i class="fa-brands fa-tiktok"></i></a></li>
                             </ul>
                         </div>
                     </div>

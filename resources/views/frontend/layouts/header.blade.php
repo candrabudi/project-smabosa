@@ -11,7 +11,7 @@
 </div>
 
 <header class="header navbar-area">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <div class="toolbar-area">
         <div class="container">
             <div class="row">
@@ -22,7 +22,7 @@
                             <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="lni lni-instagram"></i></a></li>
                             <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="lni lni-youtube"></i></a></li>
                             <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
-                            <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-tiktok"></i></a></li>
+                            <li><a href="https://www.tiktok.com/@smabosa?_t=8eIfk94bTAf&_r=1"><i class="fa-brands fa-tiktok"></i></a></li>
                         </ul>
                     </div>
                 </div>
