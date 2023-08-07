@@ -131,11 +131,7 @@ Edit Fasilitas
                             opacity: 0.8
                         }
                     });
-                    var maxLoadingTime = 13000;
-                    loadingTimeout = setTimeout(function() {
-                        loadingElement.unblock();
-                    }, maxLoadingTime);
-                    
+
                     event.preventDefault();
                     var imageFile = $('#thumbnail')[0].files[0];
                     var title = $('#title').val();
@@ -161,24 +157,39 @@ Edit Fasilitas
                             var endTime = performance.now();
                             var responseTime = Math.round(endTime - startTime);
                             loadingElement.unblock();
-                            setTimeout(function() {
-                                Swal.fire({
-                                    title: 'Berhasl!',
-                                    text: 'Ekstrakurikular Berhasil Di Ubah!',
-                                    icon: 'success',
-                                    customClass: {
-                                        confirmButton: 'btn btn-primary'
-                                    },
-                                    buttonsStyling: false
-                                }).then((result) => {
-                                    if (result.isConfirmed) {
-                                        window.location.href = '/bosa-admin/extracurricular';
-                                    }
-                                });
-                            }, responseTime + 300);
+                            loadingElement.remove();
+                            Swal.fire({
+                                title: 'Berhasl!',
+                                text: 'Ekstrakurikular Berhasil Di Ubah!',
+                                icon: 'success',
+                                customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                },
+                                buttonsStyling: false
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = '/bosa-admin/extracurricular';
+                                }
+                            });
                         },
                         error: function(xhr) {
-                            console.log(error)
+                            loadingElement.unblock();
+                            loadingElement.remove();
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'Sepertinya gambar yang kamu upload terlalu besar!',
+                                icon: 'error',
+                                customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                },
+                                buttonsStyling: false
+                            });
+                        },
+                        beforeSend: function() {
+                            var maxLoadingTime = 60000;
+                            loadingTimeout = setTimeout(function() {
+                                loadingElement.remove();
+                            }, maxLoadingTime);
                         }
                     });
                 } else {

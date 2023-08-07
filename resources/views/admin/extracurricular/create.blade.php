@@ -131,10 +131,6 @@ Tambah Ekstrakurikular
                             opacity: 0.8
                         }
                     });
-                    var maxLoadingTime = 1000000;
-                    loadingTimeout = setTimeout(function() {
-                        loadingElement.unblock();
-                    }, maxLoadingTime);
 
                     event.preventDefault();
                     var imageFile = $('#thumbnail')[0].files[0];
@@ -162,18 +158,7 @@ Tambah Ekstrakurikular
                             var endTime = performance.now();
                             var responseTime = Math.round(endTime - startTime);
                             loadingElement.unblock();
-                            $('#card-block').block({
-                                message: '<div class="spinner-border text-primary" role="status"></div>',
-                                timeout: responseTime,
-                                css: {
-                                    backgroundColor: 'transparent',
-                                    border: '0'
-                                },
-                                overlayCSS: {
-                                    backgroundColor: '#fff',
-                                    opacity: 0.8
-                                }
-                            });
+                            loadingElement.remove();
                             setTimeout(function() {
                                 Swal.fire({
                                     title: 'Berhasl!',
@@ -188,10 +173,16 @@ Tambah Ekstrakurikular
                                         window.location.href = '/bosa-admin/extracurricular';
                                     }
                                 });
-                            }, responseTime + 300);
+                            }, responseTime);
                         },
                         error: function(xhr) {
                             console.log(error)
+                        },
+                        beforeSend: function() {
+                            var maxLoadingTime = 60000;
+                            loadingTimeout = setTimeout(function() {
+                                loadingElement.remove();
+                            }, maxLoadingTime);
                         }
                     });
                 } else {
