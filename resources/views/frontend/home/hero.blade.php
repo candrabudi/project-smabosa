@@ -1,10 +1,336 @@
+@section('style')
+<style>
+    .hero-area {
+        background-size: 100%;
+        background-position: right center;
+        /* padding: 50px; */
+        box-sizing: border-box;
+        margin-top: 150px;
+    }
+
+    .hero-inner {
+        height: 600px !important;
+    }
+
+    .hero-area .overlay::before {
+        opacity: 0.7;
+        background: #081828;
+    }
+
+    .hero-container {
+        width: 100%;
+    }
+
+    .hero-area .hero-text {
+        float: none;
+        text-align: center;
+        margin-top: 150px !important;
+        height: 400px;
+    }
+
+    .thumbnail-post {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        border: 1px solid #EEE;
+    }
+
+    .thumbnail-content {
+        width: 100%;
+        height: 100%
+    }
+
+    .thumbnail-content p {
+        opacity: 0;
+    }
+
+    .thumbnail-post {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        border: 1px solid #EEE;
+    }
+
+    .thumbnail-event {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        border: 1px solid #EEE;
+    }
+
+    /* RESPONSIVE HERO SLIDER */
+    @media only screen and (max-width: 330px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 120px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 360px) and (max-width: 390px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 140px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 411px) and (max-width: 470px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 150px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 505px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 175px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 505px) and (max-width: 540px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 195px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 580px) and (max-width: 630px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 195px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 640px) and (max-width: 720px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+            margin-top: 200px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 225px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: 768px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 0px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 250px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    @media only screen and (min-width: 830px) and (max-width: 1270px) {
+        .hero-area {
+            overflow: hidden;
+            padding: 10px !important;
+        }
+
+        .hero-container .hero-inner {
+            border-radius: 3px !important;
+            width: 100% !important;
+            height: 290px !important;
+            overflow: hidden;
+        }
+
+        .hero-inner .hero-text {
+            width: 100%;
+            height: 50px !important;
+        }
+
+        .hero-area .tns-nav {
+            text-align: center;
+            position: absolute;
+            bottom: 5px !important;
+        }
+    }
+
+    .box-contact i {
+        font-size: 15px;
+        vertical-align: middle;
+    }
+
+    .box-contact i+span {
+        margin-left: 10px;
+    }
+
+    .box-contact {
+        width: 100%;
+        background-color: #DDD;
+    }
+
+    .box-contact span {
+        color: #000;
+    }
+
+    .box-icon {
+        width: 35px;
+        padding: 10px;
+        text-align: center;
+        line-height: 60px;
+        display: inline-block;
+        background-color: #375bcd;
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    .image-facility img {
+        width: 50%;
+    }
+</style>
+@endsection
 <section class="hero-area overlay">
     <div class="hero-slider">
         @foreach($image_sliders as $slider)
         <div class="hero-container">
             <div class="hero-inner" style='
-                background-image: url("{{ asset('images_upload/'.$slider->image) }}");'
-            >
+                background-image: url("{{ asset('images_upload/'.$slider->image) }}");'>
                 <div class="container">
                     <div class="row ">
                         <div class="col-lg-8 offset-lg-2 col-md-12 co-12">
