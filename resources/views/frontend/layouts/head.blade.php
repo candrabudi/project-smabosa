@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/responsive.css') }}"/>
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/all.css') }}"/>
     <link rel="stylesheet" href="{{ asset('asset_fe/css/custom_menu.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('asset_fe/css/style.css') }}"/>
+    <!-- <link rel="stylesheet" href="{{ asset('asset_fe/css/style.css') }}"/> -->
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/v5-font-face.css') }}"/>
     @yield('style')
 </head>

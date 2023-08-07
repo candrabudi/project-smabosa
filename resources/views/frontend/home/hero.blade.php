@@ -1,4 +1,4 @@
-@section('style')
+
 <style>
     .hero-area {
         background-size: 100%;
@@ -269,7 +269,7 @@
     @media only screen and (min-width: 830px) and (max-width: 1270px) {
         .hero-area {
             overflow: hidden;
-            padding: 10px !important;
+            /* padding: 10px !important; */
         }
 
         .hero-container .hero-inner {
@@ -324,7 +324,6 @@
         width: 50%;
     }
 </style>
-@endsection
 <section class="hero-area overlay">
     <div class="hero-slider">
         @foreach($image_sliders as $slider)
