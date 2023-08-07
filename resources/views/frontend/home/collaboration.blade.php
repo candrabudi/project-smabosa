@@ -1,106 +1,78 @@
 @section('style')
 <style>
-    .collaboration {
-        width: 100%;
-        height: 300px;
+    .apply-process {
         background-color: #375bcd;
+        padding: 60px 0;
         border-bottom: 15px solid #fff000;
     }
 
-    .collaboration .container-collaboration {
-        width: 80%;
-        height: 100%;
+    .apply-process .process-item {
+        padding-left: 25px;
+        position: relative;
+        padding-right: 92px;
+    }
+
+    .apply-process .process-item img {
+        color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 90px;
+        text-align: center;
+        margin-top: -20px;
+    }
+    .apply-process .process-item h4 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2042e3;
+        background-color: #fff000;
+        position: relative;
+        display: block;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        line-height: 30px;
+        padding: 15px;
+        width: 95%;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .apply-process h2 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #2042e3;
+        background-color: #fff000;
+        position: relative;
+        display: block;
+        line-height: 30px;
         margin: auto;
-        padding: 20px;
-        box-sizing: border-box;
+        padding: 15px;
+        width: 88%;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: -30px;
     }
 
-    .collaboration .container-collaboration .collaboration-title {
-        text-align: center;
+    .apply-process .process-item p {
+        color: #fff;
         width: 80%;
-        font-size: 26px;
-        margin: auto;
-
+        display: block;
     }
-
-    .collaboration .container-collaboration .collaboration-title h2 {
-        color: #375bcd;
-        padding: 10px;
-        box-sizing: border-box;
-        background-color: #fff000;
-        border-radius: 4px;
-    }
-
-    .collaboration .container-collaboration .content-collaboration {
-        padding: 20px;
-        box-sizing: border-box;
-        margin-top: 15px;
-    }
-
-    .collaboration .container-collaboration .content-collaboration .box-program-reguler {
-        line-height: 300px !important;
-        text-align: center;
-        width: 100%;
-        min-height: 40px;
-        background-color: #fff000;
-        margin-top: 50px;
-        border-radius: 4px;
-    }
-
-    .box-program-reguler h3 {
-        color: #375bcd;
-    }
-
-    .collaboration .container-collaboration .content-collaboration .box-program-ais {
-        line-height: 300px !important;
-        text-align: center;
-        width: 100%;
-        min-height: 40px;
-        background-color: #fff000;
-        margin-top: 30px;
-        border-radius: 4px;
-    }
-
-    .box-program-ais h3 {
-        color: #375bcd;
-    }
-
-    .collaboration .container-collaboration .content-collaboration img {
-        width: 100px;
-    }
-
 </style>
 @endsection
-<section class="collaboration">
-    <div class="container-collaboration">
-        <div class="collaboration-title">
-            <h2>LAYANAN PENDIDIKAN</h2>
-        </div>
-        <div class="content-collaboration">
-            <div class="row">
-                <div class="col-md">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="box-program-reguler">
-                                <h3><a href="{{route('schoolprogramRegular')}}">PROGRAM REGULER</a></h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="{{ asset('asset_be/img/logo/logo-bosa.webp')}}" lazyloading="lazy">
-                        </div>
-                    </div>
+<section class="apply-process section">
+    <div class="container">
+        <h2>LAYANAN PENDIDIKAN</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 mt-10">
+                <div class="process-item">
+                    <h4><a href="{{route('schoolprogramRegular')}}">PROGRAM REGULER</a></h4>
+                    <img src="{{ asset('asset_be/img/logo/logo-bosa.webp')}}" alt="Logo" loading="lazy">
                 </div>
-                <div class="col-md">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="box-program-ais">
-                                <h3><a href="{{route('schoolprogramBosaAis')}}">BOSA-AIS<br> EDUCATIONAL PROGRAM</a></h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="{{ asset('asset_be/img/logo/logo-bosa-ais.webp')}}" lazyloading="lazy">
-                        </div>
-                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 mt-10">
+                <div class="process-item">
+                    <h4><a href="{{route('schoolprogramBosaAis')}}">BOSA-AIS EDUCATIONAL PROGRAM</a></h4>
+                    <img src="{{ asset('asset_be/img/logo/logo-bosa-ais.webp')}}" alt="Logo" loading="lazy">
                 </div>
             </div>
         </div>
