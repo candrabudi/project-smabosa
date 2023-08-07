@@ -119,6 +119,23 @@ Edit Fasilitas
                 buttonsStyling: false
             }).then((result) => {
                 if (result.isConfirmed) {
+                    var loadingTimeout;
+                    var loadingElement = $('#card-block').block({
+                        message: '<div class="spinner-border text-primary" role="status"></div>',
+                        css: {
+                            backgroundColor: 'transparent',
+                            border: '0'
+                        },
+                        overlayCSS: {
+                            backgroundColor: '#fff',
+                            opacity: 0.8
+                        }
+                    });
+                    var maxLoadingTime = 13000;
+                    loadingTimeout = setTimeout(function() {
+                        loadingElement.unblock();
+                    }, maxLoadingTime);
+                    
                     event.preventDefault();
                     var imageFile = $('#thumbnail')[0].files[0];
                     var title = $('#title').val();
@@ -143,18 +160,7 @@ Edit Fasilitas
                         success: function(response) {
                             var endTime = performance.now();
                             var responseTime = Math.round(endTime - startTime);
-                            $('#card-block').block({
-                                message: '<div class="spinner-border text-primary" role="status"></div>',
-                                timeout: responseTime,
-                                css: {
-                                    backgroundColor: 'transparent',
-                                    border: '0'
-                                },
-                                overlayCSS: {
-                                    backgroundColor: '#fff',
-                                    opacity: 0.8
-                                }
-                            });
+                            loadingElement.unblock();
                             setTimeout(function() {
                                 Swal.fire({
                                     title: 'Berhasl!',
