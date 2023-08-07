@@ -158,7 +158,6 @@ Tambah Ekstrakurikular
                             var endTime = performance.now();
                             var responseTime = Math.round(endTime - startTime);
                             loadingElement.unblock();
-                            loadingElement.remove();
                             setTimeout(function() {
                                 Swal.fire({
                                     title: 'Berhasl!',
@@ -176,7 +175,16 @@ Tambah Ekstrakurikular
                             }, responseTime);
                         },
                         error: function(xhr) {
-                            console.log(error)
+                            loadingElement.unblock();
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'Sepertinya gambar yang kamu upload terlalu besar!',
+                                icon: 'error',
+                                customClass: {
+                                    confirmButton: 'btn btn-primary'
+                                },
+                                buttonsStyling: false
+                            });
                         },
                         beforeSend: function() {
                             var maxLoadingTime = 60000;
