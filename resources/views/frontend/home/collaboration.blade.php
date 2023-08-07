@@ -49,7 +49,6 @@
         width: 88%;
         text-align: center;
         border-radius: 8px;
-        margin-bottom: -30px;
     }
 
     .apply-process .process-item p {
