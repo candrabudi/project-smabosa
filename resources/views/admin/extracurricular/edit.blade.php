@@ -6,62 +6,64 @@ Edit Fasilitas
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Ekstrakurikular Sekolah /</span> Edit Ekstrakurikular</h4>
     <div class="row mb-3">
-        <form id="create-post-form" enctype="multipart/form-data">
-            @csrf
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <label class="form-label" for="title">Judul</label>
-                            <input type="text" class="form-control" id="title" value="{{$extracurricular->title}}" required />
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <label class="form-label" for="judul">Deskripsi Singkat</label>
-                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control" >{{$extracurricular->short_desc}}</textarea>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="document-editor">
-                                <div class="toolbar-container"></div>
-                                <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
-                                    <div id="editor"><?php echo $extracurricular->content ?></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label class="form-label" for="bs-validation-country">Status</label>
-                                <select class="form-select" id="bs-validation-country" required>
-                                    <option value="">Pilih Status</option>
-                                    <option value="Publish" {{($extracurricular->status == 'Publish') ? 'selected' : ''}}>Publish</option>
-                                    <option value="Draft" {{($extracurricular->status == 'Draft') ? 'selected' : ''}}>Draft</option>
-                                </select>
-                            </div>
-                            <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-md-12 mt-4">
-                        <div class="card h-100">
-                            <div class="card-header d-flex justify-content-between">
-                                <div class="card-title mb-0">
-                                    <h5 class="mb-0">Thumbnail</h5>
-                                </div>
-                            </div>
+        <div class="offcanvas-body pt-0" id="card-block">
+            <form id="create-post-form" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card mb-3">
                             <div class="card-body">
-                                <input class="form-control" id="thumbnail" type="file" id="formFile" />
+                                <label class="form-label" for="title">Judul</label>
+                                <input type="text" class="form-control" id="title" value="{{$extracurricular->title}}" required />
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <label class="form-label" for="judul">Deskripsi Singkat</label>
+                                <textarea name="" id="short_desc" cols="30" rows="5" class="form-control" >{{$extracurricular->short_desc}}</textarea>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="document-editor">
+                                    <div class="toolbar-container"></div>
+                                    <div class="content-container" style="pading: 20px;border: 2px solid #DEDEDE">
+                                        <div id="editor"><?php echo $extracurricular->content ?></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label class="form-label" for="bs-validation-country">Status</label>
+                                    <select class="form-select" id="bs-validation-country" required>
+                                        <option value="">Pilih Status</option>
+                                        <option value="Publish" {{($extracurricular->status == 'Publish') ? 'selected' : ''}}>Publish</option>
+                                        <option value="Draft" {{($extracurricular->status == 'Draft') ? 'selected' : ''}}>Draft</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-md-12 mt-4">
+                            <div class="card h-100">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="card-title mb-0">
+                                        <h5 class="mb-0">Thumbnail</h5>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <input class="form-control" id="thumbnail" type="file" id="formFile" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 @endsection
@@ -131,6 +133,7 @@ Edit Fasilitas
                     formData.append('content', content);
                     formData.append('status', status);
 
+                    var startTime = performance.now();
                     $.ajax({
                         url: '{{ route('admin.extracurricular.update', $extracurricular->id).'?_token='.csrf_token() }}',
                         type: "POST",
@@ -138,19 +141,35 @@ Edit Fasilitas
                         processData: false,
                         contentType: false,
                         success: function(response) {
-                            Swal.fire({
-                                title: 'Berhasl!',
-                                text: 'Ekstrakurikular Berhasil Di tambahkan!',
-                                icon: 'success',
-                                customClass: {
-                                    confirmButton: 'btn btn-primary'
+                            var endTime = performance.now();
+                            var responseTime = Math.round(endTime - startTime);
+                            $('#card-block').block({
+                                message: '<div class="spinner-border text-primary" role="status"></div>',
+                                timeout: responseTime,
+                                css: {
+                                    backgroundColor: 'transparent',
+                                    border: '0'
                                 },
-                                buttonsStyling: false
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.href = '/bosa-admin/extracurricular';
+                                overlayCSS: {
+                                    backgroundColor: '#fff',
+                                    opacity: 0.8
                                 }
                             });
+                            setTimeout(function() {
+                                Swal.fire({
+                                    title: 'Berhasl!',
+                                    text: 'Ekstrakurikular Berhasil Di Ubah!',
+                                    icon: 'success',
+                                    customClass: {
+                                        confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = '/bosa-admin/extracurricular';
+                                    }
+                                });
+                            }, responseTime + 300);
                         },
                         error: function(xhr) {
                             console.log(error)
