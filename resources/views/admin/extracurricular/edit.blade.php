@@ -157,7 +157,6 @@ Edit Fasilitas
                             var endTime = performance.now();
                             var responseTime = Math.round(endTime - startTime);
                             loadingElement.unblock();
-                            loadingElement.remove();
                             Swal.fire({
                                 title: 'Berhasl!',
                                 text: 'Ekstrakurikular Berhasil Di Ubah!',
@@ -174,7 +173,6 @@ Edit Fasilitas
                         },
                         error: function(xhr) {
                             loadingElement.unblock();
-                            loadingElement.remove();
                             Swal.fire({
                                 title: 'Error!',
                                 text: 'Sepertinya gambar yang kamu upload terlalu besar!',
