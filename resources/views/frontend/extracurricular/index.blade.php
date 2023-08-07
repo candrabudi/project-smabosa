@@ -11,7 +11,7 @@ Ekstrakurikuler - Smabosa
             <div class="col-12">
                 <div class="section-title align-center gray-bg">
                     <span>Ekstrakurikuler</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Ekstrakurikuler SMK 1 BOPKRI Yogyakarta</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Ekstrakurikuler SMA 1 BOPKRI Yogyakarta</h2>
                     <p class="wow fadeInUp" data-wow-delay=".6s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorum!</p>
                 </div>
             </div>
