@@ -54,11 +54,12 @@
     @media only screen and (min-width: 330px) and (max-width: 470px) {
         .information-first {
             width: 100%;
-            min-height: 200px!important;
-            margin-bottom: 20px!important;
+            min-height: 200px !important;
+            margin-bottom: 20px !important;
         }
+
         .content-information h3 {
-            font-size: 18px!important;
+            font-size: 18px !important;
         }
     }
 </style>
@@ -67,10 +68,8 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="information-first">
-                    <img src="{{asset('images_upload/'.$info_first->info_image)}}" lazyloading="lazy" alt="">
-                    <h3>
-                        <a href="{{route('extracurricular')}}">EKSTRAKURIKULER</a>
-                    </h3>
+                    <img src="{{ asset('images_upload/' . $info_first->info_image) }}" alt="" loading="lazy">
+                    <h3><a href="{{ route('extracurricular') }}">EKSTRAKURIKULER</a></h3>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -79,12 +78,9 @@
                         @foreach($info_images as $ii)
                         <div class="col-lg-12 mb-3">
                             <div class="content-information">
-                                <div class="thumbnail-information" loading="lazy" data-pagespeed-url-hash="814022818" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" style='background-image: url("{{ asset('images_upload/'.$ii->info_image) }}");'>
-
+                                <div class="thumbnail-information" style="background-image: url('{{ asset('images_upload/'.$ii->info_image) }}');" loading="lazy">
                                 </div>
-                                <h3>
-                                    <a href="{{$ii->route}}">{{$ii->info_name}}</a>
-                                </h3>
+                                <h3><a href="{{ $ii->route }}">{{ $ii->info_name }}</a></h3>
                             </div>
                         </div>
                         @endforeach
