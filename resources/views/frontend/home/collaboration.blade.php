@@ -1,5 +1,9 @@
 @section('style')
 <style>
+    .mt-10 {
+        margin-top: 5rem !important
+    }
+
     .apply-process {
         background-color: #375bcd;
         padding: 60px 0;
@@ -21,6 +25,7 @@
         text-align: center;
         margin-top: -20px;
     }
+
     .apply-process .process-item h4 {
         font-size: 20px;
         font-weight: bold;
@@ -36,6 +41,7 @@
         text-align: center;
         border-radius: 8px;
     }
+
     .apply-process h2 {
         font-size: 28px;
         font-weight: bold;
