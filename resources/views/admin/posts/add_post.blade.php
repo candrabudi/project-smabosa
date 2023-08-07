@@ -72,95 +72,97 @@ Tambah Post
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-1"><span class="text-muted fw-light">Posts /</span> Tambah Posting</h4>
     <div class="row mb-3">
-        <form id="create-post-form" enctype="multipart/form-data">
-            @csrf
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <label class="form-label" for="judul">Judul</label>
-                            <input type="text" class="form-control" id="judul" required />
+        <div class="offcanvas-body pt-0" id="card-block">
+            <form id="create-post-form" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <label class="form-label" for="judul">Judul</label>
+                                <input type="text" class="form-control" id="judul" required />
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="document-editor">
-                                <div class="toolbar-container"></div>
-                                <div class="content-container">
-                                    <div id="editor">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="document-editor">
+                                    <div class="toolbar-container"></div>
+                                    <div class="content-container">
+                                        <div id="editor">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <div class="form-group mb-3">
-                                    <label class="form-label" for="status">Status</label>
-                                    <select class="form-select" id="status" required>
-                                        <option value="Publish">Publish</option>
-                                        <option value="Draft">Draft</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="form-label" for="post_language">Bahasa</label>
-                                    <select class="form-select" id="post_language" required>
-                                        <option value="Indonesia">Indonesia</option>
-                                        <option value="English">English</option>
-                                        <option value="Jawa">Jawa</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="flatpickr-date" class="form-label">Tanggal Post</label>
-                                    <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-datetime" />
-                                </div>
-                            </div>
-                            <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
-                            <button class="btn btn-primary d-none" type="button" id="spiner-button" disabled>
-                                <span class="spinner-border me-1" role="status" aria-hidden="true"></span>
-                                Loading...
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <label class="form-label" for="short_desc">Deskripsi Singkat</label>
-                            <textarea name="" id="short_desc" cols="30" rows="5" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-md-12 mt-4">
-                        <div class="card">
-                            <div class="card-header d-flex justify-content-between">
-                                <div class="card-title mb-0">
-                                    <h5 class="mb-0">Kategori</h5>
-                                </div>
-                            </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3">
                             <div class="card-body">
-                                <div class="select2-success">
-                                    <select name="" id="select2Success" class="select2 form-select" multiple>
-                                        @foreach($master_categories as $mc)
-                                        <option value="{{ $mc->id }}">{{$mc->name}}</option>
-                                        @endforeach
-                                    </select>
+                                <div class="mb-3">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label" for="status">Status</label>
+                                        <select class="form-select" id="status" required>
+                                            <option value="Publish">Publish</option>
+                                            <option value="Draft">Draft</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label" for="post_language">Bahasa</label>
+                                        <select class="form-select" id="post_language" required>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="English">English</option>
+                                            <option value="Jawa">Jawa</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="flatpickr-date" class="form-label">Tanggal Post</label>
+                                        <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-datetime" />
+                                    </div>
                                 </div>
+                                <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
+                                <button class="btn btn-primary d-none" type="button" id="spiner-button" disabled>
+                                    <span class="spinner-border me-1" role="status" aria-hidden="true"></span>
+                                    Loading...
+                                </button>
                             </div>
-                            <div class="card-header d-flex justify-content-between">
-                                <div class="card-title mb-0">
-                                    <h5 class="mb-0">Thumbnail</h5>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="card mb-3">
                             <div class="card-body">
-                                <input class="form-control" id="thumbnail" type="file" id="formFile" />
+                                <label class="form-label" for="short_desc">Deskripsi Singkat</label>
+                                <textarea name="" id="short_desc" cols="30" rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-md-12 mt-4">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="card-title mb-0">
+                                        <h5 class="mb-0">Kategori</h5>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="select2-success">
+                                        <select name="" id="select2Success" class="select2 form-select" multiple>
+                                            @foreach($master_categories as $mc)
+                                            <option value="{{ $mc->id }}">{{$mc->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="card-title mb-0">
+                                        <h5 class="mb-0">Thumbnail</h5>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <input class="form-control" id="thumbnail" type="file" id="formFile" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 @endsection
@@ -205,7 +207,19 @@ Tambah Post
 <script>
     $(document).ready(function() {
         $('#submit-post').click(function() {
-            console.log("kodok");
+            var loadingTimeout;
+            var loadingElement = $('#card-block').block({
+                message: '<div class="spinner-border text-primary" role="status"></div>',
+                css: {
+                    backgroundColor: 'transparent',
+                    border: '0'
+                },
+                overlayCSS: {
+                    backgroundColor: '#fff',
+                    opacity: 0.8
+                }
+            });
+            var startTime = performance.now();
             $('#spiner-button').removeClass('d-none');
             $('#submit-post').addClass('d-none');
             Swal.fire({
@@ -248,25 +262,31 @@ Tambah Post
                         processData: false,
                         contentType: false,
                         success: function(response) {
-                            Swal.fire({
-                                title: 'Berhasl!',
-                                text: 'Postingan Berhasil Di tambahkan!',
-                                icon: 'success',
-                                customClass: {
-                                    confirmButton: 'btn btn-primary'
-                                },
-                                buttonsStyling: false
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.href = '/bosa-admin/posts';
-                                }
-                            });
+                            var endTime = performance.now();
+                            var responseTime = Math.round(endTime - startTime);
+                            loadingElement.unblock();
+                            setTimeout(function() {
+                                Swal.fire({
+                                    title: 'Berhasl!',
+                                    text: 'Postingan Berhasil Di tambahkan!',
+                                    icon: 'success',
+                                    customClass: {
+                                        confirmButton: 'btn btn-primary'
+                                    },
+                                    buttonsStyling: false
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = '/bosa-admin/posts';
+                                    }
+                                });
+                            }, responseTime + 300);
                         },
                         error: function(xhr, response) {
                             if(xhr.responseJSON.code == 400){
                                 if(xhr.responseJSON.message == "Error upload thumbnail!"){
                                     $('#spiner-button').addClass('d-none');
                                     $('#submit-post').removeClass('d-none');
+                                    loadingElement.unblock();
                                     Swal.fire({
                                         title: 'Error!',
                                         text: xhr.responseJSON.message,
@@ -280,6 +300,7 @@ Tambah Post
                             }else if(xhr.responseJSON.code == 500){
                                 $('#spiner-button').addClass('d-none');
                                 $('#submit-post').removeClass('d-none');
+                                loadingElement.unblock();
                                 Swal.fire({
                                     title: 'Error!',
                                     text: 'Something Wrong Error!',
@@ -290,6 +311,12 @@ Tambah Post
                                     buttonsStyling: false
                                 });
                             }
+                        },
+                        beforeSend: function() {
+                            var maxLoadingTime = 60000;
+                            loadingTimeout = setTimeout(function() {
+                                loadingElement.remove();
+                            }, maxLoadingTime);
                         }
                     });
                 } else {

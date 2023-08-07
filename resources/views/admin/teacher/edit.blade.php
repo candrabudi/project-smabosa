@@ -121,6 +121,19 @@ Edit Guru
                 buttonsStyling: false
             }).then((result) => {
                 if (result.isConfirmed) {
+                    var loadingTimeout;
+                    var loadingElement = $('#card-block').block({
+                        message: '<div class="spinner-border text-primary" role="status"></div>',
+                        css: {
+                            backgroundColor: 'transparent',
+                            border: '0'
+                        },
+                        overlayCSS: {
+                            backgroundColor: '#fff',
+                            opacity: 0.8
+                        }
+                    });
+                    var startTime = performance.now();
                     event.preventDefault();
                     var imageFile = $('#teacher_photo')[0].files[0];
                     var teacher_name = $('#teacher_name').val();
@@ -141,6 +154,9 @@ Edit Guru
                         processData: false,
                         contentType: false,
                         success: function(response) {
+                            var endTime = performance.now();
+                            var responseTime = Math.round(endTime - startTime);
+                            loadingElement.unblock();
                             Swal.fire({
                                 title: 'Berhasl!',
                                 text: 'Guru Berhasil Di Edit!',
@@ -156,6 +172,7 @@ Edit Guru
                             });
                         },
                         error: function(xhr) {
+                            loadingElement.unblock();
                             const sentence = "top-0 end-0";
                             const words = sentence.split(' ');
                             selectedType = "text-danger";
@@ -164,6 +181,12 @@ Edit Guru
                             DOMTokenList.prototype.add.apply(toastPlacementExample.classList, selectedPlacement);
                             toastPlacement = new bootstrap.Toast(toastPlacementExample);
                             toastPlacement.show();
+                        },
+                        beforeSend: function() {
+                            var maxLoadingTime = 60000;
+                            loadingTimeout = setTimeout(function() {
+                                loadingElement.remove();
+                            }, maxLoadingTime);
                         }
                     });
                 } else {
