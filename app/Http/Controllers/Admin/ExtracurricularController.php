@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Extracurricular;
 use Illuminate\Http\Request;
 use DataTables;
+use Intervention\Image\Facades\Image;
 use DB;
 
 class ExtracurricularController extends Controller
@@ -48,8 +49,14 @@ class ExtracurricularController extends Controller
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('extracurricular_thumbnail')) {
                 $image = $request->file('extracurricular_thumbnail');
-                $imageName = 'school_extracurricular/school_extracurricular_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/school_extracurricular'), $imageName);
+                $fileName = 'school_extracurricular/school_extracurricular_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/school_extracurricular/' . $webpFilename));
+                $image_name_db = 'school_extracurricular/' . $webpFilename;
             }else{
                 return response()->json([
                     'status'    => 'failed', 
@@ -65,7 +72,7 @@ class ExtracurricularController extends Controller
             $store_extracurricular->short_desc = $request->short_desc;
             $store_extracurricular->content = $request->content;
             $store_extracurricular->status = $request->status;
-            $store_extracurricular->thumbnail = $imageName;
+            $store_extracurricular->thumbnail = $image_name_db;
             $store_extracurricular->save();
 
             DB::commit();
@@ -92,7 +99,7 @@ class ExtracurricularController extends Controller
             return redirect()->route('admin.school-achievement');
         }
 
-        return view('admin.extracurricular.edit', compact(['facility']));
+        return view('admin.extracurricular.edit', compact(['extracurricular']));
     }
 
     public function update(Request $request, $id){
@@ -110,11 +117,17 @@ class ExtracurricularController extends Controller
             $lowercase = strtolower($request->title);
             $slug = str_replace(' ','-', $lowercase);
             if ($request->hasFile('extracurricular_thumbnail')) {
-                $image = $request->file('achievement_thumbnail');
-                $imageName = 'school_extracurricular/school_extracurricular_'.time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images_upload/school_extracurricular'), $imageName);
+                $image = $request->file('extracurricular_thumbnail');
+                $fileName = 'school_extracurricular/school_extracurricular_' . time() . '.' . $image->getClientOriginalExtension();
+                $compressedImage = Image::make($image)
+                    ->resize(800, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
+                $compressedImage->encode('webp')->save(public_path('images_upload/school_extracurricular/' . $webpFilename));
+                $image_name_db = 'school_extracurricular/' . $webpFilename;
             }else{
-                $imageName = null;
+                $image_name_db = null;
             }
 
             $school_extracurricular->title = $request->title ?? $school_extracurricular->title ;
@@ -122,7 +135,7 @@ class ExtracurricularController extends Controller
             $school_extracurricular->content = $request->content ?? $school_extracurricular->content;
             $school_extracurricular->status = $request->status ?? $school_extracurricular->status;
             $school_extracurricular->slug = $slug ?? $school_extracurricular->slug;
-            $school_extracurricular->thumbnail = $imageName ?? $school_extracurricular->thumbnail;
+            $school_extracurricular->thumbnail = $image_name_db ?? $school_extracurricular->thumbnail;
             $school_extracurricular->save();
 
             DB::commit();
