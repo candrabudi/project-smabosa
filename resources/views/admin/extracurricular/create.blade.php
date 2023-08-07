@@ -131,7 +131,7 @@ Tambah Ekstrakurikular
                             opacity: 0.8
                         }
                     });
-                    var maxLoadingTime = 13000;
+                    var maxLoadingTime = 1000000;
                     loadingTimeout = setTimeout(function() {
                         loadingElement.unblock();
                     }, maxLoadingTime);

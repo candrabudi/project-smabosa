@@ -22,6 +22,7 @@
                             <li><a href="https://instagram.com/smabosa?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="lni lni-instagram"></i></a></li>
                             <li><a href="https://youtube.com/@smabopkri1yogyakarta62"><i class="lni lni-youtube"></i></a></li>
                             <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-google"></i></a></li>
+                            <li><a href="mailto:smabosa@gmail.com"><i class="lni lni-tiktok"></i></a></li>
                         </ul>
                     </div>
                 </div>
