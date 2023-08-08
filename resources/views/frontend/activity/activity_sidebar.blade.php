@@ -21,7 +21,7 @@
             <div class="popular-feed-loop">
                 @foreach($recent_activities as $recent)
                 <div class="single-popular-feed">
-                    <div class="feed-img" style='background-image: url("{{ url('images/'.$recent->post_thumbnail) }}");'>
+                    <div class="feed-img" style='background-image: url("{{ url('images_upload/'.$recent->post_thumbnail) }}");'>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, reiciendis.
                         </p>

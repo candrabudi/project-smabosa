@@ -23,7 +23,7 @@
                 <div class=image>
                     
                     <a href="{{ route('blog.detail', $article->post_slug) }}">
-                        <div class="thumbnail-post" style='background-image: url("{{ url('images/'.$article->post_thumbnail) }}");'>
+                        <div class="thumbnail-post" style='background-image: url("{{ url('images_upload/'.$article->post_thumbnail) }}");'>
                             <div class="thumbnail-content">
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, perspiciatis.
