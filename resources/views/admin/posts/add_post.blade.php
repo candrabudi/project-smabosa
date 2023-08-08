@@ -121,10 +121,6 @@ Tambah Post
                                     </div>
                                 </div>
                                 <button type="button" id="submit-post" class="btn btn-primary">Simpan</button>
-                                <button class="btn btn-primary d-none" type="button" id="spiner-button" disabled>
-                                    <span class="spinner-border me-1" role="status" aria-hidden="true"></span>
-                                    Loading...
-                                </button>
                             </div>
                         </div>
                         <div class="card mb-3">
@@ -207,21 +203,6 @@ Tambah Post
 <script>
     $(document).ready(function() {
         $('#submit-post').click(function() {
-            var loadingTimeout;
-            var loadingElement = $('#card-block').block({
-                message: '<div class="spinner-border text-primary" role="status"></div>',
-                css: {
-                    backgroundColor: 'transparent',
-                    border: '0'
-                },
-                overlayCSS: {
-                    backgroundColor: '#fff',
-                    opacity: 0.8
-                }
-            });
-            var startTime = performance.now();
-            $('#spiner-button').removeClass('d-none');
-            $('#submit-post').addClass('d-none');
             Swal.fire({
                 title: 'Yakin?',
                 text: "Kamu akan menambahkan post",
@@ -236,6 +217,20 @@ Tambah Post
                 buttonsStyling: false
             }).then((result) => {
                 if (result.isConfirmed) {
+                    var loadingTimeout;
+                    var loadingElement = $('#card-block').block({
+                        message: '<div class="spinner-border text-primary" role="status"></div>',
+                        css: {
+                            backgroundColor: 'transparent',
+                            border: '0'
+                        },
+                        overlayCSS: {
+                            backgroundColor: '#fff',
+                            opacity: 0.8
+                        }
+                    });
+                    var startTime = performance.now();
+
                     event.preventDefault();
                     var imageFile = $('#thumbnail')[0].files[0];
                     var post_title = $('#judul').val();
@@ -284,8 +279,6 @@ Tambah Post
                         error: function(xhr, response) {
                             if(xhr.responseJSON.code == 400){
                                 if(xhr.responseJSON.message == "Error upload thumbnail!"){
-                                    $('#spiner-button').addClass('d-none');
-                                    $('#submit-post').removeClass('d-none');
                                     loadingElement.unblock();
                                     Swal.fire({
                                         title: 'Error!',
@@ -298,8 +291,6 @@ Tambah Post
                                     });
                                 }
                             }else if(xhr.responseJSON.code == 500){
-                                $('#spiner-button').addClass('d-none');
-                                $('#submit-post').removeClass('d-none');
                                 loadingElement.unblock();
                                 Swal.fire({
                                     title: 'Error!',
@@ -320,8 +311,6 @@ Tambah Post
                         }
                     });
                 } else {
-                    $('#spiner-button').addClass('d-none');
-                    $('#submit-post').removeClass('d-none');
                     Swal.fire({
                         icon: 'info',
                         title: 'Penambahan Dibatalkan',
