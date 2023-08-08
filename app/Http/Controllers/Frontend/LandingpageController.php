@@ -255,4 +255,12 @@ class LandingpageController extends Controller
             'spab'
         ]));
     }
+    public function pageInternationalCoperation()
+    {
+        $international_coperation = BosaPage::where('page_name', 'PROGRAM KERJASAMA INTERNASIONAL SMA BOSA YOGYAKARTA')
+            ->first();
+        return view('frontend.bosa_pages.international_cooperation', compact([
+            'international_coperation'
+        ]));
+    }
 }

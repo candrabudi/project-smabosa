@@ -38,6 +38,7 @@ Route::get('/pengumuman/{slug}', [LandingpageController::class, 'announcementDet
 Route::get('/program/reguler', [LandingpageController::class, 'schoolProgramRegular'])->name('schoolprogramRegular');
 Route::get('/program/bosa-ais', [LandingpageController::class, 'schoolProgramBosaAis'])->name('schoolprogramBosaAis');
 Route::get('/spab', [LandingpageController::class, 'pageSpab'])->name('pageSpab');
+Route::get('/program-kerjasama-internasional-sma-bosa-yogyakarta', [LandingpageController::class, 'pageInternationalCoperation'])->name('pageInternationalCoperation');
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
