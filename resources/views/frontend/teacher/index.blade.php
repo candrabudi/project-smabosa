@@ -11,7 +11,7 @@ Guru - Smabosa
             <div class="col-12">
                 <div class="section-title align-center gray-bg">
                     <span>Guru</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Data Guru SMA 1 BOPKRI Yogyakarta</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Data Guru dan Karyawan SMA BOPKRI 1 Yogyakarta</h2>
                 </div>
             </div>
         </div>
