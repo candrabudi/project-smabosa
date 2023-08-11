@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/animate.css') }}"/>
     <link rel="stylesheet" href="{{ asset('asset_fe/css/tiny-slider.css') }}"/>
     <link rel="stylesheet" href="{{ asset('asset_fe/css/glightbox.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('asset_fe/css/main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('asset_fe/css/main2.css') }}"/>
     <link rel="stylesheet" href="{{ asset('asset_fe/css/responsive.css') }}"/>
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/all.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('asset_fe/css/custom_menu.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('asset_fe/css/custom_menu2.css') }}"/>
     <!-- <link rel="stylesheet" href="{{ asset('asset_fe/css/style.css') }}"/> -->
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/v5-font-face.css') }}"/>
     @yield('style')
