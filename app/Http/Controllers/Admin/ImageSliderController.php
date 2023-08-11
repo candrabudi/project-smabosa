@@ -59,7 +59,7 @@ class ImageSliderController extends Controller
                 $image = $request->file('image');
                 $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
                 $compressedImage = Image::make($image)
-                    ->resize(800, null, function ($constraint) {
+                    ->resize(1920, null, function ($constraint) {
                         $constraint->aspectRatio();
                     });
                 $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';
@@ -114,7 +114,7 @@ class ImageSliderController extends Controller
                 $image = $request->file('image');
                 $fileName = 'image_slider/image_slider_' . time() . '.' . $image->getClientOriginalExtension();
                 $compressedImage = Image::make($image)
-                    ->resize(800, null, function ($constraint) {
+                    ->resize(1920, null, function ($constraint) {
                         $constraint->aspectRatio();
                     });
                 $webpFilename = pathinfo($fileName, PATHINFO_FILENAME) . '.webp';

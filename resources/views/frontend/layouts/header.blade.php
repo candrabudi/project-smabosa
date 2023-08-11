@@ -44,7 +44,7 @@
                 <div class="nav-inner">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="{{route('landingpage')}}">
-                            <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" loading="lazy" alt="Logo">
+                            <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" width="20" loading="lazy" alt="Logo">
                         </a>
                         <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
