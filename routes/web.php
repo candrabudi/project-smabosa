@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ExtracurricularController;
 use App\Http\Controllers\Admin\HomeInformationController;
 use App\Http\Controllers\Admin\SchoolProgramController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Frontend\EnLandingpageController;
 use App\Models\SchoolProgram;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,10 @@ Route::get('/program-kerjasama-internasional-sma-bosa-yogyakarta', [LandingpageC
 
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
+
+Route::prefix('en')->group(function () {
+    Route::get('/', [EnLandingpageController::class, 'index'])->name('landingpage.en');
+});
 
 Auth::routes();
 Route::middleware('auth:sanctum')->prefix('bosa-admin')->group(function () {
