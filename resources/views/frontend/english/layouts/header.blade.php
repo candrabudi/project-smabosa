@@ -59,8 +59,8 @@
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
                                     <ul class="sub-menu collapse" id="submenu-1-2">
-                                    <li class="nav-item"><a href="{{route('about')}}">Tentang Sekolah</a></li>
-                                        <li class="nav-item"><a href="{{route('teacher')}}">Guru & Karyawan</a></li>
+                                    <li class="nav-item"><a href="{{route('about')}}">About School</a></li>
+                                        <li class="nav-item"><a href="{{route('teacher')}}">Teachers & Employees</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -69,13 +69,13 @@
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
                                     <ul class="sub-menu collapse" id="submenu-1-3">
-                                        <li class="nav-item"><a href="{{route('announcement')}}">Pengumuman</a></li>
+                                        <li class="nav-item"><a href="{{route('announcement')}}">Announcement</a></li>
                                         <li class="nav-item"><a href="{{route('blog')}}">Blog</a></li>
                                         <li class="nav-item"><a href="https://www.youtube.com/channel/UC1JUQzztEDDSOVOC0rTMY2A">Video</a></li>
-                                        <li class="nav-item"><a href="{{route('activity')}}">Kegiatan</a></li>
-                                        <li class="nav-item"><a href="{{route('extracurricular')}}">Ekstrakurikuler</a></li>
-                                        <li class="nav-item"><a href="{{route('facility')}}">Fasilitas</a></li>
-                                        <li class="nav-item"><a href="{{route('facility')}}">Opini</a></li>
+                                        <li class="nav-item"><a href="{{route('activity')}}">Activity</a></li>
+                                        <li class="nav-item"><a href="{{route('extracurricular')}}">Extracurricular</a></li>
+                                        <li class="nav-item"><a href="{{route('facility')}}">Facility</a></li>
+                                        <li class="nav-item"><a href="{{route('facility')}}">Opinion</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -98,14 +98,14 @@
                                             <ul>
                                                 <li class="mega-menu-title">BKKBN</li>
                                                 <li class="nav-item"><a href="#">PERSADA</a></li>
-                                                <li class="nav-item"><a href="#">KEPENDUDUKAN</a></li>
-                                                <li class="nav-item"><a href="#">MATERI KEPENDUDUKAN</a></li>
+                                                <li class="nav-item"><a href="#">POPULATION</a></li>
+                                                <li class="nav-item"><a href="#">POPULATION MATERIALS</a></li>
                                             </ul>
                                         </li>
                                         <li class="single-block">
                                             <ul>
                                                 <li class="mega-menu-title">SPAB</li>
-                                                <li class="nav-item"><a href="{{route('pageSpab')}}">KEGIATAN</a></li>
+                                                <li class="nav-item"><a href="{{route('pageSpab')}}">ACITIVTY</a></li>
                                             </ul>
                                         </li>
                                     </ul>
