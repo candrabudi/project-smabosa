@@ -73,4 +73,11 @@ class EnLandingpageController extends Controller
             'info_images'
         ));
     }
+
+    public function about()
+    {
+        $about = AboutSchool::where('language', 'english')
+            ->first();
+        return view('frontend.english.about.index', compact('about'));
+    }
 }

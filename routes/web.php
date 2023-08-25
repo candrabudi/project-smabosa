@@ -46,6 +46,7 @@ Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])
 
 Route::prefix('en')->group(function () {
     Route::get('/', [EnLandingpageController::class, 'index'])->name('landingpage.en');
+    Route::get('/about-school', [EnLandingpageController::class, 'about'])->name('about.en');
 });
 
 Auth::routes();
