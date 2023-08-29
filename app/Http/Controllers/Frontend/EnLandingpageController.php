@@ -76,7 +76,7 @@ class EnLandingpageController extends Controller
 
     public function about()
     {
-        $about = AboutSchool::where('language', 'english')
+        $about = AboutSchool::where('language', 'English')
             ->first();
         return view('frontend.english.about.index', compact('about'));
     }
