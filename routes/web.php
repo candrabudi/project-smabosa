@@ -44,6 +44,12 @@ Route::get('/program-kerjasama-internasional-sma-bosa-yogyakarta', [LandingpageC
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
 
+Route::prefix('id/beta')->group(function ($router) {
+    Route::get('/', App\Livewire\LandingPage\HomePage::class);
+    $router->get('tentang-sekolah', App\Livewire\AboutSchool\Index::class);
+    $router->get('guru-karyawan', App\Livewire\Teacher\Index::class);
+});
+
 Route::prefix('en')->group(function () {
     Route::get('/', [EnLandingpageController::class, 'index'])->name('landingpage.en');
     Route::get('/about-school', [EnLandingpageController::class, 'about'])->name('about.en');
