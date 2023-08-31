@@ -29,7 +29,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <h4 class=content-title><a href="{{ route('blog.detail', $activity->post_slug) }}">{{ $activity->post_title }}</a></h4>
+                                <h4 class=content-title><a href="{{ route('id.blog.detail', $activity->post_slug) }}">{{ $activity->post_title }}</a></h4>
                             </div>
 
                         </div>
@@ -65,7 +65,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <h4 class="content-title"><a href="{{route('achivement.detail', $achievment->slug)}}">{{ $achievment->title }}</a></h4>
+                                <h4 class="content-title"><a href="{{route('id.achivement.detail', $achievment->slug)}}">{{ $achievment->title }}</a></h4>
                             </div>
 
                         </div>

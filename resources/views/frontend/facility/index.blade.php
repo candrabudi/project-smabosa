@@ -12,8 +12,8 @@ Fasilitas - Smabosa
                 <div class="section-title align-center gray-bg">
                     <span>Fasilitas</span>
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">Data Fasilitas SMA BOPKRI 1 Yogyakarta</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">Fasilitas sekolah merupakan berbagai macam sarana dan prasarana yang diberikan oleh sekolah yang dapat dimanfaatkan secara baik oleh peserta didik untuk mengembangkan minat dan bakatnya, selain itu juga fasilitas sekolah juga merupakan sesuatu hal yang dapat digunakan sebagai sarana untuk mengembangkan prestasi peserta didik. 
-SMA BOSA Yogyakarta mempunyai berbagai macam fasilitas sekolah dengan rincian sebagai berikut.</p>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">Fasilitas sekolah merupakan berbagai macam sarana dan prasarana yang diberikan oleh sekolah yang dapat dimanfaatkan secara baik oleh peserta didik untuk mengembangkan minat dan bakatnya, selain itu juga fasilitas sekolah juga merupakan sesuatu hal yang dapat digunakan sebagai sarana untuk mengembangkan prestasi peserta didik.
+                        SMA BOSA Yogyakarta mempunyai berbagai macam fasilitas sekolah dengan rincian sebagai berikut.</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@ SMA BOSA Yogyakarta mempunyai berbagai macam fasilitas sekolah dengan rincian se
                             <div class="info-head">
 
                                 <div class="info-box">
-                                    <h4 class="name"><a href="{{route('facility.detail', $facility->slug)}}">{{ $facility->title }}</a></h4>
+                                    <h4 class="name"><a href="{{route('id.facility.detail', $facility->slug)}}">{{ $facility->title }}</a></h4>
                                     <p><?php echo $facility->short_desc ?></p>
                                 </div>
 

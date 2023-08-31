@@ -20,34 +20,30 @@ use App\Http\Controllers\Frontend\EnLandingpageController;
 use App\Models\SchoolProgram;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
-Route::get('/blog', [LandingpageController::class, 'blog'])->name('blog');
-Route::get('/kegiatan', [LandingpageController::class, 'activity'])->name('activity');
-Route::get('/tentang-sekolah', [LandingpageController::class, 'about'])->name('about');
-Route::get('/agenda', [LandingpageController::class, 'event'])->name('event');
-Route::get('/agenda/{slug}', [LandingpageController::class, 'eventDetail'])->name('event.detail');
-Route::get('/guru', [LandingpageController::class, 'teacher'])->name('teacher');
-Route::get('/fasilitas', [LandingpageController::class, 'faciliy'])->name('facility');
-Route::get('/fasilitas/{slug}', [LandingpageController::class, 'detailFaciliy'])->name('facility.detail');
-Route::get('/ekstrakurikuler', [LandingpageController::class, 'Extracurricular'])->name('extracurricular');
-Route::get('/ekstrakurikuler/{slug}', [LandingpageController::class, 'ExtracurricularDetail'])->name('extracurricular.detail');
-Route::get('/prestasi', [LandingpageController::class, 'Achivement'])->name('achivement');
-Route::get('/prestasi/{slug}', [LandingpageController::class, 'AchivementDetail'])->name('achivement.detail');
-Route::get('/blog/{slug}', [LandingpageController::class, 'blogDetail'])->name('blog.detail');
-Route::get('/pengumuman', [LandingpageController::class, 'announcement'])->name('announcement');
-Route::get('/pengumuman/{slug}', [LandingpageController::class, 'announcementDetail'])->name('announcement.detail');
-Route::get('/program/reguler', [LandingpageController::class, 'schoolProgramRegular'])->name('schoolprogramRegular');
-Route::get('/program/bosa-ais', [LandingpageController::class, 'schoolProgramBosaAis'])->name('schoolprogramBosaAis');
-Route::get('/spab', [LandingpageController::class, 'pageSpab'])->name('pageSpab');
-Route::get('/program-kerjasama-internasional-sma-bosa-yogyakarta', [LandingpageController::class, 'pageInternationalCoperation'])->name('pageInternationalCoperation');
-
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
 
-Route::prefix('id/beta')->group(function ($router) {
-    Route::get('/', App\Livewire\LandingPage\HomePage::class);
-    $router->get('tentang-sekolah', App\Livewire\AboutSchool\Index::class);
-    $router->get('guru-karyawan', App\Livewire\Teacher\Index::class);
+Route::prefix('id')->group(function ($router) {
+    $router->get('/', App\Livewire\LandingPage\HomePage::class)->name('id.landingpage');
+    $router->get('tentang-sekolah', App\Livewire\AboutSchool\Index::class)->name('id.about');
+    $router->get('guru-karyawan', App\Livewire\Teacher\Index::class)->name('id.teacher');
+    $router->get('prestasi', App\Livewire\Achievement\Index::class)->name('id.achievement');
+    $router->get('prestasi/{slug}', App\Livewire\Achievement\Detail::class)->name('id.achivement.detail');
+    $router->get('agenda', App\Livewire\Event\Index::class)->name('id.event');
+    $router->get('agenda/{slug}', App\Livewire\Event\Detail::class)->name('id.event.detail');
+    $router->get('blog', App\Livewire\Blog\Index::class)->name('id.blog');
+    $router->get('blog/{slug}', App\Livewire\Blog\Single::class)->name('id.blog.detail'); 
+    $router->get('pengumuman', App\Livewire\Announcement\Index::class)->name('id.announcement');
+    $router->get('pengumuman/{slug}', App\Livewire\Announcement\Single::class)->name('id.announcement.detail');
+    $router->get('kegiatan', App\Livewire\Activity\Index::class)->name('id.activity');
+    $router->get('ekstrakurikuler', App\Livewire\Extracurricular\Index::class)->name('id.extracurricular');
+    $router->get('ekstrakurikuler/{slug}', App\Livewire\Extracurricular\Detail::class)->name('id.extracurricular.detail');
+    $router->get('fasilitas', App\Livewire\Facility\Index::class)->name('id.facility');
+    $router->get('fasilitas/{slug}', App\Livewire\Facility\Detail::class)->name('id.facility.detail');
+    $router->get('program/reguler', App\Livewire\Program\Regular::class)->name('id.program.regular');
+    $router->get('program/bosa-ais', App\Livewire\Program\BosaAis::class)->name('id.program.bosa-ais');
+    $router->get('spab', App\Livewire\Pages\Spab::class)->name('id.page.spab');
+    $router->get('program-kerjasama-internasional-sma-bosa-yogyakarta', App\Livewire\Pages\InternationalCoperation::class)->name('id.page.InternationalCoperation');
 });
 
 Route::prefix('en')->group(function () {

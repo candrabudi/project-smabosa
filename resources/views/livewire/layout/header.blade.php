@@ -1,13 +1,4 @@
 <div>
-    <div class="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-icon">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    
     <header class="header navbar-area">
         <div class="toolbar-area">
             <div class="container">
@@ -40,7 +31,7 @@
                 <div class="col-lg-12">
                     <div class="nav-inner">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="{{route('landingpage')}}">
+                            <a class="navbar-brand" href="{{route('id.landingpage')}}">
                                 <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" width="20" loading="lazy" alt="Logo">
                             </a>
                             <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,28 +42,28 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="/" aria-label="Toggle navigation">Home</a>
+                                        <a href="{{route('id.landingpage')}}" aria-label="Toggle navigation">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
-                                            <li class="nav-item"><a href="{{route('about')}}">Tentang Sekolah</a></li>
-                                            <li class="nav-item"><a href="{{route('teacher')}}">Guru & Karyawan</a></li>
+                                            <li class="nav-item"><a href="{{route('id.about')}}">Tentang Sekolah</a></li>
+                                            <li class="nav-item"><a href="{{route('id.teacher')}}">Guru & Karyawan</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('event')}}">Agenda</a>
+                                        <a href="{{route('id.event')}}">Agenda</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
-                                            <li class="nav-item"><a href="{{route('announcement')}}">Pengumuman</a></li>
-                                            <li class="nav-item"><a href="{{route('blog')}}">Blog</a></li>
+                                            <li class="nav-item"><a href="{{route('id.announcement')}}">Pengumuman</a></li>
+                                            <li class="nav-item"><a href="{{route('id.blog')}}">Blog</a></li>
                                             <li class="nav-item"><a href="https://www.youtube.com/channel/UC1JUQzztEDDSOVOC0rTMY2A">Video</a></li>
-                                            <li class="nav-item"><a href="{{route('activity')}}">Kegiatan</a></li>
-                                            <li class="nav-item"><a href="{{route('extracurricular')}}">Ekstrakurikuler</a></li>
-                                            <li class="nav-item"><a href="{{route('facility')}}">Fasilitas</a></li>
-                                            <li class="nav-item"><a href="{{route('facility')}}">Opini</a></li>
+                                            <li class="nav-item"><a href="{{route('id.activity')}}">Kegiatan</a></li>
+                                            <li class="nav-item"><a href="{{route('id.extracurricular')}}">Ekstrakurikuler</a></li>
+                                            <li class="nav-item"><a href="{{route('id.facility')}}">Fasilitas</a></li>
+                                            <li class="nav-item"><a href="{{route('id.facility')}}">Opini</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
@@ -102,7 +93,7 @@
                                             <li class="single-block">
                                                 <ul>
                                                     <li class="mega-menu-title">SPAB</li>
-                                                    <li class="nav-item"><a href="{{route('pageSpab')}}">KEGIATAN</a></li>
+                                                    <li class="nav-item"><a href="{{route('id.page.spab')}}">KEGIATAN</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

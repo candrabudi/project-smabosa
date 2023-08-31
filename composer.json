@@ -33,7 +33,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/Helper/ImageCache.php"
+            "app/Helper/ImageCache.php",
+            "app/Helper/IndonesiaDate.php"
         ]
     },
     "autoload-dev": {

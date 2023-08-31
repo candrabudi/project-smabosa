@@ -5,7 +5,7 @@
                 <div class="col-lg-7">
                     <div class="information-first">
                         <img src="{{ asset('images_upload/' . $info_first->info_image) }}" alt="" loading="lazy">
-                        <h3><a href="{{ route('extracurricular') }}">EKSTRAKURIKULER</a></h3>
+                        <h3><a href="{{ route('id.extracurricular') }}">EKSTRAKURIKULER</a></h3>
                     </div>
                 </div>
                 <div class="col-lg-5">

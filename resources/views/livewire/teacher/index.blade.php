@@ -1,5 +1,5 @@
 <div>
-    <livewire:layout.header/>
+    <livewire:layout.header />
     <section id="teachers" class="teachers section">
         <div class="container">
             <div class="row">
@@ -45,7 +45,7 @@
                         @if ($paginator->onFirstPage())
                         <li class="disabled"><span>&laquo;</span></li>
                         @else
-                        <li><a href="/id/beta/guru-karyawan{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+                        <li><a href="{{route('id.teacher')}}{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
                         @endif
 
                         {{-- Pagination Elements --}}
@@ -59,13 +59,13 @@
                         @if ($page == $paginator->currentPage())
                         <li class="active"><span>{{ $page }}</span></li>
                         @else
-                        <li><a href="id/beta/guru-karyawan/{{ $url }}">{{ $page }}</a></li>
+                        <li><a href="{{route('id.teacher')}}{{ $url }}">{{ $page }}</a></li>
                         @endif
                         @endforeach
                         @endif
                         @endforeach
                         @if ($paginator->hasMorePages())
-                        <li><a href="/id/beta/guru-karyawan{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                        <li><a href="{{route('id.teacher')}}{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
                         @else
                         <li class="disabled"><span>&raquo;</span></li>
                         @endif
@@ -75,4 +75,5 @@
             </div>
         </div>
     </section>
+    <livewire:layout.footer/>
 </div>

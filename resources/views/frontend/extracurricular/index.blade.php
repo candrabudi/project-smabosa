@@ -13,7 +13,7 @@ Ekstrakurikuler - Smabosa
                     <span>Ekstrakurikuler</span>
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">Ekstrakurikuler SMA BOPKRI 1 Yogyakarta</h2>
                     <p class="wow fadeInUp" data-wow-delay=".6s">Kegiatan ekstrakurikuler adalah kegiatan kurikuler yang dilakukan oleh peserta didik di luar jam belajar di bawah bimbingan dan pengawasan satuan pendidikan, bertujuan untuk mengembangkan potensi, bakat, minat, kemampuan, kepribadian, kerjasama dan kemandirian peserta didik secara optimal untuk mendukung pencapaian tujuan pendidikan.
-SMA BOSA Yogyakarta mempunyai 21 pilihan ekstrakurikuler yang dapat dipilih oleh peserta didik sesuai minat dan bakat mereka, dengan rincian sebagai berikut.</p>
+                        SMA BOSA Yogyakarta mempunyai 21 pilihan ekstrakurikuler yang dapat dipilih oleh peserta didik sesuai minat dan bakat mereka, dengan rincian sebagai berikut.</p>
                 </div>
             </div>
         </div>
