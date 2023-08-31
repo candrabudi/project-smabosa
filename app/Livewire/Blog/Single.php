@@ -20,6 +20,6 @@ class Single extends Component
         return view('livewire.blog.single', [
             'article' => $article,
             'recent_posts' => $recent_posts
-        ]);
+        ]); 
     }
 }

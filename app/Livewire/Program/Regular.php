@@ -15,4 +15,4 @@ class Regular extends Component
             'school_program' => $school_program
         ]);
     }
-}
+} 

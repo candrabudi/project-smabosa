@@ -16,7 +16,7 @@ class Grid extends Component
             ->orderby('post_date', 'DESC')
             ->paginate(10);
         return view('livewire.blog.grid', [
-            'articles' => $articles
+            'articles' => $articles 
         ]);
     }
 }

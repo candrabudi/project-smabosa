@@ -14,7 +14,7 @@ class Sidebar extends Component
             ->get()
             ->take(10);
         return view('livewire.blog.sidebar', [
-            'recent_posts' => $recent_posts
+            'recent_posts' => $recent_posts 
         ]);
     }
 }

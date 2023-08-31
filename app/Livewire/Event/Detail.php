@@ -19,7 +19,7 @@ class Detail extends Component
     {
         $event = $this->eventData;
         return view('livewire.event.detail', [
-            'event' => $event
+            'event' => $event 
         ]);
     }
 }

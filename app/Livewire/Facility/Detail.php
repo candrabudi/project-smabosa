@@ -19,7 +19,7 @@ class Detail extends Component
     {
         $facility = $this->dataFacility;
         return view('livewire.facility.detail', [
-            'facility' => $facility
+            'facility' => $facility 
         ]);
     }
 }

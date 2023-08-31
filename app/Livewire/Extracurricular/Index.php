@@ -16,5 +16,5 @@ class Index extends Component
         return view('livewire.extracurricular.index', [
             'extracurriculars' => $extracurriculars
         ]);
-    }
+    } 
 }

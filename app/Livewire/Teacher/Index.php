@@ -12,7 +12,7 @@ class Index extends Component
     public function render()
     {
         $perPage = 4;
-        $teachers = Teacher::where('status', 'Publish')->get();
+        $teachers = Teacher::where('status', 'Publish')->get(); 
 
         $paginatedTeachers = collect($teachers)->chunk($perPage);
 

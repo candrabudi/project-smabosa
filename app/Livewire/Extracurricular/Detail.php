@@ -16,7 +16,7 @@ class Detail extends Component
         $this->dataExtra = $extracurricular;
     }
     public function render()
-    {
+    { 
         $extracurricular = $this->dataExtra;
         return view('livewire.extracurricular.detail', [
             'extracurricular' => $extracurricular

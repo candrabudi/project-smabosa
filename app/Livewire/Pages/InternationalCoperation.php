@@ -13,6 +13,6 @@ class InternationalCoperation extends Component
             ->first();
         return view('livewire.pages.international-coperation', [
             'international_coperation' => $international_coperation
-        ]);
+        ]); 
     }
 }

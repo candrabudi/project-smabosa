@@ -14,5 +14,5 @@ class Spab extends Component
         return view('livewire.pages.spab', [
             'spab' => $spab
         ]);
-    }
+    } 
 }

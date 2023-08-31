@@ -14,4 +14,5 @@ class HeroImage extends Component
                 ->get()
         ]);
     }
-}
+} 
+ 

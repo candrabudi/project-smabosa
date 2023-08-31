@@ -15,7 +15,7 @@ class Achivement extends Component
     {
         $articles = Post::where('post_status', 'Publish')
             ->orderBy('post_date', 'DESC')
-            ->get()
+            ->get() 
             ->take(3);
         $events = Event::where('status', 'Publish')
             ->get()

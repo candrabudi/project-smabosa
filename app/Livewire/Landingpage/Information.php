@@ -18,5 +18,5 @@ class Information extends Component
             'info_first' => $info_first,
             'info_images' => $info_images
         ]);
-    }
+    } 
 }

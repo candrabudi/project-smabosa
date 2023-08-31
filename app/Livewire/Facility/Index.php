@@ -15,6 +15,6 @@ class Index extends Component
             ->paginate(4);
         return view('livewire.facility.index', [
             'facilities' => $facilities,
-        ]);
+        ]); 
     }
 }

@@ -15,5 +15,5 @@ class Index extends Component
         return view('livewire.event.index', [
             'events' => $events
         ]);
-    }
+    } 
 }
