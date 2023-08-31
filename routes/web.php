@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/bosa-admin/login', [AuthController::class, 'login'])->name('bosa-login');
 Route::post('/bosa-admin/custom-login', [AuthController::class, 'loginProcess'])->name('login.custom'); 
 
+$router->get('/', App\Livewire\LandingPage\HomePage::class)->name('landingpage');
 Route::prefix('id')->group(function ($router) {
     $router->get('/', App\Livewire\LandingPage\HomePage::class)->name('id.landingpage');
     $router->get('tentang-sekolah', App\Livewire\AboutSchool\Index::class)->name('id.about');
