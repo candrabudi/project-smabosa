@@ -12,7 +12,7 @@ class Index extends Component
         $about = AboutSchool::where('language', 'Indonesia')
             ->first();
         return view('livewire.about-school.index', [
-            'about' => $about
+            'about' => $about 
         ]);
     }
 }

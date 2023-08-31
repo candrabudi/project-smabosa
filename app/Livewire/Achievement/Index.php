@@ -14,7 +14,7 @@ class Index extends Component
         $achivements = SchoolAchievement::where('status', 'Publish')
             ->paginate(10);
         return view('livewire.achievement.index', [
-            'achivements' => $achivements
+            'achivements' => $achivements 
         ]);
     }
 }

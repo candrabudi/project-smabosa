@@ -17,7 +17,7 @@ class Sidebar extends Component
             ->get()
             ->take(10);
         return view('livewire.activity.sidebar', [
-            'recent_activities' => $recent_activities
+            'recent_activities' => $recent_activities 
         ]);
     }
 }

@@ -15,7 +15,7 @@ class Grid extends Component
             ->orderby('created_at', 'DESC')
             ->paginate(10);
         return view('livewire.announcement.grid', [
-            'announcements' => $announcements
+            'announcements' => $announcements 
         ]);
     }
 }

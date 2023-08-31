@@ -18,7 +18,7 @@ class Single extends Component
     {
         $announcement = $this->dataPost;
         return view('livewire.announcement.single', [
-            'announcement' => $announcement
+            'announcement' => $announcement 
         ]);
     }
 }

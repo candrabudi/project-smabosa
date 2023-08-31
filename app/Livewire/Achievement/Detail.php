@@ -19,7 +19,7 @@ class Detail extends Component
     {
         $achivement = $this->dataAchievement;
         return view('livewire.achievement.detail', [
-            'achivement' => $achivement
+            'achivement' => $achivement 
         ]);
     }
 }
