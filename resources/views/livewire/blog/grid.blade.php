@@ -28,7 +28,7 @@
                             </li>
                             <li>
                                 <i class="lni lni-calendar"></i>
-                                <a href="javascript:void(0)">{{ tanggal_indonesia($article->post_date) }}</a>
+                                <a href="javascript:void(0)"></a>
                             </li>
                         </ul>
                     </div>

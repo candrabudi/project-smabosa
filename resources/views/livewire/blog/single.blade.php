@@ -15,7 +15,7 @@
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="lni lni-calendar"></i>
-                                            {{ tanggal_indonesia($article->created_at)}}
+                                            
                                         </a>
                                     </li>
                                 </ul>
