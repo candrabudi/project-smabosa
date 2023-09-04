@@ -29,11 +29,11 @@
     <a href="#" class="scroll-top btn-hover">
         <i class="lni lni-chevron-up"></i>
     </a>
-    <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ asset('asset_fe/js/tiny-slider.js') }}"></script>
-    <script src="{{ asset('asset_fe/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('asset_fe/js/main.js') }}"></script>
-    <script src="https://use.fontawesome.com/b21714c392.js"></script>
+    <script src="{{ mix('js/app.js') }}" async></script>
+    <script src="{{ asset('asset_fe/js/tiny-slider.js') }}" defer></script>
+    <script src="{{ asset('asset_fe/js/glightbox.min.js') }}" defer></script>
+    <script src="{{ asset('asset_fe/js/main.js') }}" defer></script>
+    <script src="https://use.fontawesome.com/b21714c392.js" async></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             tns({

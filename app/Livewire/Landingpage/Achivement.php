@@ -16,7 +16,7 @@ class Achivement extends Component
         $articles = Post::where('post_status', 'Publish')
             ->orderBy('post_date', 'DESC')
             ->get() 
-            ->take(3);
+            ->take(6);
         $events = Event::where('status', 'Publish')
             ->get()
             ->take(2);
@@ -27,11 +27,11 @@ class Achivement extends Component
             ->where('post_status', 'Publish')
             ->with('category')
             ->orderby('post_date', 'DESC')
-            ->paginate(3);
+            ->paginate(6);
         $school_achievements = SchoolAchievement::where('status', 'Publish')
             ->orderBy('created_at', 'DESC')
             ->get()
-            ->take(3);
+            ->take(6);
         return view('livewire.landingpage.achivement',[
             'articles' => $articles,
             'events' => $events,
