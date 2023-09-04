@@ -17,8 +17,8 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="toolbar-login">
                             <div class="button">
-                                <a href="#">Register</a>
-                                <a href="#" class="btn">Log In</a>
+                                <a href="https://pcpdb.smabosa-yogya.sch.id/register">Register</a>
+                                <a href="https://pcpdb.smabosa-yogya.sch.id/" class="btn">Log In</a>
                             </div>
                         </div>
                     </div>
