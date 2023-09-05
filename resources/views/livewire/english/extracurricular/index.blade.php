@@ -30,7 +30,7 @@
 
                                     <div class="info-box">
                                         <span class="designation">{{ $extracurricular->title }}</span>
-                                        <h4 class="name"><a href="{{route('id.extracurricular.detail', $extracurricular->slug)}}">{{ $extracurricular->title }}</a></h4>
+                                        <h4 class="name"><a href="{{route('en.extracurricular.detail', $extracurricular->slug)}}">{{ $extracurricular->title }}</a></h4>
                                         <p>{{ $extracurricular->short_desc }}</p>
                                     </div>
 

@@ -7,7 +7,7 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
                     
-                    <a href="{{ route('blog.detail', $article->post_slug) }}">
+                    <a href="{{ route('id.blog.detail', $article->post_slug) }}">
                         <div class="thumbnail-post" style='background-image: url("{{ url('images_upload/'.$article->post_thumbnail) }}");'>
                             <div class="thumbnail-content">
                                 <p>

@@ -7,7 +7,7 @@
             <div class="single-news custom-shadow-hover wow fadeInUp" data-wow-delay=.2s>
                 <div class=image>
 
-                    <a href="{{ route('id.announcement.detail', $announcement->slug) }}">
+                    <a href="{{ route('en.announcement.detail', $announcement->slug) }}">
                         <div class="thumbnail-post" style='background-image: url("{{ url('images/'.$announcement->thumbnail) }}");'>
                             <div class="thumbnail-content">
                                 <p>
@@ -26,10 +26,10 @@
                             </li>
                         </ul>
                     </div>
-                    <h4 class=title><a href="{{ route('id.announcement.detail', $announcement->slug) }}">{{ $announcement->title }}</a></h4>
+                    <h4 class=title><a href="{{ route('en.announcement.detail', $announcement->slug) }}">{{ $announcement->title }}</a></h4>
                     <p><?php echo substr($announcement->short_desc, 0, 150) ?>...</p>
                     <div class=button>
-                        <a href="{{ route('id.announcement.detail', $announcement->slug) }}" class=btn> Baca Lebih Lanjut</a>
+                        <a href="{{ route('en.announcement.detail', $announcement->slug) }}" class=btn> Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>

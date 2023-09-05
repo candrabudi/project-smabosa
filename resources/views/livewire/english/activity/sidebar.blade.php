@@ -21,7 +21,7 @@
                         </p>
                     </div>
                     <div class=feed-desc>
-                        <h6 class=post-title><a href="{{route('id.blog.detail', $recent->post_slug)}}">{{ $recent->post_title }}</a>
+                        <h6 class=post-title><a href="{{route('en.blog.detail', $recent->post_slug)}}">{{ $recent->post_title }}</a>
                         </h6>
                         <span class=time><i class="lni lni-calendar"></i> {{ \Carbon\Carbon::now()->parse($recent->post_date)->isoFormat("dddd, D MMM Y") }}</span>
                     </div>

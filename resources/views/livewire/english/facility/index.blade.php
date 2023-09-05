@@ -29,7 +29,7 @@
                                 <div class="info-head">
 
                                     <div class="info-box">
-                                        <h4 class="name"><a href="{{route('id.facility.detail', $facility->slug)}}">{{ $facility->title }}</a></h4>
+                                        <h4 class="name"><a href="{{route('en.facility.detail', $facility->slug)}}">{{ $facility->title }}</a></h4>
                                         <p><?php echo $facility->short_desc ?></p>
                                     </div>
 

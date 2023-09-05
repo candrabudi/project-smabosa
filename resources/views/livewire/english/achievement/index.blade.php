@@ -29,7 +29,7 @@
 
                                     <div class="info-box">
                                         <span class="designation">{{ $achivement->title }}</span>
-                                        <h4 class="name"><a href="{{route('id.achivement.detail', $achivement->slug)}}">{{ $achivement->title }}</a></h4>
+                                        <h4 class="name"><a href="{{route('en.achivement.detail', $achivement->slug)}}">{{ $achivement->title }}</a></h4>
                                         <p>{{ $achivement->short_desc }}</p>
                                     </div>
 
