@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/main2.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/all.css') }}" />
-    <link rel="stylesheet" href="{{ asset('asset_fe/css/custom_menu2.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/custom_menu.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/hero.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/v5-font-face.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
