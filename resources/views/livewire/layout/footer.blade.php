@@ -6,7 +6,13 @@
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="f-about single-footer">
                             <div class="logo">
-                                <a href="{{route('id.landingpage')}}"><img src="{{ asset('asset_fe/images/logo/logo.webp') }}" alt="Logo"></a>
+                                <a href="{{route('id.landingpage')}}">
+                                    <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" srcset="{{ asset('asset_fe/images/logo/logo.webp')}} 500w,
+                                    {{ asset('asset_fe/images/logo/logo.webp')}} 1000w,
+                                    {{ asset('asset_fe/images/logo/logo.webp')}} 1500w" sizes="(max-width: 600px) 300px,
+                                    (max-width: 1200px) 600px,
+                                    1200px" width="20" loading="lazy" alt="Logo">
+                                </a>
                             </div>
                             <p>Jl. Wardhani No.2, Kotabaru, Kec. Gondokusman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224</p>
                             <div class="mt-3">
