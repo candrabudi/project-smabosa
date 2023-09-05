@@ -55,7 +55,7 @@
                                         <a href="{{route('en.event')}}">Event</a>
                                     </li>
                                     <li class="nav-item">
-                                        <span class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Our School</sp>
+                                        <span class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Our School</span>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
                                             <li class="nav-item"><a href="{{route('en.announcement')}}">Announcement</a></li>
                                             <li class="nav-item"><a href="{{route('en.blog')}}">Blog</a></li>
