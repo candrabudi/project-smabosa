@@ -4,7 +4,16 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="information-first">
-                        <img src="{{ asset('images_upload/' . $info_first->info_image) }}" alt="" loading="lazy">
+                        <img src="{{ asset('images_upload/' . $info_first->info_image) }}" 
+                            srcset="{{ asset('images_upload/' . $info_first->info_image) }} 500w,
+                                    {{ asset('images_upload/' . $info_first->info_image) }} 1000w,
+                                    {{ asset('images_upload/' . $info_first->info_image) }} 1500w" 
+                            sizes="(max-width: 600px) 300px,
+                                    (max-width: 1200px) 600px,
+                                    1200px"
+                            alt="" 
+                            loading="lazy"
+                        >
                         <h3><a href="{{ route('id.extracurricular') }}">EKSTRAKURIKULER</a></h3>
                     </div>
                 </div>

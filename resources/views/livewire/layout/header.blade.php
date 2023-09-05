@@ -32,7 +32,17 @@
                     <div class="nav-inner">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="{{route('id.landingpage')}}">
-                                <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" width="20" loading="lazy" alt="Logo">
+                                <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" 
+                                    srcset="{{ asset('asset_fe/images/logo/logo.webp')}} 500w,
+                                    {{ asset('asset_fe/images/logo/logo.webp')}} 1000w,
+                                    {{ asset('asset_fe/images/logo/logo.webp')}} 1500w" 
+                                    sizes="(max-width: 600px) 300px,
+                                    (max-width: 1200px) 600px,
+                                    1200px"
+                                    width="20" 
+                                    loading="lazy" 
+                                    alt="Logo"
+                                >
                             </a>
                             <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
