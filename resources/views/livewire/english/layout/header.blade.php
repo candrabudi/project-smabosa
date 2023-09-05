@@ -45,7 +45,7 @@
                                         <a href="{{route('en.landingpage')}}" aria-label="Toggle navigation">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profile</a>
+                                        <span class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profile</span>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
                                             <li class="nav-item"><a href="{{route('en.about')}}">About School</a></li>
                                             <li class="nav-item"><a href="{{route('en.teacher')}}">Teacher & Employee</a></li>
@@ -55,7 +55,7 @@
                                         <a href="{{route('en.event')}}">Event</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Our School</a>
+                                        <span class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Our School</sp>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
                                             <li class="nav-item"><a href="{{route('en.announcement')}}">Announcement</a></li>
                                             <li class="nav-item"><a href="{{route('en.blog')}}">Blog</a></li>
@@ -67,17 +67,17 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Library</a>
+                                        <span class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Library</span>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
                                             <li class="nav-item"><a href="http://117.102.64.163:3333/perpustakaan">Bosa Jogja Library</a></li>
     
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="https://smabosa-yogya.sch.id/id/blog/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024" aria-label="Toggle navigation">PCPDB</a>
+                                        <span href="https://smabosa-yogya.sch.id/id/blog/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024" aria-label="Toggle navigation">PCPDB</span>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a>
+                                        <span href="https://alumni.smabosa-yogya.sch.id/">Alumni</span>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
@@ -99,7 +99,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i><img src="https://cdn-icons-png.flaticon.com/512/9985/9985721.png" width="15" style="margin-top: -3px;" alt=""></i> &nbsp;Language</a>
+                                        <span class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i><img src="https://cdn-icons-png.flaticon.com/512/9985/9985721.png" width="15" style="margin-top: -3px;" alt=""></i> &nbsp;Language</span>
                                         <ul class="sub-menu collapse" id="submenu-1-6">
                                             <li class="nav-item"><a href="/id"><i><img src="https://cdn-icons-png.flaticon.com/512/323/323372.png" width="15" style="margin-top: -3px;" alt=""></i> Indonesia</a></li>
                                             <li class="nav-item"><a href="/en"><i><img src="https://cdn-icons-png.flaticon.com/512/9906/9906532.png" width="15" style="margin-top: -3px;" alt=""></i> English</a></li>
