@@ -182,6 +182,25 @@
     text-transform: capitalize;
 }
 
+.navbar-nav .nav-item span {
+    font-size: 15px;
+    color: #081828;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    position: relative;
+    padding: 38px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.3s ease-out 0s;
+    position: relative;
+    text-transform: capitalize;
+}
+
 .navbar-nav .nav-item a::after {
     opacity: 0;
     visibility: hidden;
@@ -212,12 +231,12 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .navbar-nav .nav-item a.dd-menu {
+    .navbar-nav .nav-item a.dd-menu, .navbar-nav .nav-item span.dd-menu {
         padding-right: 30px;
     }
 }
 
-.navbar-nav .nav-item a.dd-menu::after {
+.navbar-nav .nav-item a.dd-menu::after, .navbar-nav .nav-item span.dd-menu::after {
     content: "\ea58";
     font: normal normal normal 1em/1 "LineIcons";
     position: absolute;
@@ -233,14 +252,14 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .navbar-nav .nav-item a.dd-menu::after {
+    .navbar-nav .nav-item a.dd-menu::after, .navbar-nav .nav-item span.dd-menu::after {
         right: 13px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
 (max-width: 767px) {
-    .navbar-nav .nav-item a.dd-menu::after {
+    .navbar-nav .nav-item a.dd-menu::after, .navbar-nav .nav-item span.dd-menu::after {
         top: 16px;
         right: 0;
         -webkit-transform: rotate(180deg);

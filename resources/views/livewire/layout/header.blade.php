@@ -55,7 +55,7 @@
                                         <a href="{{route('id.landingpage')}}" aria-label="Toggle navigation">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
+                                        <span class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</span>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
                                             <li class="nav-item"><a href="{{route('id.about')}}">Tentang Sekolah</a></li>
                                             <li class="nav-item"><a href="{{route('id.teacher')}}">Guru & Karyawan</a></li>
@@ -77,7 +77,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Perpustakaan</a>
+                                        <span class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Perpustakaan</span>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
                                             <li class="nav-item"><a href="http://117.102.64.163:3333/perpustakaan">Bosa Jogja Library</a></li>
     
@@ -90,7 +90,7 @@
                                         <a href="https://alumni.smabosa-yogya.sch.id/">Alumni</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
+                                        <span class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Lainnya</span>
                                         <ul class="sub-menu mega-menu collapse" id="submenu-1-5">
                                             <li class="single-block">
                                                 <ul>
@@ -109,7 +109,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i><img src="https://cdn-icons-png.flaticon.com/512/9985/9985721.png" width="15" style="margin-top: -3px;" alt=""></i> &nbsp;Language</a>
+                                        <span class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i><img src="https://cdn-icons-png.flaticon.com/512/9985/9985721.png" width="15" style="margin-top: -3px;" alt=""></i> &nbsp;Language</span>
                                         <ul class="sub-menu collapse" id="submenu-1-6">
                                             <li class="nav-item"><a href="/id"><i><img src="https://cdn-icons-png.flaticon.com/512/323/323372.png" width="15" style="margin-top: -3px;" alt=""></i> Indonesia</a></li>
                                             <li class="nav-item"><a href="/en"><i><img src="https://cdn-icons-png.flaticon.com/512/9906/9906532.png" width="15" style="margin-top: -3px;" alt=""></i> English</a></li>

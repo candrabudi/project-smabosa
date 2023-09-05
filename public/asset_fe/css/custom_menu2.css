@@ -159,11 +159,11 @@
     margin-right: 0 !important;
 }
 
-.navbar-nav .nav-item:hover a {
+.navbar-nav .nav-item:hover a , .navbar-nav .nav-item:hover span{
     color: #375bcd;
 }
 
-.navbar-nav .nav-item a {
+.navbar-nav .nav-item a, .navbar-nav .nav-item span {
     font-size: 15px;
     color: #081828;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -182,12 +182,12 @@
     text-transform: capitalize;
 }
 
-.navbar-nav .nav-item a::after {
+.navbar-nav .nav-item a::after, .navbar-nav .nav-item span::after {
     opacity: 0;
     visibility: hidden;
 }
 
-.navbar-nav .nav-item a::before {
+.navbar-nav .nav-item a::before, .navbar-nav .nav-item span::before {
     content: '';
     position: absolute;
     left: 0;
@@ -199,11 +199,11 @@
     transition: all 0.3s ease-in-out;
 }
 
-.navbar-nav .nav-item a.active:before {
+.navbar-nav .nav-item a.active:before, .navbar-nav .nav-item span.active:before  {
     width: 100%;
 }
 
-.navbar-nav .nav-item:hover a:before {
+.navbar-nav .nav-item:hover a:before, .navbar-nav .nav-item:hover span:before {
     width: 100%;
 }
 
@@ -212,12 +212,12 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .navbar-nav .nav-item a.dd-menu {
+    .navbar-nav .nav-item a.dd-menu, .navbar-nav .nav-item span.dd-menu {
         padding-right: 30px;
     }
 }
 
-.navbar-nav .nav-item a.dd-menu::after {
+.navbar-nav .nav-item a.dd-menu::after, .navbar-nav .nav-item span.dd-menu::after {
     content: "\ea58";
     font: normal normal normal 1em/1 "LineIcons";
     position: absolute;
@@ -233,14 +233,14 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .navbar-nav .nav-item a.dd-menu::after {
+    .navbar-nav .nav-item a.dd-menu::after, .navbar-nav .nav-item span.dd-menu::after {
         right: 13px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
 (max-width: 767px) {
-    .navbar-nav .nav-item a.dd-menu::after {
+    .navbar-nav .nav-item a.dd-menu::after, .navbar-nav .nav-item span.dd-menu::after {
         top: 16px;
         right: 0;
         -webkit-transform: rotate(180deg);

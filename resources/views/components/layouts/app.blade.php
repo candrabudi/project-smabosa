@@ -32,9 +32,9 @@
         <i class="lni lni-chevron-up"></i>
     </a>
     <script src="{{ mix('js/app.js') }}" async></script>
-    <script src="{{ asset('js/tiny-slider.js') }}" defer></script>
-    <script src="{{ asset('js/glightbox.min.js') }}" defer></script>
-    <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" async></script>
+    <script src="{{ asset('js/tiny-slider.js') }}" async></script>
+    <script src="{{ asset('js/glightbox.min.js') }}" async></script>
     <script src="https://use.fontawesome.com/b21714c392.js" async></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
