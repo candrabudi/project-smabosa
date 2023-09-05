@@ -6,13 +6,13 @@ SMA BOPKRI 1 YOGYAKARTA
 <meta name="keywords" content="smabosa, smas bopkri 1 yogyakarta">
 @endsection
 <div>
-    <livewire:layout.header />
+    <livewire:english.layout.header />
     <section class="hero-area overlay">
 
-        <livewire:landingpage.hero-image />
+        <livewire:english.landingpage.hero-image />
     </section>
-    <livewire:landingpage.collaboration />
-    <livewire:landingpage.information />
-    <livewire:landingpage.achivement />
-    <livewire:layout.footer />
+    <livewire:english.landingpage.collaboration />
+    <livewire:english.landingpage.information />
+    <livewire:english.landingpage.achivement />
+    <livewire:english.layout.footer />
 </div>

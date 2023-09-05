@@ -1,12 +1,12 @@
 <div>
-<livewire:layout.header />
+    <livewire:english.layout.header />
     <section class="section latest-news-area blog-grid-page">
         <div class=container>
             <div class=row>
-                <livewire:activity.grid />
-                <livewire:activity.sidebar />
+                <livewire:english.blog.grid />
+                <livewire:english.blog.sidebar />
             </div>
         </div>
     </section>
-    <livewire:layout.footer />
+    <livewire:english.layout.footer />
 </div>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @yield('meta_description')
     <link rel="icon" type="image/x-icon" href="{{ asset('asset_be/img/logo/logo-bosa.webp') }}" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/v5-font-face.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @livewireStyles
-    <title>{{ $title ?? 'SMABOSA' }}</title>
+    <title>@yield('title')</title>
 </head>
 
 <body>

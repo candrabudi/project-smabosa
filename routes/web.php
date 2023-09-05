@@ -47,9 +47,23 @@ Route::prefix('id')->group(function ($router) {
     $router->get('program-kerjasama-internasional-sma-bosa-yogyakarta', App\Livewire\Pages\InternationalCoperation::class)->name('id.page.InternationalCoperation');
 });
 
-Route::prefix('en')->group(function () {
-    Route::get('/', [EnLandingpageController::class, 'index'])->name('landingpage.en');
-    Route::get('/about-school', [EnLandingpageController::class, 'about'])->name('about.en');
+Route::prefix('en')->group(function ($router) {
+    $router->get('/', App\Livewire\English\Landingpage\HomePage::class)->name('en.landingpage');
+    $router->get('/about-school', App\Livewire\English\AboutSchool\Index::class)->name('en.about');
+    $router->get('/teacher-employee', App\Livewire\English\Teacher\Index::class)->name('en.teacher');
+    $router->get('/event', App\Livewire\English\Event\Index::class)->name('en.event');
+    $router->get('/event/{slug}', App\Livewire\English\Event\Detail::class)->name('en.event.detail');
+    $router->get('/achievement', App\Livewire\English\Achievement\Index::class)->name('en.achievement');
+    $router->get('/achievement/{slug}', App\Livewire\English\Achievement\Detail::class)->name('en.achievement.detail');
+    $router->get('/announcement', App\Livewire\English\Announcement\Index::class)->name('en.announcement');
+    $router->get('/announcement/{slug}', App\Livewire\English\Announcement\Single::class)->name('en.announcement.detail');
+    $router->get('/blog', App\Livewire\English\Blog\Index::class)->name('en.blog');
+    $router->get('/blog/{slug}', App\Livewire\English\Blog\Single::class)->name('en.blog.detail');
+    $router->get('/activity', App\Livewire\English\Activity\Index::class)->name('en.activity');
+    $router->get('/extracurricular', App\Livewire\English\Extracurricular\Index::class)->name('en.extracurricular');
+    $router->get('/extracurricular/{slug}', App\Livewire\English\Extracurricular\Detail::class)->name('en.extracurricular.detail');
+    $router->get('/facility', App\Livewire\English\Facility\Index::class)->name('en.facility');
+    $router->get('/facility/{slug}', App\Livewire\English\Facility\Detail::class)->name('en.facility.detail');
 });
 
 Auth::routes();

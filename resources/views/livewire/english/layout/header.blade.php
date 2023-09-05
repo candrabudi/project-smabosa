@@ -31,7 +31,7 @@
                 <div class="col-lg-12">
                     <div class="nav-inner">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="{{route('id.landingpage')}}">
+                            <a class="navbar-brand" href="{{route('en.landingpage')}}">
                                 <img src="{{ asset('asset_fe/images/logo/logo.webp') }}" width="20" loading="lazy" alt="Logo">
                             </a>
                             <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,32 +42,32 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="{{route('id.landingpage')}}" aria-label="Toggle navigation">Home</a>
+                                        <a href="{{route('en.landingpage')}}" aria-label="Toggle navigation">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profil</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profile</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
-                                            <li class="nav-item"><a href="{{route('id.about')}}">Tentang Sekolah</a></li>
-                                            <li class="nav-item"><a href="{{route('id.teacher')}}">Guru & Karyawan</a></li>
+                                            <li class="nav-item"><a href="{{route('en.about')}}">About School</a></li>
+                                            <li class="nav-item"><a href="{{route('en.teacher')}}">Teacher & Employee</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('id.event')}}">Agenda</a>
+                                        <a href="{{route('en.event')}}">Event</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Our School</a>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
-                                            <li class="nav-item"><a href="{{route('id.announcement')}}">Pengumuman</a></li>
-                                            <li class="nav-item"><a href="{{route('id.blog')}}">Blog</a></li>
+                                            <li class="nav-item"><a href="{{route('en.announcement')}}">Announcement</a></li>
+                                            <li class="nav-item"><a href="{{route('en.blog')}}">Blog</a></li>
                                             <li class="nav-item"><a href="https://www.youtube.com/channel/UC1JUQzztEDDSOVOC0rTMY2A">Video</a></li>
-                                            <li class="nav-item"><a href="{{route('id.activity')}}">Kegiatan</a></li>
-                                            <li class="nav-item"><a href="{{route('id.extracurricular')}}">Ekstrakurikuler</a></li>
-                                            <li class="nav-item"><a href="{{route('id.facility')}}">Fasilitas</a></li>
-                                            <li class="nav-item"><a href="{{route('id.facility')}}">Opini</a></li>
+                                            <li class="nav-item"><a href="{{route('en.activity')}}">Activity</a></li>
+                                            <li class="nav-item"><a href="{{route('en.extracurricular')}}">Extracurricular</a></li>
+                                            <li class="nav-item"><a href="{{route('en.facility')}}">Facility</a></li>
+                                            <li class="nav-item"><a href="{{route('en.facility')}}">Opini</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Perpustakaan</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Library</a>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
                                             <li class="nav-item"><a href="http://117.102.64.163:3333/perpustakaan">Bosa Jogja Library</a></li>
     
@@ -99,7 +99,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i><img src="https://cdn-icons-png.flaticon.com/512/9985/9985721.png" width="15" style="margin-top: -3px;" alt=""></i> &nbsp;Language</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-earth-asia"></i>&nbsp;Language</a>
                                         <ul class="sub-menu collapse" id="submenu-1-6">
                                             <li class="nav-item"><a href="/id"><i><img src="https://cdn-icons-png.flaticon.com/512/323/323372.png" width="15" style="margin-top: -3px;" alt=""></i> Indonesia</a></li>
                                             <li class="nav-item"><a href="/en"><i><img src="https://cdn-icons-png.flaticon.com/512/9906/9906532.png" width="15" style="margin-top: -3px;" alt=""></i> English</a></li>
