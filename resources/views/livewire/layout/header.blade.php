@@ -65,7 +65,7 @@
                                         <a href="{{route('id.event')}}">Agenda</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</a>
+                                        <span class="dd-menu collapsed" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Sekolah Kita</sp>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
                                             <li class="nav-item"><a href="{{route('id.announcement')}}">Pengumuman</a></li>
                                             <li class="nav-item"><a href="{{route('id.blog')}}">Blog</a></li>
