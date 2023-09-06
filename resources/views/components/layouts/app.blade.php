@@ -31,7 +31,7 @@
     <div class="floating_btn">
         <a target="_blank" href="https://api.whatsapp.com/send/?phone=628989283238">
             <div class="contact_icon">
-                <i class="fa fa-whatsapp my-float"></i>
+                <img src="{{asset('images/logo_whatsapp.png')}}" width="140" />
             </div>
         </a>
     </div>
