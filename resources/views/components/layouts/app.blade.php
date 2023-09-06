@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/tiny-slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/glightbox.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/main2.css') }}" />
-    <link rel="stylesheet" href="{{ asset('asset_fe/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/all.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/custom_menu.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/hero.css') }}" />
@@ -27,6 +28,13 @@
 <body>
     <div style="margin-top: 150px;"></div>
     {{ $slot }}
+    <div class="floating_btn">
+        <a target="_blank" href="https://api.whatsapp.com/send/?phone=628989283238">
+            <div class="contact_icon">
+                <i class="fa fa-whatsapp my-float"></i>
+            </div>
+        </a>
+    </div>
     <a href="#" class="scroll-top btn-hover">
         <i class="lni lni-chevron-up"></i>
     </a>
