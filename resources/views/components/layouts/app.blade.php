@@ -7,8 +7,7 @@
     @yield('meta_description')
     <link rel="icon" type="image/x-icon" href="{{ asset('asset_be/img/logo/logo-bosa.webp') }}" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="preload" href="{{ asset('css/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ asset('css/app.css') }}"></noscript>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('asset_fe/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/LineIcons.2.0.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/animate.css') }}" />
@@ -32,10 +31,10 @@
         <i class="lni lni-chevron-up"></i>
     </a>
     <script src="{{ mix('js/app.js') }}" async></script>
-    <script src="{{ asset('js/main.js') }}" async></script>
-    <script src="{{ asset('js/tiny-slider.js') }}" async></script>
-    <script src="{{ asset('js/glightbox.min.js') }}" async></script>
-    <script src="https://use.fontawesome.com/b21714c392.js" async></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/tiny-slider.js') }}"></script>
+    <script src="{{ asset('js/glightbox.min.js') }}"></script>
+    <script src="https://use.fontawesome.com/b21714c392.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             tns({
