@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/tiny-slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/glightbox.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/main2.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/floating_whatsapp.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/all.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
