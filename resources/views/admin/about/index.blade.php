@@ -167,7 +167,7 @@ Tentang Sekolah
 </script>
 @include('admin.about.editorJs')
 @include('admin.about.store')
-@include('admin.about.update')
+<!-- @include('admin.about.update') -->
 @include('admin.about.delete')
 @include('admin.about.datatable')
 @endsection

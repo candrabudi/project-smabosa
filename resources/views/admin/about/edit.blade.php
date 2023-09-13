@@ -11,11 +11,7 @@ Tentang Sekolah
             <div class="card">
                 <div class="nav-align-top mb-4">
                     <div class="card-header p-3 d-flex mb-4">
-                        <h5 class="align-self-center m-0">List Tentang Sekolah</h5>
-                        <button type="reset" class="btn btn-success btn-sm ms-auto btn-toggle-sidebar" data-bs-toggle="offcanvas" data-bs-target="#modalAboutSchool" aria-controls="modalAboutSchool">
-                            <i class="ti ti-plus me-1"></i>
-                            <span class="align-middle">&NonBreakingSpace;Tambah Tentang Sekolah</span>
-                        </button>
+                        <h5 class="align-self-center m-0">Edit Tentang Sekolah</h5>
                     </div>
                     <div class="card-body">
                         <div class="offcanvas-body pt-0" id="card-block">
@@ -24,7 +20,7 @@ Tentang Sekolah
                                     <div class="col-lg-8">
                                         <div class="mb-3">
                                             <label class="form-label" for="titleAbout">Tentang Sekolah</label>
-                                            <input type="text" class="form-control" id="titleAbout" name="titleAbout" placeholder="Tentang Sekolah" />
+                                            <input type="text" class="form-control" id="titleAbout" value="{{$about_school->title}}" name="titleAbout" placeholder="Tentang Sekolah" />
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="titleAbout">Tentang Sekolah</label>
@@ -32,7 +28,7 @@ Tentang Sekolah
                                                 <div class="toolbar-container"></div>
                                                 <div class="content-container">
                                                     <div id="editor" class="content-about-school">
-
+                                                        <?php echo $about_school->content ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -42,14 +38,14 @@ Tentang Sekolah
                                         <div class="mb-3">
                                             <label class="form-label" for="languageAbout">Bahasa</label>
                                             <select class="select2 select-event-label form-select" id="languageAbout" name="languageAbout">
-                                                <option data-label="primary" value="Indonesia" selected>Indonesia</option>
-                                                <option data-label="primary" value="English">English</option>
-                                                <option data-label="primary" value="Jawa">Jawa</option>
+                                                <option data-label="primary" value="Indonesia" {{$about_school->language == "Indonesia" ? 'selected' : ''}}>Indonesia</option>
+                                                <option data-label="primary" value="English" {{$about_school->language == "English" ? 'selected' : ''}}>English</option>
+                                                <option data-label="primary" value="Jawa" {{$about_school->language == "Jawa" ? 'selected' : ''}}>Jawa</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label" for="shortDescAbout">Deskripsi Singkat</label>
-                                            <textarea name="shortDescAbout" id="shortDescAbout" class="form-control" cols="30" rows="10"></textarea>
+                                            <textarea name="shortDescAbout" id="shortDescAbout" class="form-control" cols="30" rows="10">{{$about_school->short_desc}}</textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label class="image-input border">
@@ -60,8 +56,8 @@ Tentang Sekolah
                                         </div>
                                         <div class="mb-3 d-flex justify-content-sm-between justify-content-start my-4">
                                             <div>
-                                                <button type="submit" id="submit-about" class="btn btn-primary btn-card-block-overlay-2">
-                                                    Tambah
+                                                <button type="submit" id="submit-about" class="btn btn-warning btn-card-block-overlay-2">
+                                                    Edit
                                                 </button>
                                             </div>
                                         </div>

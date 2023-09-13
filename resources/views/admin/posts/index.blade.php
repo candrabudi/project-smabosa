@@ -41,3 +41,92 @@ Post
     </div>
 </div>
 @endsection
+
+@section('scripts')
+<script>
+    $(function() {
+        var table = $('#get-post-publish').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: '{!! route('admin.posts.datatable.publish') !!}',
+            columns: [
+                { data: 'no'},
+                { data: 'post_title'},
+                { data: 'post_date'},
+                { data: 'author'},
+                { data: 'post_categories' },
+                { 
+                    data: 'id',
+                    orderable: false,
+                    render: function(id) {
+                        return '<button class="my-1 btn btn-warning btn-xs edit-post"  style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-post" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
+                    },
+                },
+            ],
+            responsive: true
+        });
+    });
+    $('#get-post-publish').on('click', '.edit-post', function() {
+        var id = $(this).data('id');
+        window.location = '/bosa-admin/posts/edit/' + id
+    });
+</script>
+<script>
+    $(function() {
+        var table = $('#get-post-delete').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: '{!! route('admin.posts.datatable.delete') !!}',
+            columns: [
+                { data: 'no'},
+                { data: 'post_title'},
+                { data: 'post_date'},
+                { data: 'author'},
+                { data: 'post_categories' },
+                { 
+                    data: 'id',
+                    orderable: false,
+                    render: function(id) {
+                        return '<button class="my-1 btn btn-warning btn-xs edit-post"  style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-post" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
+                    },
+                },
+            ],
+            responsive: true
+        });
+
+        $('#get-post-delete').on('click', '.edit-post', function() {
+            var id = $(this).data('id');
+            window.location = '/bosa-admin/posts/edit/' + id
+        });
+    });
+</script>
+<script>
+    $(function() {
+        var table = $('#get-post-draft').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: '{!! route('admin.posts.datatable.draft') !!}',
+            columns: [
+                { data: 'no'},
+                { data: 'post_title'},
+                { data: 'post_date'},
+                { data: 'author'},
+                { data: 'post_categories' },
+                { 
+                    data: 'id',
+                    orderable: false,
+                    render: function(id) {
+                        return '<button class="my-1 btn btn-warning btn-xs edit-post"  style="display: inline-block;" data-id="' + id + '"><i class="ti ti-edit me-1"></i> Edit</button> <button class="my-1 btn btn-danger btn-xs delete-post" style="display: inline-block;" data-id="' + id + '"><i class="ti ti-trash me-1"></i> Hapus</button>';
+                    },
+                },
+            ],
+            responsive: true
+        });
+
+        $('#get-post-draft').on('click', '.edit-post', function() {
+            var id = $(this).data('id');
+            window.location = '/bosa-admin/posts/edit/' + id
+        });
+    });
+</script>
+@endsection
