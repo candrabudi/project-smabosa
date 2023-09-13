@@ -74,7 +74,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <span href="https://smabosa-yogya.sch.id/id/blog/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2023-2024" aria-label="Toggle navigation">PCPDB</span>
+                                        <span href="https://smabosa-yogya.sch.id/id/blog/pedoman-dan-pengisian-formulir-pcpdb-sma-bosa-tahun-pelajaran-2024-2025" aria-label="Toggle navigation">PCPDB</span>
                                     </li>
                                     <li class="nav-item">
                                         <span href="https://alumni.smabosa-yogya.sch.id/">Alumni</span>
