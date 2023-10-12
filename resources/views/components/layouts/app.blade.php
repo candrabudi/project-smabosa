@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('meta_description')
     <link rel="icon" type="image/x-icon" href="{{ asset('asset_be/img/logo/logo-bosa.webp') }}" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="{{ asset('asset_fe/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/LineIcons.2.0.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/animate.css') }}" />
@@ -20,10 +22,23 @@
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/hero.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/v5-font-face.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
     <meta name="google-site-verification" content="4OXKjT6p5yIC16XGf4zcQ-RAFKbQhs9FDT3DS07q14U" />
     @livewireStyles
     <title>@yield('title')</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B318FS2R9Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B318FS2R9Y');
+    </script>
 </head>
 
 <body>
@@ -32,7 +47,7 @@
     <div class="floating_btn">
         <a target="_blank" href="https://api.whatsapp.com/send/?phone=628989283238">
             <div class="contact_icon">
-                <img src="{{asset('images/logo_whatsapp.png')}}" width="140" />
+                <img src="{{ asset('images/logo_whatsapp.png') }}" width="140" />
             </div>
         </a>
     </div>
