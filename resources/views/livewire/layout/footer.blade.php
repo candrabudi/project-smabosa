@@ -61,7 +61,7 @@
                             <br>
                             <p>SMA BOSA didirikan pada 1 Agustus 1946 (sebelumnya bernama Christelijke MULO /Meer Uitgebreid Lager Onderwijs) sekolah setingkat SMA untuk peserta didik Kristen pada zaman Belanda. Sekolah ini beralamat di Jalan Wardhani No.2, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta dan juga merupakan eks-bangunan Akademi Militer hingga tahun 1949.</p>
                             <br>
-                            <p>SMA BOSA mempunyai visi terwujudnya manusia cerdas, berbudaya dan berdaya saing global berdasarkan kasih, integritas, dan pelayanan yang tulus. </p>
+                            <p>SMA BOSA mempunyai visi Terwujudnya manusia cerdas, berbudaya berdaya saing global berdasarkan kasih, integritas dan pelayanan yang tulus, integritas, dan pelayanan yang tulus. </p>
                             <br>
                             <p>Maka dari itu, SMA BOSA mempunyai layanan pendidikan berupa program reguler dan BOSA-AIS Educational Program. Program Reguler merupakan layanan pendidikan dengan menerapkan kurikulum nasional yang bertujuan untuk mengasah minat dan bakat anak sejak dini dengan berfokus pada materi esensial, pengembangan karakter, dan kompetensi peserta didik SMA BOSA.</p>
                             <br>

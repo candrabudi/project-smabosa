@@ -39,7 +39,7 @@
                                     </h2>
                                     <div id=collapseOne1 class="accordion-collapse collapse show" aria-labelledby=headingOne1 data-bs-parent="#accordionExample">
                                         <div class=accordion-body>
-                                            <p>Terwujudnya manusia cerdas, berbudaya dan berdaya saing global berdasarkan kasih</p>
+                                            <p>Terwujudnya manusia cerdas, berbudaya berdaya saing global berdasarkan kasih, integritas dan pelayanan yang tulus</p>
                                         </div>
                                     </div>
                                 </div>
@@ -52,11 +52,7 @@
                                     <div id=collapseTwo2 class="accordion-collapse collapse show" aria-labelledby=headingTwo2 data-bs-parent="#accordionExample">
                                         <div class=accordion-body>
                                             <ul>
-                                                <li>Menyelenggarakan pendidikan yang berkualitas sesuai dengan tuntutan dan perkembangan jaman.</li>
-                                                <li>Mengembangkan seluruh potensi siswa, baik kemampuan akademik dan non akademik untuk mampu bersaing di tingkat nasional maupun internasional.</li>
-                                                <li>Menciptakan suasana pembelajaran yang aman, nyaman, sejuk dan menyenangkan.</li>
-                                                <li>Mengembangkan sikap kedisiplinan, ketertiban, ketaqwaan dan tanggungjawab, serta berkompetensi yang sportif melalui berbagai kegiatan sekolah.</li>
-                                                <li>Menyemaikan dan menumbuhkan sikap kasih melalui pelayanan, keteladanan dan budi pekerti luhur sesuai dengan norma keagamaan, sosial kemasyarakatan, dan norma kebangsaan berdasarkan Pancasila.</li>
+                                                <li>Menyelenggarakan pendidikan menengah atas yang sesuai perkembangan zaman dengan dasar kasih, integritas dan pelayanan yang tulus untuk mengembangkan karakter yang berbudaya, berpotensi akademik dan non akademik, serta berdaya saing nasional dan internasional.</li>
                                             </ul>
                                         </div>
                                     </div>

@@ -57,7 +57,7 @@
                                     <?php echo $article->post_content ?>
                                     
                                     @if($article->post_title == "PEDOMAN DAN PENGISIAN FORMULIR PCPDB SMA BOSA TAHUN PELAJARAN 2024-2025")
-                                    <a href="" class="btn btn-primary" style="width: 100%;">ISI FORMULIR ONLINE</a>
+                                        <a href="https://formulir.smabosa-yogya.sch.id" class="btn btn-primary" style="width: 100%;">ISI FORMULIR ONLINE</a>
                                     @endif
                                 </div>
                             </div>
