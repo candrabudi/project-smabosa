@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('asset_fe/css/hero.css') }}" />
     <link rel="stylesheet" href="{{ asset('asset_fe/css/faw/css/v5-font-face.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="google-site-verification" content="4OXKjT6p5yIC16XGf4zcQ-RAFKbQhs9FDT3DS07q14U" />
     @livewireStyles
     <title>@yield('title')</title>
 </head>
